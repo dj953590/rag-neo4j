@@ -1,1 +1,1 @@
-Neo4j and RAG implementation
+LLM-SQL Neo4j and RAG implementation
