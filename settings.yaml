@@ -1,0 +1,7 @@
+default:
+  database:
+    host: localhost
+    port: 5432
+    name: chinook
+    user: postgres
+    password: postgres
