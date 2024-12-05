@@ -11,6 +11,7 @@ from langchain.globals import set_debug
 
 set_debug(True)
 
+# the file is about how to use prompt in langchain groq
 # Set up your GROQ API key
 api_groq_key = settings.GROQ_API_KEY
 

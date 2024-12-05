@@ -7,6 +7,7 @@ from langchain.chains.sql_database import query
 from dynaconf import settings
 from langchain_groq import ChatGroq
 import os
+from tqdm import tqdm
 
 os.environ['OPENAI_API_KEY'] = settings.get('OPENAI_API_KEY', '')
 os.environ['GROQ_API_KEY'] = settings.get('GROQ_API_KEY', '')
@@ -26,11 +27,11 @@ class DBLLM:
 
         self.db = SQLDatabase.from_uri(db_url)
 
-        #self.llm = ChatOllama(base_url=llm_url, model="sqlcoder:latest", temperature=0.0)
+        self.llm = ChatOllama(base_url=llm_url, model="llama3.2:latest", temperature=0.0)
         #self.llm = OpenAI(temperature=0.0)
 
-        api_key = settings.get('GROQ_API_KEY')
-        self.llm = ChatGroq(temperature=0.0, model_name=f"llama-3.1-70b-versatile", api_key=api_key)
+        #api_key = settings.get('GROQ_API_KEY')
+        #self.llm = ChatGroq(temperature=0.0, model_name=f"llama-3.1-70b-versatile", api_key=api_key)
 
         template = """
         Based on the table schema below write a SQL query that would answer the user's quertion:
