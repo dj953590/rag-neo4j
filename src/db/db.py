@@ -153,6 +153,5 @@ if __name__ == "__main__":
         # Fetch data
         rows = db.execute_query("SELECT * FROM customer;")
         print(rows)
-
     finally:
         db.close()
