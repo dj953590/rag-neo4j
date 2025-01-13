@@ -1,0 +1,1492 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d6" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d5" for="edge" attr.name="keywords" attr.type="string" />
+  <key id="d4" for="edge" attr.name="description" attr.type="string" />
+  <key id="d3" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="entity_type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="&quot;TSLA.O&quot;">
+      <data key="d0">"TICKER"</data>
+      <data key="d1">"Reference to the stock ticker symbol for Tesla Inc, indicating its listing on financial markets."&lt;SEP&gt;"TSLA.O is the stock ticker symbol for Tesla Inc, traded on stock exchanges."&lt;SEP&gt;"TSLA.O is the ticker symbol associated with Tesla Inc, representing its shares on the stock exchange."&lt;SEP&gt;"Tesla Inc (TSLA.O) is indicated in the context of research reports."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5&lt;SEP&gt;chunk-2fcbc430f91f069df5acf1ebc52341e8&lt;SEP&gt;chunk-4bdfbf88648ff786015fe7ca8df2a261&lt;SEP&gt;chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;NEUTRAL&quot;">
+      <data key="d0">"INVESTMENT RATINGS"</data>
+      <data key="d1">"Neutral is one of the categorization of investment ratings provided by Citi Research, indicating an insufficiently positive or negative outlook on a stock."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </node>
+    <node id="&quot;ISSUER DISCLOSURE SUMMARY&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"A report summarizing the important disclosures about the issuer of financial instruments."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;TAIWAN&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Referring to the Republic of China (Taiwan), where Citigroup Global Markets operates and is subject to local laws and regulations."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;FINANCIAL SUPERVISORY SERVICE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Agency responsible for financial regulation and supervision in Korea."&lt;SEP&gt;"The Financial Supervisory Service in Korea monitors the financial markets and ensures compliance with regulations."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e&lt;SEP&gt;chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;AUSTRALIA&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The product is made available in Australia through Citigroup Global Markets Australia Pty Limited."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;COMISION NACIONAL BANCARIA Y DE VALORES&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Regulatory agency responsible for overseeing financial institutions in Mexico."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;SIGNIFICANT FINANCIAL INTEREST&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Citigroup Global Markets Inc. and/or its affiliates has a significant financial interest in relation to Tesla Inc."</data>
+      <data key="d2">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </node>
+    <node id="&quot;BUY&quot;">
+      <data key="d0">"INVESTMENT RATINGS"</data>
+      <data key="d1">"Buy is a designation within investment ratings indicating an expected total return (ETR) of 15% or more."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </node>
+    <node id="&quot;INVESTMENT OBJECTIVES&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The goals or financial outcomes that investors aim to achieve with their investments, influencing strategy."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;CITICORP SECURITIES (THAILAND) LTD.&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Operating in Thailand, regulated by the Securities and Exchange Commission, providing financial services and products."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;BELL POTTER&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Bell Potter is mentioned as making the product available to its clients."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;UNAUTHORIZED USE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"unauthorized use, duplication, redistribution, or disclosure of this report is prohibited by law."</data>
+      <data key="d2">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </node>
+    <node id="&quot;CITIBANK TOWER&quot;">
+      <data key="d0">"LOCATION"</data>
+      <data key="d1">"Citibank Tower is a prominent office building located in Jakarta, Indonesia, housing Citigroup offices."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;BRAZIL&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The product is made available in Brazil by Citigroup Global Markets Brasil - CCTVM SA."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;KOMISJA NADZORU FINANSOWEGO&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Polish Financial Supervision Authority, regulating financial institutions in Poland."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;0.5% SHORT POSITION&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Citigroup Global Markets Inc. or its affiliates has a net short position of 0.5% or more in Tesla Inc."</data>
+      <data key="d2">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </node>
+    <node id="&quot;SELL&quot;">
+      <data key="d0">"INVESTMENT RATINGS"</data>
+      <data key="d1">"Sell is a designation within investment ratings for stocks expected to have a negative ETR."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </node>
+    <node id="&quot;RISKS&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The potential for financial loss or decreased performance associated with investments, which investors must consider."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;THAILAND&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Referring to the country where Citicorp Securities operates according to local regulatory frameworks."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;PACIFIC CENTURY PLACE&quot;">
+      <data key="d0">"LOCATION"</data>
+      <data key="d1">"Pacific Century Place is a business complex in Jakarta, Indonesia, known for housing various corporate offices including Citibank."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;CANADA&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"This product is made available in Canada by Citigroup Global Markets (Canada) Inc."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;CENTRAL BANK OF THE RUSSIAN FEDERATION&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"The central bank regulates banking and financial market operations in Russia."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;SECURITIES COMMISSION OF MALAYSIA&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Regulatory authority overseeing the issuance of securities and protecting investors in Malaysia."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;1 MILLION USD DEBT POSITION&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Citigroup Global Markets Inc. owns a position of 1 million USD or more in the debt securities of Tesla Inc."</data>
+      <data key="d2">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </node>
+    <node id="&quot;RATING SUSPENDED&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"A status assigned when Citi Research suspends its rating for regulatory reasons or internal policy."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </node>
+    <node id="&quot;CHARGES AND EXPENSES&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Costs associated with investing in financial products, including management fees and transaction costs."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;CITIBANK AS&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Operating in Turkey and regulated by the Capital Markets Board, it provides financial services."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;OTEMACHI PARK BUILDING&quot;">
+      <data key="d0">"LOCATION"</data>
+      <data key="d1">"Otemachi Park Building is situated in Chiyoda, Tokyo, Japan and serves as the base for Citigroup Global Markets Japan Inc."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;GERMANY&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The product is made available in Germany by Citigroup Global Markets Europe AG."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;MONETARY AUTHORITY OF SINGAPORE&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"The central bank and financial regulatory authority for Singapore."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;CITI VELOCITY&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Citi Velocity is a platform providing access to research, disclosures, and financial information regarding various securities and clients of Citigroup."&lt;SEP&gt;"Citi Velocity is one of the proprietary electronic distribution platforms used to disseminate research content to clients."</data>
+      <data key="d2">chunk-2fcbc430f91f069df5acf1ebc52341e8&lt;SEP&gt;chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;UNDER REVIEW&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"A status that indicates Citi Research is evaluating a stock due to exceptional circumstances that may affect its rating."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </node>
+    <node id="&quot;ETF ISSUER&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Companies that create and manage exchange-traded funds, which pool investor money to purchase a variety of securities."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;TURKEY&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Referring to the country where Citibank AS operates under local regulations."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;DATACENTRAL&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"A proprietary database of Citi Research that includes firm estimates and data from various sources including Thomson Reuters."&lt;SEP&gt;"DataCentral is a source for price information, likely integrating data from various financial institutions for reliability."&lt;SEP&gt;"dataCentral is a proprietary database of Citi Research that includes the Firm's estimates, company reports, and feeds from Thomson Reuters."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60&lt;SEP&gt;chunk-0c102abbe093dc97fe93f753bc9c4eb5&lt;SEP&gt;chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;COLOMBIA&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Disclosure for investors in the Republic of Colombia regarding the communication or message."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;CITIGROUP INC.&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"A multinational investment bank and financial services corporation."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;CITI GLOBAL MARKETS INC.&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Citigroup Global Markets Inc. acts as the principal entity behind Citi Research, providing investment and financial services."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </node>
+    <node id="&quot;INVESTMENT BANKING SERVICES&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Investment banking services are financial services that assist companies in raising capital and providing advisory services related to mergers and acquisitions."</data>
+      <data key="d2">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </node>
+    <node id="&quot;MARKET PERFORMANCE&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"An assessment of how well various markets are doing, often looking at indices, total returns, and other metrics."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS LIMITED&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Present in the U.A.E and UK, licensed and regulated for providing investment services to different client types."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;MSCI&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Morgan Stanley Capital International Inc. (MSCI) provides critical insights into investment performance, risk management, and decision support tools."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;INVESTMENT&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Investment in non-U.S. securities and ADRs may entail certain risks, emphasizing the nature of the market."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS (PTY) LTD.&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Incorporated in South Africa, providing financial services in compliance with local regulations."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;FINANCIAL INSTRUMENTS&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Financial instruments are contracts that represent a monetary agreement between parties, including stocks, bonds, derivatives, and currencies."</data>
+      <data key="d2">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </node>
+    <node id="&quot;CITI&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Citi Research broadly and simultaneously disseminates its research content to the Firm’s institutional and retail clients."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;INVESTMENT FIRM SERVICES&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Services provided by financial firms that could include brokerage, investment advisement, and fund management."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;U.A.E.&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Referring to the United Arab Emirates where Citigroup Global Markets Limited communicates materials to clients."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;ASSET ALLOCATION&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"defining the asset allocation of a financial product, a portfolio of financial instruments, or a collective investment undertaking."</data>
+      <data key="d2">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </node>
+    <node id="&quot;SUSTAINALYTICS&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Sustainalytics is a provider of environmental, social, and governance (ESG) research and ratings."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;ADRS&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"American Depository Receipts (ADRs) are mentioned in the context of investing in non-U.S. securities and entail certain risks."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS TAIWAN SECURITIES COMPANY LTD.&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"A subsidiary providing financial services in Taiwan."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;CITI RESEARCH GLOBAL FUNDAMENTAL COVERAGE&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Citi Research covers a range of companies with varying investment ratings, providing insights into their financial performance and outlook."</data>
+      <data key="d2">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </node>
+    <node id="&quot;ISRAELI SECURITIES AUTHORITY&quot;">
+      <data key="d0">"AUTHORITY"</data>
+      <data key="d1">"The Israeli Securities Authority regulates securities in Israel."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;CITI GLOBAL MARKETS INDIA PRIVATE LIMITED&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"A corporate entity providing brokerage services and financial analysis, a subsidiary of Citigroup."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;UNITED KINGDOM&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Referring to the country where Citigroup Global Markets Limited provides services under local financial authorities."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;MORNINGSTAR&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Morningstar, Inc. is a research firm that provides investment research and management services."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;U.S. SECURITIES AND EXCHANGE COMMISSION&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"The U.S. Securities and Exchange Commission is referenced in relation to the registration and reporting requirements for securities."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;AUTOPILOT&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Tesla is recalling over 2 million vehicles due to an Autopilot-related issue, which will be resolved via an over-the-air software update."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;12 MONTH RATING CATALYST WATCH&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The 12 Month Rating Catalyst Watch is an analysis tool within Citi Research that monitors expected movements and influences on stock ratings over the year."</data>
+      <data key="d2">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </node>
+    <node id="&quot;INVESTMENT ADVICE, INVESTMENT MARKETING AND INVESTMENT PORTFOLIO MANAGEMENT LAW, 1995&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The law that sets the framework for advisory services in Israel."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;U.S. TREASURY DEPARTMENT&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"The department of the U.S. government responsible for managing government revenue, finances, and economic policy."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;UNITED STATES&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Referring to the country where Citigroup Global Markets Inc. is based and operates under federal securities laws."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;CREDIT CARD TRANSACTIONS&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Card Insights consists of data sourced from a subset of Citi’s proprietary credit card transactions, which is highly aggregated and anonymized."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;AUSTRALIAN SECURITIES &amp; INVESTMENTS COMMISSION&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"The Australian Securities &amp; Investments Commission is mentioned as a regulatory body for Citigroup Global Markets Australia Pty Limited."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;MARKET CAP&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Tesla Inc has a market capitalization of US$753,436 million."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;ANALYSTS’ COMPENSATION&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Analysts’ compensation at Citi Research is determined by overall profitability and includes various factors without being linked to specific recommendations."</data>
+      <data key="d2">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </node>
+    <node id="&quot;COMISSÃO DE VALORES MOBILIÁRIOS RESOLUÇÃO 20&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"A regulation in Brazil that influences the distribution of investment research content."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;INVESTMENT ADVICE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Guidance provided to investors to help them make informed decisions regarding their investment choices."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;CGMTS&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Abbreviation for Citigroup Global Markets Taiwan Securities Company Ltd., which provides financial services in Taiwan under regulation."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;PERFORMANCE&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"measuring or comparing the performance of a financial product."</data>
+      <data key="d2">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </node>
+    <node id="&quot;FINANCIAL PRODUCT&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Financial products are instruments or contracts used for investment, risk management, and financial protection."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;EUROPEAN CENTRAL BANK&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"The European Central Bank is referenced as a regulatory authority for Citigroup Global Markets Europe AG."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;TARGET PRICE&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"The target price for Tesla Inc is set at US$255.00, indicating an expected share price return of 7.6%."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;CITI RESEARCH RATINGS DISTRIBUTION&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Citi Research ratings distribution reveals the percentage of companies within certain categories of investment ratings, including Buy, Hold, and Sell."</data>
+      <data key="d2">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </node>
+    <node id="&quot;ASIC REGULATORY GUIDE 264&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"A regulation in Australia that influences the provision of financial services and advising."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;INVESTMENT STRATEGIES&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Plans deployed by investors to achieve specific investment goals over time."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;SECURITIES AND FUTURES BUREAU&quot;">
+      <data key="d0">"REGULATORY BODY"</data>
+      <data key="d1">"The agency responsible for regulating securities activities in Taiwan, overseeing firms like CGMTS."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;PORTFOLIO&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"defining the asset allocation of a portfolio of financial instruments or a collective investment undertaking."</data>
+      <data key="d2">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </node>
+    <node id="&quot;THOMSON REUTERS&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"A media and information company that provides real-time data and news for the financial markets, utilized by Citi Research for their products."&lt;SEP&gt;"Thomson Reuters is a major international news and information company that provides financial data and analytics."&lt;SEP&gt;"Thomson Reuters is a multinational media conglomerate providing professionals with the intelligence, technology, and human expertise they need to find trusted answers."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60&lt;SEP&gt;chunk-0c102abbe093dc97fe93f753bc9c4eb5&lt;SEP&gt;chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;GERMAN FEDERAL FINANCIAL SUPERVISORY AUTHORITY&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"The German Federal Financial Supervisory Authority is mentioned as a regulatory agency overseeing Citigroup Global Markets Europe AG."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;2 MILLION&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Tesla is recalling over 2 million vehicles due to an Autopilot-related issue, highlighting the scale of the recall."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;HIGH RISK RATING&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"A high risk rating is assigned to stocks based on price volatility and fundamental criteria, indicating greater investment risk."&lt;SEP&gt;"The high risk rating provides an indication of potential volatility and fundamental risks associated with particular stocks within Citi Research."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763&lt;SEP&gt;chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </node>
+    <node id="&quot;FEDERAL DEPOSIT INSURANCE CORPORATION&quot;">
+      <data key="d0">"AUTHORITY"</data>
+      <data key="d1">"The federal agency that insures deposits in the United States."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;KOFIA&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"KOFIA makes available registration information of research analysts on its website."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;SECURITIES AND EXCHANGE COMMISSION OF THAILAND&quot;">
+      <data key="d0">"REGULATORY BODY"</data>
+      <data key="d1">"The regulatory authority overseeing financial markets and firms in Thailand, including Citicorp Securities."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;FINANCIAL PRODUCTS&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"financial products or instruments are detailed in this report."</data>
+      <data key="d2">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </node>
+    <node id="&quot;CREDIT CARD DATA&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Data from proprietary credit card transactions used for analysis in understanding consumer spending patterns and financial behavior."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;SANTIAGO, CHILE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The product is made available in Chile through Banchile Corredores de Bolsa S.A., as mentioned in the document."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;OVER-THE-AIR (OTA) SOFTWARE UPDATE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The recall issue will be remedied through an over-the-air (OTA) software update that aims to fix the Autopilot problem."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS ASIA LIMITED&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Citigroup Global Markets Asia Limited is regulated by Hong Kong Securities and Futures Commission."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;GLOBAL WEALTH PLATFORMS&quot;">
+      <data key="d0">"PLATFORM"</data>
+      <data key="d1">"Various Global Wealth platforms are used by Citi Research to distribute research to clients, including institutional and retail."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;CITIBANK KOREA INC.&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Citibank Korea Inc. is regulated by the Financial Services Commission and the Financial Supervisory Service."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;CAPITAL MARKETS BOARD&quot;">
+      <data key="d0">"REGULATORY BODY"</data>
+      <data key="d1">"The authority governing capital markets in Turkey, regulating entities such as Citibank AS."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;DATTATRAY JADHAV&quot;">
+      <data key="d0">"CLIENT"</data>
+      <data key="d1">"Dattatray Jadhav is presumably an analyst involved in the research and reporting activities of Citi Research."&lt;SEP&gt;"Dattatray Jadhav is the individual for whom the report has been prepared, likely a client looking for investment insights."&lt;SEP&gt;"Dattatray Jadhav is the intended recipient of the report prepared by Citi Research regarding Tesla Inc."&lt;SEP&gt;"Prepared for Dattatray Jadhav indicates that he is the intended recipient of the research report."&lt;SEP&gt;"Prepared for Dattatray Jadhav, implying a potential engagement for insights or investment strategies."&lt;SEP&gt;"Prepared for Dattatray Jadhav, indicating the report was intended for this individual investment client."&lt;SEP&gt;"Prepared for Dattatray Jadhav."&lt;SEP&gt;"Prepared report for Dattatray Jadhav."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385&lt;SEP&gt;chunk-eab51557cfbb34bb89b43f87c8ba2e17&lt;SEP&gt;chunk-ffb78e6b81e8d890cc239b6b965cc763&lt;SEP&gt;chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b&lt;SEP&gt;chunk-2fcbc430f91f069df5acf1ebc52341e8&lt;SEP&gt;chunk-0c102abbe093dc97fe93f753bc9c4eb5&lt;SEP&gt;chunk-2d010d2489fcbe783737a4cc44e2e073&lt;SEP&gt;chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;FINANCIAL PERFORMANCE&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Metrics related to the economic health of a business or financial product, often indicating past, current, and future viability."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;CVM - COMISSÃO DE VALORES MOBILIÁRIOS&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"The CVM is the Brazilian Securities and Exchange Commission referenced in the context of Citigroup Global Markets Brasil."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;US$237.01&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"The share price of Tesla Inc as of 12 December 2023 is US$237.01."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS INDIA PRIVATE LIMITED&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"The Product is made available in India by Citigroup Global Markets India Private Limited (CGM), which is regulated by the Securities and Exchange Board of India (SEBI)."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;RETAIL CLIENTS&quot;">
+      <data key="d0">"CLIENT"</data>
+      <data key="d1">"Individual investors, as opposed to institutional clients, seeking financial products and services."&lt;SEP&gt;"Retail clients are individual investors as opposed to institutional clients; Citi does not make certain products available to them."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5&lt;SEP&gt;chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS MALAYSIA SDN BHD&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"CGMM is responsible for contents regarding its clients and is regulated by the Securities Commission of Malaysia."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;DUBAI FINANCIAL SERVICES AUTHORITY&quot;">
+      <data key="d0">"REGULATORY BODY"</data>
+      <data key="d1">"The regulatory body in the U.A.E. overseeing firms in the Dubai International Financial Center, including CGML."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;PRODUCT&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The information contained in the Product is intended solely for the recipient and may not be further distributed by the recipient to any third party."</data>
+      <data key="d2">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </node>
+    <node id="&quot;ONLINE VERSION&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The online version of the research report refers to the digital format available through Citi's proprietary distribution platforms."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;ETFS&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Exchange Traded Funds (ETFs) are investment funds traded on stock exchanges, similar to stocks."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;7.6% RETURN&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"The expected share price return for Tesla Inc is calculated to be 7.6%."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;DUPLICATION&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"unauthorized use, duplication, redistribution, or disclosure of this report is prohibited by law."</data>
+      <data key="d2">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </node>
+    <node id="&quot;VISHAL BOHRA&quot;">
+      <data key="d0">"AUTHOR"</data>
+      <data key="d1">"Vishal Bohra is the Compliance Officer for Citigroup Global Markets India Private Limited and is mentioned in the report for compliance-related inquiries."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;INSTITUTIONAL CLIENTS&quot;">
+      <data key="d0">"CLIENT"</data>
+      <data key="d1">"Institutional clients refer to organizations that invest large sums on behalf of others, such as pension funds or mutual funds."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;CITIBANAMEX CASA DE BOLSA&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"A wholly owned subsidiary of Citigroup Inc. regulated by Comision Nacional Bancaria y de Valores."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;PRUDENTIAL REGULATION AUTHORITY&quot;">
+      <data key="d0">"REGULATORY BODY"</data>
+      <data key="d1">"The UK authority overseeing financial institutions, ensuring they are safe and sound, relevant to Citigroup Global Markets Limited."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;PROPRIETARY ELECTRONIC DISTRIBUTION PLATFORMS&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Platforms used by Citi Research for electronic distribution of financial reports and research materials."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;CITIVELOCITY&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"CitiVelocity is a platform that provides financial tools and analytics for investors, including charting tools dependent on market data."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;12% DISCOUNT RATE&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"The Base case for Tesla's valuation considers a 12% discount rate in its DCF-driven earnings model."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;NIKITA JADHAV&quot;">
+      <data key="d0">"AUTHOR"</data>
+      <data key="d1">"Nikita Jadhav is mentioned as a grievance officer, providing oversight for client complaints regarding the report."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;INVESTMENT ADVISORY ACTIVITY&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Investment advisory activity refers to services related to providing investment recommendations tailored to clients."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;BANK HANDLOWY W WARSZAWIE S.A.&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"A subsidiary of Citigroup Inc. regulated by Komisja Nadzoru Finansowego."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;FINANCIAL CONDUCT AUTHORITY&quot;">
+      <data key="d0">"REGULATORY BODY"</data>
+      <data key="d1">"The UK regulator, ensuring that financial markets operate with integrity and protecting consumers, relevant to Citigroup Global Markets Limited."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;DATA AGGREGATION&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The process of collecting and summarizing data from various sources for analysis and reporting."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;EXECUTIVE ORDER 13959&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"A U.S. government mandate prohibiting investments in securities of certain companies, particularly concerning sanctions."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;34X TERMINAL 2030E ADJ. EBITDA&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"The Base case analysis uses a multiple of 34x terminal 2030E adjusted EBITDA as part of its valuation framework."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;INVESTMENT RISKS&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Investment in securities market are subject to market risks, highlighting the nature of risks involved in securities investments."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;CAPITAL MARKETS LAW OF TURKEY&quot;">
+      <data key="d0">"LAW"</data>
+      <data key="d1">"The Capital Markets Law of Turkey regulates securities and investment transactions within Turkey."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;AO CITIBANK&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Licenses to carry out banking activities issued by the Central Bank of the Russian Federation."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;FINRA&quot;">
+      <data key="d0">"REGULATORY BODY"</data>
+      <data key="d1">"The Financial Industry Regulatory Authority in the U.S. that regulates member brokerage firms, relevant to Citigroup Global Markets Inc."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;CITI RESEARCH&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Citi Research involves the analysis and recommendations related to financial instruments and companies, including Tesla Inc."&lt;SEP&gt;"Citi Research is a division of Citigroup Global Markets Inc. that conducts research and analysis on various companies, including Tesla Inc."&lt;SEP&gt;"Citi Research is a division of Citigroup Global Markets Inc. that provides research content to clients via various platforms."&lt;SEP&gt;"Citi Research is a division of Citigroup Global Markets Inc., involved in financial research and analysis."&lt;SEP&gt;"Citi Research is an analytical body providing investment recommendations and research reports, following regulatory policies to manage potential conflicts of interest."&lt;SEP&gt;"Citi Research is an investment research firm that provides insights and ratings related to stock performance, risk ratings, and investment strategies."&lt;SEP&gt;"Citi Research is responsible for preparing research coverage that includes analyses and recommendations."&lt;SEP&gt;"Citi Research provides non-fundamental research reports and recommendations regarding various issuers and investments."&lt;SEP&gt;"The research data in this report are not intended to be used for the purpose of determining the price of or amounts due in respect of financial products or instruments."&lt;SEP&gt;"The research department of Citigroup, producing reports and analytical insights for investors and clients."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385&lt;SEP&gt;chunk-eab51557cfbb34bb89b43f87c8ba2e17&lt;SEP&gt;chunk-cca80b453bcf4b9f5114ceb3e1f63c60&lt;SEP&gt;chunk-ffb78e6b81e8d890cc239b6b965cc763&lt;SEP&gt;chunk-2fcbc430f91f069df5acf1ebc52341e8&lt;SEP&gt;chunk-0c102abbe093dc97fe93f753bc9c4eb5&lt;SEP&gt;chunk-2d010d2489fcbe783737a4cc44e2e073&lt;SEP&gt;chunk-bb30e0da8c8a057be301e4a433778ec8&lt;SEP&gt;chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;RESEARCH REPORT&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"A document prepared by analysts that provides an in-depth analysis and summary of a company or market sector."</data>
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </node>
+    <node id="&quot;ISRAELI REGULATION OF INVESTMENT ADVICE, INVESTMENT MARKETING AND INVESTMENT PORTFOLIO MANAGEMENT LAW, 1995&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Regulatory framework impacting how investment advice and portfolio management is conducted in Israel."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;HIGH RISK&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The stock of Tesla is classified as High Risk based on a quantitative model that assesses the company's financial metrics."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;SECURITIES AND FUTURES ORDINANCE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Securities and Futures Ordinance (Cap.571 of the Laws of Hong Kong) regulates financial markets in Hong Kong."&lt;SEP&gt;"The Securities and Futures Ordinance is referenced as a legal framework in Hong Kong pertaining to securities."</data>
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261&lt;SEP&gt;chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;SUBJECT COMPANY&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"This refers to a company that is the focus of research content disseminated by Citi Research."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS SINGAPORE PTE. LTD.&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Capital markets services license holder, regulated by Monetary Authority of Singapore."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;US SECURITIES AND EXCHANGE COMMISSION&quot;">
+      <data key="d0">"REGULATORY BODY"</data>
+      <data key="d1">"The primary federal regulatory agency overseeing securities markets and protecting investors in the United States, overseeing Citigroup Global Markets Inc."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;REDISTRIBUTION&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"unauthorized use, duplication, redistribution, or disclosure of this report is prohibited by law."</data>
+      <data key="d2">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </node>
+    <node id="&quot;ITAY MICHAELI&quot;">
+      <data key="d0">"AUTHOR"</data>
+      <data key="d1">"Itay Michaeli is a research analyst associated with Citigroup Global Markets Inc. who has prepared the report."&lt;SEP&gt;"Itay Michaeli is an analyst at Citi Research who prepared the report regarding Tesla Inc and provided insights on the Autopilot recall."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763&lt;SEP&gt;chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;EASTERN DATE-TIME&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The Eastern date-time refers to the time zone standard against which the completion and dissemination times of the research report are measured."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;CAR OF THE FUTURE (CYBERTRUCK, SEMI)&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"New product announcements such as Cybertruck and Semi are considered potential upside risks for Tesla's stock performance."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;SECURITIES AND EXCHANGE BOARD OF INDIA&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The Securities and Exchange Board of India (SEBI) regulates the securities markets in India, ensuring protection for investor interests."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;RISK PROFILE&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Risk profile assesses an investor's ability and willingness to take risks when making investment decisions."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;CITIGROUP PRIVATE BANK&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Operates through Citibank, N.A., Singapore Branch, licensed by Monetary Authority of Singapore."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;CMOS&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Collateralized mortgage obligations that are subject to market fluctuations and regulatory considerations, referenced in the context of investment products."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;DISCLOSURE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"unauthorized use, duplication, redistribution, or disclosure of this report is prohibited by law."</data>
+      <data key="d2">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </node>
+    <node id="&quot;RISK RATING&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Risk rating takes into account both price volatility and fundamental criteria. Stocks may have no risk rating or a High risk rating assigned."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </node>
+    <node id="&quot;PRICE CHART&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"A graphical representation used to track the historical prices of financial instruments over time."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;NEGATIVE CUSTOMER EXPERIENCE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The recall could potentially lead to a negative customer experience if the restrictions implemented during the remedy affect how drivers use Autopilot."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;NATIONAL INSTITUTE OF SECURITIES MARKETS&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"The National Institute of Securities Markets (NISM) is an educational institution established by SEBI for the development of securities markets."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;INVESTMENT FOCUS AND PERSPECTIVE&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"This refers to the specific market, sector, or investment time frame that a client prefers to concentrate on."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;CITIBANK SINGAPORE LTD&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Distributes reports to selected Citigold/Citigold Private Clients."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;DIFC&quot;">
+      <data key="d0">"LOCATION"</data>
+      <data key="d1">"Dubai International Financial Center, a financial free zone in the U.A.E where CGML operates, providing a regulatory framework for investment services."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;TESLA INC&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Mentioned as a part of the report provided by Citi Research."&lt;SEP&gt;"Tesla Inc (TSLA.O) is a leading automotive and energy company known for its electric vehicles and innovative technology."&lt;SEP&gt;"Tesla Inc (TSLA.O) is a leading electric vehicle manufacturer known for its innovative technology and sustainable practices."&lt;SEP&gt;"Tesla Inc (TSLA.O) is a publicly traded electric vehicle and clean energy company known for innovation and sustainable technology."&lt;SEP&gt;"Tesla Inc (TSLA.O) is mentioned as part of the research coverage by Citi Research."&lt;SEP&gt;"Tesla Inc is a publicly traded electric vehicle and clean energy company, known for its innovative automotive technologies and energy products."&lt;SEP&gt;"Tesla Inc is a well-known electric vehicle and clean energy company headquartered in Palo Alto, California."&lt;SEP&gt;"Tesla Inc. (TSLA.O) is mentioned as an issuer in the context of research by Citi Research."&lt;SEP&gt;"Tesla Inc. is an American electric vehicle and clean energy company that designs and manufactures electric cars, batteries, and solar energy products."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385&lt;SEP&gt;chunk-eab51557cfbb34bb89b43f87c8ba2e17&lt;SEP&gt;chunk-cca80b453bcf4b9f5114ceb3e1f63c60&lt;SEP&gt;chunk-ffb78e6b81e8d890cc239b6b965cc763&lt;SEP&gt;chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b&lt;SEP&gt;chunk-2fcbc430f91f069df5acf1ebc52341e8&lt;SEP&gt;chunk-0c102abbe093dc97fe93f753bc9c4eb5&lt;SEP&gt;chunk-4bdfbf88648ff786015fe7ca8df2a261&lt;SEP&gt;chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;INVESTMENT RATINGS&quot;">
+      <data key="d0">"STATISTICS"</data>
+      <data key="d1">"Citi Research investment ratings are Buy, Neutral, and Sell, based on analyst expectations of expected total return (ETR) and risk."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </node>
+    <node id="&quot;RATING HISTORY TABLE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"A table documenting the historical ratings assigned to financial instruments by analysts."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;SUSPENSION FOR IMPROPER USE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The remedy for the Autopilot issue includes a suspension condition for drivers who misuse the system, which may impact user experience."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </node>
+    <node id="&quot;BANK OF ISRAEL&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The Bank of Israel is the central bank of Israel, responsible for the country's monetary policy and financial system."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;CONFLICT OF INTEREST&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Conflict of interest arises when a party has competing interests or loyalties that could potentially influence their actions."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;SECURITIES AND FUTURES ACT&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Regulates the definitions of recipients who are accredited, expert, and institutional investors in Singapore."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS INC.&quot;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Citi Research is a division of Citigroup Global Markets Inc., which does and seeks to do business with companies covered in research reports."&lt;SEP&gt;"Citigroup Global Markets Inc. is a financial services company providing a wide range of investment banking, securities, and other financial services."&lt;SEP&gt;"Citigroup Global Markets Inc. is a global financial services company that provides a range of financial products and services, including research, trading, and investment banking."&lt;SEP&gt;"Citigroup Global Markets Inc. operates Citi Research, which provides analysis for companies, including Tesla."&lt;SEP&gt;"Citigroup Global Markets Inc. takes responsibility for the product in the United States."&lt;SEP&gt;"Located in the United States and a member of FINRA, providing securities services and regulated by the SEC."</data>
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385&lt;SEP&gt;chunk-eab51557cfbb34bb89b43f87c8ba2e17&lt;SEP&gt;chunk-cca80b453bcf4b9f5114ceb3e1f63c60&lt;SEP&gt;chunk-2fcbc430f91f069df5acf1ebc52341e8&lt;SEP&gt;chunk-bb30e0da8c8a057be301e4a433778ec8&lt;SEP&gt;chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </node>
+    <node id="&quot;CATALYST WATCH UPSIDE/DOWNSIDE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Citi Research may include a Catalyst Watch Upside or Downside call to highlight specific near-term catalysts or events impacting a company or market."</data>
+      <data key="d2">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </node>
+    <node id="&quot;FUNDAMENTAL COVERAGE&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"Refers to the in-depth analysis of financial instruments based on economic and financial metrics."</data>
+      <data key="d2">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS TAIWAN SECURITIES COMPANY LTD.&quot;&lt;">
+      <data key="d0">"COMPANY"</data>
+      <data key="d1">"Operating in the Republic of China (Taiwan), CGMTS is regulated by the Securities and Futures Bureau, providing marketing and trading services."</data>
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </node>
+    <node id="&quot;FINANCIAL SERVICES AGENCY&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The Financial Services Agency in Japan oversees banking, securities, and insurance in the financial sector."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;ENVIRONMENTAL, SOCIAL, GOVERNANCE (ESG)&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"ESG factors are considerations that investors may examine relating to a company's environmental and social impact and governance practices."</data>
+      <data key="d2">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </node>
+    <node id="&quot;FINANCIAL SERVICES COMMISSION&quot;">
+      <data key="d0">"INDUSTRY"</data>
+      <data key="d1">"Regulatory body overseeing financial institutions and services in Korea."</data>
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </node>
+    <node id="&quot;CAPITAL MARKET AUTHORITY (CMA)&quot;">
+      <data key="d0">"EVENT"</data>
+      <data key="d1">"The Capital Market Authority in Saudi Arabia regulates the financial market and protects investors."</data>
+      <data key="d2">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS AUSTRALIA PTY LIMITED&quot;">
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+      <data key="d1">"Bell Potter is making the product available to its clients in partnership with Citigroup Global Markets Australia."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS BRASIL - CCTVM SA&quot;">
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+      <data key="d1">"The product is made available in Brazil through Citigroup Global Markets Brasil - CCTVM SA."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS (CANADA) INC.&quot;">
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+      <data key="d1">"The product is made available in Canada through Citigroup Global Markets (Canada) Inc."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS EUROPE AG&quot;">
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+      <data key="d1">"The product is made available in Germany through Citigroup Global Markets Europe AG."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CGML&quot;">
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+      <data key="d1">"Operating in DIFC, CGML is subject to its regulatory requirements, providing an operational relationship based on compliance."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CARD INSIGHTS&quot;">
+      <data key="d2">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+      <data key="d1">"Card Insights utilizes credit card transactions to derive insights into consumer behavior for market analysis.")&lt;</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CYBERTRUCK&quot;">
+      <data key="d2">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+      <data key="d1">"The Cybertruck is anticipated as a new product that could influence Tesla's long-term growth and stock valuation."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;BANCHILE CORREDORES DE BOLSA S.A.&quot;">
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+      <data key="d1">"Banchile Corredores de Bolsa S.A. makes the product available in Santiago, Chile."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CITIGROUP GLOBAL MARKETS BRASIL&quot;">
+      <data key="d2">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+      <data key="d1">"Citigroup Global Markets Brasil operates under the regulations of CVM."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot; CITICORP SECURITIES (THAILAND) LTD.&quot;">
+      <data key="d2">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+      <data key="d1">"Citicorp Securities operates under the supervision of the Securities and Exchange Commission of Thailand, demonstrating a regulatory relationship."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;CITICORP GLOBAL MARKETS MALAYSIA SDN BHD&quot;">
+      <data key="d2">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+      <data key="d1">"Both entities are part of Citigroup Inc. with operations across multiple countries in financial services."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <edge source="&quot;TSLA.O&quot;" target="&quot;CITIGROUP GLOBAL MARKETS INC.&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citigroup Global Markets Inc. has traded the equity securities of Tesla Inc, represented by the ticker TSLA.O."</data>
+      <data key="d5">"trading, securities"</data>
+      <data key="d6">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </edge>
+    <edge source="&quot;TSLA.O&quot;" target="&quot;TESLA INC&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Tesla Inc is represented on stock markets by its ticker TSLA.O, used for trading and financial reporting."&lt;</data>
+      <data key="d5">"stock representation"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;ISSUER DISCLOSURE SUMMARY&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research references issuer disclosure summaries to give clients comprehensive insights into the companies analyzed."&lt;</data>
+      <data key="d5">"compliance compliance"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;TAIWAN&quot;" target="&quot;CITIGROUP GLOBAL MARKETS TAIWAN SECURITIES COMPANY LTD.&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"CGMTS operates in Taiwan and is regulated by the local financial authorities, indicating a jurisdictional relationship."</data>
+      <data key="d5">"regulation, operations"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;FINANCIAL SUPERVISORY SERVICE&quot;" target="&quot;KOFIA&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"The Financial Supervisory Service oversees compliance regarding KOFIA's operations as a registration authority."</data>
+      <data key="d5">"Regulatory Authority"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;AUSTRALIA&quot;" target="&quot;CITIGROUP GLOBAL MARKETS AUSTRALIA PTY LIMITED&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"The product is made available in Australia through Citigroup Global Markets Australia Pty Limited."</data>
+      <data key="d5">"Availability"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;INVESTMENT OBJECTIVES&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research assists clients in aligning their investment research with their specific investment objectives."&lt;</data>
+      <data key="d5">"goal alignment"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;CITICORP SECURITIES (THAILAND) LTD.&quot;" target="&quot;THAILAND&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Citicorp Securities operates in Thailand, complying with local regulatory frameworks, showing their operational relationship."</data>
+      <data key="d5">"regulation, operations"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;BELL POTTER&quot;" target="&quot;CITIGROUP GLOBAL MARKETS AUSTRALIA PTY LIMITED&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Bell Potter is making the product available to its clients in partnership with Citigroup Global Markets Australia."</data>
+      <data key="d5">"Client Services"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;BRAZIL&quot;" target="&quot;CITIGROUP GLOBAL MARKETS BRASIL - CCTVM SA&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"The product is made available in Brazil through Citigroup Global Markets Brasil - CCTVM SA."</data>
+      <data key="d5">"Availability"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;KOMISJA NADZORU FINANSOWEGO&quot;" target="&quot;BANK HANDLOWY W WARSZAWIE S.A.&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"The bank operates under the supervision of Komisja Nadzoru Finansowego."</data>
+      <data key="d5">"Regulatory Authority"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;RISKS&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Citi Research evaluates and discloses risks associated with investment instruments in their reports."&lt;</data>
+      <data key="d5">"risk assessment"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;CANADA&quot;" target="&quot;CITIGROUP GLOBAL MARKETS (CANADA) INC.&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"The product is made available in Canada through Citigroup Global Markets (Canada) Inc."</data>
+      <data key="d5">"Availability"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;CENTRAL BANK OF THE RUSSIAN FEDERATION&quot;" target="&quot;AO CITIBANK&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"AO Citibank operates under the licenses issued by the Central Bank of the Russian Federation."</data>
+      <data key="d5">"Licensing Relationship"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;SECURITIES COMMISSION OF MALAYSIA&quot;" target="&quot;CITIGROUP GLOBAL MARKETS MALAYSIA SDN BHD&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"The Securities Commission regulates CGMM in the provision of financial products to clients."</data>
+      <data key="d5">"Regulatory Authority"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;RATING SUSPENDED&quot;" target="&quot;UNDER REVIEW&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"Both statuses show different conditions under which a stock's rating can be affected by the research firm's internal assessments."</data>
+      <data key="d5">"Rating Condition"</data>
+      <data key="d6">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </edge>
+    <edge source="&quot;CHARGES AND EXPENSES&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research includes information on charges and expenses as part of their investment recommendations."&lt;</data>
+      <data key="d5">"cost analysis"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;CITIBANK AS&quot;" target="&quot;TURKEY&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Citibank AS operates under the financial regulations of Turkey, highlighting their operational presence there."</data>
+      <data key="d5">"regulation, operations"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;CITIBANK AS&quot;" target="&quot;CAPITAL MARKETS BOARD&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Regulated by the Capital Markets Board, Citibank AS's operations in Turkey reflect compliance with local regulations."</data>
+      <data key="d5">"regulation"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;GERMANY&quot;" target="&quot;CITIGROUP GLOBAL MARKETS EUROPE AG&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"The product is made available in Germany through Citigroup Global Markets Europe AG."</data>
+      <data key="d5">"Availability"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;MONETARY AUTHORITY OF SINGAPORE&quot;" target="&quot;CITIGROUP GLOBAL MARKETS SINGAPORE PTE. LTD.&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Regulatory authority that ensures compliance for CGMSPL's operations in Singapore."</data>
+      <data key="d5">"Regulatory Oversight"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;CITI VELOCITY&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research utilizes Citi Velocity for disseminating research products and services related to investment opportunities."</data>
+      <data key="d5">"research dissemination"</data>
+      <data key="d6">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </edge>
+    <edge source="&quot;ETF ISSUER&quot;" target="&quot;ETFS&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"ETF issuers are responsible for the creation and management of exchange-traded funds, which are a focus of investment strategies."&lt;</data>
+      <data key="d5">"financial products"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;DATACENTRAL&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"DataCentral is a proprietary database used by Citi Research for sourcing data and estimates."&lt;</data>
+      <data key="d5">Data Source&lt;</data>
+      <data key="d6">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </edge>
+    <edge source="&quot;DATACENTRAL&quot;" target="&quot;CMOS&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"CMOs are tracked and analyzed within the dataCentral proprietary database, indicating a statistical relationship between investment securities and data analysis."</data>
+      <data key="d5">"statistical, data"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;DATACENTRAL&quot;" target="&quot;THOMSON REUTERS&quot;">
+      <data key="d3">16.0</data>
+      <data key="d4">"DataCentral sources financial prices presumably from Thomson Reuters, integrating data for market analysis."&lt;&lt;SEP&gt;"dataCentral sources data feeds from Thomson Reuters to enhance the value of its financial research.")&lt;</data>
+      <data key="d5">"data sourcing"&lt;SEP&gt;Data Source&lt;</data>
+      <data key="d6">chunk-cca80b453bcf4b9f5114ceb3e1f63c60&lt;SEP&gt;chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;COLOMBIA&quot;" target="&quot;CITIGROUP GLOBAL MARKETS INC.&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"Disclosure for investors in Colombia is mentioned in relation to Citigroup Global Markets Inc."</data>
+      <data key="d5">"Legal Disclosure"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;CITIGROUP INC.&quot;" target="&quot;CITICORP GLOBAL MARKETS MALAYSIA SDN BHD&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Both entities are part of Citigroup Inc. with operations across multiple countries in financial services."</data>
+      <data key="d5">"Corporate Structure"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;CITI GLOBAL MARKETS INC.&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Citi Research operates under Citigroup Global Markets Inc., thereby indicating a corporate affiliation."</data>
+      <data key="d5">"Corporate Affiliation"</data>
+      <data key="d6">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </edge>
+    <edge source="&quot;INVESTMENT BANKING SERVICES&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research provides insights that are informed by the investment banking services offered by Citigroup Global Markets Inc."</data>
+      <data key="d5">"financial insights, services"</data>
+      <data key="d6">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </edge>
+    <edge source="&quot;CITIGROUP GLOBAL MARKETS LIMITED&quot;" target="&quot;PRUDENTIAL REGULATION AUTHORITY&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"The authority oversees Citigroup Global Markets Limited's activities in the UK, demonstrating the regulatory relationship."</data>
+      <data key="d5">"regulation"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;CITIGROUP GLOBAL MARKETS LIMITED&quot;" target="&quot;FINANCIAL CONDUCT AUTHORITY&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Regulated by the FCA, Citigroup Global Markets Limited adheres to the UK financial industry standards, indicating a regulatory link."</data>
+      <data key="d5">"regulation"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;CITIGROUP GLOBAL MARKETS LIMITED&quot;" target="&quot;U.A.E.&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"This entity is regulated in the U.A.E and services professional clients, indicating a clear relationship based on operations and regulations."</data>
+      <data key="d5">"regulation, operations"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;CITIGROUP GLOBAL MARKETS LIMITED&quot;" target="&quot;UNITED KINGDOM&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Citigroup Global Markets Limited operates in the UK under local financial authorities, showing operational compliance."</data>
+      <data key="d5">"regulation, operations"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;CITIGROUP GLOBAL MARKETS LIMITED&quot;" target="&quot;DUBAI FINANCIAL SERVICES AUTHORITY&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CGML operates under the regulations set by the DFSA, confirming an operational relationship based on compliance."</data>
+      <data key="d5">"regulation"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;MSCI&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research sources information from MSCI for investment analytics and financial products."&lt;</data>
+      <data key="d5">Data Provider&lt;</data>
+      <data key="d6">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </edge>
+    <edge source="&quot;CITI&quot;" target="&quot;ASIC REGULATORY GUIDE 264&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Citi must comply with Australian regulations when offering financial services."&lt;</data>
+      <data key="d5">"regulatory compliance"</data>
+      <data key="d6">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </edge>
+    <edge source="&quot;CITI&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Citi is the parent company of Citi Research, which provides research content."&lt;</data>
+      <data key="d5">"parent-child relationship"</data>
+      <data key="d6">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </edge>
+    <edge source="&quot;CITI&quot;" target="&quot;ISRAELI SECURITIES AUTHORITY&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"The Israeli Securities Authority regulates investment communications made by Citi in Israel."&lt;</data>
+      <data key="d5">"regulatory compliance"</data>
+      <data key="d6">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </edge>
+    <edge source="&quot;CITI&quot;" target="&quot;COMISSÃO DE VALORES MOBILIÁRIOS RESOLUÇÃO 20&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Citi must disclose any commercial relationships per Brazilian regulations."&lt;</data>
+      <data key="d5">"regulatory compliance"</data>
+      <data key="d6">chunk-eab51557cfbb34bb89b43f87c8ba2e17</data>
+    </edge>
+    <edge source="&quot;SUSTAINALYTICS&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research may reference Sustainalytics for ESG-related content within their reports."&lt;</data>
+      <data key="d5">ESG Research&lt;</data>
+      <data key="d6">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </edge>
+    <edge source="&quot;ADRS&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Citi Research conveys information about investing in ADRs and the associated risks for non-U.S. securities."</data>
+      <data key="d5">"Investment Information"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;CITI RESEARCH GLOBAL FUNDAMENTAL COVERAGE&quot;" target="&quot;CITI RESEARCH RATINGS DISTRIBUTION&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"The evaluation of companies conducted by Citi Research is reflected in the ratings distribution across various investment categories."</data>
+      <data key="d5">"ratings, coverage"</data>
+      <data key="d6">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </edge>
+    <edge source="&quot;CITI GLOBAL MARKETS INDIA PRIVATE LIMITED&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Citi Research may work in conjunction with Citi Global Markets India Private Limited to provide investment services."&lt;</data>
+      <data key="d5">"corporate relationship"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;MORNINGSTAR&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research may utilize data from Morningstar for investment research and analysis."&lt;</data>
+      <data key="d5">Investment Data&lt;</data>
+      <data key="d6">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </edge>
+    <edge source="&quot;U.S. SECURITIES AND EXCHANGE COMMISSION&quot;" target="&quot;CITIGROUP GLOBAL MARKETS INC.&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citigroup Global Markets Inc. must comply with the requirements set forth by the U.S. Securities and Exchange Commission."</data>
+      <data key="d5">"Regulatory Compliance"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;AUTOPILOT&quot;" target="&quot;TESLA INC&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Tesla is recalling vehicles due to an Autopilot issue, which indicates a direct relationship between the company and the event."</data>
+      <data key="d5">"recall, event"</data>
+      <data key="d6">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </edge>
+    <edge source="&quot;AUTOPILOT&quot;" target="&quot;2 MILLION&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"The recall of 2 million vehicles is directly associated with the Autopilot-related issue, indicating the extent of the problem."</data>
+      <data key="d5">"recall"</data>
+      <data key="d6">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </edge>
+    <edge source="&quot;AUTOPILOT&quot;" target="&quot;OVER-THE-AIR (OTA) SOFTWARE UPDATE&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"An over-the-air software update is the method chosen to address the Autopilot issue during the recall."</data>
+      <data key="d5">"software update"</data>
+      <data key="d6">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </edge>
+    <edge source="&quot;U.S. TREASURY DEPARTMENT&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research adheres to guidelines set by the U.S. Treasury Department regarding investment restrictions."&lt;</data>
+      <data key="d5">"regulatory adherence"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;UNITED STATES&quot;" target="&quot;CITIGROUP GLOBAL MARKETS INC.&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"As a major financial services provider in the U.S., CGMI operates under federal securities regulations, demonstrating operational integration."</data>
+      <data key="d5">"regulation, operations"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;AUSTRALIAN SECURITIES &amp; INVESTMENTS COMMISSION&quot;" target="&quot;CITIGROUP GLOBAL MARKETS AUSTRALIA PTY LIMITED&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citigroup Global Markets Australia Pty Limited is regulated by the Australian Securities &amp; Investments Commission."</data>
+      <data key="d5">"Regulatory Oversight"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;INVESTMENT ADVICE&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Citi Research offers investment advice as part of its services to clients seeking insights on financial decisions."&lt;</data>
+      <data key="d5">"advisory services"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;CGMTS&quot;" target="&quot;SECURITIES AND FUTURES BUREAU&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"CGMTS is regulated by the Securities and Futures Bureau, indicating a supervisory relationship."</data>
+      <data key="d5">"regulation"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;EUROPEAN CENTRAL BANK&quot;" target="&quot;CITIGROUP GLOBAL MARKETS EUROPE AG&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citigroup Global Markets Europe AG operates under the oversight of the European Central Bank."</data>
+      <data key="d5">"Regulatory Oversight"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;INVESTMENT STRATEGIES&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Citi Research provides recommendations on effective investment strategies to clients."&lt;</data>
+      <data key="d5">"strategy guidance"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;THOMSON REUTERS&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research sources data from Thomson Reuters to compile financial insights, indicating a data relationship."</data>
+      <data key="d5">"data"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;GERMAN FEDERAL FINANCIAL SUPERVISORY AUTHORITY&quot;" target="&quot;CITIGROUP GLOBAL MARKETS EUROPE AG&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citigroup Global Markets Europe AG is also regulated by the German Federal Financial Supervisory Authority."</data>
+      <data key="d5">"Regulatory Oversight"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;HIGH RISK RATING&quot;" target="&quot;INVESTMENT RATINGS&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"High risk ratings are considered when determining the overall investment rating for stocks."</data>
+      <data key="d5">"Risk Assessment"</data>
+      <data key="d6">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </edge>
+    <edge source="&quot;KOFIA&quot;" target="&quot;CITIBANK KOREA INC.&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"KOFIA provides registration information that includes the involvement of research analysts from Citibank Korea Inc."</data>
+      <data key="d5">"Regulatory Compliance"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;SECURITIES AND EXCHANGE COMMISSION OF THAILAND&quot;" target="&quot; CITICORP SECURITIES (THAILAND) LTD.&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Citicorp Securities operates under the supervision of the Securities and Exchange Commission of Thailand, demonstrating a regulatory relationship."</data>
+      <data key="d5">"regulation"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;CREDIT CARD DATA&quot;" target="&quot;CARD INSIGHTS&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Card Insights utilizes credit card transactions to derive insights into consumer behavior for market analysis.")&lt;</data>
+      <data key="d5">Consumer Insights&lt;</data>
+      <data key="d6">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </edge>
+    <edge source="&quot;SANTIAGO, CHILE&quot;" target="&quot;BANCHILE CORREDORES DE BOLSA S.A.&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"Banchile Corredores de Bolsa S.A. makes the product available in Santiago, Chile."</data>
+      <data key="d5">"Availability"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;CITIGROUP GLOBAL MARKETS ASIA LIMITED&quot;" target="&quot;TESLA INC&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"The report prepared by Citigroup Global Markets Asia Limited includes research and information about Tesla Inc, indicating a research relationship between the two entities."</data>
+      <data key="d5">"research"</data>
+      <data key="d6">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </edge>
+    <edge source="&quot;CITIBANK KOREA INC.&quot;" target="&quot;DATTATRAY JADHAV&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Dattatray Jadhav is the author of the report related to Citibank Korea Inc."</data>
+      <data key="d5">"Authorship"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;CITIBANK KOREA INC.&quot;" target="&quot;FINANCIAL SERVICES COMMISSION&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"The Financial Services Commission regulates Citibank Korea Inc. regarding its operations and compliance."</data>
+      <data key="d5">"Regulatory Authority"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;DATTATRAY JADHAV&quot;" target="&quot;CITIGROUP GLOBAL MARKETS INDIA PRIVATE LIMITED&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"The Product made available in India by CGM is specifically prepared for Dattatray Jadhav, establishing a direct client relationship."</data>
+      <data key="d5">"client-service"</data>
+      <data key="d6">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </edge>
+    <edge source="&quot;DATTATRAY JADHAV&quot;" target="&quot;CITIGROUP GLOBAL MARKETS INC.&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Dattatray Jadhav is involved in the analysis and reports prepared by Citigroup Global Markets Inc."</data>
+      <data key="d5">"analyst, research"</data>
+      <data key="d6">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </edge>
+    <edge source="&quot;DATTATRAY JADHAV&quot;" target="&quot;PRODUCT&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"The information contained in the Product is intended solely for the recipient."&lt;</data>
+      <data key="d5">"Intended Use"</data>
+      <data key="d6">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </edge>
+    <edge source="&quot;DATTATRAY JADHAV&quot;" target="&quot;CITIGROUP GLOBAL MARKETS SINGAPORE PTE. LTD.&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Dattatray Jadhav was prepared a report through Citi Research which is connected with CGMSPL's offerings"</data>
+      <data key="d5">"Report Preparation"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;DATTATRAY JADHAV&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">32.0</data>
+      <data key="d4">"Citi Research prepared this report for Dattatray Jadhav."&lt;&lt;SEP&gt;"Citi Research provides tailored research and recommendations for clients like Dattatray Jadhav."&lt;&lt;SEP&gt;"Dattatray Jadhav is receiving insights and investment advice from Citi Research, indicating a client-research relationship."&lt;SEP&gt;"Dattatray Jadhav is the client for whom the report prepared by Citi Research about Tesla Inc was intended."&lt;SEP&gt;"Prepared for Dattatray Jadhav shows that he is the intended recipient of the report provided by Citi Research."&lt;</data>
+      <data key="d5">"Client Relationship"&lt;SEP&gt;"Prepared for"&lt;SEP&gt;"client engagement"&lt;SEP&gt;"client relationship"&lt;SEP&gt;"client, report"</data>
+      <data key="d6">chunk-d840ae7efd342e14b8cae5f3b8a57385&lt;SEP&gt;chunk-eab51557cfbb34bb89b43f87c8ba2e17&lt;SEP&gt;chunk-ffb78e6b81e8d890cc239b6b965cc763&lt;SEP&gt;chunk-0c102abbe093dc97fe93f753bc9c4eb5&lt;SEP&gt;chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </edge>
+    <edge source="&quot;FINANCIAL PERFORMANCE&quot;" target="&quot;RESEARCH REPORT&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Research reports often assess the financial performance of companies as part of their analysis.")&lt;</data>
+      <data key="d5">Analysis Assessment&lt;</data>
+      <data key="d6">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </edge>
+    <edge source="&quot;CVM - COMISSÃO DE VALORES MOBILIÁRIOS&quot;" target="&quot;CITIGROUP GLOBAL MARKETS BRASIL&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Citigroup Global Markets Brasil operates under the regulations of CVM."</data>
+      <data key="d5">"Regulatory Compliance"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;US$237.01&quot;" target="&quot;TESLA INC&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"The stock price of Tesla Inc is currently US$237.01, reflecting its market performance."</data>
+      <data key="d5">"stock price"</data>
+      <data key="d6">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </edge>
+    <edge source="&quot;CITIGROUP GLOBAL MARKETS INDIA PRIVATE LIMITED&quot;" target="&quot;NIKITA JADHAV&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Nikita Jadhav is named as the grievance officer for CGM, indicating a client service/patient oversight relationship."</data>
+      <data key="d5">"client-service"</data>
+      <data key="d6">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </edge>
+    <edge source="&quot;CITIGROUP GLOBAL MARKETS INDIA PRIVATE LIMITED&quot;" target="&quot;VISHAL BOHRA&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Vishal Bohra serves as the Compliance Officer for CGM, reflecting an internal oversight relationship."</data>
+      <data key="d5">"compliance"</data>
+      <data key="d6">chunk-f9d7c2e1ac5d0b63c738e1d09ddcc61b</data>
+    </edge>
+    <edge source="&quot;RETAIL CLIENTS&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research develops specialized reports for retail clients outlining various investment options."&lt;</data>
+      <data key="d5">"client services"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;CITIGROUP GLOBAL MARKETS MALAYSIA SDN BHD&quot;" target="&quot;CITIGROUP GLOBAL MARKETS SINGAPORE PTE. LTD.&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Both are subsidiaries of Citigroup Inc. offering similar investment products in different countries"</data>
+      <data key="d5">"Subsidiary Relationship"</data>
+      <data key="d6">chunk-14ce688091fef630e7c84c08350b3f6e</data>
+    </edge>
+    <edge source="&quot;PRODUCT&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research prohibits the unauthorized use, duplication, redistribution, or disclosure of the Product."&lt;</data>
+      <data key="d5">"Prohibition"</data>
+      <data key="d6">chunk-2d010d2489fcbe783737a4cc44e2e073</data>
+    </edge>
+    <edge source="&quot;ONLINE VERSION&quot;" target="&quot;RESEARCH REPORT&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"The online version offers an easily accessible format of the research report that may include more comprehensive data.")&lt;</data>
+      <data key="d5">Accessibility&lt;</data>
+      <data key="d6">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </edge>
+    <edge source="&quot;ETFS&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research provides insights into ETFs as part of its financial analysis."&lt;</data>
+      <data key="d5">"investment vehicles"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;CITIVELOCITY&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Citi Research supports its analytical claims by directing clients to platforms such as CitiVelocity for data and analytics."&lt;</data>
+      <data key="d5">"platform usage"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;DATA AGGREGATION&quot;" target="&quot;RESEARCH REPORT&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Data aggregation is vital in preparing research reports by compiling various data sources for analysis.")&lt;</data>
+      <data key="d5">Research Process&lt;</data>
+      <data key="d6">chunk-cca80b453bcf4b9f5114ceb3e1f63c60</data>
+    </edge>
+    <edge source="&quot;EXECUTIVE ORDER 13959&quot;" target="&quot;CITI RESEARCH&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research highlights compliance with Executive Order 13959 in their research to guide clients on investment restrictions."&lt;</data>
+      <data key="d5">"regulatory compliance"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;FINRA&quot;" target="&quot;CITIGROUP GLOBAL MARKETS INC.&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Citigroup Global Markets Inc. is a member of FINRA, showcasing the regulatory relationship governing securities firms in the U.S."</data>
+      <data key="d5">"regulation"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;CITI RESEARCH&quot;" target="&quot;PRICE CHART&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research utilizes price charts to illustrate historical performance of financial instruments."&lt;</data>
+      <data key="d5">"historical analysis"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;CITI RESEARCH&quot;" target="&quot;TESLA INC&quot;">
+      <data key="d3">45.0</data>
+      <data key="d4">"Citi Research covers Tesla Inc. in its research reports."&lt;&lt;SEP&gt;"Citi Research is analyzing Tesla Inc and providing insights on its operational issues and financial performance."&lt;SEP&gt;"Citi Research may include analysis or estimates related to Tesla Inc in their financial reports."&lt;&lt;SEP&gt;"Citi Research produces investment reports and analysis, which could include Tesla Inc in its research offerings."&lt;&lt;SEP&gt;"Citi Research provides investment ratings and insights that may influence the investment decisions related to Tesla Inc."&lt;SEP&gt;"Citi Research provides research coverage including analyses and recommendations regarding Tesla Inc."</data>
+      <data key="d5">"Investment Analysis"&lt;SEP&gt;"Research Coverage"&lt;SEP&gt;"analysis, research"&lt;SEP&gt;"investment analysis"&lt;SEP&gt;"research coverage"&lt;SEP&gt;Research Analysis&lt;</data>
+      <data key="d6">chunk-d840ae7efd342e14b8cae5f3b8a57385&lt;SEP&gt;chunk-eab51557cfbb34bb89b43f87c8ba2e17&lt;SEP&gt;chunk-cca80b453bcf4b9f5114ceb3e1f63c60&lt;SEP&gt;chunk-ffb78e6b81e8d890cc239b6b965cc763&lt;SEP&gt;chunk-0c102abbe093dc97fe93f753bc9c4eb5&lt;SEP&gt;chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;CITI RESEARCH&quot;" target="&quot;RATING HISTORY TABLE&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"Citi Research includes rating history tables in their reports to show changes in analyst ratings over time."&lt;</data>
+      <data key="d5">"rating documentation"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;CITI RESEARCH&quot;" target="&quot;FUNDAMENTAL COVERAGE&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Citi Research provides fundamental coverage to delve into the intrinsic value of financial instruments."&lt;</data>
+      <data key="d5">"financial analysis"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;CITI RESEARCH&quot;" target="&quot;CITIGROUP GLOBAL MARKETS INC.&quot;">
+      <data key="d3">15.0</data>
+      <data key="d4">"Citi Research is a division under Citigroup Global Markets Inc., focusing on providing insights and analysis.")&lt;&lt;SEP&gt;"Citigroup Global Markets Inc. is the legal entity responsible for the product that Citi Research prepares."</data>
+      <data key="d5">"Company Responsibility"&lt;SEP&gt;Company Division&lt;</data>
+      <data key="d6">chunk-cca80b453bcf4b9f5114ceb3e1f63c60&lt;SEP&gt;chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;CITI RESEARCH&quot;" target="&quot;SECURITIES AND FUTURES ORDINANCE&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"Citi Research's report issued in Hong Kong may relate to the Securities and Futures Ordinance."</data>
+      <data key="d5">"Compliance"</data>
+      <data key="d6">chunk-4bdfbf88648ff786015fe7ca8df2a261</data>
+    </edge>
+    <edge source="&quot;CITI RESEARCH&quot;" target="&quot;ITAY MICHAELI&quot;">
+      <data key="d3">15.0</data>
+      <data key="d4">"Itay Michaeli is an analyst at Citi Research who contributed to the report on Tesla Inc."&lt;SEP&gt;"Itay Michaeli is an analyst working for Citi Research, thus indicating a professional relationship."</data>
+      <data key="d5">"Professional Association"&lt;SEP&gt;"authorship"</data>
+      <data key="d6">chunk-ffb78e6b81e8d890cc239b6b965cc763&lt;SEP&gt;chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </edge>
+    <edge source="&quot;CITI RESEARCH&quot;" target="&quot;EASTERN DATE-TIME&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Citi Research provides reports that are referenced by Eastern date-time for clarity on when information is made available."&lt;</data>
+      <data key="d5">"time standard"</data>
+      <data key="d6">chunk-0c102abbe093dc97fe93f753bc9c4eb5</data>
+    </edge>
+    <edge source="&quot;HIGH RISK&quot;" target="&quot;TESLA INC&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Despite being classified as High Risk, Tesla shows improved financial performance that contributes positively to its analysis."</data>
+      <data key="d5">"risk assessment"</data>
+      <data key="d6">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </edge>
+    <edge source="&quot;US SECURITIES AND EXCHANGE COMMISSION&quot;" target="&quot;CITIGROUP GLOBAL MARKETS INC.&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Under the jurisdiction of the SEC, Citigroup Global Markets Inc. follows federal securities laws, demonstrating compliance."</data>
+      <data key="d5">"regulation"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;RISK RATING&quot;" target="&quot;INVESTMENT RATINGS&quot;">
+      <data key="d3">6.0</data>
+      <data key="d4">"Both risk ratings and investment ratings are tools used by Citi Research to evaluate the potential of stocks."</data>
+      <data key="d5">"Stock Evaluation"</data>
+      <data key="d6">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </edge>
+    <edge source="&quot;DIFC&quot;" target="&quot;CGML&quot;">
+      <data key="d3">9.0</data>
+      <data key="d4">"Operating in DIFC, CGML is subject to its regulatory requirements, providing an operational relationship based on compliance."</data>
+      <data key="d5">"location, regulation"</data>
+      <data key="d6">chunk-bb30e0da8c8a057be301e4a433778ec8</data>
+    </edge>
+    <edge source="&quot;TESLA INC&quot;" target="&quot;CYBERTRUCK&quot;">
+      <data key="d3">7.0</data>
+      <data key="d4">"The Cybertruck is anticipated as a new product that could influence Tesla's long-term growth and stock valuation."</data>
+      <data key="d5">"product launch"</data>
+      <data key="d6">chunk-d840ae7efd342e14b8cae5f3b8a57385</data>
+    </edge>
+    <edge source="&quot;TESLA INC&quot;" target="&quot;CATALYST WATCH UPSIDE/DOWNSIDE&quot;">
+      <data key="d3">5.0</data>
+      <data key="d4">"The Catalyst Watch calls indicate expectations about movements in Tesla's share price."</data>
+      <data key="d5">"Share Price Movement"</data>
+      <data key="d6">chunk-ffb78e6b81e8d890cc239b6b965cc763</data>
+    </edge>
+    <edge source="&quot;TESLA INC&quot;" target="&quot;CITIGROUP GLOBAL MARKETS INC.&quot;">
+      <data key="d3">8.0</data>
+      <data key="d4">"Citigroup Global Markets Inc. provides various services including investment banking services to Tesla Inc and has a financial interest in it."</data>
+      <data key="d5">"investment banking, financial services"</data>
+      <data key="d6">chunk-2fcbc430f91f069df5acf1ebc52341e8</data>
+    </edge>
+  </graph>
+</graphml>
