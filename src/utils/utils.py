@@ -28,18 +28,41 @@ class UnlimitedSemaphore:
 
 @dataclass
 class EmbeddingFunc:
+    """
+    A function to compute embeddings for a given input.
+
+    Args:
+        embedding_dim (int): The dimensionality of the embeddings.
+        max_token_size (int): The maximum token size for the embedding.
+        func (callable): The function to compute embeddings.
+        concurrent_limit (int): The maximum number of concurrent calls.
+    """
     embedding_dim: int
     max_token_size: int
     func: callable
     concurrent_limit: int = 16
 
     def __post_init__(self):
+        """
+        Initialize the semaphore for limiting concurrent calls.
+        If concurrent_limit is 0, unlimited concurrent calls are allowed.
+        """
         if self.concurrent_limit != 0:
             self._semaphore = asyncio.Semaphore(self.concurrent_limit)
         else:
             self._semaphore = UnlimitedSemaphore()
 
     async def __call__(self, *args, **kwargs) -> np.ndarray:
+        """
+        Call the underlying function with the provided arguments and await its result.
+        Use a semaphore to limit concurrent calls if concurrent_limit is not 0.
+        Args:
+            *args: Positional arguments for the function.
+            **kwargs: Keyword arguments for the function.
+
+        Returns:
+            np.ndarray: The computed embeddings.
+        """
         async with self._semaphore:
             return await self.func(*args, **kwargs)
 
@@ -53,7 +76,27 @@ def compute_mdhash_id(content, prefix: str = ""):
 
 
 def limit_async_func_call(max_size: int, waitting_time: float = 0.0001):
-    """Add restriction of maximum async calling times for a async func"""
+    """
+    Add restriction of maximum async calling times for a async func
+
+    Args:
+        max_size (int): Maximum async calling times.
+        waitting_time (float): Time to wait until next call.The limit_async_func_call function takes two parameters:
+        max_size (the maximum number of concurrent calls allowed) and waitting_time (the time to wait before retrying
+
+        if the maximum size is reached). Inside the limit_async_func_call function, a nested function final_decro is
+        defined. This function will be the actual decorator. Inside final_decro, a class variable __current_size is
+        initialized to 0. This variable keeps track of the current number of concurrent calls.
+        4.The wait_func function is defined within final_decro. This function is the decorated function that will be
+        called instead of the original function.Inside wait_func, a while loop checks if the current size is greater
+        than or equal to the maximum size. If it is, the function waits for the specified waitting_time using
+        await asyncio.sleep(waitting_time). Once the while loop finishes, the current size is incremented by 1,
+        indicating that a new concurrent call has started. The decorated function is then called with the provided
+        arguments and the result is awaited. After the decorated function finishes, the
+        current size is decremented by 1, indicating that a concurrent call has finished.
+        Finally, the wait_func function is returned as the decorated function.
+
+    """
 
     def final_decro(func):
         """Not using async.Semaphore to aovid use nest-asyncio"""
