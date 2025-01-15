@@ -35,6 +35,10 @@ print(
     rag.query("is this a syndicated or bilateral loan ? Syndicated loan is where we more than one lenders whereas bilateral loan is with only one lender", param=QueryParam(mode="hybrid"))
 )
 
+print(
+    rag.query("how much amount in dollars was associated with the credit line", param=QueryParam(mode="hybrid"))
+)
+
 
 
 """
