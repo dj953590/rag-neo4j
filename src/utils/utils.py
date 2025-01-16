@@ -118,6 +118,14 @@ def limit_async_func_call(max_size: int, waitting_time: float = 0.0001):
 
 
 def wrap_embedding_func_with_attrs(**kwargs):
+    """
+    Wrap a function with attributes and create an EmbeddingFunc instance.
+    Args:
+        **kwargs:
+
+    Returns:
+        EmbeddingFunc: An EmbeddingFunc instance.
+    """
     """Wrap a function with attributes"""
 
     def final_decro(func) -> EmbeddingFunc:
