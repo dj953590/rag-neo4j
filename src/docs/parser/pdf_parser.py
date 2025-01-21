@@ -25,7 +25,7 @@ from pypdf import PdfReader as pdf2_read
 
 from api import settings
 from api.utils.file_utils import get_project_base_directory
-from deepdoc.vision import OCR, Recognizer, LayoutRecognizer, TableStructureRecognizer
+from src.docs.vision import OCR, Recognizer, LayoutRecognizer, TableStructureRecognizer
 from rag.nlp import rag_tokenizer
 from copy import deepcopy
 from huggingface_hub import snapshot_download
