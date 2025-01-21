@@ -15,12 +15,7 @@ from tenacity import (
     retry_if_exception_type,
 )
 import sys
-
-if sys.version_info < (3, 9):
-    from typing import AsyncIterator
-else:
-    from collections.abc import AsyncIterator
-
+from collections.abc import AsyncIterator
 from src.utils.utils import safe_unicode_decode, wrap_embedding_func_with_attrs
 from src.utils.log import logger
 
@@ -44,6 +39,9 @@ async def openai_complete_if_cache(
         api_key=None,
         **kwargs,
 ) -> str:
+    """
+    OpenAI completion with caching.
+    """
     if api_key:
         os.environ["OPENAI_API_KEY"] = api_key
 
@@ -57,8 +55,8 @@ async def openai_complete_if_cache(
         messages.append({"role": "system", "content": system_prompt})
     messages.extend(history_messages)
     messages.append({"role": "user", "content": prompt})
-
-    # 添加日志输出
+    logger.debug("===== LLM Request =====")
+    logger.debug("===== LLM Response =====")
     logger.debug("===== Query Input to LLM =====")
     logger.debug(f"Query: {prompt}")
     logger.debug(f"System prompt: {system_prompt}")
