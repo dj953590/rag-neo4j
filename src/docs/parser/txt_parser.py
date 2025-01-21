@@ -12,7 +12,7 @@
 #
 import re
 
-from deepdoc.parser.utils import get_text
+from src.docs.parser.utils import get_text
 from rag.nlp import num_tokens_from_string
 
 
