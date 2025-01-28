@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import os
 import json
+import io
 
 from PIL.Image import Image
 from onnxtr.io import DocumentFile
@@ -94,7 +95,7 @@ class BaseProcessor(ABC):
             return True
         return False
 
-    def perform_ocr_with_onnxtr(self, image):
+    def perform_ocr(self, image):
         """
         Perform OCR on the image using the ONNX OCR engine.
         """
@@ -115,6 +116,22 @@ class BaseProcessor(ABC):
         Extract text from the file.
         """
         pass
+
+    def text_images_chunks(self, size=1024, overlap = 128, **kwargs):
+        """
+        Split the image into chunks and extract text and images.
+
+        Args:
+            size: The size of each chunk in pixels.
+            overlap: The overlap between chunks in pixels.
+            **kwargs: Additional keyword arguments for the text and images extraction method.
+
+        Returns:
+            A list of dictionaries, each containing the image data, bounding box coordinates, and extracted text and images.
+        """
+
+        pass
+
 
     @abstractmethod
     def extract_tables(self):
