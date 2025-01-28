@@ -23,8 +23,8 @@ from PIL import Image
 import numpy as np
 from pypdf import PdfReader as pdf2_read
 
-from api import settings
-from api.utils.file_utils import get_project_base_directory
+
+from src.utils.utils import get_project_base_directory
 from src.docs.vision import OCR, Recognizer, LayoutRecognizer, TableStructureRecognizer
 from rag.nlp import rag_tokenizer
 from copy import deepcopy
@@ -40,6 +40,7 @@ class RAGFlowPdfParser:
         self.tbl_det = TableStructureRecognizer()
 
         self.updown_cnt_mdl = xgb.Booster()
+        """
         if not settings.LIGHTEN:
             try:
                 import torch
@@ -47,6 +48,7 @@ class RAGFlowPdfParser:
                     self.updown_cnt_mdl.set_param({"device": "cuda"})
             except Exception:
                 logging.exception("RAGFlowPdfParser __init__")
+        """
         try:
             model_dir = os.path.join(
                 get_project_base_directory(),
@@ -91,10 +93,6 @@ class RAGFlowPdfParser:
 
     def _match_proj(self, b):
         proj_patt = [
-            r"第[零一二三四五六七八九十百]+章",
-            r"第[零一二三四五六七八九十百]+[条节]",
-            r"[零一二三四五六七八九十百]+[、是 　]",
-            r"[\(（][零一二三四五六七八九十百]+[）\)]",
             r"[\(（][0-9]+[）\)]",
             r"[0-9]+(、|\.[　 ]|）|\.[^0-9./a-zA-Z_%><-]{4,})",
             r"[0-9]+\.[0-9.]+(、|\.[ 　])",

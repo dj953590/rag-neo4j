@@ -14,6 +14,50 @@ from typing import Any, List, Union
 from src.utils.log import logger
 
 ENCODER = None
+PROJECT_BASE = os.getenv("RAG_PROJECT_BASE") or os.getenv("RAG_DEPLOY_BASE")
+RAG_BASE = os.getenv("RAG_BASE")
+
+
+def get_project_base_directory(*args):
+    """
+    Return the project base directory.
+        param args: The path to join with the project base directory.
+        return: PROJECT_BASE
+    """
+    global PROJECT_BASE
+    if PROJECT_BASE is None:
+        PROJECT_BASE = os.path.abspath(
+            os.path.join(
+                os.path.dirname(os.path.realpath(__file__)),
+                os.pardir,
+                os.pardir,
+            )
+        )
+
+    if args:
+        return os.path.join(PROJECT_BASE, *args)
+    return PROJECT_BASE
+
+
+def get_rag_directory(*args):
+    """
+    Return the RAG base directory.
+        param args: The path to join with the RAG base directory.
+        return: RAG_BASE
+    """
+    global RAG_BASE
+    if RAG_BASE is None:
+        RAG_BASE = os.path.abspath(
+            os.path.join(
+                os.path.dirname(os.path.realpath(__file__)),
+                os.pardir,
+                os.pardir,
+                os.pardir,
+            )
+        )
+    if args:
+        return os.path.join(RAG_BASE, *args)
+    return RAG_BASE
 
 
 class UnlimitedSemaphore:

@@ -17,7 +17,7 @@ import os
 
 from huggingface_hub import snapshot_download
 
-from api.utils.file_utils import get_project_base_directory
+from src.utils.utils import get_project_base_directory
 from .operators import *  # noqa: F403
 import math
 import numpy as np
