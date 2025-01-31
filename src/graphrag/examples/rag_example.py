@@ -15,7 +15,6 @@ rag = TKGS(
     # llm_model_func=gpt_4o_complete
 )
 
-
 with open("./Citibank-Amazon.txt", "r", encoding="utf-8") as f:
     rag.insert(f.read())
 
@@ -23,36 +22,38 @@ with open("./Citibank-Amazon.txt", "r", encoding="utf-8") as f:
 
 
 # Perform local search
-print(
-    rag.query("What is Origination date or executed date for the Loan ?", param=QueryParam(mode="hybrid"))
-)
+
+query = "Give the loan executed date or dated between Amazon and the lenders ?"
+print(query)
 
 print(
-    rag.query("What kind of credit line Amazon has ?", param=QueryParam(mode="hybrid"))
+    rag.query(query, param=QueryParam(mode="hybrid"))
 )
+
+query = "What kind of credit line Amazon has ?"
+print(query)
+print(
+    rag.query(query, param=QueryParam(mode="hybrid"))
+)
+query = "is this a syndicated or bilateral loan ? Syndicated loan is where we more than one lenders whereas bilateral loan is with only one lender"
+print(query)
 
 print(
-    rag.query("is this a syndicated or bilateral loan ? Syndicated loan is where we more than one lenders whereas bilateral loan is with only one lender", param=QueryParam(mode="hybrid"))
+    rag.query(query, param=QueryParam(mode="hybrid"))
 )
+
+query = "how much amount in dollars was associated with the credit line"
+print(query)
 
 print(
-    rag.query("how much amount in dollars was associated with the credit line", param=QueryParam(mode="hybrid"))
+    rag.query(query, param=QueryParam(mode="hybrid"))
 )
 
+while True:
+    query = input("Enter your query (or type 'exit' to quit): ")
+    if query.lower() == 'exit':
+        break
+    result = rag.query(query, param=QueryParam(mode="hybrid"))
+    print(result)
 
 
-"""
-# Perform global search
-print(
-    rag.query("What a MarketCap of Tata Give it in numbers with appropriate symbol ?", param=QueryParam(mode="hybrid"))
-)
-
-# Perform hybrid search
-print(
-    rag.query("Who was the author of this document this is not the same as who this document is meant for its the analyst who wrote this document ?", param=QueryParam(mode="hybrid"))
-)
-
-print(
-    rag.query("Summarize TTL Company Description, Investment Strategy, Valuation and Risks ?", param=QueryParam(mode="hybrid"))
-)
-"""
