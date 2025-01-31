@@ -14,7 +14,6 @@ from src.docs.parser.base_processor import BaseProcessor
 
 
 class PDFProcessor(BaseProcessor, ABC):
-
     def text_and_images(self):
         """
         Extract text, images, and tables from the PDF.
@@ -63,7 +62,7 @@ class PDFProcessor(BaseProcessor, ABC):
                 # image = self.preprocess_image(image)
 
                 # Perform OCR on the image using onnxtr
-                ocr_result = self.perform_ocr_with_onnxtr(image)
+                ocr_result = self.perform_ocr(image)
                 ocr_text = " ".join(
                     word.value
                     for block in ocr_result.pages[0].blocks
@@ -98,12 +97,14 @@ def main(pdf_path, output_path):
     """
     extractor = PDFProcessor(file_path=pdf_path, output_path=output_path)
     structured_data = extractor.process()
-    print(f"Structured data saved to {output_path} in the json format \n {structured_data}")
+    print(
+        f"Structured data saved to {output_path} in the json format \n {structured_data}"
+    )
 
 
 if __name__ == "__main__":
     pdf_path = (
-            Path(__file__).parent / "docs" / "neo4j.pdf"
+        Path(__file__).parent / "docs" / "neo4j.pdf"
     )  # Replace with your PDF file path
     output_path = Path(__file__).parent / "docs" / "neo4j.json"  # Output JSON file
     main(pdf_path, output_path)
