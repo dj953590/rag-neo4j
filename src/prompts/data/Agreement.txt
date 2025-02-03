@@ -1,0 +1,32 @@
+company
+corporation
+agreement
+amendment
+executed date
+maturity date
+waiver
+borrower
+guarantor
+obligor
+lender
+secured party
+agent
+facility
+letter of credit
+base rate benchmark
+interest rate
+margin
+default interest
+collateral
+security trustee
+pledgor
+lien
+lienholder
+covenants
+schedule
+prepayment
+syndicated
+assignee
+transferor
+agency
+regulatory

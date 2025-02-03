@@ -11,9 +11,10 @@ import numpy as np
 
 
 class BaseProcessor(ABC):
-    def __init__(self, file_path, output_path=None):
+    def __init__(self, file_path, output_path=None, output_text_path=None):
         self.file_path = file_path
         self.output_path = output_path
+        self.output_text_path = output_text_path
         # Initialize the OCR model
         self.ocr_model = ocr_predictor(
             det_arch="fast_base",  # detection architecture
@@ -117,28 +118,7 @@ class BaseProcessor(ABC):
         """
         pass
 
-    def text_images_chunks(self, size=1024, overlap = 128, **kwargs):
-        """
-        Split the image into chunks and extract text and images.
 
-        Args:
-            size: The size of each chunk in pixels.
-            overlap: The overlap between chunks in pixels.
-            **kwargs: Additional keyword arguments for the text and images extraction method.
-
-        Returns:
-            A list of dictionaries, each containing the image data, bounding box coordinates, and extracted text and images.
-        """
-
-        pass
-
-
-    @abstractmethod
-    def extract_tables(self):
-        """
-        Extract tables from the file.
-        """
-        pass
 
     def save_images(self, image_data, output_dir, image_name):
         """
@@ -159,6 +139,14 @@ class BaseProcessor(ABC):
         with open(self.output_path, "w", encoding="utf-8") as f:
             json.dump(structured_data, f, indent=4, ensure_ascii=False)
 
+    def extract_text_from_structured_data(self, structured_data):
+        extracted_text = []
+        for page in structured_data:
+            for content in page["content"]:
+                if content["type"] == "text" or content["type"] == "ocr_text":
+                    extracted_text.append(content["text"])
+        return "\n".join(extracted_text)
+
     def process(self):
         """
         Process the file and return structured data in JSON format.
@@ -167,4 +155,9 @@ class BaseProcessor(ABC):
         if self.output_path:
             self.save_structured_data(structured_data)
 
-        return json.dumps(structured_data, indent=4)
+        if self.output_text_path:
+            extracted_text = self.extract_text_from_structured_data(structured_data)
+            with open(self.output_text_path, "w", encoding="utf-8") as f:
+                f.write(extracted_text)
+
+        return structured_data

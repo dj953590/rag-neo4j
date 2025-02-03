@@ -2,6 +2,7 @@ import logging
 from rich.logging import RichHandler
 from rich.console import Console
 from rich.theme import Theme
+import sys
 
 # Define a custom theme for the console output (optional)
 custom_theme = Theme({
@@ -40,4 +41,10 @@ file_formatter = logging.Formatter(
 )
 file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)
+
+for handler in logging.getLogger().handlers:
+    if isinstance(handler, logging.StreamHandler):
+        handler.setStream(sys.stdout)
+        handler.stream.reconfigure(encoding='utf-8')
+
 

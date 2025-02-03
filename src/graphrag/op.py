@@ -366,9 +366,10 @@ async def extract_entities(
         tuple_delimiter=PROMPTS["DEFAULT_TUPLE_DELIMITER"],
         record_delimiter=PROMPTS["DEFAULT_RECORD_DELIMITER"],
         completion_delimiter=PROMPTS["DEFAULT_COMPLETION_DELIMITER"],
-        entity_types=",".join(entity_types),
+        entity_types=PROMPTS["DEFAULT_ENTITY_TYPES"],
         language=language,
     )
+    #entity_types=",".join(entity_types),
     # add example's format
     examples = examples.format(**example_context_base)
 
@@ -377,7 +378,7 @@ async def extract_entities(
         tuple_delimiter=PROMPTS["DEFAULT_TUPLE_DELIMITER"],
         record_delimiter=PROMPTS["DEFAULT_RECORD_DELIMITER"],
         completion_delimiter=PROMPTS["DEFAULT_COMPLETION_DELIMITER"],
-        entity_types=",".join(entity_types),
+        entity_types=PROMPTS["DEFAULT_ENTITY_TYPES"],
         examples=examples,
         language=language,
     )
@@ -404,10 +405,13 @@ async def extract_entities(
         chunk_key = chunk_key_dp[0]
         chunk_dp = chunk_key_dp[1]
         content = chunk_dp["content"]
-        # hint_prompt = entity_extract_prompt.format(**context_base, input_text=content)
+        hint_prompt = entity_extract_prompt.format(**context_base, input_text=content)
+        """
         hint_prompt = entity_extract_prompt.format(
             **context_base, input_text="{input_text}"
         ).format(**context_base, input_text=content)
+        """
+        logger.info(f"Prompt for Extracting entities from chunk: {hint_prompt}")
 
         final_result = await use_llm_func(hint_prompt)
         history = pack_user_ass_to_openai_messages(hint_prompt, final_result)
@@ -466,10 +470,16 @@ async def extract_entities(
             end="",
             flush=True,
         )
+        #log all the entities and relations
+
+        logger.info(f"Extracted entities: {maybe_nodes}")
+        logger.info(f"Extracted relations: {maybe_edges}")
+
         return dict(maybe_nodes), dict(maybe_edges)
 
     results = []
-    for chunk_key_dp in tqdm(ordered_chunks, total=len(ordered_chunks), desc="Extracting entities from chunks", unit="chunk"):
+    for chunk_key_dp in tqdm(ordered_chunks, total=len(ordered_chunks), desc="Extracting entities from chunks",
+                             unit="chunk"):
         result = await _process_single_content(chunk_key_dp)
         results.append(result)
     """
@@ -998,6 +1008,8 @@ async def _find_most_related_edges_from_entities(
     seen = set()
 
     for this_edges in all_related_edges:
+        if this_edges is None:
+            continue
         for e in this_edges:
             sorted_edge = tuple(sorted(e))
             if sorted_edge not in seen:

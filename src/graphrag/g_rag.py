@@ -115,7 +115,7 @@ class TKGS:
           GRAG: An instance of the GRAG class.
     """
     working_dir: str = field(
-        default_factory=lambda: f"./lightrag_cache_{datetime.now().strftime('%Y-%m-%d-%H:%M:%S')}"
+        default_factory=lambda: f"./tkgs_cache_{datetime.now().strftime('%Y-%m-%d-%H:%M:%S')}"
     )
     # Default not to use embedding cache
     embedding_cache_config: dict = field(
@@ -157,7 +157,7 @@ class TKGS:
 
     embedding_func: EmbeddingFunc = field(default_factory=lambda: openai_embedding)
     embedding_batch_num: int = 4
-    embedding_func_max_async: int = 2
+    embedding_func_max_async: int = 4
 
     # LLM
     llm_model_func: callable = gpt_4o_mini_complete
@@ -190,9 +190,6 @@ class TKGS:
             self.embedding_func
         )
 
-        ####
-        # add embedding func by walter
-        ####
         self.full_docs = (JsonKVStorage(namespace="full_docs", global_config=asdict(self),
                                         embedding_func=self.embedding_func, ))
 

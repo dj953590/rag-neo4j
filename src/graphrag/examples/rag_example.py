@@ -2,6 +2,8 @@ import os
 from src.graphrag.g_rag import TKGS, QueryParam
 from src.llm.oai import gpt_4o_mini_complete
 from dynaconf import settings
+from src.docs.parser.pdf_processor import PDFProcessor
+from pathlib2 import Path
 
 WORKING_DIR = "./amazon"
 
@@ -14,23 +16,21 @@ rag = TKGS(
     llm_model_func=gpt_4o_mini_complete,
     # llm_model_func=gpt_4o_complete
 )
+pdf_path = (
+        Path(__file__).parent / "amazon" / "citibank-amazon.pdf"
+)  # Replace with your PDF file path
+output_path = Path(__file__).parent / "amazon" / "citibank-amazon.json"  # Output JSON file
+output_text_path = Path(__file__).parent / "amazon" / "citibank-amazon.txt"  # Output JSON file
 
-with open("./Citibank-Amazon.txt", "r", encoding="utf-8") as f:
+extractor = PDFProcessor(file_path=pdf_path, output_path=output_path, output_text_path=output_text_path)
+structured_data = extractor.process()
+
+with open(output_text_path, "r", encoding="utf-8") as f:
     rag.insert(f.read())
 
-
-
-
 # Perform local search
-
-query = "Give the loan executed date or dated between Amazon and the lenders ?"
-print(query)
-
-print(
-    rag.query(query, param=QueryParam(mode="hybrid"))
-)
-
-query = "What kind of credit line Amazon has ?"
+"""
+query = "What kind of credit line GXO has with Citibank and provide the exact amount ?"
 print(query)
 print(
     rag.query(query, param=QueryParam(mode="hybrid"))
@@ -42,18 +42,16 @@ print(
     rag.query(query, param=QueryParam(mode="hybrid"))
 )
 
-query = "how much amount in dollars was associated with the credit line"
+query = "how much amount in dollars was associated with the credit agreement ?"
 print(query)
 
 print(
     rag.query(query, param=QueryParam(mode="hybrid"))
 )
-
+"""
 while True:
     query = input("Enter your query (or type 'exit' to quit): ")
     if query.lower() == 'exit':
         break
     result = rag.query(query, param=QueryParam(mode="hybrid"))
     print(result)
-
-

@@ -1,19 +1,17 @@
 from abc import ABC
 
 import fitz  # PyMuPDF
-import json
 from PIL import Image
 import io
-import pdfplumber  # For table extraction
-import cv2
-import numpy as np
-from onnxtr.io import DocumentFile
-from onnxtr.models import ocr_predictor, EngineConfig
 from pathlib2 import Path
 from src.docs.parser.base_processor import BaseProcessor
 
 
 class PDFProcessor(BaseProcessor, ABC):
+    def __init__(self, file_path, output_path=None, output_text_path=None):
+        super().__init__(file_path=file_path, output_path=output_path, output_text_path=output_text_path)
+        self.doc = fitz.open(self.file_path)
+
     def text_and_images(self):
         """
         Extract text, images, and tables from the PDF.
@@ -25,6 +23,7 @@ class PDFProcessor(BaseProcessor, ABC):
 
             # Extract text blocks with font information
             text_blocks = page.get_text("dict")["blocks"]
+            previous_text = ""
             for block in text_blocks:
                 if block["type"] == 0:  # Text block
                     for line in block["lines"]:
@@ -33,7 +32,13 @@ class PDFProcessor(BaseProcessor, ABC):
                             font_size = span["size"]
                             is_heading = self.is_heading(span)
                             is_bullet = self.is_bullet_point(span)
-
+                            # Merge single character text with the next line
+                            if len(text.strip()) == 1:
+                                previous_text += text.strip()
+                                continue
+                            else:
+                                text = previous_text + text.strip()
+                                previous_text = ""
                             # Add metadata for headings and bullets
                             metadata = {
                                 "type": "text",
@@ -51,6 +56,7 @@ class PDFProcessor(BaseProcessor, ABC):
                             }
                             page_data["content"].append(metadata)
             # Extract images and perform OCR
+            """
             image_list = page.get_images(full=True)
             for img_index, img in enumerate(image_list):
                 xref = img[0]
@@ -86,7 +92,7 @@ class PDFProcessor(BaseProcessor, ABC):
                         "font_size": None,  # OCR does not provide font size information
                     }
                 )
-
+            """
             structured_data.append(page_data)
         return structured_data
 

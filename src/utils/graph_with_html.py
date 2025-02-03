@@ -3,7 +3,10 @@ from pyvis.network import Network
 import random
 import os
 # Load the GraphML file
-G = nx.read_graphml("../graphrag/examples/amazon/graph_chunk_entity_relation.graphml")
+filepath = "../graphrag/examples/amazon/graph_chunk_entity_relation.graphml"
+output_html = '_'.join(filepath.split('/')[1:-1]) + '.html'
+print(output_html)
+G = nx.read_graphml(filepath)
 
 # Create a Pyvis network
 net = Network(height="100vh", notebook=True)
@@ -24,7 +27,7 @@ for edge in net.edges:
         edge["title"] = edge["description"]
 
 # Save and display the network
-net.show("knowledge_graph.html")
+net.show(output_html)
 
 # Define the output folder
 output_folder = "./output"
@@ -33,7 +36,7 @@ output_folder = "./output"
 os.makedirs(output_folder, exist_ok=True)
 
 # Save the network HTML file in the output folder
-output_path = os.path.join(output_folder, "knowledge_graph.html")
+output_path = os.path.join(output_folder, output_html)
 net.save_graph(output_path)
 
 print(f"Knowledge graph saved to: {output_path}")

@@ -1,5 +1,17 @@
-GRAPH_FIELD_SEP = "<SEP>"
+import os
 
+file_path = os.path.join(os.path.dirname(__file__), "data\\Agreement.txt")
+
+
+def default_entities_types(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+        default_entities = [line.strip() for line in lines if line.strip() and not line.startswith('#')]
+    return default_entities
+
+
+DEFAULT_ENTITY_TYPES = default_entities_types(file_path)
+GRAPH_FIELD_SEP = "<SEP>"
 PROMPTS = {}
 
 PROMPTS["DEFAULT_LANGUAGE"] = "English"
@@ -8,16 +20,17 @@ PROMPTS["DEFAULT_RECORD_DELIMITER"] = "##"
 PROMPTS["DEFAULT_COMPLETION_DELIMITER"] = "<|COMPLETE|>"
 PROMPTS["process_tickers"] = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
 
-PROMPTS["DEFAULT_ENTITY_TYPES"] = ["company", "client", "author", "ticker", "industry", "event", "statistics"]
+PROMPTS["DEFAULT_ENTITY_TYPES"] = DEFAULT_ENTITY_TYPES
 
-PROMPTS["entity_extraction"] = """-Goal-
-Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.
+PROMPTS["entity_extraction"] = """You are efficient named entity relationship extractor 
+-Your Goal-
+Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities from the text, as well as those matching list of entity types, and all relationships among the identified entities
 Use {language} as output language.
 
 -Steps-
 1. Identify all entities. For each identified entity, extract the following information:
 - entity_name: Name of the entity, use same language as input text. If English, capitalized the name.
-- entity_type: One of the following types: [{entity_types}]
+- entity_type: One of the following types: {entity_types}or any other relevant type identified from the text
 - entity_description: Comprehensive description of the entity's attributes and activities
 Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
 
@@ -53,7 +66,6 @@ Output:
 
 PROMPTS["entity_extraction_examples"] = [
     """Example 1:
-
 Entity_types: ["company", client, "author", "ticker", "industry", "event", "statistics"]
 Text:
 Tata Technologies (TATE.NS) Initiate at Sell: Leveraged to Auto Vertical;
@@ -88,6 +100,7 @@ Output:
 ("relationship"{tuple_delimiter}"TTL"{tuple_delimiter}"VinFast"{tuple_delimiter}"TTL was engaged by {tuple_delimiter}VinFast across full vehicle turnkey programs for their VF6 and VF7 models resulting in significant growth for Tata"{tuple_delimiter}7){record_delimiter}
 ("relationship"{tuple_delimiter}"TTL"{tuple_delimiter}"Sell"{tuple_delimiter}"We initiate TTL with a {tuple_delimiter}Sell rating and {tuple_delimiter}target price of Rs1000"{tuple_delimiter}6){record_delimiter}
 ("content_keywords"{tuple_delimiter}"Growth Drivers, Client Expansion, Company Financials, Revenues"){completion_delimiter}
+#############################""",
 #############################""",
 ]
 
@@ -204,7 +217,6 @@ Output:
 }}
 #############################""",
 ]
-
 
 PROMPTS["naive_rag_response"] = """---Role---
 
