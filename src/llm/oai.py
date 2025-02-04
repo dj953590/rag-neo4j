@@ -1,6 +1,7 @@
 import os
 import numpy as np
 from typing import Union, List
+from dynaconf import settings
 from openai import (
     AsyncOpenAI,
     APIConnectionError,
@@ -143,14 +144,31 @@ async def gpt_4o_mini_complete(
         **kwargs,
     )
 
+async def llama_3_3_70b_versatile(
+        prompt, system_prompt=None, history_messages=[], keyword_extraction=False, **kwargs
+) -> str:
+    keyword_extraction = kwargs.pop("keyword_extraction", None)
+    if keyword_extraction:
+        kwargs["response_format"] = GPTKeywordExtractionFormat
+    return await openai_complete_if_cache(
+        "gpt-4o-mini",
+        prompt,
+        system_prompt=system_prompt,
+        history_messages=history_messages,
+        **kwargs,
+    )
+
 
 if __name__ == "__main__":
     import asyncio
 
 
     async def main():
+        os.environ["OPENAI_API_KEY"] = settings.get("OPENAI_API_KEY")
         result = await gpt_4o_mini_complete("How are you?")
         print(result)
+        os.environ['GROQ_API_KEY'] = settings.get('GROQ_API_KEY', '')
+        base_url = settings.get('GROQ_BASE_URL', 'https://api.openai.com')
 
 
     asyncio.run(main())
