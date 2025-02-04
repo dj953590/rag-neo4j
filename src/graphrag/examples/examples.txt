@@ -1,3 +1,13 @@
+1) series of capabilities demo
+
+**** Is the current solution scalable ? we talked about it briefly how we have stored multi - step instruction in the graph database which  will straight away help what Amal is thinking around 4 datasets
+
+**** Do we have right strategy to tune the prompt ?
+**** Can we handle all kind of documents - whether it is scanned, images or various other document types like doc, xls or ppt - work in progress
+
+
+
+
 You are efficient names entity relationship recognizer. Given a text document identify all entities of those types from the text and all relationships among the identified entities.
 **Steps
 1. 
@@ -5,7 +15,7 @@ Identify all entities. For each identified entity, extract the following informa
 - entity_name: Name of the entity, use same language as input text. If English, capitalized the name.
 - entity_type: One of the following types: ["AGREEMENT","BORROWER","LENDER","AGENT", "LOAN AMOUNT", "FACILITY","INTEREST RATE", "SYNDICATION,"AGREEMENT DATE"]
 - entity_description: Comprehensive description of the entity"s attributes and activities
-** Format each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>) 
+** Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>) 
 2.
 From the entities identified in step 1, 
 identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
@@ -15,10 +25,10 @@ For each pair of related entities, extract the following information:
 - relationship_description: explanation as to why you think the source entity and the target entity are related to each other
 - relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity
 - relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on concepts or themes rather than specific details
-**Format each relationship as ("relationship"<|><source_entity>{<|><target_entity>{<|><relationship_description><|><relationship_keywords><|><relationship_strength>)
+**Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{{tuple_delimiter}<target_entity>{{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)
 
 3. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
-**Format the content-level key words as ("content_keywords"<|><high_level_keywords>)
+**Format the content-level key words as ("content_keywords"{tuple_delimiter}<high_level_keywords>)
 
 
 Text document 
@@ -26,25 +36,70 @@ Text document
 Amazon Seller Lending Entity” means (a) Amazon Capital Funding LLC and/or (b) any other Subsidiary of the Company that replaces and/or substitutes Amazon Capital Funding LLC under, or constitutes an additional special purpose entity established in connection with, an Amazon Seller Lending Facility."
 
 
-("entity"<|>FIVE-YEAR REVOLVING CREDIT AGREEMENT<|>AGREEMENT<|>A financial contract dated November 1, 2023, among multiple parties, establishing a revolving credit facility for the borrowers.)
-("entity"<|>November 1, 2023<|>AGREEMENT DATE<|>The official date when the Five-Year Revolving Credit Agreement was entered into by the involved parties.)
-("entity"<|>AMAZON.COM, INC.<|>BORROWER<|>A Delaware corporation, acting as the primary borrower under the agreement.)
-("entity"<|>DESIGNATED BORROWERS<|>BORROWER<|>Certain subsidiaries of Amazon.com, Inc. that are designated as additional borrowers under the agreement.)
-("entity"<|>CITIBANK, N.A.<|>AGENT<|>Acts as the Administrative Agent, Sole Lead Arranger, and Syndication Agent for the revolving credit agreement.)
-("entity"<|>LENDERS<|>LENDER<|>A group of financial institutions, including Citibank, N.A., providing the revolving credit facility.)
-("entity"<|>BOFA SECURITIES, INC.<|>LENDER<|>A financial institution acting as one of the joint bookrunners in the syndication of the credit facility.)
-("entity"<|>DEUTSCHE BANK SECURITIES INC.<|>LENDER<|>A financial institution acting as one of the joint bookrunners in the syndication of the credit facility.)
-("entity"<|>HSBC SECURITIES (USA), INC.<|>LENDER<|>A financial institution acting as one of the joint bookrunners in the syndication of the credit facility.)
-("entity"<|>WELLS FARGO SECURITIES, LLC<|>LENDER<|>A financial institution acting as one of the joint bookrunners in the syndication of the credit facility.)
-("entity"<|>Amazon Seller Lending Entity<|>FACILITY<|>Refers to Amazon Capital Funding LLC or any other special purpose entity established in connection with an Amazon Seller Lending Facility.)
-("relationship"<|>FIVE-YEAR REVOLVING CREDIT AGREEMENT<|>AMAZON.COM, INC.<|>Amazon.com, Inc. is the primary borrower under the agreement.<|>borrowing, financial contract<|>9)
-("relationship"<|>FIVE-YEAR REVOLVING CREDIT AGREEMENT<|>DESIGNATED BORROWERS<|>Designated Borrowers are additional borrowers under the agreement.<|>borrowing, financial contract<|>8)
-("relationship"<|>FIVE-YEAR REVOLVING CREDIT AGREEMENT<|>CITIBANK, N.A.<|>Citibank, N.A. is the Administrative Agent and Sole Lead Arranger of the agreement.<|>financial management, administration<|>9)
-("relationship"<|>FIVE-YEAR REVOLVING CREDIT AGREEMENT<|>LENDERS<|>Lenders provide the credit facility under the agreement.<|>financing, lending<|>9)
-("relationship"<|>CITIBANK, N.A.<|>LENDERS<|>Citibank, N.A. acts as the Syndication Agent coordinating among lenders.<|>syndication, coordination<|>8)
-("relationship"<|>BOFA SECURITIES, INC.<|>LENDERS<|>BOFA Securities, Inc. is one of the financial institutions providing funding under the agreement.<|>lending, funding<|>7)
-("relationship"<|>DEUTSCHE BANK SECURITIES INC.<|>LENDERS<|>Deutsche Bank Securities Inc. is one of the financial institutions providing funding under the agreement.<|>lending, funding<|>7)
-("relationship"<|>HSBC SECURITIES (USA), INC.<|>LENDERS<|>HSBC Securities (USA), Inc. is one of the financial institutions providing funding under the agreement.<|>lending, funding<|>7)
-("relationship"<|>WELLS FARGO SECURITIES, LLC<|>LENDERS<|>Wells Fargo Securities, LLC is one of the financial institutions providing funding under the agreement.<|>lending, funding<|>7)
-("relationship"<|>Amazon Seller Lending Entity<|>AMAZON.COM, INC.<|>Amazon Seller Lending Entity is a subsidiary or special purpose entity of Amazon.com, Inc. for lending purposes.<|>subsidiary, financial services<|>7)
-("content_keywords"<|>Revolving Credit, Loan Agreement, Borrowing, Financial Institutions, Syndication, Lenders, Administrative Agent, Amazon, Banking, Credit Facility)
+("entity"{tuple_delimiter}FIVE-YEAR REVOLVING CREDIT AGREEMENT{tuple_delimiter}AGREEMENT{tuple_delimiter}A financial contract dated November 1, 2023, among multiple parties, establishing a revolving credit facility for the borrowers.)
+("entity"{tuple_delimiter}November 1, 2023{tuple_delimiter}AGREEMENT DATE{tuple_delimiter}The official date when the Five-Year Revolving Credit Agreement was entered into by the involved parties.)
+("entity"{tuple_delimiter}AMAZON.COM, INC.{tuple_delimiter}BORROWER{tuple_delimiter}A Delaware corporation, acting as the primary borrower under the agreement.)
+("entity"{tuple_delimiter}DESIGNATED BORROWERS{tuple_delimiter}BORROWER{tuple_delimiter}Certain subsidiaries of Amazon.com, Inc. that are designated as additional borrowers under the agreement.)
+("entity"{tuple_delimiter}CITIBANK, N.A.{tuple_delimiter}AGENT{tuple_delimiter}Acts as the Administrative Agent, Sole Lead Arranger, and Syndication Agent for the revolving credit agreement.)
+("entity"{tuple_delimiter}LENDERS{tuple_delimiter}LENDER{tuple_delimiter}A group of financial institutions, including Citibank, N.A., providing the revolving credit facility.)
+("entity"{tuple_delimiter}BOFA SECURITIES, INC.{tuple_delimiter}LENDER{tuple_delimiter}A financial institution acting as one of the joint bookrunners in the syndication of the credit facility.)
+("entity"{tuple_delimiter}DEUTSCHE BANK SECURITIES INC.{tuple_delimiter}LENDER{tuple_delimiter}A financial institution acting as one of the joint bookrunners in the syndication of the credit facility.)
+("entity"{tuple_delimiter}HSBC SECURITIES (USA), INC.{tuple_delimiter}LENDER{tuple_delimiter}A financial institution acting as one of the joint bookrunners in the syndication of the credit facility.)
+("entity"{tuple_delimiter}WELLS FARGO SECURITIES, LLC{tuple_delimiter}LENDER{tuple_delimiter}A financial institution acting as one of the joint bookrunners in the syndication of the credit facility.)
+("entity"{tuple_delimiter}Amazon Seller Lending Entity{tuple_delimiter}FACILITY{tuple_delimiter}Refers to Amazon Capital Funding LLC or any other special purpose entity established in connection with an Amazon Seller Lending Facility.)
+("relationship"{tuple_delimiter}FIVE-YEAR REVOLVING CREDIT AGREEMENT{tuple_delimiter}AMAZON.COM, INC.{tuple_delimiter}Amazon.com, Inc. is the primary borrower under the agreement.{tuple_delimiter}borrowing, financial contract{tuple_delimiter}9)
+("relationship"{tuple_delimiter}FIVE-YEAR REVOLVING CREDIT AGREEMENT{tuple_delimiter}DESIGNATED BORROWERS{tuple_delimiter}Designated Borrowers are additional borrowers under the agreement.{tuple_delimiter}borrowing, financial contract{tuple_delimiter}8)
+("relationship"{tuple_delimiter}FIVE-YEAR REVOLVING CREDIT AGREEMENT{tuple_delimiter}CITIBANK, N.A.{tuple_delimiter}Citibank, N.A. is the Administrative Agent and Sole Lead Arranger of the agreement.{tuple_delimiter}financial management, administration{tuple_delimiter}9)
+("relationship"{tuple_delimiter}FIVE-YEAR REVOLVING CREDIT AGREEMENT{tuple_delimiter}LENDERS{tuple_delimiter}Lenders provide the credit facility under the agreement.{tuple_delimiter}financing, lending{tuple_delimiter}9)
+("relationship"{tuple_delimiter}CITIBANK, N.A.{tuple_delimiter}LENDERS{tuple_delimiter}Citibank, N.A. acts as the Syndication Agent coordinating among lenders.{tuple_delimiter}syndication, coordination{tuple_delimiter}8)
+("relationship"{tuple_delimiter}BOFA SECURITIES, INC.{tuple_delimiter}LENDERS{tuple_delimiter}BOFA Securities, Inc. is one of the financial institutions providing funding under the agreement.{tuple_delimiter}lending, funding{tuple_delimiter}7)
+("relationship"{tuple_delimiter}DEUTSCHE BANK SECURITIES INC.{tuple_delimiter}LENDERS{tuple_delimiter}Deutsche Bank Securities Inc. is one of the financial institutions providing funding under the agreement.{tuple_delimiter}lending, funding{tuple_delimiter}7)
+("relationship"{tuple_delimiter}HSBC SECURITIES (USA), INC.{tuple_delimiter}LENDERS{tuple_delimiter}HSBC Securities (USA), Inc. is one of the financial institutions providing funding under the agreement.{tuple_delimiter}lending, funding{tuple_delimiter}7)
+("relationship"{tuple_delimiter}WELLS FARGO SECURITIES, LLC{tuple_delimiter}LENDERS{tuple_delimiter}Wells Fargo Securities, LLC is one of the financial institutions providing funding under the agreement.{tuple_delimiter}lending, funding{tuple_delimiter}7)
+("relationship"{tuple_delimiter}Amazon Seller Lending Entity{tuple_delimiter}AMAZON.COM, INC.{tuple_delimiter}Amazon Seller Lending Entity is a subsidiary or special purpose entity of Amazon.com, Inc. for lending purposes.{tuple_delimiter}subsidiary, financial services{tuple_delimiter}7)
+("content_keywords"{tuple_delimiter}Revolving Credit, Loan Agreement, Borrowing, Financial Institutions, Syndication, Lenders, Administrative Agent, Amazon, Banking, Credit Facility)
+
+["agreement","borrower","lender","agent", "loan amount", "facility","interest rate", "syndication,"agreement date"]
+
+series of 
+Is the current solution scalable ? we talked about it briefly how we have stored multi - step instruction in the graph database
+
+company
+agreement
+amendment
+executed date
+maturity date
+waiver
+borrower
+guarantor
+obligor
+lender
+secured party
+agent
+facility
+letter of credit
+base rate
+interest rate
+margin
+default interest
+collateral
+security trustee
+pledgor
+lien
+lienholder
+covenants
+schedule
+prepayment
+syndicated
+assignee
+transferor
+agency
+regulatory
+
+What are the alternative currency sublimit mentioned in the agreement ? provide the amount ?
+what is the executed date of the agreement between Citibank and Amazon ? Are there any previous agreements mentioned in the present document and if so what are they ?
+What is the exact aggregate commitments of the agreement between Citibank and Amazon ? Do not provide any explanation  
+Provide names of all the lenders for the agreement between Citibank and Amazon ? its just the names 
+
+What are alternative currencies in the agreement ?
+

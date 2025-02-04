@@ -51,7 +51,7 @@ print(
 """
 while True:
     query = input("Enter your query (or type 'exit' to quit): ")
-    if query.lower() == 'exit':
+    if query.lower() == 'bye' or query.lower() == 'exit':
         break
     result = rag.query(query, param=QueryParam(mode="hybrid"))
     print(result)
