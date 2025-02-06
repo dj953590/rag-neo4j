@@ -43,12 +43,12 @@ async def openai_complete_if_cache(
     """
     OpenAI completion with caching.
     """
-    if api_key:
+    if api_key and base_url:
         os.environ["OPENAI_API_KEY"] = api_key
+        openai_async_client = AsyncOpenAI(base_url=base_url)
+    else:
+        openai_async_client = AsyncOpenAI()
 
-    openai_async_client = (
-        AsyncOpenAI() if base_url is None else AsyncOpenAI(base_url=base_url)
-    )
     kwargs.pop("hashing_kv", None)
     kwargs.pop("keyword_extraction", None)
     messages = []
@@ -118,12 +118,13 @@ async def openai_embedding(
         base_url: str = None,
         api_key: str = None,
 ) -> np.ndarray:
-    if api_key:
+    if api_key and base_url:
         os.environ["OPENAI_API_KEY"] = api_key
+        openai_async_client = AsyncOpenAI(base_url=base_url)
+    else:
+        os.environ["OPENAI_API_KEY"] = settings.get("OPENAI_API_KEY")
+        openai_async_client = AsyncOpenAI()
 
-    openai_async_client = (
-        AsyncOpenAI() if base_url is None else AsyncOpenAI(base_url=base_url)
-    )
     response = await openai_async_client.embeddings.create(
         model=model, input=texts, encoding_format="float"
     )
@@ -144,11 +145,12 @@ async def gpt_4o_mini_complete(
         **kwargs,
     )
 
+
 async def llama_3_3_70b_versatile(
         prompt, system_prompt=None, history_messages=[], keyword_extraction=False, **kwargs
 ) -> str:
     keyword_extraction = kwargs.pop("keyword_extraction", None)
-    api_key= settings.get('GROQ_API_KEY', '')
+    api_key = settings.get('GROQ_API_KEY', '')
     base_url = settings.get('GROQ_BASE_URL', 'https://api.openai.com')
     if keyword_extraction:
         kwargs["response_format"] = GPTKeywordExtractionFormat
@@ -163,15 +165,59 @@ async def llama_3_3_70b_versatile(
     )
 
 
+async def llama_3_3_70b_turbo(
+        prompt, system_prompt=None, history_messages=[], keyword_extraction=False, **kwargs
+) -> str:
+    keyword_extraction = kwargs.pop("keyword_extraction", None)
+    api_key = settings.get('TOGETHER_API_KEY', '')
+    base_url = settings.get('TOGETHER_BASE_URL', 'https://api.togetherapi.com/v1')
+    if keyword_extraction:
+        kwargs["response_format"] = GPTKeywordExtractionFormat
+    return await openai_complete_if_cache(
+        "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        prompt,
+        system_prompt=system_prompt,
+        history_messages=history_messages,
+        base_url=base_url,
+        api_key=api_key,
+        **kwargs,
+    )
+
+
+async def deepseek_distill_llama(
+        prompt, system_prompt=None, history_messages=[], keyword_extraction=False, **kwargs
+) -> str:
+    keyword_extraction = kwargs.pop("keyword_extraction", None)
+    api_key = settings.get('TOGETHER_API_KEY', '')
+    base_url = settings.get('TOGETHER_BASE_URL', 'https://api.togetherapi.com/v1')
+    if keyword_extraction:
+        kwargs["response_format"] = GPTKeywordExtractionFormat
+    return await openai_complete_if_cache(
+        "deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
+        prompt,
+        system_prompt=system_prompt,
+        history_messages=history_messages,
+        base_url=base_url,
+        api_key=api_key,
+        **kwargs,
+    )
+
+
 if __name__ == "__main__":
     import asyncio
 
 
     async def main():
+        """
         os.environ["OPENAI_API_KEY"] = settings.get("OPENAI_API_KEY")
         result = await gpt_4o_mini_complete("How are you?")
         print(result)
         result = await llama_3_3_70b_versatile("How are you?")
+        print(result)
+        """
+        result = await llama_3_3_70b_turbo("How are you?")
+        print(result)
+        result = await deepseek_distill_llama("How are you?")
         print(result)
 
 

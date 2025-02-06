@@ -1,6 +1,7 @@
 import os
 from src.graphrag.g_rag import TKGS, QueryParam
-from src.llm.oai import gpt_4o_mini_complete
+from src.llm.oai import gpt_4o_mini_complete, llama_3_3_70b_turbo, deepseek_distill_llama
+from src.llm.oai import llama_3_3_70b_versatile
 from dynaconf import settings
 from src.docs.parser.pdf_processor import PDFProcessor
 from pathlib2 import Path
@@ -13,7 +14,7 @@ if not os.path.exists(WORKING_DIR):
 os.environ["OPENAI_API_KEY"] = settings.get("OPENAI_API_KEY")
 rag = TKGS(
     working_dir=WORKING_DIR,
-    llm_model_func=gpt_4o_mini_complete,
+    llm_model_func=deepseek_distill_llama,
     # llm_model_func=gpt_4o_complete
 )
 pdf_path = (
