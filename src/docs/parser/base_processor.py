@@ -118,7 +118,13 @@ class BaseProcessor(ABC):
         """
         pass
 
+    @abstractmethod
+    def text_tables_images(self):
+        """
+        Extract text from the file.
+        """
 
+        pass
 
     def save_images(self, image_data, output_dir, image_name):
         """
@@ -151,7 +157,7 @@ class BaseProcessor(ABC):
         """
         Process the file and return structured data in JSON format.
         """
-        structured_data = self.text_and_images()
+        structured_data = self.text_tables_images()
         if self.output_path:
             self.save_structured_data(structured_data)
 

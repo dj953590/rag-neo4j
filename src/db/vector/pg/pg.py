@@ -17,8 +17,17 @@ Base = declarative_base()
 class VectorTable(Base):
     """Table schema for storing vectors in PostgreSQL."""
     __tablename__ = "documents"
-
+    """
+    id: Unique identifier for the document chunk
+    doc_id: Unique identifier for the document
+    doc_name: Name of the file
+    embedding: Vector embedding of the document
+    content: Content of the document
+    mdata: Metadata of the document
+    """
     id = Column(String, primary_key=True)
+    doc_id = Column(String, nullable=False)
+    doc_name = Column(String, nullable=False)
     embedding = Column(Vector)  # PGVector column type
     content = Column(String)
     mdata = Column(JSON)
@@ -63,6 +72,8 @@ class PGVectorStorage(BaseVectorStorage):
 
         try:
             ids = list(data.keys())
+            doc_ids = [v["doc_id"] for v in data.values()]
+            doc_names = [v["doc_name"] for v in data.values()]
             documents = [v["content"] for v in data.values()]
             metadatas = [
                 {k: v for k, v in item.items() if k in self.meta_fields}
@@ -70,12 +81,16 @@ class PGVectorStorage(BaseVectorStorage):
                 for item in data.values()
             ]
 
-            # Process in batches
+            # Logic here is to process in batches to avoid memory issues
+            # Split data into batches
+            # Use asyncio.gather to run embedding tasks concurrently
+            # Upsert in batches
+
             batches = [
                 documents[i: i + self._max_batch_size]
                 for i in range(0, len(documents), self._max_batch_size)
             ]
-
+            # Get embeddings for each batch
             embedding_tasks = [self.embedding_func(batch) for batch in batches]
             embeddings_list = []
 
@@ -85,7 +100,7 @@ class PGVectorStorage(BaseVectorStorage):
             # Use asyncio.gather instead of as_completed if order doesn't matter
             embeddings_results = await asyncio.gather(*embedding_tasks)
             embeddings_list = list(embeddings_results)
-
+            # Flatten embeddings list
             embeddings = np.concatenate(embeddings_list)
 
             # Upsert in batches
@@ -96,6 +111,8 @@ class PGVectorStorage(BaseVectorStorage):
                 for j in range(len(ids[batch_slice])):
                     vector = VectorTable(
                         id=ids[batch_slice][j],
+                        doc_id=doc_ids[batch_slice][j],
+                        doc_name=doc_names[batch_slice][j],
                         embedding=embeddings[batch_slice][j].tolist(),
                         content=documents[batch_slice][j],
                         mdata=metadatas[batch_slice][j],
@@ -111,7 +128,7 @@ class PGVectorStorage(BaseVectorStorage):
             logger.error(f"Error during PGVector upsert: {str(e)}")
             raise
 
-    async def query(self, query: str, top_k=5) -> Union[dict, list[dict]]:
+    async def query(self, query: str, doc_id: str, top_k=5) -> Union[dict, list[dict]]:
         try:
             embedding = await self.embedding_func([query])
 
@@ -136,7 +153,8 @@ class PGVectorStorage(BaseVectorStorage):
             """
             results = session.query(VectorTable,
                                     VectorTable.embedding.cosine_distance(query_embedding).label("distance")
-                                    ).order_by("distance").limit(top_k * 2).all()
+                                    ).filter(doc_id == VectorTable.doc_id
+                                             ).order_by("distance").limit(top_k * 2).all()
 
             # Filter results by cosine similarity threshold and take top k
             filtered_results = [

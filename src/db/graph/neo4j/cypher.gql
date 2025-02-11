@@ -1,0 +1,11 @@
+Cypher
+
+MATCH (n)-[r]-(m)
+WHERE n.doc_id = 'DOC-82e6bf341809018813b0e813f86b67c6' AND r.doc_id ='DOC-82e6bf341809018813b0e813f86b67c6' AND m.doc_id = 'DOC-82e6bf341809018813b0e813f86b67c6'
+RETURN n, r, m
+
+	DOC-6651d386274d94a69cbc67e7a7e06bb2
+
+MATCH (n)-[r]-(m)
+WHERE n.doc_id = 'DOC-6651d386274d94a69cbc67e7a7e06bb2' AND r.doc_id ='DOC-6651d386274d94a69cbc67e7a7e06bb2' AND m.doc_id = 'DOC-6651d386274d94a69cbc67e7a7e06bb2'
+RETURN n, r, m

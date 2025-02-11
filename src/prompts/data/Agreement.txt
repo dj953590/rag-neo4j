@@ -2,6 +2,7 @@ company
 corporation
 agreement
 amendment
+commitment
 executed date
 maturity date
 waiver
@@ -12,6 +13,7 @@ lender
 secured party
 agent
 facility
+swingline
 letter of credit
 base rate benchmark
 interest rate
@@ -19,9 +21,7 @@ margin
 default interest
 collateral
 security trustee
-pledgor
 lien
-lienholder
 covenants
 schedule
 prepayment

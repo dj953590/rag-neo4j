@@ -24,13 +24,13 @@ PROMPTS["DEFAULT_ENTITY_TYPES"] = DEFAULT_ENTITY_TYPES
 
 PROMPTS["entity_extraction"] = """You are efficient named entity relationship extractor 
 -Your Goal-
-Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities from the text, as well as those matching list of entity types, and all relationships among the identified entities
+Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities from the text that are matching list of entity types, and all relationships among the identified entities
 Use {language} as output language.
 
 -Steps-
 1. Identify all entities. For each identified entity, extract the following information:
 - entity_name: Name of the entity, use same language as input text. If English, capitalized the name.
-- entity_type: One of the following types: {entity_types}or any other relevant type identified from the text
+- entity_type: One of the following types: {entity_types}or any other relevant type identified as credit agreement related
 - entity_description: Comprehensive description of the entity's attributes and activities
 Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
 
