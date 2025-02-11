@@ -632,8 +632,11 @@ async def kg_query(
     # LLM generate keywords
     kw_prompt_temp = PROMPTS["keywords_extraction"]
     kw_prompt = kw_prompt_temp.format(query=query, examples=examples, language=language)
+    logger.info(f"Query Keywords prompt: {kw_prompt}")
+
     result = await use_model_func(kw_prompt, keyword_extraction=True)
     logger.info(f"Query Keywords prompt result: {result}")
+
     try:
         # json_text = locate_json_string_body_from_string(result) # handled in use_model_func
         match = re.search(r"\{.*\}", result, re.DOTALL)
@@ -676,6 +679,7 @@ async def kg_query(
         relationships_vdb,
         text_chunks_db,
         query_param,
+        global_config
     )
 
     if query_param.only_need_context:
@@ -714,6 +718,7 @@ async def _build_query_context(
         relationships_vdb: BaseVectorStorage,
         text_chunks_db: BaseKVStorage[TextChunkSchema],
         query_param: QueryParam,
+        global_config: dict,
 ):
     """
     Builds the context for the graph query.
@@ -754,6 +759,7 @@ async def _build_query_context(
                 entities_vdb,
                 text_chunks_db,
                 query_param,
+                global_config,
             )
     if query_param.mode in ["global", "hybrid"]:
         if hl_keywrds == "":
@@ -777,6 +783,7 @@ async def _build_query_context(
                 relationships_vdb,
                 text_chunks_db,
                 query_param,
+                global_config,
             )
             if (
                     hl_entities_context == ""
@@ -825,6 +832,7 @@ async def _get_node_data(
         entities_vdb: BaseVectorStorage,
         text_chunks_db: BaseKVStorage[TextChunkSchema],
         query_param: QueryParam,
+        global_config: dict,
 ):
     """
     Gets the node data for the local mode query.
@@ -935,31 +943,38 @@ async def _find_most_related_text_unit_from_entities(
     Returns:
         A list of text units for each entity.
     """
+    # Splits the source_id of each entity in node_datas by GRAPH_FIELD_SEP and stores the results in text_units.
     text_units = [
         split_string_by_multi_markers(dp["source_id"], [GRAPH_FIELD_SEP])
         for dp in node_datas
     ]
+    # Asynchronously gathers the edges for each entity in node_datas using knowledge_graph_inst.get_node_edges.
     edges = await asyncio.gather(
         *[knowledge_graph_inst.get_node_edges(dp["entity_name"]) for dp in node_datas]
     )
+    # Initializes an empty set all_one_hop_nodes and updates it with the second node of each edge in edges.
     all_one_hop_nodes = set()
     for this_edges in edges:
         if not this_edges:
             continue
         all_one_hop_nodes.update([e[1] for e in this_edges])
 
+    # Converts all_one_hop_nodes to a list and asynchronously gathers the node data for each node in all_one_hop_nodes.
     all_one_hop_nodes = list(all_one_hop_nodes)
     all_one_hop_nodes_data = await asyncio.gather(
         *[knowledge_graph_inst.get_node(e) for e in all_one_hop_nodes]
     )
 
-    # Add null check for node data
+    # Creates a dictionary all_one_hop_text_units_lookup that maps each node to its source_id split by GRAPH_FIELD_SEP,
+    # ensuring the node data is not None and contains source_id.
     all_one_hop_text_units_lookup = {
         k: set(split_string_by_multi_markers(v["source_id"], [GRAPH_FIELD_SEP]))
         for k, v in zip(all_one_hop_nodes, all_one_hop_nodes_data)
         if v is not None and "source_id" in v  # Add source_id check
     }
 
+    # Initializes an empty dictionary all_text_units_lookup and populates it with text unit data, order, and relation
+    # counts. Increments relation_counts if the text unit is related to a one-hop node.
     all_text_units_lookup = {}
     for index, (this_text_units, this_edges) in enumerate(zip(text_units, edges)):
         for c_id in this_text_units:
@@ -988,7 +1003,7 @@ async def _find_most_related_text_unit_from_entities(
     if not all_text_units:
         logger.warning("No valid text units found")
         return []
-
+    # Sorts all_text_units by order and relation_counts, truncates the list by token size, and extracts the content.
     all_text_units = sorted(
         all_text_units, key=lambda x: (x["order"], -x["relation_counts"])
     )
@@ -998,7 +1013,7 @@ async def _find_most_related_text_unit_from_entities(
         key=lambda x: x["data"]["content"],
         max_token_size=query_param.max_token_for_text_unit,
     )
-
+    # Extracts the data from all_text_units and returns the list of text units.
     all_text_units = [t["data"] for t in all_text_units]
     return all_text_units
 
