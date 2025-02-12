@@ -137,7 +137,7 @@ class GraphEngine:
     # text chunking
     chunk_token_size: int = 500
     min_percentage: int = 10
-    chunk_overlap_token_size: int = 0
+    chunk_overlap_token_size: int = 50
 
     tiktoken_model_name: str = "gpt-4o-mini"
 

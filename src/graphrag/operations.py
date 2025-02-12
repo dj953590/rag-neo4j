@@ -421,7 +421,7 @@ async def extract_entities(
             **context_base, input_text="{input_text}"
         ).format(**context_base, input_text=content)
         """
-        logger.debug(f"Prompt for Extracting entities from chunk: {hint_prompt}")
+        logger.info(f"Prompt for Extracting entities from chunk: {hint_prompt}")
 
         final_result = await use_llm_func(hint_prompt)
         history = pack_user_ass_to_openai_messages(hint_prompt, final_result)

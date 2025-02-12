@@ -1,13 +1,12 @@
 import os
+from src.entities.legal.legal import load_legal_entities
 
-file_path = os.path.join(os.path.dirname(__file__), "data\\Agreement.txt")
+file_path = os.path.join(os.path.dirname(__file__), "..\\entities\\\\legal\\data\\Agreement.txt")
 
 
 def default_entities_types(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        lines = file.readlines()
-        default_entities = [line.strip() for line in lines if line.strip() and not line.startswith('#')]
-    return default_entities
+    default_entities = load_legal_entities(file_path)
+    return default_entities.dump()
 
 
 DEFAULT_ENTITY_TYPES = default_entities_types(file_path)
@@ -23,42 +22,53 @@ PROMPTS["process_tickers"] = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "
 PROMPTS["DEFAULT_ENTITY_TYPES"] = DEFAULT_ENTITY_TYPES
 
 PROMPTS["entity_extraction"] = """You are efficient named entity relationship extractor 
--Your Goal-
-Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities from the text that are matching list of entity types, and all relationships among the identified entities
-Use {language} as output language.
+- **Your Goal** - 
+Given a text document relevant to credit agreements and a list of legal entity types, **identify all entities** from the text that match these types and extract **all relationships** among the identified entities.  
+Use **{language}** as the output language.  
+---
+### **Entity Types with Descriptions for Credit Agreement**  
+Below is a list of **valid entity types** with their **descriptions**. Use this as a reference when identifying entities:  
 
--Steps-
-1. Identify all entities. For each identified entity, extract the following information:
-- entity_name: Name of the entity, use same language as input text. If English, capitalized the name.
-- entity_type: One of the following types: {entity_types}or any other relevant type identified as credit agreement related
-- entity_description: Comprehensive description of the entity's attributes and activities
-Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+{entity_types}
 
-2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
-For each pair of related entities, extract the following information:
-- source_entity: name of the source entity, as identified in step 1
-- target_entity: name of the target entity, as identified in step 1
-- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
-- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity
-- relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on concepts or themes rather than specific details
-Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)
+---
+### **Steps**
+1. **Identify all entities**  
+   - Extract all entities that match the provided **entity types**.  
+   - If an entity does not match an exact type but is still **credit agreement-related**, classify it appropriately.  
+   - For each identified entity, extract:  
+     - **Entity Name**: The exact name as mentioned in the text (capitalize if in English).  
+     - **Entity Type**: One of the predefined credit agreement-related entity types.  
+     - **Entity Description**: A **comprehensive** summary of the entity's attributes, role, and significance based on the text.
+    - **Format each entity** as:  
+     `("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)`  
 
-3. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
-Format the content-level key words as ("content_keywords"{tuple_delimiter}<high_level_keywords>)
+2. **Extract relationships among identified entities**  
+   - Identify **clear relationships** between entities and extract:  
+     - **Source Entity**: The first entity involved in the relationship.  
+     - **Target Entity**: The second entity involved.  
+     - **Relationship Description**: Explanation of how the two entities are related.  
+     - **Relationship Strength**: A numeric score (1-10) indicating how strong the relationship is between the source entity and target entity.  
+     - **Relationship Keywords**: Key terms that describe the nature of the relationship.  
+   - **Format each relationship** as:  
+     `("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)`  
 
-4. Return output in {language} as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+3. **Extract key concepts and themes**  
+   - Identify overarching concepts or themes in the text.  
+   - **Format as**:  
+     `("content_keywords"{tuple_delimiter}<high_level_keywords>)` 
 
-5. When finished, output {completion_delimiter}
+4. **Return output in structured format** in {language} as a single list of all the entities and relationships identified in steps 1 and 2  
+   - Use **{record_delimiter}** as the delimiter between records.  
+   - End response with `{completion_delimiter}`.
 
 ######################
 -Examples-
 ######################
 {examples}
-
-#############################
+######################
 -Real Data-
 ######################
-Entity_types: {entity_types}
 Text: {input_text}
 ######################
 Output:

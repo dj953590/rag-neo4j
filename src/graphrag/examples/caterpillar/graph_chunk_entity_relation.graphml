@@ -9,942 +9,879 @@
 <key id="d2" for="node" attr.name="source_id" attr.type="string"/>
 <key id="d1" for="node" attr.name="description" attr.type="string"/>
 <key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
-<graph edgedefault="undirected"><node id="&quot;FIVE-YEAR FACILITY&quot;">
-  <data key="d0">"FACILITY"</data>
-  <data key="d1">"This indicates the structured lending facility provided for the Borrowers over five years."</data>
+<graph edgedefault="undirected"><node id="&quot;AMENDMENT NO. 2&quot;">
+  <data key="d0">"AMENDMENT"</data>
+  <data key="d1">"Amendment to the Third Amended and Restated Credit Agreement dated as of August 29, 2024."</data>
   <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;RATIFICATION&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"Existing Credit Agreement and all other documents executed in connection therewith shall remain in full force and effect and are hereby ratified and confirmed."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
+<node id="&quot;ARTICLE IX&quot;">
+  <data key="d0">"AGREEMENT"</data>
+  <data key="d1">"A specific section within the credit agreement that outlines the obligations reaffirmed by CFSC."</data>
+  <data key="d2">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
 <node id="&quot;CERTIFICATE OF INCORPORATION&quot;">
   <data key="d0">"DOCUMENT"</data>
-  <data key="d1">"the attached Certificate of Incorporation and By-laws (or the equivalents thereof) of such Borrower."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
+  <data key="d1">"The attached Certificate of Incorporation and By-laws of each Borrower is required for certification."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;EXISTING CREDIT AGREEMENT&quot;">
-  <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"The Departing Bank's Commitment and Revolving Credit Commitment under the Existing Credit Agreement immediately prior to giving effect to this Amendment shall be terminated."&lt;SEP&gt;"The Existing Credit Agreement is hereby amended as follows:"&lt;SEP&gt;"The execution, delivery and effectiveness of this Amendment shall not operate as a waiver of any right, power or remedy of any party under the Existing Credit Agreement."&lt;SEP&gt;"Upon the effectiveness of this Amendment, each reference in the Amended Credit Agreement to “this Agreement”, “hereunder”, “hereof”, “herein” or words of like import shall mean and be a reference to the Existing Credit Agreement as amended hereby."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9&lt;SEP&gt;chunk-a4f411684ecf9b125f0ad1602ab3f306&lt;SEP&gt;chunk-e1e95dbe8843d751033d0ade8331ce60&lt;SEP&gt;chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;ELECTRONIC SIGNATURES&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"The parties may execute this Amendment using Electronic Signatures as contemplated by Section 8.11 of the Amended Credit Agreement."</data>
-  <data key="d2">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;BY-LAWS&quot;">
-  <data key="d0">"DOCUMENT"</data>
-  <data key="d1">"the attached Certificate of Incorporation and By-laws (or the equivalents thereof) of such Borrower."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AUGUST 29, 2029&quot;">
-  <data key="d0">"MATURITY DATE"</data>
-  <data key="d1">"Current Termination Date means, with respect to any Bank at any time, August 29, 2029."</data>
-  <data key="d2">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;STATE OF NEW YORK&quot;">
-  <data key="d0">"REGULATORY"</data>
-  <data key="d1">"This Amendment shall be governed by, and construed in accordance with, the law of the State of New York."</data>
-  <data key="d2">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
+<node id="&quot;FEBRUARY 8, 2025&quot;">
+  <data key="d0">"EXECUTED DATE"</data>
+  <data key="d1">"The date on which agreements, including amendments, may be executed."</data>
+  <data key="d2">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
 <node id="&quot;CATERPILLAR INTERNATIONAL FINANCE DESIGNATED ACTIVITY COMPANY&quot;">
-  <data key="d0">"COMPANY"</data>
-  <data key="d1">"This entity is one of the Borrowers involved within the credit agreement framework."</data>
+  <data key="d0">"CORPORATION"</data>
+  <data key="d1">"Enter into the Amendment NO. 2 to Third Amended and Restated Credit Agreement (Five-Year Facility) dated as of August 29, 2024."</data>
   <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;OPINION LETTER&quot;">
-  <data key="d0">"DOCUMENT"</data>
-  <data key="d1">"an opinion letter of counsel for each of Caterpillar and CFSC, given upon their express instructions, in form and substance reasonably acceptable to the Agent."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
 <node id="&quot;THE BANK OF NEW YORK MELLON&quot;">
   <data key="d0">"LENDER"</data>
-  <data key="d1">"Schedule I to the Existing Credit Agreement is hereby amended to delete the Commitments and the Revolving Credit Commitments of The Bank of New York Mellon."&lt;SEP&gt;"Upon the effectiveness hereof, The Bank of New York Mellon (the 'Departing Bank') shall no longer constitute a Bank under the Amended Credit Agreement."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9&lt;SEP&gt;chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;FACSIMILE&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"A facsimile copy of any signature hereto shall have the same effect as the original of such signature."</data>
-  <data key="d2">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;UPFRONT FEES&quot;">
-  <data key="d0">"FINANCIAL ARRANGEMENT"</data>
-  <data key="d1">"the Agent shall have received, for the account of each applicable Bank, any upfront fees to be paid by any Borrower to such Banks in connection with this Amendment."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;DBS BANK LTD.&quot;">
-  <data key="d0">"LENDER"</data>
-  <data key="d1">"Schedule I to the Existing Credit Agreement is hereby amended to insert the Commitments and the Revolving Credit Commitments of DBS Bank Ltd."&lt;SEP&gt;"Upon the effectiveness hereof, DBS Bank Ltd. (the 'Additional Bank') shall constitute a Bank under the Amended Credit Agreement."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9&lt;SEP&gt;chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;PDF COPY&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"A PDF copy of any signature hereto shall have the same effect as the original of such signature."</data>
-  <data key="d2">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;BENEFICIAL OWNERSHIP CERTIFICATION&quot;">
-  <data key="d0">"DOCUMENT"</data>
-  <data key="d1">"a Beneficial Ownership Certification in relation to each Borrower that qualifies as a 'legal entity customer' under the Beneficial Ownership Regulation."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;CFSC&quot;">
-  <data key="d0">"GUARANTOR"</data>
-  <data key="d1">"CFSC hereby reaffirms all of its obligations under Article IX of the Amended Credit Agreement."&lt;SEP&gt;"Good standing certificates for each of Caterpillar and CFSC."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925&lt;SEP&gt;chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;SIGNATURE&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"A facsimile or PDF copy of any signature hereto shall have the same effect as the original of such signature."</data>
-  <data key="d2">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;BANKS&quot;">
-  <data key="d0">"CORPORATION"</data>
-  <data key="d1">"The Banks are a collective term for the financial institutions party to the Existing Credit Agreement."</data>
-  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;BUSINESS DAYS&quot;">
-  <data key="d0">"TIME MEASURE"</data>
-  <data key="d1">"to the extent such documentation is requested at least five (5) Business Days prior to the..."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;CURRENT TERMINATION DATE&quot;">
-  <data key="d0">"MATURITY DATE"</data>
-  <data key="d1">"Current Termination Date means, with respect to any Bank at any time, August 29, 2029."</data>
-  <data key="d2">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;COUNTERPARTS&quot;">
-  <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"This Amendment may be executed in any number of counterparts and by different parties hereto in separate counterparts."</data>
-  <data key="d2">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;CITIBANK, N.A.&quot;">
-  <data key="d0">"AGENT"</data>
-  <data key="d1">"Citibank, N.A. serves as the Agent under the Existing Credit Agreement."</data>
-  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;COUNSEL&quot;">
-  <data key="d0">"LEGAL"</data>
-  <data key="d1">"an opinion letter of counsel for each of Caterpillar and CFSC."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;COMMITMENTS&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"Schedule I to the Existing Credit Agreement is hereby amended to delete the Commitments and the Revolving Credit Commitments of The Bank of New York Mellon."</data>
-  <data key="d2">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AFFILIATES&quot;">
-  <data key="d0">"OBLIGOR"</data>
-  <data key="d1">"The execution of this Amendment by any party hereto shall be enforceable against its Affiliates party to the Loan Documents."</data>
-  <data key="d2">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AMENDMENT NO. 2 TO THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;">
-  <data key="d0">"AMENDMENT"</data>
-  <data key="d1">"This document is an amendment to the existing credit agreement between the mentioned parties."</data>
-  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AGENT'S RECEIPT&quot;">
-  <data key="d0">"EVENT"</data>
-  <data key="d1">"upon the Agent’s receipt of the following:"</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;REVOLVING CREDIT COMMITMENTS&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"Schedule I to the Existing Credit Agreement is hereby amended to delete the Commitments and the Revolving Credit Commitments of The Bank of New York Mellon."</data>
-  <data key="d2">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;LOAN DOCUMENTS&quot;">
-  <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"The Additional Bank acknowledges and agrees that it has received a copy of the Amended Credit Agreement, together with copies of financial statements and such other documents and information as it has deemed appropriate to make its own credit analysis."&lt;SEP&gt;"The execution of this Amendment by any party hereto shall be enforceable against its Affiliates party to the Loan Documents."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9&lt;SEP&gt;chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;">
-  <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"This credit agreement includes various terms and conditions for the Borrowers and the Banks."</data>
-  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d1">"A financial institution specified in the credit agreement, previously associated with Commitments and Revolving Credit Commitments."&lt;SEP&gt;"A financial institution that was previously a party to the Amended Credit Agreement but is referenced as the Departing Bank in the document."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df&lt;SEP&gt;chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
 <node id="&quot;CREDIT RATINGS&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"Evidence of the Credit Ratings for the Borrowers in effect as of the Closing Date."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
+  <data key="d0">"COLLATERAL"</data>
+  <data key="d1">"Evaluations of the Borrowers that are required for compliance as of the Closing Date."</data>
+  <data key="d2">chunk-58598f70b5a253429401f1f1c4a79734</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;SECTION 4&quot;">
-  <data key="d0">"SECTION"</data>
-  <data key="d1">"This Amendment shall become effective and be deemed effective as of the conditions precedent set forth in Section 4 below."</data>
-  <data key="d2">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;COMMITMENT&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"the Additional Bank shall be bound by the provisions of this Amendment, the Amended Credit Agreement and the other Loan Documents including, without limitation, funding obligations in respect of its Commitment and Revolving Credit Commitment."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;000110465924096572&quot;">
-  <data key="d0">"IDENTIFIER"</data>
-  <data key="d1">"A unique identifier associated with the specific filing in the SEC's database."</data>
-  <data key="d2">chunk-407f41850c4aa30e1bb70168c210aff9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AMENDED CREDIT AGREEMENT&quot;">
-  <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"Each capitalized term used herein and not defined herein shall have the meaning ascribed thereto in the Amended Credit Agreement."&lt;SEP&gt;"The Additional Bank shall be deemed and constitute a Bank under the Amended Credit Agreement and the other Loan Documents."&lt;SEP&gt;"The Existing Credit Agreement will be referred to as the Amended Credit Agreement once the amendment has been executed."&lt;SEP&gt;"The credit agreement post-approval of amendments, including those made by Amendments No. 1 and No. 2."&lt;SEP&gt;"This Amendment shall be subject to the submission to jurisdiction and service of process provisions and requirements set forth in Section 8.08 of the Amended Credit Agreement."&lt;SEP&gt;"reaffirms all covenants, representations and warranties made by it in the Amended Credit Agreement."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9&lt;SEP&gt;chunk-e1e95dbe8843d751033d0ade8331ce60&lt;SEP&gt;chunk-a4f411684ecf9b125f0ad1602ab3f306&lt;SEP&gt;chunk-9ef11f13cda702c217a04f82ce77965d&lt;SEP&gt;chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;CLOSING DATE&quot;">
-  <data key="d0">"EXECUTED DATE"</data>
-  <data key="d1">"Evidence of the Credit Ratings for the Borrowers in effect as of the Closing Date."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;SECTION 1&quot;">
-  <data key="d0">"SECTION"</data>
-  <data key="d1">"Defined Terms. Each capitalized term used herein and not defined herein shall have the meaning ascribed thereto in the Amended Credit Agreement."</data>
-  <data key="d2">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;REVOLVING CREDIT COMMITMENT&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"the Additional Bank shall be bound by the provisions of this Amendment, the Amended Credit Agreement and the other Loan Documents including, without limitation, funding obligations in respect of its Commitment and Revolving Credit Commitment."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AUGUST 29, 2024&quot;">
-  <data key="d0">"EXECUTED DATE"</data>
-  <data key="d1">"This is the date on which the Amendment No. 2 is executed."</data>
-  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;COVENANTS&quot;">
+<node id="&quot;SECTION 10&quot;">
   <data key="d0">"COVENANTS"</data>
-  <data key="d1">"SECTION 5. Covenants, Representations and Warranties of the Borrowers."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
+  <data key="d1">"SECTION 10 discusses the roles of Additional Bank and Departing Bank."</data>
+  <data key="d2">chunk-3297117ba565b80ed2032999083df511</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;SECTION 2&quot;">
-  <data key="d0">"SECTION"</data>
-  <data key="d1">"Amendments to the Existing Credit Agreement. Effective as of the date hereof, subject to the satisfaction of the conditions precedent set forth in Section 4 below."</data>
-  <data key="d2">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;ADDITIONAL BANK&quot;">
-  <data key="d0">"SECURED PARTY"</data>
-  <data key="d1">"DBS Bank Ltd. is designated as the Additional Bank under the Amended Credit Agreement, assuming the role and responsibilities associated with this designation."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;SEPTEMBER 1, 2022&quot;">
-  <data key="d0">"EXECUTED DATE"</data>
-  <data key="d1">"This date references the original credit agreement prior to the amendments."</data>
-  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;BORROWERS&quot;">
-  <data key="d0">"OBLIGOR"</data>
-  <data key="d1">"each Borrower hereby reaffirms all covenants, representations and warranties made by it in the Amended Credit Agreement."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;BANK&quot;">
-  <data key="d0">"OBLIGOR"</data>
-  <data key="d1">"Current Termination Date means, with respect to any Bank at any time, August 29, 2029."&lt;SEP&gt;"duly executed counterparts of this Amendment from each Borrower, the Agent, and each Bank."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925&lt;SEP&gt;chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;DEPARTING BANK&quot;">
-  <data key="d0">"SECURED PARTY"</data>
-  <data key="d1">"The Bank of New York Mellon is designated as the Departing Bank, ceasing to be a Bank under the Amended Credit Agreement."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AUGUST 31, 2023&quot;">
-  <data key="d0">"EXECUTED DATE"</data>
-  <data key="d1">"The date on which Amendment No. 1 was executed to the existing credit agreement."&lt;SEP&gt;"This date references the earlier amendment to the existing credit agreement."</data>
-  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AMENDMENT&quot;">
-  <data key="d0">"AMENDMENT"</data>
-  <data key="d1">"The Amendment modifies the terms of the existing agreements, allowing the Addition and departure of Banks under the Amended Credit Agreement."&lt;SEP&gt;"The execution, delivery and effectiveness of this Amendment shall not operate as a waiver of any right, power or remedy of any party under the Existing Credit Agreement."&lt;SEP&gt;"Upon the effectiveness of this Amendment, each Borrower hereby represents and warrants that this Amendment constitutes a legal, valid and binding obligation."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9&lt;SEP&gt;chunk-a4f411684ecf9b125f0ad1602ab3f306&lt;SEP&gt;chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AMENDMENT EFFECTIVE DATE&quot;">
-  <data key="d0">"EXECUTED DATE"</data>
-  <data key="d1">"date hereof (the “Amendment Effective Date”) upon the Agent’s receipt of the following."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;SCHEDULE I&quot;">
-  <data key="d0">"SCHEDULE"</data>
-  <data key="d1">"Schedule I outlines the Commitment and Revolving Credit Commitment of the Additional Bank as part of the Amended Credit Agreement."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AMENDMENT NO. 1 TO THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;">
-  <data key="d0">"AMENDMENT"</data>
-  <data key="d1">"This amendment refers to the first alteration made to the original credit agreement prior to Amendment No. 2."</data>
-  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;EVENT OF DEFAULT&quot;">
-  <data key="d0">"DEFAULT INTEREST"</data>
-  <data key="d1">"no Event of Default exists with respect to such Borrower and no event exists which would constitute an Event of Default with respect to such Borrower."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;AGENT&quot;">
-  <data key="d0">"AGENT"</data>
-  <data key="d1">"The Agent is mentioned in relation to the Additional Bank’s decision-making, indicating a support role in the agreement process."&lt;SEP&gt;"duly executed counterparts of this Amendment from each Borrower, the Agent, and each Bank."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925&lt;SEP&gt;chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;CREDIT ANALYSIS&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"The Additional Bank conducts its own credit analysis as part of its decision-making process to enter into the Amendment."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;THIRD AMENDED AND RESTATED CREDIT AGREEMENT&quot;">
-  <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"This agreement consolidates and restates the existing credit agreements among the Borrowers and Banks."</data>
-  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;LEGAL OBLIGATION&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"this Amendment constitutes a legal, valid and binding obligation of such Borrower."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
+<node id="&quot;MAYER BROWN LLP&quot;">
+  <data key="d0">"LAW FIRM"</data>
+  <data key="d1">"An opinion letter from Mayer Brown LLP, counsel for the Borrowers, is required upon their express instructions."</data>
+  <data key="d2">chunk-58598f70b5a253429401f1f1c4a79734</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
 <node id="&quot;CATERPILLAR FINANCIAL SERVICES CORPORATION&quot;">
-  <data key="d0">"COMPANY"</data>
-  <data key="d1">"Caterpillar Financial Services Corporation is one of the Borrowers under the credit agreement."</data>
+  <data key="d0">"CORPORATION"</data>
+  <data key="d1">"Enter into the Amendment NO. 2 to Third Amended and Restated Credit Agreement (Five-Year Facility) dated as of August 29, 2024."</data>
   <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;BORROWER&quot;">
-  <data key="d0">"BORROWER"</data>
-  <data key="d1">"the Agent shall have received, for the account of each applicable Bank, any upfront fees to be paid by any Borrower to such Banks in connection with this Amendment."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;FINANCIAL STATEMENTS&quot;">
-  <data key="d0">"COLLATERAL"</data>
-  <data key="d1">"Financial statements are documents provided to the Additional Bank to assist in its credit analysis and decision regarding the Amendment."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;APPLICABLE BANKRUPTCY LAWS&quot;">
-  <data key="d0">"REGULATORY"</data>
-  <data key="d1">"except as enforceability thereof may be limited by applicable bankruptcy, insolvency, reorganization, moratorium or similar laws relating to or affecting creditor’s rights generally."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;CERTAIN GOOD AND VALUABLE CONSIDERATION&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"This refers to the consideration provided by the parties entering into the amendment."</data>
+<node id="&quot;AMENDMENT NO. 1&quot;">
+  <data key="d0">"AMENDMENT"</data>
+  <data key="d1">"The prior amendment to the Third Amended and Restated Credit Agreement dated August 31, 2023."</data>
   <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
 <node id="&quot;CATERPILLAR&quot;">
   <data key="d0">"COMPANY"</data>
-  <data key="d1">"Good standing certificates for each of Caterpillar and CFSC."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
+  <data key="d1">"Good standing certificates for each of Caterpillar and CFSC are required as part of the conditions precedent."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;LOAN AGREEMENT&quot;">
+<node id="&quot;CLOSING DATE&quot;">
+  <data key="d0">"EXECUTED DATE"</data>
+  <data key="d1">"The date upon which Evidence of the Credit Ratings for the Borrowers is required."</data>
+  <data key="d2">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;REVOLVING CREDIT COMMITMENT&quot;">
+  <data key="d0">"COMMITMENT"</data>
+  <data key="d1">"A specific type of commitment that allows the Departing Bank to withdraw and repay funds as needed under the Existing Credit Agreement before termination."&lt;SEP&gt;"Funding obligations in respect of the Additional Bank's Commitment and Revolving Credit Commitment."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df&lt;SEP&gt;chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;">
   <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"The Loan Agreement includes the terms and provisions that govern the relationships and obligations of the Banks involved."</data>
-  <data key="d2">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;THE BORROWERS&quot;">
-  <data key="d0">"OBLIGOR"</data>
-  <data key="d1">"The term refers to the collective entities borrowing under the credit agreement."</data>
+  <data key="d1">"The original credit agreement that is being amended."</data>
   <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;LOAN DOCUMENT&quot;">
-  <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"this Amendment constitutes a Loan Document."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
+<node id="&quot;AUGUST 29, 2029&quot;">
+  <data key="d0">"MATURITY DATE"</data>
+  <data key="d1">"The specified maturity date in the credit agreement for termination of the commitments unless extended."</data>
+  <data key="d2">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;MAYER BROWN LLP&quot;">
-  <data key="d0">"LAW FIRM"</data>
-  <data key="d1">"an opinion letter of Mayer Brown LLP, counsel for the Borrowers, given upon their express instructions."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
+<node id="&quot;BY-LAWS&quot;">
+  <data key="d0">"DOCUMENT"</data>
+  <data key="d1">"The attached By-laws of each Borrower is required along with the Certificate of Incorporation."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;SEC.GOV&quot;">
-  <data key="d0">"COMPANY"</data>
-  <data key="d1">"The official website of the U.S. Securities and Exchange Commission, which provides access to various regulatory filings and documentation."</data>
-  <data key="d2">chunk-407f41850c4aa30e1bb70168c210aff9</data>
+<node id="&quot;SECTION 6&quot;">
+  <data key="d0">"SCHEDULE"</data>
+  <data key="d1">"Part of the credit agreement that discusses references to existing agreements and amendments."</data>
+  <data key="d2">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;THE AGENT&quot;">
-  <data key="d0">"AGENT"</data>
-  <data key="d1">"Refers to Citibank, N.A., which acts as the agent managing the credit agreement."</data>
+<node id="&quot;COMMITMENT&quot;">
+  <data key="d0">"COMMITMENT"</data>
+  <data key="d1">"An obligation by a bank to provide a certain amount of credit under the terms set forth in the agreements."&lt;SEP&gt;"The Additional Bank's Commitment and Revolving Credit Commitment appearing in Schedule I to the Amended Credit Agreement."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df&lt;SEP&gt;chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;DBS BANK LTD.&quot;">
+  <data key="d0">"LENDER"</data>
+  <data key="d1">"A financial institution inserted into the credit agreement with specified Commitments and Revolving Credit Commitments totaling $44,000,000."&lt;SEP&gt;"DBS Bank Ltd. serves as the Additional Bank under the Amended Credit Agreement, bound by its provisions."</data>
+  <data key="d2">chunk-3297117ba565b80ed2032999083df511&lt;SEP&gt;chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;EVENT OF DEFAULT CONDITIONS&quot;">
+  <data key="d0">"COVENANTS"</data>
+  <data key="d1">"Conditions under which a Borrower would be considered in default, explicitly described in the Amended Credit Agreement."</data>
+  <data key="d2">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;DEPARTING BANK&quot;">
+  <data key="d0">"BANK"</data>
+  <data key="d1">"The classification of The Bank of New York Mellon as an entity that no longer constitutes a bank under the Amended Credit Agreement due to its withdrawal."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;FIVE-YEAR FACILITY&quot;">
+  <data key="d0">"FACILITY"</data>
+  <data key="d1">"Indicates the structured credit arrangement type in the Third Amended and Restated Credit Agreement."</data>
   <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;INSTRUMENT&quot;">
-  <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"any other document, instrument or agreement executed and/or delivered in connection with such agreement."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
+<node id="&quot;BANK&quot;">
+  <data key="d0">"LENDER"</data>
+  <data key="d1">"Each applicable Bank must receive upfront fees from Borrowers in connection with this Amendment."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;CATERPILLAR FINANCE KABUSHIKI KAISHA&quot;">
-  <data key="d0">"COMPANY"</data>
-  <data key="d1">"Caterpillar Finance Kabushiki Kaisha is involved as a Borrower in the credit agreement."</data>
+<node id="&quot;EVENT OF DEFAULT&quot;">
+  <data key="d0">"COVENANTS"</data>
+  <data key="d1">"A situation outlined in the agreement that, if it occurs, would allow a lender to demand repayment or take other actions against the Borrower."&lt;SEP&gt;"The concept of Event of Default is mentioned with respect to the Borrowers and their obligations under the agreement."</data>
+  <data key="d2">chunk-58598f70b5a253429401f1f1c4a79734&lt;SEP&gt;chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;LOAN DOCUMENTS&quot;">
+  <data key="d0">"AGREEMENT"</data>
+  <data key="d1">"Affiliates party to the Loan Documents, and shall constitute each such Affiliate’s approval of this Amendment."&lt;SEP&gt;"Comprises all legal documents that outline the rights and obligations of the parties involved in the loan arrangements under the Amended Credit Agreement."&lt;SEP&gt;"Legal documents outlining the rights and obligations associated with the loans under the Amended Credit Agreement."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df&lt;SEP&gt;chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;CATERPILLAR INC.&quot;">
+  <data key="d0">"CORPORATION"</data>
+  <data key="d1">"Enter into the Amendment NO. 2 to Third Amended and Restated Credit Agreement (Five-Year Facility) dated as of August 29, 2024."</data>
   <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;EXISTING CREDIT AGREEMENT&quot;">
+  <data key="d0">"AGREEMENT"</data>
+  <data key="d1">"A legal contract that outlines the terms and conditions under which the loan is provided to the borrower."&lt;SEP&gt;"A previous legal contract outlining terms of credit and obligations before the amendment and associated changes."&lt;SEP&gt;"The Existing Credit Agreement is the foundational document which has been modified and referred to as the Amended Credit Agreement."&lt;SEP&gt;"The Third Amended and Restated Credit Agreement dated September 1, 2022, that is being amended by Amendment No. 2."&lt;SEP&gt;"The prior agreement referenced in the context of the amendment, to which the Borrowers' obligations relate."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df&lt;SEP&gt;chunk-58598f70b5a253429401f1f1c4a79734&lt;SEP&gt;chunk-4fdadc02546029dea7800ee5f9c31dc1&lt;SEP&gt;chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2&lt;SEP&gt;chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;SCHEDULE I&quot;">
+  <data key="d0">"SCHEDULE"</data>
+  <data key="d1">"An attachment to the Existing Credit Agreement that lists the various commitments and roles of the banks involved."&lt;SEP&gt;"Schedule I contains the Commitment and Revolving Credit Commitment of the Additional Bank."</data>
+  <data key="d2">chunk-3297117ba565b80ed2032999083df511&lt;SEP&gt;chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;BOARD OF DIRECTORS&quot;">
+  <data key="d0">"EXECUTIVE BODY"</data>
+  <data key="d1">"Resolutions of the Board of Directors of each Borrower evidencing corporate authority are required for executing this Amendment."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;SECTION 7&quot;">
+  <data key="d0">"SCHEDULE"</data>
+  <data key="d1">"Describes the execution process of the Amendment, including details on counterparts and signature methods."</data>
+  <data key="d2">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;CFSC&quot;">
+  <data key="d0">"GUARANTOR"</data>
+  <data key="d1">"CFSC hereby reaffirms all of its obligations under Article IX of the Amended Credit Agreement."&lt;SEP&gt;"CFSC reaffirms all obligations under Article IX of the credit agreement, functioning as a guarantor for certain obligations."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e&lt;SEP&gt;chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;BANKRUPTCY LAWS&quot;">
+  <data key="d0">"REGULATORY"</data>
+  <data key="d1">"Applicable laws that may limit the enforceability of the Borrowers' obligations under the agreement."</data>
+  <data key="d2">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;OBLIGATIONS&quot;">
+  <data key="d0">"COMMITMENT"</data>
+  <data key="d1">"Duties that the Additional Bank is required to perform under the terms of the Loan Documents."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;THIRD AMENDED AND RESTATED CREDIT AGREEMENT&quot;">
+  <data key="d0">"AGREEMENT"</data>
+  <data key="d1">"The comprehensive document outlining the terms of the credit agreement and its amendments."</data>
+  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;AMENDMENT EFFECTIVE DATE&quot;">
+  <data key="d0">"EXECUTED DATE"</data>
+  <data key="d1">"A specified date after which various obligations and representations must be met in relation to the Borrowers."&lt;SEP&gt;"This Amendment shall become effective and be deemed effective as of the date hereof (the 'Amendment Effective Date')."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e&lt;SEP&gt;chunk-58598f70b5a253429401f1f1c4a79734</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
 <node id="&quot;BENEFICIAL OWNERSHIP REGULATION&quot;">
   <data key="d0">"REGULATORY"</data>
-  <data key="d1">"a Beneficial Ownership Certification in relation to each Borrower that qualifies as a “legal entity customer” under the Beneficial Ownership Regulation."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
+  <data key="d1">"Regulation that defines the documentation requirements for legal entity customers, including each Borrower."</data>
+  <data key="d2">chunk-58598f70b5a253429401f1f1c4a79734</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;EDGAR&quot;">
-  <data key="d0">"FACILITY"</data>
-  <data key="d1">"The Electronic Data Gathering, Analysis, and Retrieval system that allows investors to access the SEC's financial statements and other documents filed by companies."</data>
-  <data key="d2">chunk-407f41850c4aa30e1bb70168c210aff9</data>
+<node id="&quot;SECTION 8&quot;">
+  <data key="d0">"COVENANTS"</data>
+  <data key="d1">"SECTION 8 addresses Governing Law; Submission to Jurisdiction; Service of Process; Waiver of Jury Trial."</data>
+  <data key="d2">chunk-3297117ba565b80ed2032999083df511</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;THE EXISTING CREDIT AGREEMENT&quot;">
+<node id="&quot;AMENDED CREDIT AGREEMENT&quot;">
   <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"The preceding credit agreement that is being modified by subsequent amendments."</data>
-  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d1">"A legal contract outlining terms between parties related to the provision of credit and the responsibilities of banks involved."&lt;SEP&gt;"An agreement that has been amended, with all covenants, representations, and warranties being reaffirmed by the Borrowers."&lt;SEP&gt;"The Amended Credit Agreement details the commitments and provisions applicable to the Additional Bank."&lt;SEP&gt;"The Amended Credit Agreement outlines the obligations of CFSC under Article IX."&lt;SEP&gt;"The Existing Credit Agreement as amended by this Amendment."&lt;SEP&gt;"The Existing Credit Agreement, as amended by this Amendment, is referred to herein as the 'Amended Credit Agreement'."&lt;SEP&gt;"The revised credit agreement that references the Existing Credit Agreement after amendments have been made."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df&lt;SEP&gt;chunk-58598f70b5a253429401f1f1c4a79734&lt;SEP&gt;chunk-4fdadc02546029dea7800ee5f9c31dc1&lt;SEP&gt;chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2&lt;SEP&gt;chunk-83d1bc953975fdc876f33628f400261e&lt;SEP&gt;chunk-9ef11f13cda702c217a04f82ce77965d&lt;SEP&gt;chunk-3297117ba565b80ed2032999083df511</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;REPRESENTATIONS&quot;">
-  <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"each Borrower hereby reaffirms all covenants, representations and warranties made by it."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
+<node id="&quot;CONDITIONS PRECEDENT&quot;">
+  <data key="d0">"AGREEMENT"</data>
+  <data key="d1">"Conditions precedent must be met for the Amendment to become effective."&lt;SEP&gt;"The requirements that must be satisfied before certain actions can occur under the terms of the credit agreement."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e&lt;SEP&gt;chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;CATERPILLAR INC.&quot;">
+<node id="&quot;GOOD STANDING CERTIFICATES&quot;">
+  <data key="d0">"DOCUMENT"</data>
+  <data key="d1">"Good standing certificates are required for each of Caterpillar and CFSC as part of the conditions precedent."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;AFFILIATES&quot;">
   <data key="d0">"COMPANY"</data>
-  <data key="d1">"Caterpillar Inc. is one of the parties involved in the amendment of the credit agreement."</data>
+  <data key="d1">"Entities related to parties involved in the Loan Documents that must also approve the Amendment."</data>
+  <data key="d2">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;CATERPILLAR FINANCE KABUSHIKI KAISHA&quot;">
+  <data key="d0">"CORPORATION"</data>
+  <data key="d1">"Enter into the Amendment NO. 2 to Third Amended and Restated Credit Agreement (Five-Year Facility) dated as of August 29, 2024."</data>
   <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;CERTIFICATES&quot;">
-  <data key="d0">"DOCUMENT"</data>
-  <data key="d1">"Good standing certificates for each of Caterpillar and CFSC."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;TM2423020D1_EX10-5.HTM&quot;">
-  <data key="d0">"AGREEMENT"</data>
-  <data key="d1">"A specific document filed with the SEC, which is part of the regulatory compliance and disclosure process for companies."</data>
-  <data key="d2">chunk-407f41850c4aa30e1bb70168c210aff9</data>
-  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
-  <data key="d4">citibank-caterpillar</data>
-</node>
-<node id="&quot;THE BANKS PARTY TO THE EXISTING CREDIT AGREEMENT&quot;">
+<node id="&quot;BANKS&quot;">
   <data key="d0">"LENDER"</data>
-  <data key="d1">"This encompasses all banks involved in the original credit agreement."</data>
+  <data key="d1">"The Banks party to the Existing Credit Agreement referenced below are involved in the credit agreement."</data>
   <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;WARRANTIES&quot;">
+<node id="&quot;COMMITMENTS&quot;">
   <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"each Borrower hereby reaffirms all covenants, representations and warranties made by it in the Amended Credit Agreement."</data>
-  <data key="d2">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
+  <data key="d1">"Refers to the financial commitments outlined in the schedule of the Existing Credit Agreement and its amendments."</data>
+  <data key="d2">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;RESOLUTIONS&quot;">
+<node id="&quot;LEGAL ENTITY CUSTOMER&quot;">
+  <data key="d0">"BORROWER"</data>
+  <data key="d1">"A designation of each Borrower under the Beneficial Ownership Regulation, requiring specific documentation."</data>
+  <data key="d2">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;CREDIT ANALYSIS&quot;">
+  <data key="d0">"PROCESS"</data>
+  <data key="d1">"The independent review conducted by the Additional Bank to assess the creditworthiness of the agreement before participating as a bank."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;AMENDMENT&quot;">
+  <data key="d0">"AMENDMENT"</data>
+  <data key="d1">"A modification or addition to the Existing Credit Agreement, indicating changes or updates to the terms."&lt;SEP&gt;"A modification to the Existing Credit Agreement, which has been enacted to update terms and conditions."&lt;SEP&gt;"This Amendment modifies the existing credit agreement and outlines actions necessary for its effectiveness."&lt;SEP&gt;"This Amendment shall be governed by, and construed in accordance with, the law of the State of New York."</data>
+  <data key="d2">chunk-4fdadc02546029dea7800ee5f9c31dc1&lt;SEP&gt;chunk-83d1bc953975fdc876f33628f400261e&lt;SEP&gt;chunk-3297117ba565b80ed2032999083df511&lt;SEP&gt;chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;UPFRONT FEES&quot;">
+  <data key="d0">"COMMITMENT"</data>
+  <data key="d1">"Upfront fees to be paid by any Borrower to such Banks in connection with this Amendment."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;COVENANTS&quot;">
+  <data key="d0">"COVENANTS"</data>
+  <data key="d1">"Financial and operational restrictions imposed on the Borrowers, reaffirmed in the Amended Credit Agreement."</data>
+  <data key="d2">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;SECTION 8.08&quot;">
+  <data key="d0">"COVENANTS"</data>
+  <data key="d1">"Section 8.08 of the Amended Credit Agreement outlines submission to jurisdiction and service of process provisions."</data>
+  <data key="d2">chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;AUGUST 29, 2024&quot;">
+  <data key="d0">"EXECUTED DATE"</data>
+  <data key="d1">"The date on which Amendment No. 2 to the Third Amended and Restated Credit Agreement is entered into."</data>
+  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;AGENT&quot;">
+  <data key="d0">"AGENT"</data>
+  <data key="d1">"An entity managing administrative functions under the Amended Credit Agreement, providing oversight in credit decisions."&lt;SEP&gt;"An entity managing administrative loan functions, responsible for facilitating the amendment process."&lt;SEP&gt;"The Agent is responsible for receiving duly executed counterparts of the Amendment from each Borrower, the Agent, and each Bank."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e&lt;SEP&gt;chunk-58598f70b5a253429401f1f1c4a79734&lt;SEP&gt;chunk-a3d2193e53925a8976a993ed85a696df</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;OPINION LETTER&quot;">
   <data key="d0">"DOCUMENT"</data>
-  <data key="d1">"the attached resolutions of the Board of Directors of such Borrower evidencing corporate authority to execute and deliver this Amendment and the other documents."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
+  <data key="d1">"An opinion letter of counsel for each of Caterpillar and CFSC is needed upon their express instructions."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;DATA&quot;">
+<node id="&quot;ADDITIONAL BANK&quot;">
+  <data key="d0">"BANK"</data>
+  <data key="d1">"A financial institution that has agreed to the terms of the Amended Credit Agreement and performs credit analysis independently."&lt;SEP&gt;"Upon the effectiveness hereof, DBS Bank Ltd. (the 'Additional Bank') shall constitute a Bank under the Amended Credit Agreement."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df&lt;SEP&gt;chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;BORROWER&quot;">
+  <data key="d0">"BORROWER"</data>
+  <data key="d1">"Each Borrower is defined as a party receiving the loan under the agreement, reaffirming covenants, representations, and warranties in the Amended Credit Agreement."&lt;SEP&gt;"Each Borrower is required to execute counterparts of this Amendment as part of the conditions precedent."&lt;SEP&gt;"The entity receiving the loan under the agreement, as mentioned in the context of the credit agreement."</data>
+  <data key="d2">chunk-83d1bc953975fdc876f33628f400261e&lt;SEP&gt;chunk-58598f70b5a253429401f1f1c4a79734&lt;SEP&gt;chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;CITIBANK, N.A.&quot;">
+  <data key="d0">"AGENT"</data>
+  <data key="d1">"Acts as the Agent under the Existing Credit Agreement."</data>
+  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;REVOLVING CREDIT COMMITMENTS&quot;">
   <data key="d0">"COMMITMENT"</data>
-  <data key="d1">"Information that companies are required to submit to the SEC, reflecting their financial status and operations."</data>
-  <data key="d2">chunk-407f41850c4aa30e1bb70168c210aff9</data>
+  <data key="d1">"Specific type of commitment related to the revolving credit line, which allows borrowing and repayment multiple times."</data>
+  <data key="d2">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<node id="&quot;BOARD OF DIRECTORS&quot;">
-  <data key="d0">"GOVERNANCE"</data>
-  <data key="d1">"the attached resolutions of the Board of Directors of such Borrower evidencing corporate authority to execute and deliver this Amendment and the other documents."</data>
-  <data key="d2">chunk-5062068bbb50c4a689ff70996b6d1925</data>
+<node id="&quot;LOAN DOCUMENT&quot;">
+  <data key="d0">"AGREEMENT"</data>
+  <data key="d1">"Refers to any document related to the loan process encapsulated within the credit agreement context."</data>
+  <data key="d2">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
   <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
   <data key="d4">citibank-caterpillar</data>
 </node>
-<edge source="&quot;RATIFICATION&quot;" target="&quot;EXISTING CREDIT AGREEMENT&quot;">
+<node id="&quot;TERMINATION&quot;">
+  <data key="d0">"PROCESS"</data>
+  <data key="d1">"The cessation of rights and obligations of the Departing Bank under the Amended Credit Agreement following the amendment."</data>
+  <data key="d2">chunk-a3d2193e53925a8976a993ed85a696df</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;CURRENT TERMINATION DATE&quot;">
+  <data key="d0">"COMMITMENT"</data>
+  <data key="d1">"Refers to the date, August 29, 2029, when the agreement can be terminated, extendable with bank consent."</data>
+  <data key="d2">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;REPAYMENT OBLIGATIONS&quot;">
+  <data key="d0">"OBLIGOR"</data>
+  <data key="d1">"The obligations of the Borrowers to repay the loan as stipulated in the Amended Credit Agreement."</data>
+  <data key="d2">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;SECTION 8.12&quot;">
+  <data key="d0">"COVENANTS"</data>
+  <data key="d1">"Section 8.12 of the Amended Credit Agreement includes the waiver of jury trial provisions."</data>
+  <data key="d2">chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<node id="&quot;SEPTEMBER 1, 2022&quot;">
+  <data key="d0">"EXECUTED DATE"</data>
+  <data key="d1">"The date of the original Third Amended and Restated Credit Agreement before the amendment."</data>
+  <data key="d2">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d3">DOC-82e6bf341809018813b0e813f86b67c6</data>
+  <data key="d4">citibank-caterpillar</data>
+</node>
+<edge source="&quot;AMENDMENT NO. 2&quot;" target="&quot;CATERPILLAR FINANCE KABUSHIKI KAISHA&quot;">
   <data key="d5">8.0</data>
-  <data key="d6">"The Existing Credit Agreement is ratified and confirmed."</data>
-  <data key="d7">ratification</data>
-  <data key="d8">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
+  <data key="d6">"Caterpillar Finance Kabushiki Kaisha is a party to Amendment No. 2 to the Third Amended and Restated Credit Agreement."</data>
+  <data key="d7">"participates in"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AMENDMENT NO. 2&quot;" target="&quot;CATERPILLAR FINANCIAL SERVICES CORPORATION&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"Caterpillar Financial Services Corporation is a party to Amendment No. 2 to the Third Amended and Restated Credit Agreement."</data>
+  <data key="d7">"participates in"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AMENDMENT NO. 2&quot;" target="&quot;CATERPILLAR INC.&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"Caterpillar Inc. is a party to Amendment No. 2 to the Third Amended and Restated Credit Agreement."</data>
+  <data key="d7">"participates in"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AMENDMENT NO. 2&quot;" target="&quot;AMENDED CREDIT AGREEMENT&quot;">
+  <data key="d5">7.0</data>
+  <data key="d6">"Amendment No. 2 modifies the Existing Credit Agreement to create the Amended Credit Agreement."</data>
+  <data key="d7">"modifies"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AMENDMENT NO. 2&quot;" target="&quot;CATERPILLAR INTERNATIONAL FINANCE DESIGNATED ACTIVITY COMPANY&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"Caterpillar International Finance Designated Activity Company is a party to Amendment No. 2 to the Third Amended and Restated Credit Agreement."</data>
+  <data key="d7">"participates in"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;ARTICLE IX&quot;" target="&quot;CFSC&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"CFSC's obligations are elaborated upon in Article IX of the credit agreement."&lt;</data>
+  <data key="d7">"obligation detail"</data>
+  <data key="d8">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
 <edge source="&quot;CERTIFICATE OF INCORPORATION&quot;" target="&quot;BORROWER&quot;">
-  <data key="d5">6.0</data>
-  <data key="d6">"The Certificate of Incorporation must be attached for the Borrower's execution of the Amendment."}</data>
-  <data key="d7">"corporate document"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
+  <data key="d5">5.0</data>
+  <data key="d6">"Each Borrower must provide the Certificate of Incorporation for certification."</data>
+  <data key="d7">"document requirement"</data>
+  <data key="d8">chunk-83d1bc953975fdc876f33628f400261e</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
-<edge source="&quot;EXISTING CREDIT AGREEMENT&quot;" target="&quot;AMENDMENT NO. 2 TO THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;">
+<edge source="&quot;CATERPILLAR INTERNATIONAL FINANCE DESIGNATED ACTIVITY COMPANY&quot;" target="&quot;CATERPILLAR&quot;">
   <data key="d5">9.0</data>
-  <data key="d6">"The amendment modifies the terms of the Existing Credit Agreement."&lt;</data>
-  <data key="d7">9</data>
+  <data key="d6">"Caterpillar has a relationship with Caterpillar International Finance Designated Activity Company as financial partners."</data>
+  <data key="d7">"affiliated with"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;THE BANK OF NEW YORK MELLON&quot;" target="&quot;COMMITMENTS&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"The Bank of New York Mellon's commitments are detailed in the Existing Credit Agreement."&lt;</data>
+  <data key="d7">"financial commitment"</data>
+  <data key="d8">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;THE BANK OF NEW YORK MELLON&quot;" target="&quot;DBS BANK LTD.&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"DBS Bank Ltd. was added to the existing financial commitments originally held by The Bank of New York Mellon."&lt;</data>
+  <data key="d7">"replacement"</data>
+  <data key="d8">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;THE BANK OF NEW YORK MELLON&quot;" target="&quot;DEPARTING BANK&quot;">
+  <data key="d5">9.0</data>
+  <data key="d6">"The Bank of New York Mellon is referred to as the Departing Bank that is no longer part of the Amended Credit Agreement."</data>
+  <data key="d7">"Withdrawal, Non-participation"</data>
+  <data key="d8">chunk-a3d2193e53925a8976a993ed85a696df</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;CREDIT RATINGS&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"Credit Ratings need to be provided for the Borrowers as part of the loan compliance at Closing Date."</data>
+  <data key="d7">"compliance requirement"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;SECTION 10&quot;" target="&quot;ADDITIONAL BANK&quot;">
+  <data key="d5">6.0</data>
+  <data key="d6">"The Additional Bank's role and obligations are outlined in Section 10 of the Agreement."</data>
+  <data key="d7">"role, obligations"</data>
+  <data key="d8">chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;MAYER BROWN LLP&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"Mayer Brown LLP acts as counsel for the Borrowers, providing legal opinion related to the credit agreement."</data>
+  <data key="d7">"legal counsel"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;CATERPILLAR FINANCIAL SERVICES CORPORATION&quot;" target="&quot;CATERPILLAR&quot;">
+  <data key="d5">9.0</data>
+  <data key="d6">"Caterpillar, as a parent company, relates to its subsidiary, Caterpillar Financial Services Corporation."</data>
+  <data key="d7">"affiliated with"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AMENDMENT NO. 1&quot;" target="&quot;EXISTING CREDIT AGREEMENT&quot;">
+  <data key="d5">7.0</data>
+  <data key="d6">"Amendment No. 1 to the Third Amended and Restated Credit Agreement modifies the Existing Credit Agreement."</data>
+  <data key="d7">"modifies"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;CATERPILLAR&quot;" target="&quot;CATERPILLAR FINANCE KABUSHIKI KAISHA&quot;">
+  <data key="d5">9.0</data>
+  <data key="d6">"Caterpillar is affiliated with Caterpillar Finance Kabushiki Kaisha in the borrowing process."</data>
+  <data key="d7">"affiliated with"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;CATERPILLAR&quot;" target="&quot;OPINION LETTER&quot;">
+  <data key="d5">5.0</data>
+  <data key="d6">"Caterpillar must provide an opinion letter upon express instructions."</data>
+  <data key="d7">"legal document"</data>
+  <data key="d8">chunk-83d1bc953975fdc876f33628f400261e</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;CATERPILLAR&quot;" target="&quot;AGENT&quot;">
+  <data key="d5">6.0</data>
+  <data key="d6">"Good standing certificates for Caterpillar and CFSC are required to be submitted to the Agent."</data>
+  <data key="d7">"good standing requirement"</data>
+  <data key="d8">chunk-83d1bc953975fdc876f33628f400261e</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;CATERPILLAR&quot;" target="&quot;CATERPILLAR INC.&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"Caterpillar Inc. is a commonly used short name for Caterpillar."</data>
+  <data key="d7">"identifies as"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;CLOSING DATE&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"Evidence of the Credit Ratings for the Borrowers is required as of the Closing Date."</data>
+  <data key="d7">"credit ratings requirement"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AUGUST 29, 2029&quot;" target="&quot;CURRENT TERMINATION DATE&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"The Current Termination Date defines when the agreement can be legally terminated."&lt;</data>
+  <data key="d7">"termination definition"</data>
+  <data key="d8">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;BY-LAWS&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">5.0</data>
+  <data key="d6">"The By-laws of each Borrower must also be attached along with the Certificate of Incorporation."</data>
+  <data key="d7">"document complement"</data>
+  <data key="d8">chunk-83d1bc953975fdc876f33628f400261e</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;SECTION 6&quot;" target="&quot;AMENDMENT&quot;">
+  <data key="d5">9.0</data>
+  <data key="d6">"SECTION 6 details how the Amendment interacts with references to the Existing Credit Agreement and establishes clarity in document relationships."</data>
+  <data key="d7">"reference clarification"</data>
+  <data key="d8">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;COMMITMENT&quot;" target="&quot;ADDITIONAL BANK&quot;">
+  <data key="d5">6.0</data>
+  <data key="d6">"The Additional Bank's Commitment and Revolving Credit Commitment are specified in Schedule I of the Amended Credit Agreement."</data>
+  <data key="d7">"specifies, involves"</data>
+  <data key="d8">chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;DBS BANK LTD.&quot;" target="&quot;REVOLVING CREDIT COMMITMENTS&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"DBS Bank Ltd. has specified Revolving Credit Commitments in the updated credit agreement."&lt;</data>
+  <data key="d7">"financial commitment"</data>
+  <data key="d8">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;DBS BANK LTD.&quot;" target="&quot;AMENDMENT&quot;">
+  <data key="d5">7.0</data>
+  <data key="d6">"DBS Bank Ltd. agrees to the provisions of this Amendment, which govern the relation to the Amended Credit Agreement."</data>
+  <data key="d7">"agrees to, governed by"</data>
+  <data key="d8">chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;DBS BANK LTD.&quot;" target="&quot;AMENDED CREDIT AGREEMENT&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"DBS Bank Ltd. is bound by the provisions of the Amended Credit Agreement as an Additional Bank."</data>
+  <data key="d7">"bound by, Additional Bank"</data>
+  <data key="d8">chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;EVENT OF DEFAULT CONDITIONS&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"Each Borrower confirms that no Event of Default Conditions exist, ensuring compliance with the agreement."</data>
+  <data key="d7">"compliance assurance"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;DEPARTING BANK&quot;" target="&quot;LOAN DOCUMENTS&quot;">
+  <data key="d5">7.0</data>
+  <data key="d6">"The Departing Bank retains rights and obligations under the provisions of the Existing Credit Agreement that survive termination."</data>
+  <data key="d7">"Survival, Rights"</data>
+  <data key="d8">chunk-a3d2193e53925a8976a993ed85a696df</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;DEPARTING BANK&quot;" target="&quot;AMENDED CREDIT AGREEMENT&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"The Departing Bank's Commitment and Revolving Credit Commitment under the Existing Credit Agreement are terminated upon this amendment."</data>
+  <data key="d7">"Termination, Change in Status"</data>
+  <data key="d8">chunk-a3d2193e53925a8976a993ed85a696df</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;BANK&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">7.0</data>
+  <data key="d6">"Each Borrower is required to pay upfront fees to their respective Banks in connection with this Amendment."</data>
+  <data key="d7">"fee payment"</data>
+  <data key="d8">chunk-83d1bc953975fdc876f33628f400261e</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;EVENT OF DEFAULT&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">9.0</data>
+  <data key="d6">"Each Borrower assures that no Event of Default exists with respect to them under the agreement."&lt;SEP&gt;"The occurrence of an Event of Default affects the Borrower's obligations and the lender's right to act under the terms of the agreement."</data>
+  <data key="d7">"assurance of compliance"&lt;SEP&gt;"default condition"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734&lt;SEP&gt;chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;LOAN DOCUMENTS&quot;" target="&quot;ADDITIONAL BANK&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"The Additional Bank must fulfill its responsibilities as outlined in the Loan Documents per the terms of the Amended Credit Agreement."</data>
+  <data key="d7">"Commitment, Obligation"</data>
+  <data key="d8">chunk-a3d2193e53925a8976a993ed85a696df</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;LOAN DOCUMENTS&quot;" target="&quot;AMENDMENT&quot;">
+  <data key="d5">7.0</data>
+  <data key="d6">"The Amendment is tied to the approval and conditions outlined in the Loan Documents."</data>
+  <data key="d7">"approval, conditions"</data>
+  <data key="d8">chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;CATERPILLAR INC.&quot;" target="&quot;AGENT&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"Caterpillar Inc. designates Citibank, N.A. as the Agent under the Existing Credit Agreement."</data>
+  <data key="d7">"designates"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;EXISTING CREDIT AGREEMENT&quot;" target="&quot;AMENDED CREDIT AGREEMENT&quot;">
+  <data key="d5">17.0</data>
+  <data key="d6">"The Amended Credit Agreement is a modification of the Existing Credit Agreement."&lt;&lt;SEP&gt;"The Amended Credit Agreement is a revision of the Existing Credit Agreement highlighting modified terms and references."&lt;SEP&gt;"The Amended Credit Agreement modifies the Existing Credit Agreement, affecting the commitments previously set forth."&lt;SEP&gt;"The Amended Credit Agreement refers to the Existing Credit Agreement, signifying a continuation of prior terms."</data>
+  <data key="d7">"Modification, Agreement Change"&lt;SEP&gt;"continuity of agreement"&lt;SEP&gt;"modification"&lt;SEP&gt;"revision"</data>
+  <data key="d8">chunk-4fdadc02546029dea7800ee5f9c31dc1&lt;SEP&gt;chunk-58598f70b5a253429401f1f1c4a79734&lt;SEP&gt;chunk-a3d2193e53925a8976a993ed85a696df&lt;SEP&gt;chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;EXISTING CREDIT AGREEMENT&quot;" target="&quot;BANKS&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"The Banks are parties to the Existing Credit Agreement that is referenced in this amendment."</data>
+  <data key="d7">"parties to"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;EXISTING CREDIT AGREEMENT&quot;" target="&quot;CITIBANK, N.A.&quot;">
+  <data key="d5">9.0</data>
+  <data key="d6">"Citibank, N.A. acts as Agent under the Existing Credit Agreement."</data>
+  <data key="d7">"functions as"</data>
   <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
 <edge source="&quot;EXISTING CREDIT AGREEMENT&quot;" target="&quot;AMENDMENT&quot;">
-  <data key="d5">5.0</data>
-  <data key="d6">"The Amendment is related to the Existing Credit Agreement, specifying that it does not waive any rights under it."</data>
-  <data key="d7">"modification"</data>
-  <data key="d8">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
+  <data key="d5">8.0</data>
+  <data key="d6">"This amendment modifies the Existing Credit Agreement, linking the two documents and indicating a revision of terms."</data>
+  <data key="d7">"modification, linkage"</data>
+  <data key="d8">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
-<edge source="&quot;EXISTING CREDIT AGREEMENT&quot;" target="&quot;AMENDED CREDIT AGREEMENT&quot;">
-  <data key="d5">7.0</data>
-  <data key="d6">"The Amended Credit Agreement refers to the Existing Credit Agreement as amended."</data>
-  <data key="d7">reference</data>
-  <data key="d8">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;BY-LAWS&quot;" target="&quot;BORROWER&quot;">
-  <data key="d5">6.0</data>
-  <data key="d6">"The By-laws must also be attached for the Borrower's execution of the Amendment."}</data>
-  <data key="d7">"corporate document"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;CATERPILLAR INTERNATIONAL FINANCE DESIGNATED ACTIVITY COMPANY&quot;" target="&quot;AMENDMENT NO. 2 TO THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;">
-  <data key="d5">10.0</data>
-  <data key="d6">"This company is part of the Borrowers in the amendment and existing credit agreement."&lt;</data>
-  <data key="d7">10</data>
-  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;OPINION LETTER&quot;" target="&quot;BORROWER&quot;">
-  <data key="d5">6.0</data>
-  <data key="d6">"The Borrower provides necessary documents, including the opinion letter for the Amendment."}</data>
-  <data key="d7">"compliance"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;OPINION LETTER&quot;" target="&quot;CATERPILLAR&quot;">
-  <data key="d5">5.0</data>
-  <data key="d6">"Caterpillar requires the opinion letter from legal counsel to proceed with the Amendment."}</data>
-  <data key="d7">"legal support"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;OPINION LETTER&quot;" target="&quot;CFSC&quot;">
-  <data key="d5">5.0</data>
-  <data key="d6">"CFSC requires the opinion letter from legal counsel to proceed with the Amendment."}</data>
-  <data key="d7">"legal support"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;THE BANK OF NEW YORK MELLON&quot;" target="&quot;DEPARTING BANK&quot;">
+<edge source="&quot;EXISTING CREDIT AGREEMENT&quot;" target="&quot;SCHEDULE I&quot;">
   <data key="d5">1.0</data>
-  <data key="d6">"The Bank of New York Mellon holds the title of Departing Bank, denoting its exit from the obligations under the Amended Credit Agreement."}</data>
-  <data key="d7">"Designation"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
+  <data key="d6">"Schedule I is a part of the Existing Credit Agreement which details the commitments of the involved banks."&lt;</data>
+  <data key="d7">"part of"</data>
+  <data key="d8">chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
-<edge source="&quot;THE BANK OF NEW YORK MELLON&quot;" target="&quot;DBS BANK LTD.&quot;">
-  <data key="d5">7.0</data>
-  <data key="d6">"Schedule I to the Existing Credit Agreement is hereby amended to delete the Commitments and the Revolving Credit Commitments of The Bank of New York Mellon and insert those of DBS Bank Ltd."</data>
-  <data key="d7">"Amendment"</data>
-  <data key="d8">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
+<edge source="&quot;EXISTING CREDIT AGREEMENT&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">9.0</data>
+  <data key="d6">"The Existing Credit Agreement is the framework within which the Borrower receives financing, establishing obligations and rights."</data>
+  <data key="d7">"obligation"</data>
+  <data key="d8">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
-<edge source="&quot;THE BANK OF NEW YORK MELLON&quot;" target="&quot;LOAN AGREEMENT&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"The Bank of New York Mellon had obligations under the Loan Agreement, which are terminated upon its departure."}</data>
-  <data key="d7">"Contractual Obligations"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;THE BANK OF NEW YORK MELLON&quot;" target="&quot;COMMITMENT&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"The Bank of New York Mellon's Commitment under the Existing Credit Agreement will be terminated upon its departure."}</data>
-  <data key="d7">"Financial Termination"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;THE BANK OF NEW YORK MELLON&quot;" target="&quot;AMENDED CREDIT AGREEMENT&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"The Bank of New York Mellon will no longer constitute a Bank under the Amended Credit Agreement, indicating a relationship pertaining to its status as a departing entity."}</data>
-  <data key="d7">"Bank Departure"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;THE BANK OF NEW YORK MELLON&quot;" target="&quot;REVOLVING CREDIT COMMITMENT&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"The Bank of New York Mellon's Revolving Credit Commitment under the Existing Credit Agreement will be terminated upon its departure."}</data>
-  <data key="d7">"Financial Termination"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;THE BANK OF NEW YORK MELLON&quot;" target="&quot;LOAN DOCUMENTS&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"The Bank of New York Mellon will no longer have rights under the Loan Documents after its departure from being a Bank."}</data>
-  <data key="d7">"Contractual Rights"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;UPFRONT FEES&quot;" target="&quot;BANK&quot;">
-  <data key="d5">5.0</data>
-  <data key="d6">"The upfront fees are a requirement for the transaction between the Borrower and the Bank."}</data>
-  <data key="d7">"financial arrangement"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;DBS BANK LTD.&quot;" target="&quot;COMMITMENT&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"DBS Bank Ltd. is bound by provisions related to its Commitment under the Amended Credit Agreement."}</data>
-  <data key="d7">"Financial Obligation"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;DBS BANK LTD.&quot;" target="&quot;SCHEDULE I&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"DBS Bank Ltd.'s commitments are recorded in Schedule I, which forms part of the Amended Credit Agreement."}</data>
-  <data key="d7">"Documentation"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;DBS BANK LTD.&quot;" target="&quot;REVOLVING CREDIT COMMITMENT&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"DBS Bank Ltd. is obliged to fulfill its Revolving Credit Commitment as per the Amended Credit Agreement."}</data>
-  <data key="d7">"Financial Obligation"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;DBS BANK LTD.&quot;" target="&quot;AMENDED CREDIT AGREEMENT&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"DBS Bank Ltd. will participate as a Bank under the Amended Credit Agreement, indicating a direct relationship to the agreement."}</data>
-  <data key="d7">"Bank Participation"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;DBS BANK LTD.&quot;" target="&quot;AGENT&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"DBS Bank Ltd. acts independently and not relying on the Agent or any other Bank."}</data>
-  <data key="d7">"Operational Independence"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;DBS BANK LTD.&quot;" target="&quot;LOAN DOCUMENTS&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"DBS Bank Ltd. will need to comply with and is bound by the terms of the Loan Documents alongside the Amended Credit Agreement."}</data>
-  <data key="d7">"Contractual Obligations"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;DBS BANK LTD.&quot;" target="&quot;ADDITIONAL BANK&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"DBS Bank Ltd. operates under the title of Additional Bank, indicating its capacity as a secured party in the agreement."}</data>
-  <data key="d7">"Designation"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
+<edge source="&quot;SECTION 7&quot;" target="&quot;AMENDMENT&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"SECTION 7 specifies the execution procedures for the Amendment, ensuring proper format and acceptance for all parties involved."</data>
+  <data key="d7">"execution procedure"</data>
+  <data key="d8">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
 <edge source="&quot;CFSC&quot;" target="&quot;AMENDED CREDIT AGREEMENT&quot;">
-  <data key="d5">8.0</data>
-  <data key="d6">"CFSC hereby reaffirms all of its obligations under Article IX of the Amended Credit Agreement."</data>
-  <data key="d7">"Reaffirmation"</data>
-  <data key="d8">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;CFSC&quot;" target="&quot;CATERPILLAR&quot;">
-  <data key="d5">5.0</data>
-  <data key="d6">"Caterpillar and CFSC are both evaluated for good standing in relation to the Amendment."}</data>
-  <data key="d7">"compliance"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;BANKS&quot;" target="&quot;THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;">
-  <data key="d5">8.0</data>
-  <data key="d6">"The Banks are parties to the credit agreement stipulating their collaboration with the Borrowers."&lt;</data>
-  <data key="d7">8</data>
-  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;CURRENT TERMINATION DATE&quot;" target="&quot;SECTION 2&quot;">
-  <data key="d5">6.0</data>
-  <data key="d6">"Identifies the modification date for the Current Termination Date in relation to the Section of the agreement."</data>
-  <data key="d7">"Modification"</data>
-  <data key="d8">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;COUNTERPARTS&quot;" target="&quot;AMENDMENT&quot;">
-  <data key="d5">4.0</data>
-  <data key="d6">"The Amendment may be executed in any number of counterparts, indicating its flexibility in execution."</data>
-  <data key="d7">"flexibility"</data>
-  <data key="d8">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;CITIBANK, N.A.&quot;" target="&quot;THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;">
   <data key="d5">9.0</data>
-  <data key="d6">"Citibank acts as the Agent facilitating the agreement among the other parties."&lt;</data>
-  <data key="d7">9</data>
-  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d6">"CFSC reaffirms its obligations as stated in the Amended Credit Agreement."&lt;&lt;SEP&gt;"CFSC reaffirms its obligations under Article IX of the Amended Credit Agreement."</data>
+  <data key="d7">"guarantee"&lt;SEP&gt;"guaranty, reaffirmation"</data>
+  <data key="d8">chunk-83d1bc953975fdc876f33628f400261e&lt;SEP&gt;chunk-d6deecefaeb7e3a0fdb52f9ca6b11ad2</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
-<edge source="&quot;AFFILIATES&quot;" target="&quot;AMENDMENT&quot;">
-  <data key="d5">4.0</data>
-  <data key="d6">"The execution of the Amendment by any party affects its Affiliates, binding them to the agreement."</data>
-  <data key="d7">"binding"</data>
-  <data key="d8">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;AMENDMENT NO. 2 TO THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;" target="&quot;CATERPILLAR FINANCIAL SERVICES CORPORATION&quot;">
-  <data key="d5">10.0</data>
-  <data key="d6">"Caterpillar Financial Services Corporation is involved in the agreement as a Borrower."&lt;</data>
-  <data key="d7">10</data>
-  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;AMENDMENT NO. 2 TO THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;" target="&quot;CATERPILLAR FINANCE KABUSHIKI KAISHA&quot;">
-  <data key="d5">10.0</data>
-  <data key="d6">"This entity is identified as a Borrower in the amendment."&lt;</data>
-  <data key="d7">10</data>
-  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;AMENDMENT NO. 2 TO THIRD AMENDED AND RESTATED CREDIT AGREEMENT (FIVE-YEAR FACILITY)&quot;" target="&quot;CATERPILLAR INC.&quot;">
-  <data key="d5">10.0</data>
-  <data key="d6">"Caterpillar Inc. is a party entering into the amendment of the credit agreement."&lt;</data>
-  <data key="d7">10</data>
-  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;LOAN DOCUMENTS&quot;" target="&quot;ADDITIONAL BANK&quot;">
+<edge source="&quot;BANKRUPTCY LAWS&quot;" target="&quot;BORROWER&quot;">
   <data key="d5">1.0</data>
-  <data key="d6">"The Additional Bank is involved with the Loan Documents, confirming its binding obligations under the agreements."}</data>
-  <data key="d7">"Contractual Obligation"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;LOAN DOCUMENTS&quot;" target="&quot;AMENDMENT&quot;">
-  <data key="d5">5.0</data>
-  <data key="d6">"The Amendment pertains to and is enforceable against the Loan Documents."</data>
-  <data key="d7">"enforceable"</data>
-  <data key="d8">chunk-a4f411684ecf9b125f0ad1602ab3f306</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;LOAN DOCUMENTS&quot;" target="&quot;AGENT&quot;">
-  <data key="d5">1.0</data>
-  <data key="d6">"The role of the Agent relates to strategy and assistance provided to the Additional Bank during the agreement process."}</data>
-  <data key="d7">"Supporting Role"</data>
-  <data key="d8">chunk-eaaa2767e1321b60195f4e1074afafc9</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;AMENDED CREDIT AGREEMENT&quot;" target="&quot;SECTION 1&quot;">
-  <data key="d5">7.0</data>
-  <data key="d6">"Defines the capitalized terms used throughout the Amended Credit Agreement."</data>
-  <data key="d7">"Definition"</data>
-  <data key="d8">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;AMENDED CREDIT AGREEMENT&quot;" target="&quot;SECTION 2&quot;">
-  <data key="d5">7.0</data>
-  <data key="d6">"Outlines the amendments made to the Existing Credit Agreement."</data>
-  <data key="d7">"Amendment Outline"</data>
-  <data key="d8">chunk-5bd287a3ef42a722f577eb8f268d1b97</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;AMENDED CREDIT AGREEMENT&quot;" target="&quot;AMENDMENT&quot;">
-  <data key="d5">13.0</data>
-  <data key="d6">"The Amendment is subject to the terms set forth in the Amended Credit Agreement."&lt;SEP&gt;"The Amendment updates and modifies the Amended Credit Agreement."</data>
-  <data key="d7">"subject to"&lt;SEP&gt;amendment</data>
-  <data key="d8">chunk-a4f411684ecf9b125f0ad1602ab3f306&lt;SEP&gt;chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;COVENANTS&quot;" target="&quot;BORROWERS&quot;">
-  <data key="d5">8.0</data>
-  <data key="d6">"Covenants are reaffirmed by each Borrower as part of the Amended Credit Agreement."</data>
-  <data key="d7">covenants</data>
-  <data key="d8">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;BORROWERS&quot;" target="&quot;APPLICABLE BANKRUPTCY LAWS&quot;">
-  <data key="d5">6.0</data>
-  <data key="d6">"Borrower's obligations are subject to applicable bankruptcy laws."</data>
-  <data key="d7">obligations</data>
-  <data key="d8">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;BORROWERS&quot;" target="&quot;AMENDMENT&quot;">
-  <data key="d5">7.0</data>
-  <data key="d6">"The Borrowers represent and warrant the Amendment as a binding obligation."</data>
-  <data key="d7">binding obligation</data>
-  <data key="d8">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;BORROWERS&quot;" target="&quot;EVENT OF DEFAULT&quot;">
-  <data key="d5">7.0</data>
-  <data key="d6">"Borrowers warrant the absence of an Event of Default."</data>
-  <data key="d7">absence of default</data>
-  <data key="d8">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;BANK&quot;" target="&quot;AGENT&quot;">
-  <data key="d5">6.0</data>
-  <data key="d6">"The Agent interacts with each Bank for the execution of the Amendment."}</data>
-  <data key="d7">"transaction"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;AMENDMENT&quot;" target="&quot;LEGAL OBLIGATION&quot;">
-  <data key="d5">7.0</data>
-  <data key="d6">"The Amendment acts as a legal obligation for the Borrower."</data>
-  <data key="d7">legal obligation</data>
-  <data key="d8">chunk-e1e95dbe8843d751033d0ade8331ce60</data>
+  <data key="d6">"Applicable Bankruptcy Laws could affect the enforceability of the obligations for the Borrowers."</data>
+  <data key="d7">"legal compliance"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
 <edge source="&quot;AMENDMENT EFFECTIVE DATE&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"Certain documentation must be provided by the Borrowers at least five Business Days prior to the Amendment Effective Date."</data>
+  <data key="d7">"documentation requirement"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;BENEFICIAL OWNERSHIP REGULATION&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"Borrowers must comply with the Beneficial Ownership Regulation requirements which relate to legal entity customers."</data>
+  <data key="d7">"compliance requirement"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;SECTION 8&quot;" target="&quot;SECTION 8.12&quot;">
+  <data key="d5">5.0</data>
+  <data key="d6">"Section 8.12 provides waiver of jury trial which is a part of section 8."</data>
+  <data key="d7">"provides, part of"</data>
+  <data key="d8">chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;SECTION 8&quot;" target="&quot;SECTION 8.08&quot;">
+  <data key="d5">5.0</data>
+  <data key="d6">"Section 8.08 is a component of the wider Section 8 regarding jurisdiction and service of process."</data>
+  <data key="d7">"component, jurisdiction"</data>
+  <data key="d8">chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;SECTION 8&quot;" target="&quot;AMENDED CREDIT AGREEMENT&quot;">
   <data key="d5">7.0</data>
-  <data key="d6">"The Amendment Effective Date pertains to the activities and requirements of the Borrower."}</data>
-  <data key="d7">"contractual"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
+  <data key="d6">"Section 8's provisions govern aspects of the Amended Credit Agreement."</data>
+  <data key="d7">"govern, provisions"</data>
+  <data key="d8">chunk-3297117ba565b80ed2032999083df511</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AMENDED CREDIT AGREEMENT&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"Each Borrower reaffirms covenants and representations in the Amended Credit Agreement, making it a binding obligation."</data>
+  <data key="d7">"binding obligation"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AMENDED CREDIT AGREEMENT&quot;" target="&quot;ADDITIONAL BANK&quot;">
+  <data key="d5">8.0</data>
+  <data key="d6">"The Additional Bank agrees to the terms outlined in the Amended Credit Agreement and acknowledges receipt of relevant documents for credit analysis."</data>
+  <data key="d7">"Agreement, Acknowledgment"</data>
+  <data key="d8">chunk-a3d2193e53925a8976a993ed85a696df</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;GOOD STANDING CERTIFICATES&quot;" target="&quot;AGENT&quot;">
+  <data key="d5">6.0</data>
+  <data key="d6">"The Agent is required to receive the Good standing certificates from Caterpillar and CFSC."</data>
+  <data key="d7">"agent requirement"</data>
+  <data key="d8">chunk-83d1bc953975fdc876f33628f400261e</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AFFILIATES&quot;" target="&quot;AMENDMENT&quot;">
+  <data key="d5">9.0</data>
+  <data key="d6">"The approval of the Amendment by Affiliates indicates their binding commitment to the updated terms and conditions of the Loan Documents."</data>
+  <data key="d7">"approval requirement"</data>
+  <data key="d8">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;BANKS&quot;" target="&quot;AGENT&quot;">
+  <data key="d5">9.0</data>
+  <data key="d6">"The Banks are connected to Citibank, N.A. as the Agent in the context of the Existing Credit Agreement."</data>
+  <data key="d7">"highly related to"</data>
+  <data key="d8">chunk-9ef11f13cda702c217a04f82ce77965d</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;LEGAL ENTITY CUSTOMER&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"Each Borrower must comply with the designation of Legal Entity Customer under regulatory requirements."</data>
+  <data key="d7">"regulatory compliance"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AMENDMENT&quot;" target="&quot;LOAN DOCUMENT&quot;">
+  <data key="d5">7.0</data>
+  <data key="d6">"The Amendment serves as a Loan Document, adjusting the terms of the loan as set forth in the Existing Credit Agreement."</data>
+  <data key="d7">"technical amendment"</data>
+  <data key="d8">chunk-4fdadc02546029dea7800ee5f9c31dc1</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;COVENANTS&quot;" target="&quot;BORROWER&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"Borrowers reaffirm all covenants as part of their continuing obligations in the Amended Credit Agreement."</data>
+  <data key="d7">"reaffirmation of obligations"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
+  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
+</edge>
+<edge source="&quot;AGENT&quot;" target="&quot;ADDITIONAL BANK&quot;">
+  <data key="d5">7.0</data>
+  <data key="d6">"The Additional Bank confirms it will make credit decisions independently and without reliance on the Agent."</data>
+  <data key="d7">"Independence, Decision-Making"</data>
+  <data key="d8">chunk-a3d2193e53925a8976a993ed85a696df</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
 <edge source="&quot;AGENT&quot;" target="&quot;BORROWER&quot;">
-  <data key="d5">7.0</data>
-  <data key="d6">"The Agent requires duly executed counterparts of this Amendment from each Borrower to proceed."}</data>
-  <data key="d7">"transaction"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
+  <data key="d5">8.0</data>
+  <data key="d6">"The Agent manages the administrative functions concerning the Borrowers' obligations under the amended agreement."&lt;SEP&gt;"The Agent shall receive duly executed counterparts from each Borrower and each Bank."</data>
+  <data key="d7">"administrative management"&lt;SEP&gt;"agent responsibilities"</data>
+  <data key="d8">chunk-83d1bc953975fdc876f33628f400261e&lt;SEP&gt;chunk-58598f70b5a253429401f1f1c4a79734</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
-<edge source="&quot;BORROWER&quot;" target="&quot;MAYER BROWN LLP&quot;">
-  <data key="d5">13.0</data>
-  <data key="d6">"Mayer Brown LLP provides an opinion letter for the Borrowers."}&lt;SEP&gt;"Mayer Brown LLP's opinion letter is specifically provided to the Borrowers per their request."}</data>
-  <data key="d7">"legal support"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
-  <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
-</edge>
-<edge source="&quot;BORROWER&quot;" target="&quot;RESOLUTIONS&quot;">
-  <data key="d5">7.0</data>
-  <data key="d6">"Resolutions of the Borrower's Board of Directors are required for executing the Amendment."}</data>
-  <data key="d7">"corporate governance"</data>
-  <data key="d8">chunk-5062068bbb50c4a689ff70996b6d1925</data>
+<edge source="&quot;BORROWER&quot;" target="&quot;REPAYMENT OBLIGATIONS&quot;">
+  <data key="d5">1.0</data>
+  <data key="d6">"Borrowers are legally bound to fulfill repayment obligations as outlined in the Amended Credit Agreement."</data>
+  <data key="d7">"obligatory relationship"</data>
+  <data key="d8">chunk-58598f70b5a253429401f1f1c4a79734</data>
   <data key="d9">DOC-82e6bf341809018813b0e813f86b67c6</data>
 </edge>
 </graph></graphml>

@@ -1,0 +1,32 @@
+company: A legal business entity or corporation
+corporation: A specific type of company with limited liability
+agreement: A legal contract outlining terms between parties
+amendment: A modification or addition to an existing agreement
+commitment: A lender's obligation to provide financing
+executed date: The date on which the agreement was signed
+maturity date: The final due date for repayment of a loan
+waiver: A legal decision to waive a contractual obligation
+borrower: The entity receiving the loan under the agreement
+guarantor: An entity that guarantees the borrower's obligations
+obligor: A party legally bound to fulfill obligations under a contract
+lender: A financial institution providing the loan
+secured party: A lender holding a security interest in collateral
+agent: An entity managing administrative loan functions
+facility: A structured credit or loan arrangement
+swingline: A short-term borrowing facility
+letter of credit: A guarantee from a bank ensuring payment
+base rate benchmark: A reference interest rate (e.g. SOFR, LIBOR)
+interest rate: The cost of borrowing expressed as a percentage
+margin: The additional percentage added to the base rate
+default interest: The increased interest rate applied in case of default
+collateral: Assets pledged to secure a loan
+security trustee: An entity holding security interests on behalf of lenders
+lien: A legal right over a borrower's assets as collateral
+covenants: Financial and operational restrictions on the borrower
+schedule: A structured timeline for loan events
+prepayment: The ability to repay a loan before maturity
+syndicated: A loan provided by multiple lenders
+assignee: A party receiving loan rights via transfer
+transferor: A lender transferring its loan interest
+agency: The function of managing a syndicated loan
+regulatory: Entities responsible for overseeing compliance and regulations
