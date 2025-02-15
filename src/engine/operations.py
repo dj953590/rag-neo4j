@@ -1325,7 +1325,7 @@ async def naive_query(
     """
     use_model_func = global_config["llm_model_func"]
     args_hash = compute_args_hash(query_param.mode, query)
-    results = await chunks_vdb.query(query, top_k=query_param.top_k)
+    results = await chunks_vdb.query(query, param=query_param)
     if not len(results):
         return PROMPTS["fail_response"]
 

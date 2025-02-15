@@ -8,7 +8,7 @@ from sqlalchemy import create_engine, Column, String, JSON, text, literal_column
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import func
-from src.db.base import BaseVectorStorage
+from src.db.base import BaseVectorStorage, QueryParam
 from src.utils.log import logger
 
 Base = declarative_base()
@@ -128,8 +128,13 @@ class PGVectorStorage(BaseVectorStorage):
             logger.error(f"Error during PGVector upsert: {str(e)}")
             raise
 
-    async def query(self, query: str, doc_id: str, top_k=5) -> Union[dict, list[dict]]:
+    async def query(self, query: str, param: QueryParam) -> Union[dict, list[dict]]:
         try:
+            top_k = 5
+            if param.top_k:
+                top_k = param.top_k
+
+            doc_id = param.doc_id
             embedding = await self.embedding_func([query])
 
             session = self._Session()
@@ -153,7 +158,7 @@ class PGVectorStorage(BaseVectorStorage):
             """
             results = session.query(VectorTable,
                                     VectorTable.embedding.cosine_distance(query_embedding).label("distance")
-                                    ).filter(doc_id == VectorTable.doc_id
+                                    ).filter(doc_id == VectorTable.doc_id if doc_id is not None else True
                                              ).order_by("distance").limit(top_k * 2).all()
 
             # Filter results by cosine similarity threshold and take top k

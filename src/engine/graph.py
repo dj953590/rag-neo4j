@@ -10,13 +10,12 @@ from src.llm.oai import (
     openai_embedding,
 )
 from src.engine.operations import (
-    chunking_by_token_size,
     extract_entities,
     # local_query,global_query,hybrid_query,
     kg_query,
     naive_query,
 )
-from src.utils.chunks import extract_chunks
+from src.docs.chunker.chunks import extract_chunks
 
 from src.utils.log import logger
 
@@ -541,7 +540,7 @@ class GraphEngine:
         Returns:
                 list: The results of the query.
         """
-        if param.mode in ["local", "global", "hybrid"]:
+        if param.mode in ["hybrid"]:
             response = await kg_query(
                 query,
                 self.chunk_entity_relation_graph,

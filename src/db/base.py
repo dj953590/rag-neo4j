@@ -15,7 +15,7 @@ T = TypeVar("T")
 
 @dataclass
 class QueryParam:
-    mode: Literal["local", "global", "hybrid", "naive"] = "global"
+    mode: Literal["hybrid", "naive"] = "naive"
     only_need_context: bool = False
     only_need_prompt: bool = False
     response_type: str = "Multiple Paragraphs"
@@ -30,6 +30,9 @@ class QueryParam:
     max_token_for_global_context: int = 4000
     # Number of tokens for the entity descriptions
     max_token_for_local_context: int = 4000
+    # document id
+    doc_id: str = None
+    
 
 
 @dataclass
@@ -51,7 +54,7 @@ class BaseVectorStorage(StorageNameSpace):
     embedding_func: EmbeddingFunc
     meta_fields: set = field(default_factory=set)
 
-    async def query(self, query: str, doc_id: str,  top_k: int) -> list[dict]:
+    async def query(self, query: str, param: QueryParam) -> list[dict]:
         raise NotImplementedError
 
     async def upsert(self, data: dict[str, dict]):
