@@ -9,7 +9,7 @@ from src.llm.oai import (
     gpt_4o_mini_complete,
     openai_embedding,
 )
-from src.graphrag.operations import (
+from src.engine.operations import (
     chunking_by_token_size,
     extract_entities,
     # local_query,global_query,hybrid_query,

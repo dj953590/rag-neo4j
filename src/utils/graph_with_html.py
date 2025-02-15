@@ -3,7 +3,7 @@ from pyvis.network import Network
 import random
 import os
 # Load the GraphML file
-filepath = "../graphrag/examples/amazon/graph_chunk_entity_relation.graphml"
+filepath = "../engine/examples/amazon/graph_chunk_entity_relation.graphml"
 output_html = '_'.join(filepath.split('/')[1:-1]) + '.html'
 print(output_html)
 G = nx.read_graphml(filepath)

@@ -1,5 +1,5 @@
 import os
-from src.graphrag.graph import GraphEngine, QueryParam
+from src.engine.graph import GraphEngine, QueryParam
 from src.llm.oai import gpt_4o_mini_complete, llama_3_3_70b_turbo, deepseek_distill_llama
 from src.llm.oai import llama_3_3_70b_versatile
 from dynaconf import settings

@@ -81,7 +81,7 @@ def extract_chunks(data: dict, max_tokens: int, min_percentage: int, overlap_tok
 
 
 if __name__ == "__main__":
-    filepath = "../graphrag/examples/caterpillar/citibank-caterpillar.json"
+    filepath = "../engine/examples/caterpillar/citibank-caterpillar.json"
     # Example usage
     with open(filepath, 'r', encoding='utf-8') as file:
         data = json.load(file)
