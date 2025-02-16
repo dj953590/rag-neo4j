@@ -8,7 +8,7 @@ from sqlalchemy import create_engine, Column, String, JSON, text, literal_column
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import func
-from src.db.base import BaseVectorStorage, QueryParam
+from src.storage.db.base import BaseVectorStorage, QueryParam
 from src.utils.log import logger
 
 Base = declarative_base()

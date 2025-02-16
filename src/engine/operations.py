@@ -590,6 +590,7 @@ async def extract_entities(
 async def kg_query(
         query,
         knowledge_graph_inst: BaseGraphStorage,
+        kg_db: BaseGraphStorage,
         entities_vdb: BaseVectorStorage,
         relationships_vdb: BaseVectorStorage,
         text_chunks_db: BaseKVStorage[TextChunkSchema],
@@ -602,6 +603,7 @@ async def kg_query(
     Args:
         query: The graph query string.
         knowledge_graph_inst: The knowledge graph instance.
+        kg_db: The knowledge graph database instance.
         entities_vdb: The entities vector database instance.
         relationships_vdb: The relationships vector database instance.
         text_chunks_db: The text chunks database instance.
@@ -610,6 +612,7 @@ async def kg_query(
     Returns:
         The result of the graph query.
     # Handle cache
+
     """
     use_model_func = global_config["llm_model_func"]
     args_hash = compute_args_hash(query_param.mode, query)
@@ -625,7 +628,7 @@ async def kg_query(
     )
 
     # Set mode
-    if query_param.mode not in ["local", "global", "hybrid"]:
+    if query_param.mode not in ["hybrid"]:
         logger.error(f"Unknown mode {query_param.mode} in kg_query")
         return PROMPTS["fail_response"]
 
@@ -675,6 +678,7 @@ async def kg_query(
     context = await _build_query_context(
         keywords,
         knowledge_graph_inst,
+        kg_db,
         entities_vdb,
         relationships_vdb,
         text_chunks_db,
@@ -714,6 +718,7 @@ async def kg_query(
 async def _build_query_context(
         query: list,
         knowledge_graph_inst: BaseGraphStorage,
+        kg_db: BaseGraphStorage,
         entities_vdb: BaseVectorStorage,
         relationships_vdb: BaseVectorStorage,
         text_chunks_db: BaseKVStorage[TextChunkSchema],
@@ -726,6 +731,7 @@ async def _build_query_context(
     Args:
         query: The list of keywords.
         knowledge_graph_inst: The knowledge graph instance.
+        kg_db: The knowledge graph database instance.
         entities_vdb: The entities vector database instance.
         relationships_vdb: The relationships vector database instance.
         text_chunks_db: The text chunks database instance.
@@ -737,7 +743,7 @@ async def _build_query_context(
     """
 
     ll_kewwords, hl_keywrds = query[0], query[1]
-    if query_param.mode in ["local", "hybrid"]:
+    if query_param.mode in ["hybrid"]:
         if ll_kewwords == "":
             ll_entities_context, ll_relations_context, ll_text_units_context = (
                 "",
@@ -747,7 +753,6 @@ async def _build_query_context(
             warnings.warn(
                 "Low Level context is None. Return empty Low entity/relationship/source"
             )
-            query_param.mode = "global"
         else:
             (
                 ll_entities_context,
@@ -756,12 +761,13 @@ async def _build_query_context(
             ) = await _get_node_data(
                 ll_kewwords,
                 knowledge_graph_inst,
+                kg_db,
                 entities_vdb,
                 text_chunks_db,
                 query_param,
                 global_config,
             )
-    if query_param.mode in ["global", "hybrid"]:
+    if query_param.mode in ["hybrid"]:
         if hl_keywrds == "":
             hl_entities_context, hl_relations_context, hl_text_units_context = (
                 "",
@@ -771,7 +777,6 @@ async def _build_query_context(
             warnings.warn(
                 "High Level context is None. Return empty High entity/relationship/source"
             )
-            query_param.mode = "local"
         else:
             (
                 hl_entities_context,
@@ -780,10 +785,10 @@ async def _build_query_context(
             ) = await _get_edge_data(
                 hl_keywrds,
                 knowledge_graph_inst,
+                kg_db,
                 relationships_vdb,
                 text_chunks_db,
                 query_param,
-                global_config,
             )
             if (
                     hl_entities_context == ""
@@ -797,18 +802,6 @@ async def _build_query_context(
             [hl_entities_context, ll_entities_context],
             [hl_relations_context, ll_relations_context],
             [hl_text_units_context, ll_text_units_context],
-        )
-    elif query_param.mode == "local":
-        entities_context, relations_context, text_units_context = (
-            ll_entities_context,
-            ll_relations_context,
-            ll_text_units_context,
-        )
-    elif query_param.mode == "global":
-        entities_context, relations_context, text_units_context = (
-            hl_entities_context,
-            hl_relations_context,
-            hl_text_units_context,
         )
     return f"""
 -----Entities-----
@@ -829,6 +822,7 @@ async def _build_query_context(
 async def _get_node_data(
         query,
         knowledge_graph_inst: BaseGraphStorage,
+        kg_db: BaseGraphStorage,
         entities_vdb: BaseVectorStorage,
         text_chunks_db: BaseKVStorage[TextChunkSchema],
         query_param: QueryParam,
@@ -840,6 +834,7 @@ async def _get_node_data(
     Args:
         query: The query keywords.
         knowledge_graph_inst: The knowledge graph instance.
+        kg_db: The knowledge graph database instance.
         entities_vdb: The entities vector database instance.
         text_chunks_db: The text chunks database instance.
         query_param: The query parameters.
@@ -848,13 +843,13 @@ async def _get_node_data(
 
     # get similar entities
     """
-    results = await entities_vdb.query(query, top_k=query_param.top_k)
+    results = await entities_vdb.query(query, param=query_param)
     if not len(results):
         return "", "", ""
     # get entity information
     node_datas = await asyncio.gather(
         *[
-            knowledge_graph_inst.get_node(r["entity_name"])
+            kg_db.get_node(r["entity_name"], param=query_param)
             for r in results
             if "entity_name" in r
         ]
@@ -866,7 +861,7 @@ async def _get_node_data(
     # get entity degree
     node_degrees = await asyncio.gather(
         *[
-            knowledge_graph_inst.node_degree(r["entity_name"])
+            kg_db.node_degree(r["entity_name"], param=query_param)
             for r in results
             if "entity_name" in r
         ]
@@ -878,11 +873,11 @@ async def _get_node_data(
     ]  # what is this text_chunks_db doing.  dont remember it in airvx.  check the diagram.
     # get entity text chunk
     use_text_units = await _find_most_related_text_unit_from_entities(
-        node_datas, query_param, text_chunks_db, knowledge_graph_inst
+        node_datas, query_param, text_chunks_db, knowledge_graph_inst, kg_db
     )
     # get relate edges
     use_relations = await _find_most_related_edges_from_entities(
-        node_datas, query_param, knowledge_graph_inst
+        node_datas, query_param, knowledge_graph_inst, kg_db
     )
     logger.info(
         f"Local query uses {len(node_datas)} entities, {len(use_relations)} relations, {len(use_text_units)} text units"
@@ -931,6 +926,7 @@ async def _find_most_related_text_unit_from_entities(
         query_param: QueryParam,
         text_chunks_db: BaseKVStorage[TextChunkSchema],
         knowledge_graph_inst: BaseGraphStorage,
+        kg_db: BaseGraphStorage,
 ):
     """
     Finds the most related text unit for each entity in the given node_datas.
@@ -940,6 +936,7 @@ async def _find_most_related_text_unit_from_entities(
         query_param: The query parameters.
         text_chunks_db: The text chunks database instance.
         knowledge_graph_inst: The knowledge graph instance.
+        kg_db: The knowledge graph database instance.
     Returns:
         A list of text units for each entity.
     """
@@ -950,7 +947,7 @@ async def _find_most_related_text_unit_from_entities(
     ]
     # Asynchronously gathers the edges for each entity in node_datas using knowledge_graph_inst.get_node_edges.
     edges = await asyncio.gather(
-        *[knowledge_graph_inst.get_node_edges(dp["entity_name"]) for dp in node_datas]
+        *[kg_db.get_node_edges(dp["entity_name"], param=query_param) for dp in node_datas]
     )
     # Initializes an empty set all_one_hop_nodes and updates it with the second node of each edge in edges.
     all_one_hop_nodes = set()
@@ -962,7 +959,7 @@ async def _find_most_related_text_unit_from_entities(
     # Converts all_one_hop_nodes to a list and asynchronously gathers the node data for each node in all_one_hop_nodes.
     all_one_hop_nodes = list(all_one_hop_nodes)
     all_one_hop_nodes_data = await asyncio.gather(
-        *[knowledge_graph_inst.get_node(e) for e in all_one_hop_nodes]
+        *[kg_db.get_node(e, param=query_param) for e in all_one_hop_nodes]
     )
 
     # Creates a dictionary all_one_hop_text_units_lookup that maps each node to its source_id split by GRAPH_FIELD_SEP,
@@ -1022,6 +1019,7 @@ async def _find_most_related_edges_from_entities(
         node_datas: list[dict],
         query_param: QueryParam,
         knowledge_graph_inst: BaseGraphStorage,
+        kg_db: BaseGraphStorage,
 ):
     """
     Finds the most related edges for each entity in the given node_datas.
@@ -1030,11 +1028,12 @@ async def _find_most_related_edges_from_entities(
         node_datas: The entities data.
         query_param: The query parameters.
         knowledge_graph_inst: The knowledge graph instance.
+        kg_db: The knowledge graph database instance.
     Returns:
         A list of edges for each entity.
     """
     all_related_edges = await asyncio.gather(
-        *[knowledge_graph_inst.get_node_edges(dp["entity_name"]) for dp in node_datas]
+        *[kg_db.get_node_edges(dp["entity_name"], param=query_param) for dp in node_datas]
     )
     all_edges = []
     seen = set()
@@ -1049,10 +1048,10 @@ async def _find_most_related_edges_from_entities(
                 all_edges.append(sorted_edge)
 
     all_edges_pack = await asyncio.gather(
-        *[knowledge_graph_inst.get_edge(e[0], e[1]) for e in all_edges]
+        *[kg_db.get_edge(e[0], e[1],param=query_param) for e in all_edges]
     )
     all_edges_degree = await asyncio.gather(
-        *[knowledge_graph_inst.edge_degree(e[0], e[1]) for e in all_edges]
+        *[kg_db.edge_degree(e[0], e[1], param=query_param) for e in all_edges]
     )
     all_edges_data = [
         {"src_tgt": k, "rank": d, **v}
@@ -1073,6 +1072,7 @@ async def _find_most_related_edges_from_entities(
 async def _get_edge_data(
         keywords,
         knowledge_graph_inst: BaseGraphStorage,
+        kg_db: BaseGraphStorage,
         relationships_vdb: BaseVectorStorage,
         text_chunks_db: BaseKVStorage[TextChunkSchema],
         query_param: QueryParam,
@@ -1083,20 +1083,21 @@ async def _get_edge_data(
     Args:
         keywords: The keywords to search for.
         knowledge_graph_inst: The knowledge graph instance.
+        kg_db: The knowledge graph database instance.
         relationships_vdb: The relationships vector storage instance.
         text_chunks_db: The text chunks database instance.
         query_param: The query parameters.
     Returns:
         A tuple of edge data, entities, and text units.
     """
-    results = await relationships_vdb.query(keywords, top_k=query_param.top_k)
+    results = await relationships_vdb.query(keywords, param=query_param)
 
     if not len(results):
         return "", "", ""
 
     edge_datas = await asyncio.gather(
         *[
-            knowledge_graph_inst.get_edge(r["src_id"], r["tgt_id"])
+            kg_db.get_edge(r["src_id"], r["tgt_id"], param=query_param)
             for r in results
             if "src_id" in r and "tgt_id" in r
         ]
@@ -1106,7 +1107,7 @@ async def _get_edge_data(
         logger.warning("Some edges are missing, maybe the storage is damaged")
     edge_degree = await asyncio.gather(
         *[
-            knowledge_graph_inst.edge_degree(r["src_id"], r["tgt_id"])
+            kg_db.edge_degree(r["src_id"], r["tgt_id"], param=query_param)
             for r in results
             if "src_id" in r and "tgt_id" in r
         ]
@@ -1126,7 +1127,7 @@ async def _get_edge_data(
     )
 
     use_entities = await _find_most_related_entities_from_relationships(
-        edge_datas, query_param, knowledge_graph_inst
+        edge_datas, query_param, knowledge_graph_inst, kg_db
     )
     use_text_units = await _find_related_text_unit_from_relationships(
         edge_datas, query_param, text_chunks_db
@@ -1176,6 +1177,7 @@ async def _find_most_related_entities_from_relationships(
         edge_datas: list[dict],
         query_param: QueryParam,
         knowledge_graph_inst: BaseGraphStorage,
+        kg_db: BaseGraphStorage,
 ):
     """
         Finds the most related entities for each edge in the given edge_datas.
@@ -1183,6 +1185,7 @@ async def _find_most_related_entities_from_relationships(
         edge_datas: The edges data.
         query_param: The query parameters.
         knowledge_graph_inst: The knowledge graph instance.
+        kg_db: The knowledge graph database instance.
     Returns:
         A list of entities for each edge.
     """
@@ -1198,11 +1201,11 @@ async def _find_most_related_entities_from_relationships(
             seen.add(e["tgt_id"])
 
     node_datas = await asyncio.gather(
-        *[knowledge_graph_inst.get_node(entity_name) for entity_name in entity_names]
+        *[kg_db.get_node(entity_name, param=query_param) for entity_name in entity_names]
     )
 
     node_degrees = await asyncio.gather(
-        *[knowledge_graph_inst.node_degree(entity_name) for entity_name in entity_names]
+        *[kg_db.node_degree(entity_name, param=query_param) for entity_name in entity_names]
     )
     node_datas = [
         {**n, "entity_name": k, "rank": d}

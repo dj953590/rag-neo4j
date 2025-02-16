@@ -7,7 +7,7 @@ from src.utils.utils import (
     write_json,
 )
 
-from src.db.base import BaseKVStorage
+from src.storage.db.base import BaseKVStorage
 
 @dataclass
 class JsonKVStorage(BaseKVStorage):

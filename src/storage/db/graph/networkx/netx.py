@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import numpy as np
 from typing import Any, Union
 from src.utils.log import logger
-from src.db.base import BaseGraphStorage
+from src.storage.db.base import BaseGraphStorage, QueryParam
 import networkx as nx
 from typing_extensions import cast
 
@@ -90,27 +90,27 @@ class NetworkXStorage(BaseGraphStorage):
     async def index_done_callback(self):
         NetworkXStorage.write_nx_graph(self._graph, self._graphml_xml_file)
 
-    async def has_node(self, node_id: str) -> bool:
+    async def has_node(self, node_id: str, param: QueryParam = None) -> bool:
         return self._graph.has_node(node_id)
 
-    async def has_edge(self, source_node_id: str, target_node_id: str) -> bool:
+    async def has_edge(self, source_node_id: str, target_node_id: str, param: QueryParam = None) -> bool:
         return self._graph.has_edge(source_node_id, target_node_id)
 
-    async def get_node(self, node_id: str) -> Union[dict, None]:
+    async def get_node(self, node_id: str, param: QueryParam = None) -> Union[dict, None]:
         return self._graph.nodes.get(node_id)
 
-    async def node_degree(self, node_id: str) -> int:
+    async def node_degree(self, node_id: str, param: QueryParam = None) -> int:
         return self._graph.degree(node_id)
 
-    async def edge_degree(self, src_id: str, tgt_id: str) -> int:
+    async def edge_degree(self, src_id: str, tgt_id: str, param: QueryParam = None) -> int:
         return self._graph.degree(src_id) + self._graph.degree(tgt_id)
 
     async def get_edge(
-            self, source_node_id: str, target_node_id: str
+            self, source_node_id: str, target_node_id: str, param: QueryParam = None
     ) -> Union[dict, None]:
         return self._graph.edges.get((source_node_id, target_node_id))
 
-    async def get_node_edges(self, source_node_id: str):
+    async def get_node_edges(self, source_node_id: str, param: QueryParam = None):
         if self._graph.has_node(source_node_id):
             return list(self._graph.edges(source_node_id))
         return None
@@ -123,11 +123,12 @@ class NetworkXStorage(BaseGraphStorage):
     ):
         self._graph.add_edge(source_node_id, target_node_id, **edge_data)
 
-    async def delete_node(self, node_id: str):
+    async def delete_node(self, node_id: str, param: QueryParam = None):
         """
         Delete a node from the graph based on the specified node_id.
-
-        :param node_id: The node_id to delete
+        Args:
+            node_id: The node_id to delete
+            param: QueryParam object
         """
         if self._graph.has_node(node_id):
             self._graph.remove_node(node_id)

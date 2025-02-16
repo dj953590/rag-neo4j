@@ -68,28 +68,28 @@ class BaseVectorStorage(StorageNameSpace):
 class BaseGraphStorage(StorageNameSpace):
     embedding_func: EmbeddingFunc = None
 
-    async def has_node(self, node_id: str) -> bool:
+    async def has_node(self, node_id: str, param: QueryParam = None) -> bool:
         raise NotImplementedError
 
-    async def has_edge(self, source_node_id: str, target_node_id: str) -> bool:
+    async def has_edge(self, source_node_id: str, target_node_id: str, param: QueryParam = None) -> bool:
         raise NotImplementedError
 
-    async def node_degree(self, node_id: str) -> int:
+    async def node_degree(self, node_id: str, param: QueryParam = None) -> int:
         raise NotImplementedError
 
-    async def edge_degree(self, src_id: str, tgt_id: str) -> int:
+    async def edge_degree(self, src_id: str, tgt_id: str, param: QueryParam = None) -> int:
         raise NotImplementedError
 
-    async def get_node(self, node_id: str) -> Union[dict, None]:
+    async def get_node(self, node_id: str, param: QueryParam = None) -> Union[dict, None]:
         raise NotImplementedError
 
     async def get_edge(
-            self, source_node_id: str, target_node_id: str
+            self, source_node_id: str, target_node_id: str, param: QueryParam = None
     ) -> Union[dict, None]:
         raise NotImplementedError
 
     async def get_node_edges(
-            self, source_node_id: str
+            self, source_node_id: str, param: QueryParam = None
     ) -> Union[list[tuple[str, str]], None]:
         raise NotImplementedError
 
@@ -101,7 +101,7 @@ class BaseGraphStorage(StorageNameSpace):
     ):
         raise NotImplementedError
 
-    async def delete_node(self, node_id: str):
+    async def delete_node(self, node_id: str, param: QueryParam = None):
         raise NotImplementedError
 
     async def embed_nodes(self, algorithm: str) -> tuple[np.ndarray, list[str]]:

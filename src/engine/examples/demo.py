@@ -44,5 +44,6 @@ while True:
     query = input("Enter your query (or type 'exit' to quit): ")
     if query.lower() == 'bye' or query.lower() == 'exit':
         break
-    result = engine.query(query, param=QueryParam(mode="hybrid"))
+    query_param = QueryParam(mode="hybrid", doc_id=doc_id)
+    result = engine.query(query, param=query_param)
     print(result)

@@ -17,7 +17,7 @@ def merge_bounding_boxes(start_box, end_box):
     ]
 
 
-def extract_chunks(data: dict, max_tokens: int, min_percentage: int, overlap_tokens: int):
+def extract_chunks(data: list, max_tokens: int, min_percentage: int, overlap_tokens: int):
     min_tokens = max_tokens * min_percentage / 100
     chunks = []
     current_chunk = []
@@ -81,7 +81,7 @@ def extract_chunks(data: dict, max_tokens: int, min_percentage: int, overlap_tok
 
 
 if __name__ == "__main__":
-    filepath = "../engine/examples/caterpillar/citibank-caterpillar.json"
+    filepath = "../../engine/examples/caterpillar/citibank-caterpillar.json"
     # Example usage
     with open(filepath, 'r', encoding='utf-8') as file:
         data = json.load(file)

@@ -25,15 +25,15 @@ from src.utils.utils import (
     limit_async_func_call,
     convert_response_to_json,
 )
-from src.db.base import (
+from src.storage.db.base import (
     StorageNameSpace,
     QueryParam,
 )
 
-from src.db.kv.kv_json import JsonKVStorage
-from src.db.vector.pg.pg import PGVectorStorage
-from src.db.graph.networkx.netx import NetworkXStorage
-from src.db.graph.neo4j.neo4j import Neo4JStorage
+from src.storage.db.kv.kv_json import JsonKVStorage
+from src.storage.db.vector.pg.pg import PGVectorStorage
+from src.storage.db.graph.networkx.netx import NetworkXStorage
+from src.storage.db.graph.neo4j.neo4j import Neo4JStorage
 
 
 def lazy_external_import(module_name: str, class_name: str):
@@ -238,7 +238,7 @@ class GraphEngine:
                                            )
                            )
 
-    def insert_json(self, json_data):
+    def insert_json(self, json_data: list):
         """
         Insert JSON data into the storage.
 
@@ -273,7 +273,7 @@ class GraphEngine:
             return None
         return new_docs
 
-    async def ainsert_json(self, data: dict):
+    async def ainsert_json(self, data: list):
         """
         Insert one or more strings into the storage asynchronously.
 
@@ -283,7 +283,8 @@ class GraphEngine:
                 None
         """
         update_storage = False
-        combined_chunks, docs = extract_chunks(data, self.chunk_token_size, self.min_percentage, self.chunk_overlap_token_size)
+        combined_chunks, docs = extract_chunks(data, self.chunk_token_size, self.min_percentage,
+                                               self.chunk_overlap_token_size)
         try:
             new_docs = await self.check_docs(docs)
             if new_docs is None:
@@ -373,150 +374,6 @@ class GraphEngine:
             tasks.append(cast(StorageNameSpace, storage_inst).index_done_callback())
         await asyncio.gather(*tasks)
 
-    def insert_custom_kg(self, custom_kg: dict):
-        loop = always_get_an_event_loop()
-        return loop.run_until_complete(self.ainsert_custom_kg(custom_kg))
-
-    async def ainsert_custom_kg(self, custom_kg: dict):
-        """
-        Insert custom knowledge graph into the storage asynchronously.
-
-        Args:
-            custom_kg (dict): The custom knowledge graph to be inserted.
-            Returns:
-                None
-        """
-        update_storage = False
-        try:
-            # Insert chunks into vector storage
-            all_chunks_data = {}
-            chunk_to_source_map = {}
-            for chunk_data in custom_kg.get("chunks", []):
-                chunk_content = chunk_data["content"]
-                source_id = chunk_data["source_id"]
-                chunk_id = compute_mdhash_id(chunk_content.strip(), prefix="chunk-")
-
-                chunk_entry = {"content": chunk_content.strip(), "source_id": source_id}
-                all_chunks_data[chunk_id] = chunk_entry
-                chunk_to_source_map[source_id] = chunk_id
-                update_storage = True
-
-            if self.chunks_vdb is not None and all_chunks_data:
-                await self.chunks_vdb.upsert(all_chunks_data)
-            if self.text_chunks is not None and all_chunks_data:
-                await self.text_chunks.upsert(all_chunks_data)
-
-            # Insert entities into knowledge graph
-            all_entities_data = []
-            for entity_data in custom_kg.get("entities", []):
-                entity_name = f'"{entity_data["entity_name"].upper()}"'
-                entity_type = entity_data.get("entity_type", "UNKNOWN")
-                description = entity_data.get("description", "No description provided")
-                # source_id = entity_data["source_id"]
-                source_chunk_id = entity_data.get("source_id", "UNKNOWN")
-                source_id = chunk_to_source_map.get(source_chunk_id, "UNKNOWN")
-
-                # Log if source_id is UNKNOWN
-                if source_id == "UNKNOWN":
-                    logger.warning(
-                        f"Entity '{entity_name}' has an UNKNOWN source_id. Please check the source mapping."
-                    )
-
-                # Prepare node data
-                node_data = {
-                    "entity_type": entity_type,
-                    "description": description,
-                    "source_id": source_id,
-                }
-                # Insert node data into the knowledge graph
-                await self.chunk_entity_relation_graph.upsert_node(
-                    entity_name, node_data=node_data
-                )
-                node_data["entity_name"] = entity_name
-                all_entities_data.append(node_data)
-                update_storage = True
-
-            # Insert relationships into knowledge graph
-            all_relationships_data = []
-            for relationship_data in custom_kg.get("relationships", []):
-                src_id = f'"{relationship_data["src_id"].upper()}"'
-                tgt_id = f'"{relationship_data["tgt_id"].upper()}"'
-                description = relationship_data["description"]
-                keywords = relationship_data["keywords"]
-                weight = relationship_data.get("weight", 1.0)
-                # source_id = relationship_data["source_id"]
-                source_chunk_id = relationship_data.get("source_id", "UNKNOWN")
-                source_id = chunk_to_source_map.get(source_chunk_id, "UNKNOWN")
-
-                # Log if source_id is UNKNOWN
-                if source_id == "UNKNOWN":
-                    logger.warning(
-                        f"Relationship from '{src_id}' to '{tgt_id}' has an UNKNOWN source_id. Please check the source mapping."
-                    )
-
-                # Check if nodes exist in the knowledge graph
-                for need_insert_id in [src_id, tgt_id]:
-                    if not (
-                            await self.chunk_entity_relation_graph.has_node(need_insert_id)
-                    ):
-                        await self.chunk_entity_relation_graph.upsert_node(
-                            need_insert_id,
-                            node_data={
-                                "source_id": source_id,
-                                "description": "UNKNOWN",
-                                "entity_type": "UNKNOWN",
-                            },
-                        )
-
-                # Insert edge into the knowledge graph
-                await self.chunk_entity_relation_graph.upsert_edge(
-                    src_id,
-                    tgt_id,
-                    edge_data={
-                        "weight": weight,
-                        "description": description,
-                        "keywords": keywords,
-                        "source_id": source_id,
-                    },
-                )
-                edge_data = {
-                    "src_id": src_id,
-                    "tgt_id": tgt_id,
-                    "description": description,
-                    "keywords": keywords,
-                }
-                all_relationships_data.append(edge_data)
-                update_storage = True
-
-            # Insert entities into vector storage if needed
-            if self.entities_vdb is not None:
-                data_for_vdb = {
-                    compute_mdhash_id(dp["entity_name"], prefix="ent-"): {
-                        "content": dp["entity_name"] + dp["description"],
-                        "entity_name": dp["entity_name"],
-                    }
-                    for dp in all_entities_data
-                }
-                await self.entities_vdb.upsert(data_for_vdb)
-
-            # Insert relationships into vector storage if needed
-            if self.relationships_vdb is not None:
-                data_for_vdb = {
-                    compute_mdhash_id(dp["src_id"] + dp["tgt_id"], prefix="rel-"): {
-                        "src_id": dp["src_id"],
-                        "tgt_id": dp["tgt_id"],
-                        "content": dp["keywords"]
-                                   + dp["src_id"]
-                                   + dp["tgt_id"]
-                                   + dp["description"],
-                    }
-                    for dp in all_relationships_data
-                }
-                await self.relationships_vdb.upsert(data_for_vdb)
-        finally:
-            if update_storage:
-                await self._insert_done()
-
     def query(self, query: str, param: QueryParam = QueryParam()):
         """
         Query the knowledge graph using the given query and parameters.
@@ -544,6 +401,7 @@ class GraphEngine:
             response = await kg_query(
                 query,
                 self.chunk_entity_relation_graph,
+                self.chunk_entity_relation_graphdb,
                 self.entities_vdb,
                 self.relationships_vdb,
                 self.text_chunks,

@@ -5,7 +5,7 @@ from typing import Any, Union, Tuple, List, Dict
 import inspect
 from src.utils.log import logger
 from dynaconf import settings
-from src.db.base import BaseGraphStorage
+from src.storage.db.base import BaseGraphStorage, QueryParam
 
 from neo4j import (
     AsyncGraphDatabase,
@@ -60,41 +60,74 @@ class Neo4JStorage(BaseGraphStorage):
     async def index_done_callback(self):
         print("KG successfully indexed.")
 
-    async def has_node(self, node_id: str) -> bool:
+    def _validate_doc_id(self, param: QueryParam) -> bool:
+        """
+        Validate if doc_id is present in QueryParam.
+        Logs a warning if doc_id is missing.
+        """
+        if not param or not hasattr(param, "doc_id") or not param.doc_id:
+            logger.warning("doc_id is missing in QueryParam. Ensure doc_id is provided for proper querying.")
+            return False
+        return True
+
+    async def has_node(self, node_id: str, param: QueryParam = None) -> bool:
+        """
+        Check if a node exists in the graph, filtered by doc_id if provided.
+        """
+        if not self._validate_doc_id(param):
+            return False  # Return False if doc_id is missing
+
         entity_name_label = node_id.strip('"')
+        doc_id = param.doc_id if param else None
 
         async with self._driver.session() as session:
             query = (
-                f"MATCH (n:`{entity_name_label}`) RETURN count(n) > 0 AS node_exists"
+                f"MATCH (n:`{entity_name_label}` {{doc_id: $doc_id}}) "
+                "RETURN count(n) > 0 AS node_exists"
             )
-            result = await session.run(query)
+            result = await session.run(query, doc_id=doc_id)
             single_result = await result.single()
             logger.debug(
                 f'{inspect.currentframe().f_code.co_name}:query:{query}:result:{single_result["node_exists"]}'
             )
             return single_result["node_exists"]
 
-    async def has_edge(self, source_node_id: str, target_node_id: str) -> bool:
+    async def has_edge(self, source_node_id: str, target_node_id: str, param: QueryParam = None) -> bool:
+        """
+        Check if an edge exists between two nodes, filtered by doc_id if provided.
+        """
+        if not self._validate_doc_id(param):
+            return False  # Return False if doc_id is missing
+
         entity_name_label_source = source_node_id.strip('"')
         entity_name_label_target = target_node_id.strip('"')
+        doc_id = param.doc_id if param else None
 
         async with self._driver.session() as session:
             query = (
-                f"MATCH (a:`{entity_name_label_source}`)-[r]-(b:`{entity_name_label_target}`) "
+                f"MATCH (a:`{entity_name_label_source}` {{doc_id: $doc_id}})-[r]-(b:`{entity_name_label_target}` {{doc_id: $doc_id}}) "
                 "RETURN COUNT(r) > 0 AS edgeExists"
             )
-            result = await session.run(query)
+            result = await session.run(query, doc_id=doc_id)
             single_result = await result.single()
             logger.debug(
                 f'{inspect.currentframe().f_code.co_name}:query:{query}:result:{single_result["edgeExists"]}'
             )
             return single_result["edgeExists"]
 
-    async def get_node(self, node_id: str) -> Union[dict, None]:
+    async def get_node(self, node_id: str, param: QueryParam = None) -> Union[dict, None]:
+        """
+        Retrieve a node by its ID, filtered by doc_id if provided.
+        """
+        if not self._validate_doc_id(param):
+            return None  # Return None if doc_id is missing
+
+        entity_name_label = node_id.strip('"')
+        doc_id = param.doc_id if param else None
+
         async with self._driver.session() as session:
-            entity_name_label = node_id.strip('"')
-            query = f"MATCH (n:`{entity_name_label}`) RETURN n"
-            result = await session.run(query)
+            query = f"MATCH (n:`{entity_name_label}` {{doc_id: $doc_id}}) RETURN n"
+            result = await session.run(query, doc_id=doc_id)
             record = await result.single()
             if record:
                 node = record["n"]
@@ -105,15 +138,22 @@ class Neo4JStorage(BaseGraphStorage):
                 return node_dict
             return None
 
-    async def node_degree(self, node_id: str) -> int:
+    async def node_degree(self, node_id: str, param: QueryParam = None) -> int:
+        """
+        Calculate the degree of a node, filtered by doc_id if provided.
+        """
+        if not self._validate_doc_id(param):
+            return 0  # Return 0 if doc_id is missing
+
         entity_name_label = node_id.strip('"')
+        doc_id = param.doc_id if param else None
 
         async with self._driver.session() as session:
             query = f"""
-                MATCH (n:`{entity_name_label}`)
+                MATCH (n:`{entity_name_label}` {{doc_id: $doc_id}})
                 RETURN COUNT{{ (n)--() }} AS totalEdgeCount
             """
-            result = await session.run(query)
+            result = await session.run(query, doc_id=doc_id)
             record = await result.single()
             if record:
                 edge_count = record["totalEdgeCount"]
@@ -122,13 +162,13 @@ class Neo4JStorage(BaseGraphStorage):
                 )
                 return edge_count
             else:
-                return None
+                return 0  # Return 0 if no edges are found
 
-    async def edge_degree(self, src_id: str, tgt_id: str) -> int:
+    async def edge_degree(self, src_id: str, tgt_id: str, param: QueryParam = None) -> int:
         entity_name_label_source = src_id.strip('"')
         entity_name_label_target = tgt_id.strip('"')
-        src_degree = await self.node_degree(entity_name_label_source)
-        trg_degree = await self.node_degree(entity_name_label_target)
+        src_degree = await self.node_degree(entity_name_label_source, param=param)
+        trg_degree = await self.node_degree(entity_name_label_target, param=param)
 
         # Convert None to 0 for addition
         src_degree = 0 if src_degree is None else src_degree
@@ -141,31 +181,25 @@ class Neo4JStorage(BaseGraphStorage):
         return degrees
 
     async def get_edge(
-            self, source_node_id: str, target_node_id: str
+            self, source_node_id: str, target_node_id: str, param: QueryParam = None
     ) -> Union[dict, None]:
+        """
+        Retrieve an edge between two nodes, filtered by doc_id if provided.
+        """
+        if not self._validate_doc_id(param):
+            return None  # Return None if doc_id is missing
+
         entity_name_label_source = source_node_id.strip('"')
         entity_name_label_target = target_node_id.strip('"')
-        """
-        Find all edges between nodes of two given labels
+        doc_id = param.doc_id if param else None
 
-        Args:
-            source_node_label (str): Label of the source nodes
-            target_node_label (str): Label of the target nodes
-
-        Returns:
-            list: List of all relationships/edges found
-        """
         async with self._driver.session() as session:
             query = f"""
-            MATCH (start:`{entity_name_label_source}`)-[r]->(end:`{entity_name_label_target}`)
+            MATCH (start:`{entity_name_label_source}` {{doc_id: $doc_id}})-[r]->(end:`{entity_name_label_target}` {{doc_id: $doc_id}})
             RETURN properties(r) as edge_properties
             LIMIT 1
-            """.format(
-                entity_name_label_source=entity_name_label_source,
-                entity_name_label_target=entity_name_label_target,
-            )
-
-            result = await session.run(query)
+            """
+            result = await session.run(query, doc_id=doc_id)
             record = await result.single()
             if record:
                 result = dict(record["edge_properties"])
@@ -176,18 +210,23 @@ class Neo4JStorage(BaseGraphStorage):
             else:
                 return None
 
-    async def get_node_edges(self, source_node_id: str) -> List[Tuple[str, str]]:
-        node_label = source_node_id.strip('"')
+    async def get_node_edges(self, source_node_id: str, param: QueryParam = None) -> List[Tuple[str, str]]:
+        """
+        Retrieve all edges connected to a node, filtered by doc_id if provided.
+        """
+        if not self._validate_doc_id(param):
+            return []  # Return an empty list if doc_id is missing
 
+        node_label = source_node_id.strip('"')
+        doc_id = param.doc_id if param else None
+
+        query = f"""
+            MATCH (n:`{node_label}` {{doc_id: $doc_id}})
+            OPTIONAL MATCH (n)-[r]-(connected {{doc_id: $doc_id}})
+            RETURN n, r, connected
         """
-        Retrieves all edges (relationships) for a particular node identified by its label.
-        :return: List of dictionaries containing edge information
-        """
-        query = f"""MATCH (n:`{node_label}`)
-                OPTIONAL MATCH (n)-[r]-(connected)
-                RETURN n, r, connected"""
         async with self._driver.session() as session:
-            results = await session.run(query)
+            results = await session.run(query, doc_id=doc_id)
             edges = []
             async for record in results:
                 source_node = record["n"]

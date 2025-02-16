@@ -2,7 +2,7 @@ import chromadb
 import numpy as np
 from dataclasses import dataclass
 from typing import List, Dict, Union
-from src.db.base import BaseVectorStorage, QueryParam
+from src.storage.db.base import BaseVectorStorage, QueryParam
 from src.utils.log import logger
 
 
