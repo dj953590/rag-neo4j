@@ -1,6 +1,9 @@
+import os
+
 import boto3
 from botocore.client import Config
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError, ClientError
+
 
 class S3Storage:
     def __init__(self, endpoint_url: str, access_key: str, secret_key: str, bucket_name: str):
@@ -35,7 +38,7 @@ class S3Storage:
         :return: True if successful, False otherwise
         """
         if object_name is None:
-            object_name = file_path.split("/")[-1]  # Use the file name as the object name
+            object_name = os.path.basename(file_path)  # Use the file name as the object name
 
         try:
             self.s3_client.upload_file(file_path, self.bucket_name, object_name)
@@ -121,3 +124,26 @@ class S3Storage:
         except ClientError as e:
             print(f"Client error: {e}")
             return []
+
+
+if __name__ == "__main__":
+    # Initialize S3 storage client
+    # Configuration for MinIO (local S3-compatible storage)
+    endpoint_url = "http://localhost:9000"  # MinIO server URL
+    access_key = "admin"  # MinIO access key
+    secret_key = "password"  # MinIO secret key
+    bucket_name = "legal"  # Bucket name
+
+    # Initialize the S3Storage class
+    s3_storage = S3Storage(endpoint_url, access_key, secret_key, bucket_name)
+
+    filepath = os.path.join(os.getcwd(), "examples.txt")
+    # Upload a file
+    s3_storage.upload_file(filepath)
+
+    # List files in the bucket
+    s3_storage.list_files()
+
+    # Download a file
+    s3_storage.download_file("example.txt", "downloaded_example.txt")
+
