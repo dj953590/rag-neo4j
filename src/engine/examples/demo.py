@@ -34,10 +34,8 @@ engine = GraphEngine(
 )
 
 extractor = PDFProcessor(file_path=pdf_path, output_path=output_path, output_text_path=output_text_path)
-structured_data = extractor.process()
-
-with open(output_path, 'r', encoding='utf-8') as file:
-    engine.insert_json(json.load(file))
+structured_data = extractor.markdown()
+engine.insert(structured_data)
 
 
 while True:

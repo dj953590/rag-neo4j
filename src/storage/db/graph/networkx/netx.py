@@ -1,13 +1,19 @@
 import asyncio
 import os
 import html
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import numpy as np
 from typing import Any, Union
+
+from pathlib2 import Path
+
+from src.llm.oai import openai_embedding
 from src.utils.log import logger
 from src.storage.db.base import BaseGraphStorage, QueryParam
 import networkx as nx
 from typing_extensions import cast
+
+from src.utils.utils import EmbeddingFunc
 
 
 @dataclass
@@ -23,6 +29,10 @@ class NetworkXStorage(BaseGraphStorage):
         logger.info(
             f"Writing graph with {graph.number_of_nodes()} nodes, {graph.number_of_edges()} edges"
         )
+        # Ensure relationships have labels
+        for u, v, data in graph.edges(data=True):
+            if "label" not in data:
+                data["label"] = "CONNECTED_TO"  # Default relationship type
         nx.write_graphml(graph, file_name)
 
     @staticmethod
@@ -154,3 +164,32 @@ class NetworkXStorage(BaseGraphStorage):
         return embeddings, nodes_ids
 
 
+async def main():
+    relationship = "caterpillar"
+    WORKING_DIR = (
+            Path(__file__).parent.parent.parent.parent.parent / "engine" / "examples" / relationship
+    )
+
+    g_c = {
+        "working_dir": WORKING_DIR,
+        "node2vec_params": {
+            "n_components": 64,
+            "walk_length": 80,
+            "n_walks": 10,
+            "p": 1,
+            "q": 1,
+            "window": 10,
+            "n_iter": 1,
+            "verbose": 1,
+        },
+    }
+    storage = NetworkXStorage(namespace="chunk_entity_relation", global_config=g_c)
+    graph = await storage.get_graph()
+    # write graph to file in the same working directory
+    file_name = os.path.join(WORKING_DIR, f"graph_{storage.namespace}.graphml")
+
+    storage.write_nx_graph(graph, file_name)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

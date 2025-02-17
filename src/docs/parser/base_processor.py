@@ -126,6 +126,13 @@ class BaseProcessor(ABC):
 
         pass
 
+    @abstractmethod
+    def markdown(self):
+        """
+        Extract text from the file.
+        """
+        pass
+
     def save_images(self, image_data, output_dir, image_name):
         """
         Save images to the output directory.

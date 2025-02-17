@@ -1,16 +1,23 @@
 from abc import ABC
 
-import fitz  # PyMuPDF
+import pymupdf  # PyMuPDF
 from PIL import Image
 import io
 from pathlib2 import Path
 from src.docs.parser.base_processor import BaseProcessor
+from src.docs.parser.helpers.pdf.pymupdf_rag import to_markdown
 
 
 class PDFProcessor(BaseProcessor, ABC):
     def __init__(self, file_path, output_path=None, output_text_path=None):
         super().__init__(file_path=file_path, output_path=output_path, output_text_path=output_text_path)
-        self.doc = fitz.open(self.file_path)
+        self.doc = pymupdf.open(self.file_path)
+
+    def markdown(self):
+
+        md_string = to_markdown(self.doc, page_chunks=True, extract_words=True)
+        return md_string
+
 
     def text_tables_images(self):
         """

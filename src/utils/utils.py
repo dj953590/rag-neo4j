@@ -195,6 +195,13 @@ def decode_tokens_by_tiktoken(tokens: list[int], model_name: str = "gpt-4o"):
     return content
 
 
+def decode_tokens(tokens: list[int], model_name: str = "gpt-4o") -> list[str]:
+    global ENCODER
+    if ENCODER is None:
+        ENCODER = tiktoken.encoding_for_model(model_name)
+    return [ENCODER.decode_single_token_bytes(token).decode('utf-8') for token in tokens]
+
+
 # Refer the utils functions of the official GraphRAG implementation:
 # https://github.com/microsoft/graphrag
 def clean_str(input: Any) -> str:

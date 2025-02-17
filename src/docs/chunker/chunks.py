@@ -1,11 +1,15 @@
 import json
-from src.utils.utils import encode_string_by_tiktoken
+import re
+
+from beartype.typing import List, Dict
+
+from src.utils.utils import encode_string_by_tiktoken, decode_tokens
 
 
 def count_tokens(content):
     # Implement your token counting logic here
     tokens = encode_string_by_tiktoken(content, model_name="gpt-4o")
-    return len(tokens)
+    return len(tokens), tokens
 
 
 def merge_bounding_boxes(start_box, end_box):
@@ -15,6 +19,43 @@ def merge_bounding_boxes(start_box, end_box):
         end_box[2],
         end_box[3]
     ]
+
+
+def extract_chunks_md(data: List, max_tokens: int = 500) -> List[str]:
+    def chunk_text(text: str, chunk_token_size: int) -> List[str]:
+        token_count, words_list = count_tokens(text)
+        chunks = []
+        current_chunk = []
+        current_token_count = 0
+
+        if token_count > chunk_token_size:
+            words = decode_tokens(words_list)
+            word_token_count = 1
+            for word in words:
+                if current_token_count + word_token_count > chunk_token_size:
+                    # Ensure the chunk ends at a Markdown indicator
+                    while current_chunk and not re.match(r'^[#*\-]', current_chunk[-1]):
+                        word = current_chunk.pop()
+                        current_token_count -= 1
+                    chunks.append(''.join(current_chunk))
+                    current_chunk = []
+                    current_token_count = 0
+                current_chunk.append(word)
+                current_token_count += word_token_count
+        else:
+            chunks.append(text)
+
+        if current_chunk:
+            chunks.append(''.join(current_chunk))
+
+        return chunks
+
+    chunks = []
+    for page in data:
+        page_text = page['text']
+        page_chunks = chunk_text(page_text, max_tokens)
+        chunks.extend(page_chunks)
+    return chunks
 
 
 def extract_chunks(data: list, max_tokens: int, min_percentage: int, overlap_tokens: int):
@@ -47,7 +88,8 @@ def extract_chunks(data: list, max_tokens: int, min_percentage: int, overlap_tok
 
                     current_chunk = new_chunk
                     current_token_count = sum(count_tokens(e['text']) for e in current_chunk)
-                    current_bounding_box = merge_bounding_boxes(current_chunk[0]['bounding_box'], current_chunk[-1]['bounding_box']) if current_chunk else None
+                    current_bounding_box = merge_bounding_boxes(current_chunk[0]['bounding_box'], current_chunk[-1][
+                        'bounding_box']) if current_chunk else None
             current_chunk.append(element)
             current_token_count += token_count
             if current_bounding_box is None:

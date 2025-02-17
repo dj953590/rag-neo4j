@@ -1,6 +1,4 @@
-Page 1:
-========================================
-**Exhibit 10.5**
+Chunk 1:**Exhibit 10.5**
 
 EXECUTION VERSION
 
@@ -58,10 +56,7 @@ satisfaction of the conditions precedent set forth in Section 4 below, the Exist
 -----
 
 
-========================================
-Page 2:
-========================================
-2.1.     The definition of “Current Termination Date” set forth in Section 1.01 of the Existing Credit Agreement is
+Chunk 2:2.1.     The definition of “Current Termination Date” set forth in Section 1.01 of the Existing Credit Agreement is
 
 hereby amended in its entirety as follows:
 
@@ -121,10 +116,7 @@ and substance reasonably acceptable to the Agent;
 -----
 
 
-========================================
-Page 3:
-========================================
-4.6.     an opinion letter of Mayer Brown LLP, counsel for the Borrowers, given upon their express instructions, in
+Chunk 3:4.6.     an opinion letter of Mayer Brown LLP, counsel for the Borrowers, given upon their express instructions, in
 
 form and substance reasonably acceptable to the Agent;
 
@@ -185,10 +177,7 @@ Affiliates party to the Loan Documents, and shall constitute each such Affiliate
 -----
 
 
-========================================
-Page 4:
-========================================
-SECTION 8.     Governing Law; Submission to Jurisdiction; Service of Process; Waiver of Jury Trial. This
+Chunk 4:SECTION 8.     Governing Law; Submission to Jurisdiction; Service of Process; Waiver of Jury Trial. This
 
 Amendment shall be governed by, and construed in accordance with, the law of the State of New York (without regard for conflict of
 law principles that would result in the application of any law other than the internal law of the State of New York). This Amendment
@@ -233,4 +222,3 @@ The remainder of this page is intentionally blank.
 -----
 
 
-========================================

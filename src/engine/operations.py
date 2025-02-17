@@ -22,7 +22,7 @@ from src.utils.utils import (
     truncate_list_by_token_size,
     compute_args_hash,
 )
-from src.db.base import (
+from src.storage.db.base import (
     BaseGraphStorage,
     BaseKVStorage,
     BaseVectorStorage,

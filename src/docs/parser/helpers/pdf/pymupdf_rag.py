@@ -22,7 +22,13 @@ D
 import os
 import string
 from binascii import b2a_base64
+from typing import Any
+
 import pymupdf
+from beartype.typing import List, Dict
+from pymupdf import Document
+
+from src.docs.chunker.chunks import extract_chunks_md
 from src.docs.parser.helpers.pdf.get_text_lines import get_raw_lines, is_white
 from src.docs.parser.helpers.pdf.multi_column import column_boxes
 from src.docs.parser.helpers.pdf.progress import ProgressBar
@@ -53,7 +59,7 @@ class IdentifyHeaders:
 
     def __init__(
         self,
-        doc: str,
+        doc: Document,
         pages: list = None,
         body_limit: float = 12,
     ):
@@ -250,7 +256,7 @@ def to_markdown(
     extract_words=False,
     show_progress=True,
     image_extract_algorithm="simple-drop",
-) -> str:
+) -> str | List[Dict[str, Any]]:
     """Process the document and return the text of the selected pages.
 
     Args:
@@ -394,7 +400,7 @@ def to_markdown(
         tab_rects: dict = {},
         img_rects: list = [],
         force_text=force_text,
-    ) -> string:
+    ) -> str:
         """Output the text found inside the given clip.
 
         This is an alternative for plain text in that it outputs
@@ -439,6 +445,8 @@ def to_markdown(
             if intersects_rects(lrect, img_rects0):
                 continue
 
+            if lrect.y0 < margins[1] or lrect.y1 > (parms.page.rect.height - margins[3]):
+                continue
             # ------------------------------------------------------------
             # Pick up tables ABOVE this text block
             # ------------------------------------------------------------
@@ -1001,10 +1009,10 @@ if __name__ == "__main__":
     import time
     from pathlib2 import Path
 
-    doc_name = "citibank-amazon"
+    doc_name = "citibank-caterpillar"
 
     filename = (
-            Path(__file__).parent.parent / 'docs' / (doc_name + ".pdf")
+            Path(__file__).parent.parent.parent / 'docs' / (doc_name + ".pdf")
     )  # Replace with your PDF file path
 
     t0 = time.perf_counter()  # start a time
@@ -1032,13 +1040,22 @@ if __name__ == "__main__":
     # get the markdown string
     extract_words=False,
     md_string = to_markdown(doc, pages=pages, page_chunks=True, extract_words=True)
+    outname = doc.name.replace(".pdf", ".md")
+    chunk_outname = doc.name.replace(".pdf", "-chunks.md")
 
     for page in md_string:
-        print(f"Page {page['metadata']['page']}:")
-        print(page['text'])
-        print("\n" + "="*40 + "\n")
-    # output to a text file with extension ".md"
-    outname = doc.name.replace(".pdf", ".md")
-    pathlib.Path(outname).write_bytes(md_string.encode())
+        page_hdr = f"Page {page['metadata']['page']}:"
+        page_txt = page['text']
+        page_sep = "\n" + "="*40 + "\n"
+        page_str = page_hdr + page_sep + page_txt + page_sep
+        with Path(outname).open("ab") as f:
+            f.write(page_str.encode())
+
+    chunks = extract_chunks_md(md_string, max_tokens=1024)
+    with Path(chunk_outname).open("ab") as f:
+        for i, chunk in enumerate(chunks):
+            f.write(f"Chunk {i+1}:".encode())
+            f.write(chunk.encode())
+            f.write("\n".encode())
     t1 = time.perf_counter()  # stop timer
     print(f"Markdown creation time for {doc.name=} {round(t1-t0,2)} sec.")

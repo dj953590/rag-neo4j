@@ -6,15 +6,9 @@ from botocore.exceptions import NoCredentialsError, PartialCredentialsError, Cli
 
 
 class S3Storage:
-    def __init__(self, endpoint_url: str, access_key: str, secret_key: str, bucket_name: str):
-        """
-        Initialize the S3 storage client.
 
-        :param endpoint_url: S3 endpoint URL (e.g., "http://localhost:9000" for MinIO)
-        :param access_key: Access key for S3
-        :param secret_key: Secret key for S3
-        :param bucket_name: Name of the bucket to interact with
-        """
+    def __init__(self, endpoint_url: str, access_key: str, secret_key: str, bucket_name: str):
+
         self.endpoint_url = endpoint_url
         self.access_key = access_key
         self.secret_key = secret_key

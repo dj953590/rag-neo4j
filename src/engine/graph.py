@@ -15,7 +15,7 @@ from src.engine.operations import (
     kg_query,
     naive_query,
 )
-from src.docs.chunker.chunks import extract_chunks
+from src.docs.chunker.chunks import extract_chunks, extract_chunks_md
 
 from src.utils.log import logger
 
@@ -238,17 +238,17 @@ class GraphEngine:
                                            )
                            )
 
-    def insert_json(self, json_data: list):
+    def insert(self, data: list):
         """
         Insert JSON data into the storage.
 
         Args:
-            json_data (dict): The JSON data to be inserted.
+            data (dict): The JSON data to be inserted.
         Returns:
                 None
         """
         loop = always_get_an_event_loop()
-        return loop.run_until_complete(self.ainsert_json(json_data))
+        return loop.run_until_complete(self.ainsert(data))
 
     async def check_docs(self, docs: str):
         """
@@ -273,7 +273,7 @@ class GraphEngine:
             return None
         return new_docs
 
-    async def ainsert_json(self, data: list):
+    async def ainsert(self, data: list):
         """
         Insert one or more strings into the storage asynchronously.
 
@@ -283,8 +283,7 @@ class GraphEngine:
                 None
         """
         update_storage = False
-        combined_chunks, docs = extract_chunks(data, self.chunk_token_size, self.min_percentage,
-                                               self.chunk_overlap_token_size)
+        combined_chunks, docs = extract_chunks_md(data, self.chunk_token_size)
         try:
             new_docs = await self.check_docs(docs)
             if new_docs is None:
