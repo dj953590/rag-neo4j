@@ -119,6 +119,56 @@ class S3Storage:
             print(f"Client error: {e}")
             return []
 
+def create_folder(self, folder_name: str):
+    """
+    Create a folder in the S3 bucket.
+
+    :param folder_name: Name of the folder to create
+    :return: True if successful, False otherwise
+    """
+    if not folder_name.endswith('/'):
+        folder_name += '/'
+    try:
+        self.s3_client.put_object(Bucket=self.bucket_name, Key=folder_name)
+        print(f"Folder '{folder_name}' created in '{self.bucket_name}'")
+        return True
+    except NoCredentialsError:
+        print("Credentials not available.")
+        return False
+    except PartialCredentialsError:
+        print("Incomplete credentials provided.")
+        return False
+    except ClientError as e:
+        print(f"Client error: {e}")
+        return False
+
+def delete_folder(self, folder_name: str):
+    """
+    Delete a folder and its contents from the S3 bucket.
+
+    :param folder_name: Name of the folder to delete
+    :return: True if successful, False otherwise
+    """
+    if not folder_name.endswith('/'):
+        folder_name += '/'
+    try:
+        # List all objects in the folder
+        response = self.s3_client.list_objects_v2(Bucket=self.bucket_name, Prefix=folder_name)
+        if 'Contents' in response:
+            # Delete all objects in the folder
+            objects_to_delete = [{'Key': obj['Key']}] for obj in response['Contents']
+                self.s3_client.delete_objects(Bucket=self.bucket_name, Delete={'Objects': objects_to_delete})
+        print(f"Folder '{folder_name}' and its contents deleted from '{self.bucket_name}'")
+        return True
+    except NoCredentialsError:
+        print("Credentials not available.")
+        return False
+    except PartialCredentialsError:
+        print("Incomplete credentials provided.")
+        return False
+    except ClientError as e:
+        print(f"Client error: {e}")
+        return False
 
 if __name__ == "__main__":
     # Initialize S3 storage client

@@ -1,5 +1,6 @@
 import json
 import re
+from typing import Tuple, List
 
 from beartype.typing import List, Dict
 
@@ -21,13 +22,12 @@ def merge_bounding_boxes(start_box, end_box):
     ]
 
 
-def extract_chunks_md(data: List, max_tokens: int = 500) -> List[str]:
+def extract_chunks_md(data: List, max_tokens: int = 500) -> tuple[list[str], str]:
     def chunk_text(text: str, chunk_token_size: int) -> List[str]:
         token_count, words_list = count_tokens(text)
         chunks = []
         current_chunk = []
         current_token_count = 0
-
         if token_count > chunk_token_size:
             words = decode_tokens(words_list)
             word_token_count = 1
@@ -37,7 +37,8 @@ def extract_chunks_md(data: List, max_tokens: int = 500) -> List[str]:
                     while current_chunk and not re.match(r'^[#*\-]', current_chunk[-1]):
                         word = current_chunk.pop()
                         current_token_count -= 1
-                    chunks.append(''.join(current_chunk))
+                    if current_chunk:
+                        chunks.append(''.join(current_chunk))
                     current_chunk = []
                     current_token_count = 0
                 current_chunk.append(word)
@@ -51,11 +52,13 @@ def extract_chunks_md(data: List, max_tokens: int = 500) -> List[str]:
         return chunks
 
     chunks = []
+    full_text: str = ""
     for page in data:
         page_text = page['text']
+        full_text += page_text
         page_chunks = chunk_text(page_text, max_tokens)
         chunks.extend(page_chunks)
-    return chunks
+    return chunks, full_text.strip()
 
 
 def extract_chunks(data: list, max_tokens: int, min_percentage: int, overlap_tokens: int):

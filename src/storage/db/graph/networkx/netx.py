@@ -97,6 +97,9 @@ class NetworkXStorage(BaseGraphStorage):
             "node2vec": self._node2vec_embed,
         }
 
+    async def get_graph(self) -> nx.Graph:
+        return self._graph
+
     async def index_done_callback(self):
         NetworkXStorage.write_nx_graph(self._graph, self._graphml_xml_file)
 
@@ -165,7 +168,7 @@ class NetworkXStorage(BaseGraphStorage):
 
 
 async def main():
-    relationship = "caterpillar"
+    relationship = "gxo"
     WORKING_DIR = (
             Path(__file__).parent.parent.parent.parent.parent / "engine" / "examples" / relationship
     )

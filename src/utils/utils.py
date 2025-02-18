@@ -9,7 +9,7 @@ import re
 import tiktoken
 from dataclasses import dataclass
 from functools import wraps
-from hashlib import md5
+from hashlib import md5, sha256
 from typing import Any, List, Union
 from src.utils.log import logger
 
@@ -116,7 +116,7 @@ def compute_args_hash(*args):
 
 
 def compute_mdhash_id(content, prefix: str = ""):
-    return prefix + md5(content.encode()).hexdigest()
+    return prefix + sha256(content.encode()).hexdigest()
 
 
 def limit_async_func_call(max_size: int, waitting_time: float = 0.0001):

@@ -23,7 +23,7 @@ PROMPTS["DEFAULT_ENTITY_TYPES"] = DEFAULT_ENTITY_TYPES
 
 PROMPTS["entity_extraction"] = """You are efficient named entity relationship extractor 
 - **Your Goal** - 
-Given a text document relevant to credit agreements and a list of legal entity types, **identify all entities** from the text that match these types and extract **all relationships** among the identified entities.  
+Given a **Markdown** text document relevant to credit agreements and a list of legal entity types, **identify all entities** from the text that match these types and extract **all relationships** among the identified entities.  
 Use **{language}** as the output language.  
 ---
 ### **Entity Types with Descriptions for Credit Agreement**  

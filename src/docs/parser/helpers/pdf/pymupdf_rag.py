@@ -1051,7 +1051,7 @@ if __name__ == "__main__":
         with Path(outname).open("ab") as f:
             f.write(page_str.encode())
 
-    chunks = extract_chunks_md(md_string, max_tokens=1024)
+    chunks, docs = extract_chunks_md(md_string, max_tokens=500)
     with Path(chunk_outname).open("ab") as f:
         for i, chunk in enumerate(chunks):
             f.write(f"Chunk {i+1}:".encode())

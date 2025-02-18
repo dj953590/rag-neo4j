@@ -134,7 +134,7 @@ class GraphEngine:
     log_level: str = field(default=current_log_level)
 
     # text chunking
-    chunk_token_size: int = 500
+    chunk_token_size: int = 1024
     min_percentage: int = 10
     chunk_overlap_token_size: int = 50
 
@@ -304,12 +304,12 @@ class GraphEngine:
             ):
                 chunks = {}
                 for chunk in combined_chunks:
-                    combined_text = " ".join(element['text'] for element in chunk['content'])
-                    chunk_id = compute_mdhash_id(combined_text, prefix="chunk-")
+                    # combined_text = " ".join(element['text'] for element in chunk['content'])
+                    chunk_id = compute_mdhash_id(chunk, prefix="chunk-")
                     chunks[chunk_id] = {
-                        "content": combined_text,
-                        "bounding_box": chunk['bounding_box'],
-                        "token_count": chunk['token_count'],
+                        "content": chunk,
+                        # "bounding_box": chunk['bounding_box'],
+                        # "token_count": chunk['token_count'],
                         "full_doc_id": doc_key,
                         "doc_id": self.doc_id,
                         "doc_name": self.doc_name,

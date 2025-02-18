@@ -39,14 +39,15 @@ class GraphMLLoader:
 
     def store_graph(self):
         with self.driver.session() as session:
-            session.write_transaction(self.create_nodes)
-            session.write_transaction(self.create_relationships)
+            session.execute_write(self.create_nodes)
+            session.execute_write(self.create_relationships)
 
     def load_graphml(self, file_name):
         """
         Load a GraphML file into Neo4j using APOC.
         """
         self.G = nx.read_graphml(file_name)
+
 
 if __name__ == "__main__":
     # Initialize the loader
