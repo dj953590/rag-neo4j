@@ -174,7 +174,7 @@ class PGVectorStorage(BaseVectorStorage):
             # Filter results by cosine similarity threshold and take top k
             filtered_results = [
                                    {
-                                       "id": result.VectorTable.id,
+                                       "chunk_id": result.VectorTable.chunk_id,
                                        "distance": result.distance,
                                        "content": result.VectorTable.content,
                                        **result.VectorTable.mdata,
