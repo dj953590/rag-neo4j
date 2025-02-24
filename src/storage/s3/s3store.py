@@ -156,8 +156,9 @@ def delete_folder(self, folder_name: str):
         response = self.s3_client.list_objects_v2(Bucket=self.bucket_name, Prefix=folder_name)
         if 'Contents' in response:
             # Delete all objects in the folder
-            objects_to_delete = [{'Key': obj['Key']} for obj in response['Contents']
-                self.s3_client.delete_objects(Bucket=self.bucket_name, Delete={'Objects': objects_to_delete})
+            contents = response['Contents']
+            objects_to_delete = [{'Key': obj['Key']} for obj in contents]
+            self.s3_client.delete_objects(Bucket=self.bucket_name, Delete={'Objects': objects_to_delete})
         print(f"Folder '{folder_name}' and its contents deleted from '{self.bucket_name}'")
         return True
     except NoCredentialsError:
