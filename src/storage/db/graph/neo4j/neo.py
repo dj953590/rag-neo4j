@@ -39,6 +39,7 @@ class Neo4JStorage(BaseGraphStorage):
         uri = settings.get('NEO4j_URI', None)
         user = settings.get('NEO4J_USERNAME', None)
         pwd = settings.get('NEO4J_PASSWORD', None)
+        self._database = settings.get('NEO4J_DATABASE', "neo4j")
         self._driver: AsyncDriver = AsyncGraphDatabase.driver(
             uri, auth=(user, pwd)
         )
@@ -80,7 +81,7 @@ class Neo4JStorage(BaseGraphStorage):
         entity_name_label = node_id.strip('"')
         doc_id = param.doc_id if param else None
 
-        async with self._driver.session() as session:
+        async with self._driver.session(database=self._database) as session:
             query = (
                 f"MATCH (n:`{entity_name_label}` {{doc_id: $doc_id}}) "
                 "RETURN count(n) > 0 AS node_exists"
@@ -103,7 +104,7 @@ class Neo4JStorage(BaseGraphStorage):
         entity_name_label_target = target_node_id.strip('"')
         doc_id = param.doc_id if param else None
 
-        async with self._driver.session() as session:
+        async with self._driver.session(database=self._database) as session:
             query = (
                 f"MATCH (a:`{entity_name_label_source}` {{doc_id: $doc_id}})-[r]-(b:`{entity_name_label_target}` {{doc_id: $doc_id}}) "
                 "RETURN COUNT(r) > 0 AS edgeExists"
@@ -125,7 +126,7 @@ class Neo4JStorage(BaseGraphStorage):
         entity_name_label = node_id.strip('"')
         doc_id = param.doc_id if param else None
 
-        async with self._driver.session() as session:
+        async with self._driver.session(database=self._database) as session:
             query = f"MATCH (n:`{entity_name_label}` {{doc_id: $doc_id}}) RETURN n"
             result = await session.run(query, doc_id=doc_id)
             record = await result.single()
@@ -148,7 +149,7 @@ class Neo4JStorage(BaseGraphStorage):
         entity_name_label = node_id.strip('"')
         doc_id = param.doc_id if param else None
 
-        async with self._driver.session() as session:
+        async with self._driver.session(database=self._database) as session:
             query = f"""
                 MATCH (n:`{entity_name_label}` {{doc_id: $doc_id}})
                 RETURN COUNT{{ (n)--() }} AS totalEdgeCount
@@ -193,7 +194,7 @@ class Neo4JStorage(BaseGraphStorage):
         entity_name_label_target = target_node_id.strip('"')
         doc_id = param.doc_id if param else None
 
-        async with self._driver.session() as session:
+        async with self._driver.session(database=self._database) as session:
             query = f"""
             MATCH (start:`{entity_name_label_source}` {{doc_id: $doc_id}})-[r]->(end:`{entity_name_label_target}` {{doc_id: $doc_id}})
             RETURN properties(r) as edge_properties
@@ -225,7 +226,7 @@ class Neo4JStorage(BaseGraphStorage):
             OPTIONAL MATCH (n)-[r]-(connected {{doc_id: $doc_id}})
             RETURN n, r, connected
         """
-        async with self._driver.session() as session:
+        async with self._driver.session(database=self._database) as session:
             results = await session.run(query, doc_id=doc_id)
             edges = []
             async for record in results:
@@ -280,7 +281,7 @@ class Neo4JStorage(BaseGraphStorage):
             )
 
         try:
-            async with self._driver.session() as session:
+            async with self._driver.session(database=self._database) as session:
                 await session.execute_write(_do_upsert)
         except Exception as e:
             logger.error(f"Error during upsert: {str(e)}")
@@ -327,11 +328,56 @@ class Neo4JStorage(BaseGraphStorage):
             )
 
         try:
-            async with self._driver.session() as session:
+            async with self._driver.session(database=self._database) as session:
                 await session.execute_write(_do_upsert_edge)
         except Exception as e:
             logger.error(f"Error during edge upsert: {str(e)}")
             raise
 
+    async def get_node_count(self, ) -> int:
+        """
+        Retrieve the count of nodes in the graph, filtered by doc_id if provided.
+        """
+        try:
+            async with self._driver.session(database=self._database) as session:
+                result = await session.run("MATCH (n) RETURN count(n) as totalNodes")
+
+                # Check if result itself is None
+                if result is None:
+                    logger.error("session.run returned None. Please check your driver connection and configuration.")
+                    return 0
+
+                record = await result.single()
+
+                # Check if single() returns None (e.g., no record was produced)
+                if record is None:
+                    logger.info("No record returned; assuming count is 0.")
+                    return 0
+
+                total_nodes = record.get("totalNodes", 0)
+                return total_nodes
+        except Exception as e:
+            return 0
+
+    async def get_database(self):
+        async with self._driver.session(database=self._database) as session:
+            query = "SHOW DATABASES"
+            result = await session.run(query)
+            databases = await result.values()
+            current_database = next((db[0] for db in databases if db[0] == self._database), None)
+            return current_database
+
     async def _node2vec_embed(self):
         print("Implemented but never called.")
+
+
+if __name__ == "__main__":
+    # write code to get the data from neo4j database and display it
+    neodb = Neo4JStorage("rag_neo4j", "rag_neo4j", "rag_neo4j")
+    try:
+        dbresult = asyncio.run(neodb.get_database())
+        print(dbresult)
+        node_count = asyncio.run(neodb.get_node_count())
+        print(node_count)
+    finally:
+        asyncio.run(neodb.close())

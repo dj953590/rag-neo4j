@@ -38,7 +38,10 @@ Below is a list of **valid entity types** with their **descriptions**. Use this 
    - If an entity does not match an exact type but is still **credit agreement-related**, classify it appropriately.  
    - For each identified entity, extract:  
      - **Entity Name**: The exact name as mentioned in the text (capitalize if in English).  
-     - **Entity Type**: One of the predefined credit agreement-related entity types.  
+     - **Entity Type**: One of the predefined **credit agreement-related** entity types. ** DO NOT **
+            - include any entity that does not match the entity types provided.
+            - include any entity that is not related to credit agreements.  
+            - include enity without a type
      - **Entity Description**: A **comprehensive** summary of the entity's attributes, role, and significance based on the text.
     - **Format each entity** as:  
      `("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)`  
@@ -51,7 +54,8 @@ Below is a list of **valid entity types** with their **descriptions**. Use this 
      - **Relationship Strength**: A numeric score (1-10) indicating how strong the relationship is between the source entity and target entity.  
      - **Relationship Keywords**: Key terms that describe the nature of the relationship.  
    - **Format each relationship** as:  
-     `("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)`  
+     `("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)`
+   - if an entity does not have relationships, do not include it in the output.  
 
 3. **Extract key concepts and themes**  
    - Identify overarching concepts or themes in the text.  

@@ -33,7 +33,7 @@ from src.storage.db.base import (
 from src.storage.db.kv.kv_json import JsonKVStorage
 from src.storage.db.vector.pg.pg import PGVectorStorage
 from src.storage.db.graph.networkx.netx import NetworkXStorage
-from src.storage.db.graph.neo4j.neo4j import Neo4JStorage
+from src.storage.db.graph.neo4j.neo import Neo4JStorage
 
 
 def lazy_external_import(module_name: str, class_name: str):
@@ -142,7 +142,7 @@ class GraphEngine:
 
     # entity extraction
     entity_extract_max_gleaning: int = 1
-    entity_summary_to_max_tokens: int = 350
+    entity_summary_to_max_tokens: int = 512
 
     # node embedding
     node_embedding_algorithm: str = "node2vec"
@@ -293,6 +293,7 @@ class GraphEngine:
             logger.info(f"[New Docs] inserting {len(new_docs)} docs into memory storage")
 
             inserting_chunks = {}
+            chunk_sequence = 0  # Initialize chunk sequence
             """for doc_key, doc in tqdm_async(new_docs.items(), desc="Chunking documents", unit="doc"): 
             new_docs.items() returns an iterator over the key-value pairs (document key and document content) in the 
             new_docs dictionary. tqdm_async is used to display a progress bar for the iteration, with the description 
@@ -313,7 +314,9 @@ class GraphEngine:
                         "full_doc_id": doc_key,
                         "doc_id": self.doc_id,
                         "doc_name": self.doc_name,
+                        "chunk_sequence": chunk_sequence
                     }
+                    chunk_sequence += 1  # Increment chunk sequence
                 inserting_chunks.update(chunks)
             _add_chunk_keys = await self.text_chunks.filter_keys(
                 list(inserting_chunks.keys())

@@ -32,7 +32,7 @@ class NetworkXStorage(BaseGraphStorage):
         # Ensure relationships have labels
         for u, v, data in graph.edges(data=True):
             if "label" not in data:
-                data["label"] = "CONNECTED_TO"  # Default relationship type
+                data["label"] = "<r>"  # Default relationship type
         nx.write_graphml(graph, file_name)
 
     @staticmethod

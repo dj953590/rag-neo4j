@@ -4,10 +4,9 @@ from typing import Union
 import numpy as np
 from dynaconf import settings
 from pgvector.sqlalchemy import Vector
-from sqlalchemy import create_engine, Column, String, JSON, text, literal_column, Float, bindparam
+from sqlalchemy import create_engine, Column, String, JSON, Integer, func, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import func
 from src.storage.db.base import BaseVectorStorage, QueryParam
 from src.utils.log import logger
 
@@ -16,7 +15,7 @@ Base = declarative_base()
 
 class VectorTable(Base):
     """Table schema for storing vectors in PostgreSQL."""
-    __tablename__ = "documents"
+    __tablename__ = "DOCUMENTS"
     """
     id: Unique identifier for the document chunk
     doc_id: Unique identifier for the document
@@ -25,12 +24,13 @@ class VectorTable(Base):
     content: Content of the document
     mdata: Metadata of the document
     """
-    id = Column(String, primary_key=True)
+    chunk_id = Column(String, primary_key=True)
     doc_id = Column(String, nullable=False)
-    doc_name = Column(String, nullable=False)
     embedding = Column(Vector)  # PGVector column type
     content = Column(String)
     mdata = Column(JSON)
+    chunk_sequence = Column(Integer, nullable=False, default=0)
+    updated_on = Column(DateTime, server_default=func.now(), nullable=False)
 
 
 @dataclass
@@ -59,7 +59,7 @@ class PGVectorStorage(BaseVectorStorage):
             Base.metadata.create_all(self._engine)
 
             # Set batch size for upsert operations
-            self._max_batch_size = settings.get("embedding_batch_num", 32)
+            self._max_batch_size = settings.get("embedding_batch_num", 8)
 
         except Exception as e:
             logger.error(f"PGVector initialization failed: {str(e)}")
@@ -80,42 +80,52 @@ class PGVectorStorage(BaseVectorStorage):
                 or {"_default": "true"}
                 for item in data.values()
             ]
+            chunk_sequences = [v.get("chunk_sequence", 0) for v in data.values()]
 
-            # Logic here is to process in batches to avoid memory issues
-            # Split data into batches
-            # Use asyncio.gather to run embedding tasks concurrently
-            # Upsert in batches
-
-            batches = [
-                documents[i: i + self._max_batch_size]
-                for i in range(0, len(documents), self._max_batch_size)
-            ]
-            # Get embeddings for each batch
-            embedding_tasks = [self.embedding_func(batch) for batch in batches]
-            embeddings_list = []
-
-            # Pre-allocate embeddings_list with known size
-            embeddings_list = [None] * len(embedding_tasks)
-
-            # Use asyncio.gather instead of as_completed if order doesn't matter
-            embeddings_results = await asyncio.gather(*embedding_tasks)
-            embeddings_list = list(embeddings_results)
-            # Flatten embeddings list
-            embeddings = np.concatenate(embeddings_list)
-
-            # Upsert in batches
+            batch_size = 40
             session = self._Session()
-            for i in range(0, len(ids), self._max_batch_size):
-                batch_slice = slice(i, i + self._max_batch_size)
+            for i in range(0, len(ids), batch_size):
+                batch_ids = ids[i:i + batch_size]
+                batch_doc_ids = doc_ids[i:i + batch_size]
+                batch_doc_names = doc_names[i:i + batch_size]
+                batch_documents = documents[i:i + batch_size]
+                batch_metadatas = metadatas[i:i + batch_size]
+                batch_chunk_sequences = chunk_sequences[i:i + batch_size]
 
-                for j in range(len(ids[batch_slice])):
+                # Logic here is to process in batches to avoid memory issues
+                # Split data into batches
+                # Use asyncio.gather to run embedding tasks concurrently
+                # Upsert in batches
+
+                batches = [
+                    batch_documents[i: i + self._max_batch_size]
+                    for i in range(0, len(batch_documents), self._max_batch_size)
+                ]
+                # Get embeddings for each batch
+                embedding_tasks = [self.embedding_func(batch) for batch in batches]
+                embeddings_list = []
+
+                # Pre-allocate embeddings_list with known size
+                embeddings_list = [None] * len(embedding_tasks)
+
+                # Use asyncio.gather instead of as_completed if order doesn't matter
+                embeddings_results = await asyncio.gather(*embedding_tasks)
+                embeddings_list = list(embeddings_results)
+                # Flatten embeddings list
+                embeddings = np.concatenate(embeddings_list)
+
+                # Upsert in batches
+
+                # Process each batch
+                for j in range(len(batch_ids)):
                     vector = VectorTable(
-                        id=ids[batch_slice][j],
-                        doc_id=doc_ids[batch_slice][j],
-                        doc_name=doc_names[batch_slice][j],
-                        embedding=embeddings[batch_slice][j].tolist(),
-                        content=documents[batch_slice][j],
-                        mdata=metadatas[batch_slice][j],
+                        chunk_id=batch_ids[j],
+                        doc_id=batch_doc_ids[j],
+                        embedding=embeddings[j].tolist(),
+                        content=batch_documents[j],
+                        mdata=batch_metadatas[j],
+                        chunk_sequence=batch_chunk_sequences[j],
+                        updated_on=func.now()
                     )
                     session.merge(vector)  # Upsert operation
 

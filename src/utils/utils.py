@@ -84,7 +84,7 @@ class EmbeddingFunc:
     embedding_dim: int
     max_token_size: int
     func: callable
-    concurrent_limit: int = 16
+    concurrent_limit: int = 4
 
     def __post_init__(self):
         """

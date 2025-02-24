@@ -216,14 +216,12 @@ async def _merge_nodes_then_upsert(
     )
     # Add data to graph database for storage
     doc_id: str = global_config["doc_id"]
-    doc_name: str = global_config["doc_name"]
 
     node_data = dict(
         entity_type=entity_type,
         description=description,
         source_id=source_id,
         doc_id=doc_id,
-        doc_name=doc_name,
     )
     await knowledge_graph_inst.upsert_node(
         entity_name,
@@ -558,32 +556,34 @@ async def extract_entities(
 
     doc_id: str = global_config["doc_id"]
     doc_name: str = global_config["doc_name"]
+    entity_sequence = 0
     if entity_vdb is not None:
-        data_for_vdb = {
-            compute_mdhash_id(dp["entity_name"], prefix="ent-"): {
+        data_for_vdb = {}
+        for dp in all_entities_data:
+            data_for_vdb[compute_mdhash_id(dp["entity_name"], prefix="ent-")] = {
                 "content": dp["entity_name"] + dp["description"],
                 "entity_name": dp["entity_name"],
                 "doc_id": doc_id,
                 "doc_name": doc_name,
+                "chunk_sequence": entity_sequence,
             }
-            for dp in all_entities_data
-        }
+            entity_sequence += 1
         await entity_vdb.upsert(data_for_vdb)
-
+    relationship_sequence = 0
     if relationships_vdb is not None:
-        data_for_vdb = {
-            compute_mdhash_id(dp["src_id"] + dp["tgt_id"], prefix="rel-"): {
+        data_for_vdb = {}
+        for dp in all_relationships_data:
+            data_for_vdb[
+                compute_mdhash_id(dp["src_id"] + dp["tgt_id"], prefix="rel-")
+            ] = {
                 "src_id": dp["src_id"],
                 "tgt_id": dp["tgt_id"],
-                "content": dp["keywords"]
-                           + dp["src_id"]
-                           + dp["tgt_id"]
-                           + dp["description"],
+                "content": dp["keywords"] + dp["src_id"] + dp["tgt_id"] + dp["description"],
                 "doc_id": doc_id,
                 "doc_name": doc_name,
+                "chunk_sequence": relationship_sequence,
             }
-            for dp in all_relationships_data
-        }
+            relationship_sequence += 1
         await relationships_vdb.upsert(data_for_vdb)
 
     return knowledge_graph_inst

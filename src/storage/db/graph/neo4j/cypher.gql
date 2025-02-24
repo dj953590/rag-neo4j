@@ -9,3 +9,11 @@ RETURN n, r, m
 MATCH (n)-[r]-(m)
 WHERE n.doc_id = 'DOC-6651d386274d94a69cbc67e7a7e06bb2' AND r.doc_id ='DOC-6651d386274d94a69cbc67e7a7e06bb2' AND m.doc_id = 'DOC-6651d386274d94a69cbc67e7a7e06bb2'
 RETURN n, r, m
+
+get all the nodes and relationship
+
+match (n) - [r] - (m) return n,r,m
+
+Remove all the nodes and associated relationship
+
+match (n) detach delete n

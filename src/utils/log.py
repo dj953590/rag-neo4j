@@ -14,7 +14,7 @@ custom_theme = Theme({
 })
 
 # Create a console object with the custom theme
-console = Console(theme=custom_theme)
+console = Console(theme=custom_theme, width=120)
 
 # Set up the logging configuration
 logging.basicConfig(
