@@ -1,32 +1,32 @@
-company: A legal business entity or corporation
-corporation: A specific type of company with limited liability
-agreement: A legal contract outlining terms between parties
-amendment: A modification or addition to an existing agreement
-commitment: A lender's obligation to provide financing
-executed date: The date on which the agreement was signed
-maturity date: The final due date for repayment of a loan
-waiver: A legal decision to waive a contractual obligation
-borrower: The entity receiving the loan under the agreement
-guarantor: An entity that guarantees the borrower's obligations
-obligor: A party legally bound to fulfill obligations under a contract
-lender: A financial institution providing the loan
-secured party: A lender holding a security interest in collateral
-agent: An entity managing administrative loan functions
-facility: A structured credit or loan arrangement
-swingline: A short-term borrowing facility
-letter of credit: A guarantee from a bank ensuring payment
-base rate benchmark: A reference interest rate (e.g. SOFR, LIBOR)
-interest rate: The cost of borrowing expressed as a percentage
-margin: The additional percentage added to the base rate
-default interest: The increased interest rate applied in case of default
-collateral: Assets pledged to secure a loan
-security trustee: An entity holding security interests on behalf of lenders
-lien: A legal right over a borrower's assets as collateral
-covenants: Financial and operational restrictions on the borrower
-schedule: A structured timeline for loan events
-prepayment: The ability to repay a loan before maturity
-syndicated: A loan provided by multiple lenders
-assignee: A party receiving loan rights via transfer
-transferor: A lender transferring its loan interest
-agency: The function of managing a syndicated loan
-regulatory: Entities responsible for overseeing compliance and regulations
+company: A legal business entity or corporation that engages in commercial, industrial, or professional activities. This term often refers to any organization recognized as a distinct legal entity.
+corporation: A specific type of company organized under corporate law, recognized as a separate legal entity from its shareholders, with limited liability and governed by a board of directors.
+agreement: A formal, legally binding contract outlining the rights, obligations, and terms between two or more parties. In a credit context, it details the financing arrangement, including terms of borrowing, repayment schedules, interest rates, and collateral.
+amendment: A formal change, modification, or addition to an existing agreement. Amendments are used to update, clarify, or alter the terms of the original contract as circumstances evolve.
+commitment: A lender’s legally binding promise to provide financing up to a specified amount under certain conditions. This term signifies the obligation of the lender to make funds available when required.
+executed date: The specific date on which all parties have signed the agreement, marking the formal commencement of contractual obligations and binding terms.
+maturity date: The predetermined final due date for the repayment of the loan. This date signals the end of the loan term, when all outstanding principal and accrued interest must be repaid.
+waiver: A formal decision by a party to relinquish or forego a known right or claim under the agreement. Waivers may be granted to allow temporary flexibility in performance without altering the core terms.
+borrower: The individual, company, or legal entity that receives funds under the credit agreement and is responsible for repaying the loan according to the agreed terms, including any interest and fees.
+guarantor: An entity that provides additional assurance to the lender by agreeing to repay the loan if the primary borrower defaults. Guarantors help mitigate credit risk.
+obligor: Any party that is contractually obligated to fulfill the terms of the agreement. While often synonymous with the borrower, this term can also include other parties with specific performance obligations.
+lender: The financial institution or entity that provides the loan to the borrower, responsible for disbursing funds and monitoring compliance with the credit agreement.
+secured party: A lender or financial institution that holds a security interest in collateral provided by the borrower. This interest serves as assurance, allowing the lender to claim the collateral if the borrower defaults.
+agent: A designated entity—often a bank or financial intermediary—tasked with managing the administrative and operational aspects of the credit agreement, including fund disbursement, communication, and coordination among participants.
+facility: The structured credit or loan arrangement outlined in the agreement. This term covers various forms of credit, such as revolving credit or term loans, and defines the specific financing structure.
+swingline: A short-term borrowing facility within a larger credit arrangement designed to provide temporary liquidity or bridge financing until longer-term funding is secured.
+letter of credit: A financial instrument issued by a bank guaranteeing payment on behalf of the borrower to a beneficiary, ensuring that the borrower’s obligations will be met even if they encounter financial difficulties.
+base rate benchmark: A reference interest rate (such as LIBOR, SOFR, or the Prime Rate) used as a starting point for calculating the loan’s interest rate. A margin is typically added to this base rate to determine the final rate charged.
+interest rate: The cost of borrowing expressed as a percentage of the principal. It may be fixed or variable, reflecting market conditions and the borrower’s credit risk.
+margin: The additional percentage added to the base rate benchmark to arrive at the final interest rate on the loan. This margin compensates the lender for credit risk and administrative costs.
+default interest: A higher interest rate applied when the borrower fails to meet payment obligations, serving as a penalty and an incentive to maintain timely payments.
+collateral: Assets or property pledged by the borrower as security for the loan. Collateral helps reduce the lender's risk by providing a means to recover funds in case of default.
+security trustee: An entity appointed to hold and manage the collateral on behalf of all lenders involved in the credit agreement. The trustee is responsible for enforcing security interests if the borrower defaults.
+lien: A legal right or claim against a borrower’s asset, granted to the lender as security for the loan. A lien ensures that the lender can recover its funds by seizing and selling the asset if necessary.
+covenants: Specific promises or restrictions included in the agreement that govern the borrower’s operations and financial behavior. Covenants are designed to protect the lender’s interests by ensuring the borrower remains within defined risk parameters.
+schedule: A detailed timeline that outlines key dates and deadlines related to the credit agreement, including repayment dates, interest payment intervals, and compliance milestones.
+prepayment: A provision that allows the borrower to repay part or all of the loan before the scheduled maturity date, often subject to specific fees or penalties as outlined in the agreement.
+syndicated: Refers to a loan that is provided by a group of lenders rather than a single institution, allowing risk and financing responsibilities to be shared among multiple parties.
+assignee: An entity that receives rights or obligations under the credit agreement through a transfer from the original party. The assignee assumes the transferred responsibilities or benefits as defined in the agreement.
+transferor: The party that transfers its rights or interests in the credit agreement to another entity. This often occurs in loan trading or syndication, where parts of the loan are sold to different institutions.
+agency: The role or function of managing and coordinating a syndicated loan, typically performed by an appointed agent who acts on behalf of all participating lenders.
+regulatory: Refers to the authorities or bodies responsible for overseeing and enforcing compliance with laws, rules, and regulations that govern credit agreements and financial transactions.

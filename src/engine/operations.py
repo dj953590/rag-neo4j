@@ -493,23 +493,23 @@ async def extract_entities(
         return batch_set_results
 
     results = []
-
+    """
     # single processing a chunk
     for chunk_key_dp in tqdm(ordered_chunks, total=len(ordered_chunks), desc="Extracting entities from chunks",
                              unit="chunk"):
         result = await _process_single_content(chunk_key_dp)
         results.append(result)
-
-    # for batch Split ordered_chunks into batches of size 4
     """
+    # for batch Split ordered_chunks into batches of size 4
+
     batches = [ordered_chunks[i:i + batch_size] for i in range(0, len(ordered_chunks), batch_size)]
     for batch in tqdm(batches, total=len(batches), desc="Processing batches", unit="batch"):
         batch_results = await process_batch(batch)
         results.extend(batch_results)
 
+
     """
-    # not full parallel processing
-    """
+     #  no limit full parallel processing
      for result in tqdm_async(
             asyncio.as_completed([_process_single_content(c) for c in ordered_chunks]),
             total=len(ordered_chunks),
@@ -1219,18 +1219,20 @@ async def _find_most_related_entities_from_relationships(
             entity_names.append(e["tgt_id"])
             seen.add(e["tgt_id"])
 
-    node_datas = await asyncio.gather(
+    node_datas_list = await asyncio.gather(
         *[kg_db.get_node(entity_name, param=query_param) for entity_name in entity_names]
     )
 
     node_degrees = await asyncio.gather(
         *[kg_db.node_degree(entity_name, param=query_param) for entity_name in entity_names]
     )
-    node_datas = [
-        {**n, "entity_name": k, "rank": d}
-        for k, n, d in zip(entity_names, node_datas, node_degrees)
-        if k is not None and n is not None and d is not None and not logger.info(f"k: {k}, n: {n}, d: {d}")
-    ]
+
+    node_datas = []
+    for k, n, d in zip(entity_names, node_datas_list, node_degrees):
+        if k is None or n is None or d is None:
+            logger.info(f"k: {k}, n: {n}, d: {d}")
+        else:
+            node_datas.append({**n, "entity_name": k, "rank": d})
 
     node_datas = truncate_list_by_token_size(
         node_datas,

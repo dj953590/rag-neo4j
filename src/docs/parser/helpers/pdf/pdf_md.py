@@ -4,7 +4,7 @@ in Markdown format, compatible with the GitHub standard.
 
 It must be invoked with the filename like this:
 
-python pymupdf_rag.py input.pdf [-pages PAGES]
+python pdf_md.py input.pdf [-pages PAGES]
 
 The "PAGES" parameter is a string (containing no spaces) of comma-separated
 page numbers to consider. Each item is either a single page number or a
@@ -23,15 +23,15 @@ import os
 import string
 from binascii import b2a_base64
 from typing import Any
+from tqdm import tqdm
 
 import pymupdf
 from beartype.typing import List, Dict
 from pymupdf import Document
 
 from src.docs.chunker.chunks import extract_chunks_md
-from src.docs.parser.helpers.pdf.get_text_lines import get_raw_lines, is_white
-from src.docs.parser.helpers.pdf.multi_column import column_boxes
-from src.docs.parser.helpers.pdf.progress import ProgressBar
+from src.docs.parser.helpers.pdf.pdf_text import get_raw_lines, is_white
+from src.docs.parser.helpers.pdf.pdf_multicolumn import column_boxes
 from dataclasses import dataclass
 
 # Characters recognized as bullets when starting a line.
@@ -919,7 +919,8 @@ def to_markdown(
     textflags = pymupdf.TEXT_MEDIABOX_CLIP
     if show_progress:
         print(f"Processing {doc.name}...")
-        pages = ProgressBar(list(pages))
+        pages = tqdm(list(pages))
+
     for pno in pages:
         parms = get_page_output(doc, pno, margins, textflags)
         if page_chunks is False:
@@ -1009,7 +1010,7 @@ if __name__ == "__main__":
     import time
     from pathlib2 import Path
 
-    doc_name = "citibank-caterpillar"
+    doc_name = "citibank-amazon"
 
     filename = (
             Path(__file__).parent.parent.parent / 'docs' / (doc_name + ".pdf")
@@ -1039,7 +1040,7 @@ if __name__ == "__main__":
 
     # get the markdown string
     extract_words=False,
-    md_string = to_markdown(doc, pages=pages, page_chunks=True, extract_words=True)
+    md_string = to_markdown(doc, pages=pages, page_chunks=True, extract_words=True, margins=(0, 20, 0, 20))
     outname = doc.name.replace(".pdf", ".md")
     chunk_outname = doc.name.replace(".pdf", "-chunks.md")
 
@@ -1051,7 +1052,7 @@ if __name__ == "__main__":
         with Path(outname).open("ab") as f:
             f.write(page_str.encode())
 
-    chunks, docs = extract_chunks_md(md_string, max_tokens=500)
+    chunks, docs = extract_chunks_md(md_string, max_tokens=1024)
     with Path(chunk_outname).open("ab") as f:
         for i, chunk in enumerate(chunks):
             f.write(f"Chunk {i+1}:".encode())

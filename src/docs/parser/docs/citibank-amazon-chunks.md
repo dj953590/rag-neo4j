@@ -1,27 +1,4 @@
-Page 117:
-========================================
-SIGNATURE PAGE TO
-
-THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
-
-OF AMAZON.COM, INC.
-
-**U.S. BANK NATIONAL ASSOCIATION, as a Lender:**
-
-By: /s/ Joyce P. Dorsett
-
-Name:Joyce P. Dorsett
-
-Title: Senior Vice President
-
-
------
-
-
-========================================
-Page 1:
-========================================
-EX-10.1 2 tm2329405d1_ex10-1.htm EXHIBIT 10.1
+Chunk 1:EX-10.1 2 tm2329405d1_ex10-1.htm EXHIBIT 10.1
 
 **Exhibit 10.1**
 
@@ -118,10 +95,7 @@ as Co-Documentation Agents
 -----
 
 
-========================================
-Page 2:
-========================================
-and
+Chunk 2:and
 
 **U.S. BANK NATIONAL ASSOCIATION,**
 
@@ -131,10 +105,7 @@ as Co-Managing Agents
 -----
 
 
-========================================
-Page 3:
-========================================
-**TABLE OF CONTENTS**
+Chunk 3:**TABLE OF CONTENTS**
 
 ARTICLE I. DEFINITIONS AND ACCOUNTING TERMS
 
@@ -232,10 +203,7 @@ ARTICLE V. REPRESENTATIONS AND WARRANTIES
 -----
 
 
-========================================
-Page 4:
-========================================
-5.10 Anti-Corruption 59
+Chunk 4:5.10 Anti-Corruption 59
 
 5.11 Sanctions 60
 
@@ -247,10 +215,7 @@ i
 -----
 
 
-========================================
-Page 5:
-========================================
-ARTICLE VI. AFFIRMATIVE COVENANTS
+Chunk 5:ARTICLE VI. AFFIRMATIVE COVENANTS
 
 6.01 Financial Statements 60
 
@@ -332,10 +297,7 @@ ii
 -----
 
 
-========================================
-Page 6:
-========================================
-ARTICLE XI. MISCELLANEOUS
+Chunk 6:ARTICLE XI. MISCELLANEOUS
 
 11.01 Amendments, Etc. 75
 
@@ -387,10 +349,7 @@ iii
 -----
 
 
-========================================
-Page 7:
-========================================
-**SCHEDULES**
+Chunk 7:**SCHEDULES**
 
 2.01 Commitments
 
@@ -426,10 +385,7 @@ iv
 -----
 
 
-========================================
-Page 8:
-========================================
-**FIVE-YEAR REVOLVING CREDIT AGREEMENT**
+Chunk 8:**FIVE-YEAR REVOLVING CREDIT AGREEMENT**
 
 This FIVE-YEAR REVOLVING CREDIT AGREEMENT dated as of November 1, 2023 (this “Agreement”), is entered into
 
@@ -486,10 +442,7 @@ Aggregate Commitments equal to US$15,000,000,000.
 -----
 
 
-========================================
-Page 9:
-========================================
-“Alternative Currency” means Euro, Sterling, Yen, Canadian Dollars, Australian Dollars, Swiss Francs and each other
+Chunk 9:“Alternative Currency” means Euro, Sterling, Yen, Canadian Dollars, Australian Dollars, Swiss Francs and each other
 
 currency (other than US Dollars) that is approved in accordance with Section 1.05.
 
@@ -552,10 +505,7 @@ to the Administrative Agent.
 -----
 
 
-========================================
-Page 10:
-========================================
-“Attributable Indebtedness” means, on any date, (a) in respect of any capital lease of any Person, the capitalized amount
+Chunk 10:“Attributable Indebtedness” means, on any date, (a) in respect of any capital lease of any Person, the capitalized amount
 
 thereof that would appear on a balance sheet of such Person prepared as of such date in accordance with GAAP, and (b) in respect of
 any Synthetic Lease Obligation, the capitalized amount of the remaining lease payments under the relevant lease that would appear on
@@ -611,10 +561,7 @@ or their Affiliates (other than through liquidation, administration or other ins
 -----
 
 
-========================================
-Page 11:
-========================================
-“Base Rate” means, for any day, a rate per annum equal to the highest of (a) the NYFRB Rate in effect on such day plus 1/2 of
+Chunk 11:“Base Rate” means, for any day, a rate per annum equal to the highest of (a) the NYFRB Rate in effect on such day plus 1/2 of
 
 1.00% per annum, (b) the Prime Rate in effect on such day, and (c) the Term SOFR for a one month Interest Period as published two
 U.S. Government Securities Business Days prior to such day (or, if such day is not a U.S. Government Securities Business Day, the
@@ -670,10 +617,7 @@ Currency at such time in the United States and (b) the related Benchmark Replace
 -----
 
 
-========================================
-Page 12:
-========================================
-If the Benchmark Replacement as determined pursuant to clause (1), (2) or (3) above would be less than the Floor, the
+Chunk 12:If the Benchmark Replacement as determined pursuant to clause (1), (2) or (3) above would be less than the Floor, the
 
 Benchmark Replacement will be deemed to be the Floor for the purposes of this Agreement and the other Loan Documents.
 
@@ -727,10 +671,7 @@ such Benchmark (or such component thereof) continues to be provided on such date
 -----
 
 
-========================================
-Page 13:
-========================================
-For the avoidance of doubt, (i) if the event giving rise to the Benchmark Replacement Date occurs on the same day as, but
+Chunk 13:For the avoidance of doubt, (i) if the event giving rise to the Benchmark Replacement Date occurs on the same day as, but
 
 earlier than, the Reference Time in respect of any determination, the Benchmark Replacement Date will be deemed to have occurred
 prior to the Reference Time for such determination and (ii) the “Benchmark Replacement Date” will be deemed to have occurred in the
@@ -779,10 +720,7 @@ such Benchmark (or the published component used in the calculation thereof).
 -----
 
 
-========================================
-Page 14:
-========================================
-“Benchmark Unavailability Period” means, with respect to any Benchmark, the period (if any) (x) beginning at the time that a
+Chunk 14:“Benchmark Unavailability Period” means, with respect to any Benchmark, the period (if any) (x) beginning at the time that a
 
 Benchmark Replacement Date pursuant to clause (1) or (2) of that definition has occurred if, at such time, no Benchmark Replacement
 has replaced such then-current Benchmark for all purposes hereunder and under any other Loan Document in accordance with Section
@@ -837,10 +775,7 @@ Loan, such day shall also be an RFR Business Day.
 -----
 
 
-========================================
-Page 15:
-========================================
-“Canadian Dollar” and “C$” mean the lawful money of Canada.
+Chunk 15:“Canadian Dollar” and “C$” mean the lawful money of Canada.
 
 “CDO Rate” means, with respect to any Term Benchmark Borrowing denominated in Canadian Dollars for any Interest
 
@@ -892,10 +827,7 @@ Section 11.01.
 -----
 
 
-========================================
-Page 16:
-========================================
-“CME Term SOFR Administrator” means CME Group Benchmark Administration Limited as administrator of the forward
+Chunk 16:“CME Term SOFR Administrator” means CME Group Benchmark Administration Limited as administrator of the forward
 looking term Secured Overnight Financing Rate (SOFR) (or a successor administrator).
 
 “Code” means the U.S. Internal Revenue Code of 1986.
@@ -951,10 +883,7 @@ CORRA is required, references to CORRA will be deemed to be references to the la
 -----
 
 
-========================================
-Page 17:
-========================================
-“Daily Compounded CORRA Borrowing” means, if available pursuant to Section 3.03, any Borrowing comprised of Daily
+Chunk 17:“Daily Compounded CORRA Borrowing” means, if available pursuant to Section 3.03, any Borrowing comprised of Daily
 
 Compounded CORRA Loans.
 
@@ -1014,10 +943,7 @@ Default Rate shall be an interest rate equal to the interest rate (including any
 -----
 
 
-========================================
-Page 18:
-========================================
-“Defaulting Lender” means, subject to Section 2.13(b), any Lender that (a) has failed to (i) fund all or any portion of its Loans
+Chunk 18:“Defaulting Lender” means, subject to Section 2.13(b), any Lender that (a) has failed to (i) fund all or any portion of its Loans
 
 within two Business Days of the date such Loans were required to be funded hereunder unless such Lender notifies the Administrative
 Agent and the Company in writing that such failure is the result of such Lender’s determination that one or more conditions precedent
@@ -1068,10 +994,7 @@ receivable or any rights and claims associated therewith. “Dispose” shall ha
 -----
 
 
-========================================
-Page 19:
-========================================
-“EEA Financial Institution” means (a) any credit institution or investment firm established in any EEA Member Country
+Chunk 19:“EEA Financial Institution” means (a) any credit institution or investment firm established in any EEA Member Country
 
 which is subject to the supervision of an EEA Resolution Authority, (b) any entity established in an EEA Member Country which is a
 parent of an institution described in clause (a) of this definition, or (c) any financial institution established in an EEA Member Country
@@ -1131,10 +1054,7 @@ Period.
 -----
 
 
-========================================
-Page 20:
-========================================
-“EURIBO Screen Rate” means a rate per annum equal to the euro interbank offered rate administered by the European Money
+Chunk 20:“EURIBO Screen Rate” means a rate per annum equal to the euro interbank offered rate administered by the European Money
 
 Market Institute (or any other Person that takes over the administration of such rate) for the applicable period, as displayed (before any
 correction, recalculation or republication by the administrator) on the Reuters screen page that displays such rate (currently
@@ -1186,10 +1106,7 @@ by and among the Company, the lenders party thereto and JPMorgan Chase Bank, N.A
 -----
 
 
-========================================
-Page 21:
-========================================
-“Existing 364-Day Credit Agreement” means that certain 364-Day Revolving Credit Agreement dated as of November 18,
+Chunk 21:“Existing 364-Day Credit Agreement” means that certain 364-Day Revolving Credit Agreement dated as of November 18,
 
 2022, by and among the Company, the lenders party thereto and JPMorgan Chase Bank, N.A., as administrative agent.
 
@@ -1242,10 +1159,7 @@ otherwise investing in commercial loans and similar extensions of credit in the 
 -----
 
 
-========================================
-Page 22:
-========================================
-“GAAP” means generally accepted accounting principles in the United States as set forth in the Accounting Standards
+Chunk 22:“GAAP” means generally accepted accounting principles in the United States as set forth in the Accounting Standards
 
 Codification established by the Financial Accounting Standards Board and defined in FASB ASC 105.
 
@@ -1304,10 +1218,7 @@ accounts payable in the ordinary course of business);
 -----
 
 
-========================================
-Page 23:
-========================================
-(e)     indebtedness (excluding prepaid interest thereon) of others secured by a Lien on property owned or being
+Chunk 23:(e)     indebtedness (excluding prepaid interest thereon) of others secured by a Lien on property owned or being
 
 purchased by such Person (including indebtedness arising under conditional sales or other title retention agreements) whether
 or not such indebtedness shall have been assumed by such Person or is limited in recourse (but limited, in the event such
@@ -1363,10 +1274,7 @@ calendar month, in which case such Interest Period shall end on the next precedi
 -----
 
 
-========================================
-Page 24:
-========================================
-(ii)     any Interest Period of one month or longer that begins on the last Business Day of a calendar month (or on a
+Chunk 24:(ii)     any Interest Period of one month or longer that begins on the last Business Day of a calendar month (or on a
 
 day for which there is no numerically corresponding day in the calendar month at the end of such Interest Period) shall end on
 the last Business Day of the calendar month at the end of such Interest Period; and
@@ -1425,10 +1333,7 @@ enforceability against any Borrower of any Loan Document to which it is a party.
 -----
 
 
-========================================
-Page 25:
-========================================
-“Material Indebtedness” means Indebtedness of the Company or any Subsidiary in an aggregate outstanding principal amount
+Chunk 25:“Material Indebtedness” means Indebtedness of the Company or any Subsidiary in an aggregate outstanding principal amount
 
 of $1,500,000,000 or more, other than (i) Indebtedness outstanding under this Agreement, (ii) Indebtedness of any Amazon Seller
 Lending Entity or other relevant special purpose entity Subsidiary under any financing described in Section 7.01(v), provided that such
@@ -1485,10 +1390,7 @@ shall be deemed to be zero.
 -----
 
 
-========================================
-Page 26:
-========================================
-“Obligations” means all advances to, and debts, liabilities, obligations, covenants and duties of, any Borrower arising under
+Chunk 26:“Obligations” means all advances to, and debts, liabilities, obligations, covenants and duties of, any Borrower arising under
 
 any Loan Document or otherwise with respect to any Loan, whether direct or indirect (including those acquired by assumption),
 absolute or contingent, due or to become due, now existing or hereafter arising and including interest and fees that accrue after the
@@ -1542,10 +1444,7 @@ Connection Taxes imposed with respect to an assignment (other than an assignment
 -----
 
 
-========================================
-Page 27:
-========================================
-“Outstanding Amount” means, on any date with respect to any Loans, the sum of the US Dollar Equivalents of the outstanding
+Chunk 27:“Outstanding Amount” means, on any date with respect to any Loans, the sum of the US Dollar Equivalents of the outstanding
 
 principal amount of such Loans after giving effect to any borrowings and prepayments or repayments of such Loans occurring on such
 date.
@@ -1605,10 +1504,7 @@ indirectly, voting equity securities of the Company.
 -----
 
 
-========================================
-Page 28:
-========================================
-“Person” means any natural person, corporation, limited liability company, trust, joint venture, association, company,
+Chunk 28:“Person” means any natural person, corporation, limited liability company, trust, joint venture, association, company,
 
 partnership, Governmental Authority or other entity.
 
@@ -1630,41 +1526,8 @@ amended from time to time.
 
 of any obligation of any Borrower hereunder or under any other Loan Document.
 
-“Reference Time” with respect to any setting of the then-current Benchmark means (a) if such Benchmark is Term SOFR, 5:00
-
-a.m., Chicago time, on the day that is two U.S. Government Securities Business Days preceding the date of such setting, (b) if such
-Benchmark is the EURIBO Rate, 11:00 a.m., Brussels time, two TARGET Days preceding the date of such setting, (c) if such
-Benchmark is the TIBO Rate, 11:00 a.m., Tokyo time, two Business Days preceding the date of such setting, (d) if such Benchmark is
-the CDO Rate, 10:15 a.m., Toronto time, on the first date of such setting, (e) if such Benchmark is the AUD Bank Bill Rate, 11:00 a.m.,
-Sydney time, on the first date of such setting, (f) if the RFR for such Benchmark is SONIA or Daily Simple SOFR, then four RFR
-Business Days prior to such setting, (g) if the RFR for such Benchmark is SARON, then five RFR Business Days prior to such setting
-or (h) otherwise, the time determined by the Administrative Agent in its reasonable discretion.
-
-“Register” has the meaning specified in Section 11.06(c).
-
-“Regulatory Information” has the meaning specified in Section 2.14(a).
-
-“Related Parties” means, with respect to any Person, such Person’s Affiliates and the partners, directors, officers and
-
-employees (and, solely to the extent acting on behalf of or at the express instructions of any of the foregoing, agents and advisors of the
-foregoing) of such Person and of such Person’s Affiliates.
-
-“Relevant Governmental Body” means (a) with respect to a Benchmark Replacement in respect of Loans denominated in US
-
-Dollars, the Federal Reserve Board and/or the NYFRB or a committee officially endorsed or convened by the Federal Reserve Board
-and/or the NYFRB or, in each case, any successor thereto, (b) with respect to a Benchmark Replacement in respect of Loans
-denominated in Euro, the European Central Bank, or a committee officially endorsed or convened by the European Central Bank or, in
-each case, any successor thereto, (c) with respect to a Benchmark Replacement in respect of Loans denominated in Sterling, the Bank
-of England, or a committee officially endorsed or convened by the Bank of England or, in each case, any successor thereto, (d) with
-respect to a Benchmark Replacement in respect of Loans denominated in Yen, the Bank of Japan, or a committee officially endorsed or
-convened by the Bank of Japan or, in each case, any successor thereto, (e) with respect to a Benchmark Replacement in respect of
-Loans denominated in Swiss Francs, the Swiss National Bank, or a committee officially endorsed or convened by the Swiss National
-Bank or, in each case, any successor thereto, (f) with respect to a Benchmark Replacement in respect of Loans denominated in
-Canadian Dollars, the Bank of Canada, or a committee officially endorsed or convened by the Bank of Canada or, in each case, any
-successor thereto and (g) with respect to a Benchmark Replacement in respect of Loans denominated in any other Agreed Currency, (i)
-the central bank for the Agreed Currency in which such Benchmark Replacement is denominated or any central bank or other
-supervisor which is responsible for supervising either (A) such Benchmark Replacement or (B) the administrator of such Benchmark
-Replacement or (ii) any working group or committee officially endorsed or convened by (A) the central bank for the Agreed Currency
+“Reference Time” with respect to any setting of the then-current
+Chunk 29: BenchmarkReplacement or (ii) any working group or committee officially endorsed or convened by (A) the central bank for the Agreed Currency
 in which such Benchmark Replacement is denominated, (B) any central bank or other supervisor that is responsible for supervising
 either (1) such Benchmark Replacement or (2) the administrator of such Benchmark Replacement, (C) a group of those central banks or
 other supervisors or (D) the Financial Stability Board or any part thereof.
@@ -1675,10 +1538,7 @@ other supervisors or (D) the Financial Stability Board or any part thereof.
 -----
 
 
-========================================
-Page 29:
-========================================
-“Relevant Rate” means (a) with respect to any Term Benchmark Loan or Term Benchmark Borrowing denominated in US
+Chunk 30:“Relevant Rate” means (a) with respect to any Term Benchmark Loan or Term Benchmark Borrowing denominated in US
 
 Dollars, the Term SOFR, (b) with respect to any RFR Loan or RFR Borrowing denominated in US Dollars, the Daily Simple SOFR, (c)
 with respect to any Loan or Borrowing denominated in Euro, the EURIBO Rate, (d) with respect to any Loan or Borrowing
@@ -1725,10 +1585,7 @@ Responsible Officer shall be conclusively presumed to have acted on behalf of su
 -----
 
 
-========================================
-Page 30:
-========================================
-“Reuters” means Thomson Reuters Corporation, Refinitiv or, in each case, a successor thereto.
+Chunk 31:“Reuters” means Thomson Reuters Corporation, Refinitiv or, in each case, a successor thereto.
 
 “Revaluation Date” means, with respect to any Loan denominated in an Alternative Currency, (a) the date of the
 
@@ -1791,10 +1648,7 @@ successor source for the Swiss Average Rate Overnight identified as such by the 
 -----
 
 
-========================================
-Page 31:
-========================================
-“SARON Loan” means a Loan that bears interest at a rate based on the Daily Simple SARON.
+Chunk 32:“SARON Loan” means a Loan that bears interest at a rate based on the Daily Simple SARON.
 
 “SEC” means the Securities and Exchange Commission, or any Governmental Authority succeeding to any of its principal
 
@@ -1851,10 +1705,7 @@ related schedules, a “Master Agreement”), including any such obligations or 
 -----
 
 
-========================================
-Page 32:
-========================================
-“Swap Termination Value” means, in respect of any one or more Swap Contracts, after taking into account the effect of any
+Chunk 33:“Swap Termination Value” means, in respect of any one or more Swap Contracts, after taking into account the effect of any
 
 legally enforceable netting agreement relating to such Swap Contracts, (a) for any date on or after the date such Swap Contracts have
 been closed out and termination value(s) determined in accordance therewith, such termination value(s), and (b) for any date prior to
@@ -1918,10 +1769,7 @@ Business Days from the date of the Term CORRA Notice.
 -----
 
 
-========================================
-Page 33:
-========================================
-“Term CORRA Transition Event” means the determination by the Administrative Agent that (a) Term CORRA has been
+Chunk 34:“Term CORRA Transition Event” means the determination by the Administrative Agent that (a) Term CORRA has been
 
 recommended for use by the Relevant Governmental Body, and is determinable for any Available Tenor, (b) the administration of Term
 CORRA is administratively feasible for the Administrative Agent (as determined by the Administrative Agent in its reasonable
@@ -1972,10 +1820,7 @@ to time in its reasonable discretion); provided that if the TIBO Screen Rate sha
 -----
 
 
-========================================
-Page 34:
-========================================
-“TIBOR Loan” means a Loan that bears interest at a rate based on the TIBO Rate.
+Chunk 35:“TIBOR Loan” means a Loan that bears interest at a rate based on the TIBO Rate.
 
 “Total Credit Exposure” means, as to any Lender at any time, the unused Commitment and the Revolving Credit Exposure of
 
@@ -2039,10 +1884,7 @@ powers under that Bail-In Legislation that are related to or ancillary to any of
 -----
 
 
-========================================
-Page 35:
-========================================
-**1.02    Other Interpretive Provisions. With reference to this Agreement and each other Loan Document, unless otherwise**
+Chunk 36:**1.02    Other Interpretive Provisions. With reference to this Agreement and each other Loan Document, unless otherwise**
 
 specified herein or in such other Loan Document:
 
@@ -2097,10 +1939,7 @@ change in GAAP.
 -----
 
 
-========================================
-Page 36:
-========================================
-(c)      Consolidation of Variable Interest Entities. All references herein to consolidated financial statements of the Company
+Chunk 37:(c)      Consolidation of Variable Interest Entities. All references herein to consolidated financial statements of the Company
 
 and its Subsidiaries or to the determination of any amount for the Company and its Subsidiaries on a consolidated basis or any similar
 reference shall, in each case, be deemed to include each variable interest entity that the Company is required to consolidate pursuant to
@@ -2159,10 +1998,7 @@ service.
 -----
 
 
-========================================
-Page 37:
-========================================
-**1.07    Divisions. For all purposes under this Agreement, in connection with any division or plan of division under Delaware**
+Chunk 38:**1.07    Divisions. For all purposes under this Agreement, in connection with any division or plan of division under Delaware**
 
 law (or any comparable event under a different jurisdiction’s laws): (a) if any asset, right, obligation or liability of any Person becomes
 the asset, right, obligation or liability of a different Person, then it shall be deemed to have been transferred from the original Person to
@@ -2193,50 +2029,10 @@ denominated in Yen may only be TIBOR Loans, in each case, as further provided he
 -----
 
 
-========================================
-Page 38:
-========================================
-**2.02    Borrowings, Conversions and Continuations of Loans.**
+Chunk 39:**2.02    Borrowings, Conversions and Continuations of Loans.**
 
-(a)      Each borrowing of Loans, each conversion of Loans denominated in US Dollars from one Type to another and each
 
-continuation of Term Benchmark Loans shall be made upon the applicable Borrower’s irrevocable notice to the Administrative Agent,
-which may be given by telephone or delivery of a Loan Notice; provided that any telephonic notice must be confirmed immediately by
-delivery to the Administrative Agent of a Loan Notice. Each Loan Notice must be received by the Administrative Agent not later than
-1:00 p.m., New York City time, (i) three Business Days prior to the requested date of any borrowing of, conversion to or continuation
-of Term Benchmark Loans denominated in US Dollars, Euro or Canadian Dollars or of any conversion of Term Benchmark Loans
-denominated in US Dollars to Base Rate Loans, (ii) four Business Days prior to the requested date of any borrowing or continuation of
-Term Benchmark Loans denominated in other Alternative Currencies, (iii) if applicable pursuant to Section 3.03, one Business Day
-prior to the requested date of any borrowing of or conversion to RFR Loans denominated in US Dollars, (iv) three Business Days prior
-to the requested date of any borrowing of or conversion to RFR Loans denominated in Sterling or, if applicable pursuant to Section
-3.03, Canadian Dollars, (v) four Business Days prior to the requested date of any borrowing of RFR Loans denominated in Swiss
-Francs and (vi) on the requested date of any borrowing of Base Rate Loans; provided that if the applicable Borrower wishes to request
-Term Benchmark Loans having an Interest Period that, pursuant to the definition of “Interest Period” requires the consent of all the
-Lenders, then (A) the applicable notice must be received by the Administrative Agent not later than 1:00 p.m., New York City time, (1)
-four Business Days prior to the requested date of such borrowing, conversion to or continuation of Term Benchmark Loans
-denominated in US Dollars, Euro or Canadian Dollars, or (2) five Business Days prior to the requested date of such borrowing or
-continuation of Term Benchmark Loans denominated in other Alternative Currencies, whereupon the Administrative Agent shall give
-prompt notice to the Lenders of such request and determine whether the requested Interest Period is acceptable to all of them and (B)
-not later than 1:00 p.m., New York City time, (1) three Business Days before the requested date of such borrowing, conversion to or
-continuation of Term Benchmark Loans denominated in US Dollars, Euro or Canadian Dollars, or (2) four Business Days prior to the
-requested date of such borrowing or continuation of Term Benchmark Loans denominated in other Alternative Currencies, the
-Administrative Agent shall notify the Company (which notice may be by telephone) whether or not the requested Interest Period has
-been consented to by all the Lenders. Each borrowing of, conversion to or continuation of Term Benchmark Loans shall be in an
-aggregate amount that is an integral multiple of the Borrowing Multiple and not less than the Borrowing Minimum. Each borrowing of
-or conversion to Base Rate Loans or RFR Loans shall be in an aggregate amount that is an integral multiple of the Borrowing Multiple
-and not less than the Borrowing Minimum. Each Loan Notice shall specify (i) whether the applicable Borrower is requesting a
-borrowing of Loans, a conversion of Loans denominated in US Dollars from one Type to another or a continuation of Term Benchmark
-Loans, (ii) the requested date of the borrowing, conversion or continuation, as the case may be (which shall be a Business Day), (iii) the
-principal amount of Loans to be borrowed, converted or continued, (iv) the Type of Loans to be borrowed, continued or to which
-existing Loans are to be converted, (v) if applicable, the duration of the Interest Period with respect thereto, (vi) the currency of the
-Loans to be borrowed and (vii) if applicable, the Designated Borrower. In the case of any conversion or continuation of any Loans,
-such conversion or continuation shall apply to Loans comprising the same existing Borrowing, it being understood that the applicable
-Borrower may elect different conversion or continuation options with respect to different portions of the affected existing Borrowing,
-in which case each such portion shall be allocated ratably among the Lenders holding the Loans comprising such Borrowing, and the
-Loans comprising each such portion shall be considered a separate Borrowing. If the applicable Borrower fails to specify a currency in
-a Loan Notice requesting a borrowing of Loans, then the Loans so requested shall be made in US Dollars. If the applicable Borrower
-fails to specify a Type of Loan in a Loan Notice or if the applicable Borrower fails to give a timely notice requesting a conversion or
-continuation of any Term Benchmark Borrowing, then, subject to Section 3.03, the applicable Loans shall be made as, or continued as,
+Chunk 40:(a Loans shall be made as, or continued as,
 (i) in the case of Loans denominated in US Dollars, Term SOFR Loans, (ii) in the case of Loans denominated in Euro, EURIBOR
 Loans, (iii) in the case of Loans denominated in Yen, TIBOR Loans, (iv) in the case of Loans denominated in Sterling, SONIA Loans,
 (v) in the case of Loans denominated in Canadian Dollars, CDOR Loans (or, if applicable pursuant to Section 3.03, Term CORRA
@@ -2255,10 +2051,7 @@ reborrowed in the other currency.
 -----
 
 
-========================================
-Page 39:
-========================================
-(b)      Following receipt of a Loan Notice, the Administrative Agent shall promptly notify each Lender of the details thereof
+Chunk 41:(b)      Following receipt of a Loan Notice, the Administrative Agent shall promptly notify each Lender of the details thereof
 
 and, in the case of a Loan Notice requesting a borrowing of Loans, of the principal amount (and currency) of its Loans to be made as
 part of the requested borrowing, and if no timely notice of a conversion or continuation of any Term Benchmark Borrowing is provided
@@ -2292,23 +2085,8 @@ outstanding at any given time.
 
 **2.03    Prepayments.**
 
-(a)      Any Borrower may, upon notice to the Administrative Agent from such Borrower, at any time or from time to time
 
-voluntarily prepay any Borrowing in whole or in part without premium or penalty; provided that (i) such notice must be received by the
-Administrative Agent not later than 1:00 p.m., New York City time, (A) three Business Days prior to any date of prepayment of Term
-Benchmark Loans denominated in US Dollars, Euro or Canadian Dollars, (B) four Business Days prior to any date of prepayment of
-Term Benchmark Loans denominated in the other Alternative Currencies, (C) one Business Day prior to any date of prepayment of
-RFR Loans denominated in US Dollars, (D) three Business Days prior to any date of prepayment of RFR Loans denominated in
-Sterling or Canadian Dollars, (E) four Business Days prior to any date of prepayment of RFR Loans denominated in Swiss Francs and
-(F) on the date of prepayment of Base Rate Loans and (ii) any prepayment of any Borrowing shall be in an aggregate amount that is an
-integral multiple of the Borrowing Multiple and not less than the Borrowing Minimum or, if less, the entire principal amount of such
-Borrowing then outstanding. Each such notice shall specify the date and amount of such prepayment and the Borrowing or Borrowings
-to be prepaid and, if a Term Benchmark Borrowing is to be prepaid, the Interest Period applicable thereto. The Administrative Agent
-will promptly notify each Lender of its receipt of each such notice, and of the amount of such Lender’s Applicable Percentage of such
-prepayment. If such notice is given by a Borrower, such Borrower shall make such prepayment, and the payment amount specified in
-such notice shall be due and payable, on the date specified in the applicable notice; provided that such notice of prepayment may state
-that such prepayment is conditioned upon the occurrence of one or more events specified therein, in which case such notice may be
-revoked by such Borrower (by notice to the Administrative Agent on or prior to the date of such prepayment) if any applicable
+Chunk 42:(aoked by such Borrower (by notice to the Administrative Agent on or prior to the date of such prepayment) if any applicable
 condition is not satisfied. Any prepayment of a Term Benchmark Loan or RFR Loan shall be accompanied by all accrued interest on the
 amount prepaid. Subject to Section 2.13, each prepayment of a Borrowing shall be applied to the Loans of the Lenders comprising such
 Borrowing in accordance with their respective Applicable Percentages.
@@ -2319,10 +2097,7 @@ Borrowing in accordance with their respective Applicable Percentages.
 -----
 
 
-========================================
-Page 40:
-========================================
-(b)      If the Administrative Agent notifies the Borrowers at any time that (i) solely as a result of fluctuations in currency
+Chunk 43:(b)      If the Administrative Agent notifies the Borrowers at any time that (i) solely as a result of fluctuations in currency
 
 exchange rates, the Total Outstandings at such time exceed an amount equal to 105% of the Aggregate Commitments then in effect or
 (ii) other than as a result of fluctuations in currency exchange rates, the Total Outstandings at such time exceed the Aggregate
@@ -2366,10 +2141,7 @@ of such reduction or termination.
 -----
 
 
-========================================
-Page 41:
-========================================
-**2.05    Repayment of Loans. Each Borrower shall repay to the Lenders on the Maturity Date the aggregate principal amount**
+Chunk 44:**2.05    Repayment of Loans. Each Borrower shall repay to the Lenders on the Maturity Date the aggregate principal amount**
 
 of Loans made to such Borrower and outstanding on the Maturity Date.
 
@@ -2425,10 +2197,7 @@ the Daily Simple SOFR plus the Applicable Rate;
 -----
 
 
-========================================
-Page 42:
-========================================
-(x)    each Term CORRA Borrowing, if available pursuant to Section 3.03, shall bear interest on the
+Chunk 45:(x)    each Term CORRA Borrowing, if available pursuant to Section 3.03, shall bear interest on the
 
 outstanding principal amount thereof for the Interest Period applicable to such Borrowing at a rate per annum equal
 to the Term CORRA (plus the applicable Benchmark Replacement Adjustment set forth in clause (2) of the definition
@@ -2486,10 +2255,7 @@ Administrative Agent of an interest rate or fee hereunder shall be conclusive an
 -----
 
 
-========================================
-Page 43:
-========================================
-**2.09    Evidence of Debt.** The Loans made by each Lender shall be evidenced by one or more accounts or records
+Chunk 46:**2.09    Evidence of Debt.** The Loans made by each Lender shall be evidenced by one or more accounts or records
 
 maintained by such Lender and by the Administrative Agent in the ordinary course of business. The accounts or records maintained by
 the Administrative Agent and each Lender shall be conclusive absent manifest error of the amount of the Loans made by the Lenders to
@@ -2535,10 +2301,7 @@ be reflected in computing interest or fees, as the case may be.
 -----
 
 
-========================================
-Page 44:
-========================================
-(b)      (i)       Funding by Lenders; Presumption by Administrative Agent. Unless the Administrative Agent shall have
+Chunk 47:(b)      (i)       Funding by Lenders; Presumption by Administrative Agent. Unless the Administrative Agent shall have
 
 received notice from a Lender prior to the proposed date of any borrowing of Loans that such Lender will not make available to the
 Administrative Agent such Lender’s share of the applicable Borrowing, the Administrative Agent may assume that such Lender has
@@ -2591,10 +2354,7 @@ under Section 11.04(c) or 11.05.
 -----
 
 
-========================================
-Page 45:
-========================================
-(e)      Funding Source. Nothing herein shall be deemed to obligate any Lender to obtain the funds for any Loan in any
+Chunk 48:(e)      Funding Source. Nothing herein shall be deemed to obligate any Lender to obtain the funds for any Loan in any
 
 particular place or manner or to constitute a representation by any Lender that it has obtained or will obtain the funds for any Loan in
 any particular place or manner.
@@ -2649,10 +2409,7 @@ Lender to so agree.
 -----
 
 
-========================================
-Page 46:
-========================================
-(c)      Notification by Administrative Agent. The Administrative Agent shall notify the Company of each Lender’s
+Chunk 49:(c)      Notification by Administrative Agent. The Administrative Agent shall notify the Company of each Lender’s
 
 determination under this Section promptly after the Response Date.
 
@@ -2703,10 +2460,7 @@ or consent with respect to this Agreement or any other Loan Document shall be re
 -----
 
 
-========================================
-Page 47:
-========================================
-(ii)      Defaulting Lender Waterfall. Any payment of principal, interest, fees or other amounts received by the
+Chunk 50:(ii)      Defaulting Lender Waterfall. Any payment of principal, interest, fees or other amounts received by the
 
 Administrative Agent for the account of such Defaulting Lender (whether voluntary or mandatory, at maturity, pursuant to
 Article VIII or otherwise) or received by the Administrative Agent from a Defaulting Lender pursuant to Section 11.08 shall
@@ -2753,10 +2507,7 @@ hereunder arising from that Lender’s having been a Defaulting Lender.
 -----
 
 
-========================================
-Page 48:
-========================================
-**2.14    Designated Borrowers.**
+Chunk 51:**2.14    Designated Borrowers.**
 
 (a)      The Company may at any time, upon not less than 10 Business Days’ notice from the Company to the Administrative
 
@@ -2808,10 +2559,7 @@ Administrative Agent will promptly notify the Lenders of any such termination of
 -----
 
 
-========================================
-Page 49:
-========================================
-**ARTICLE III.**
+Chunk 52:**ARTICLE III.**
 
 **TAXES, YIELD PROTECTION AND ILLEGALITY**
 
@@ -2859,51 +2607,7 @@ timely reimburse it for the payment of, any Other Taxes.
 -----
 
 
-========================================
-Page 50:
-========================================
-(c)      Tax Indemnifications. (i) Without duplication of amounts paid in Section 3.01(a), each of the Borrowers shall, and
-
-does hereby, severally indemnify each Recipient, and shall make payment in respect thereof within 10 days after demand therefor, for
-the full amount of any Indemnified Taxes (including Indemnified Taxes imposed or asserted on or attributable to amounts payable
-under this Section) payable or paid by such Recipient or required to be withheld or deducted from a payment to such Recipient, and any
-penalties, interest and reasonable expenses arising therefrom or with respect thereto, whether or not such Indemnified Taxes were
-correctly or legally imposed or asserted by the relevant Governmental Authority; provided that the Borrowers shall not be obligated to
-make payment to any Recipient pursuant to this Section 3.01(c) in respect of penalties, interest and other liabilities attributable to any
-Indemnified Taxes if (x) written demand therefor has not been made by such Recipient within 60 days from the date on which such
-Recipient received written notice of the imposition of Indemnified Taxes by the relevant Governmental Authority, but only to the extent
-such penalties, interest and other similar liabilities are attributable to such failure or delay by the Recipient in making such written
-demand, (y) such penalties, interest and other liabilities have accrued after the relevant Borrower had indemnified or paid an additional
-amount due as of the date of such payment pursuant to this Section 3.01 or (z) such penalties, interest and other liabilities are
-attributable to the gross negligence or willful misconduct of any of the Recipients or their Affiliates. A certificate as to the amount of
-such payment or liability delivered to the Company by a Lender (with a copy to the Administrative Agent), or by the Administrative
-Agent on its own behalf or on behalf of a Lender, shall be conclusive absent manifest error. If the Administrative Agent or any Lender
-receives a written notice of Tax assessment from any Governmental Authority regarding any Tax in respect of which indemnification
-may be required pursuant to this Section 3.01(c), the Administrative Agent or such Lender shall notify the Company within 120 days
-following the receipt of such notice that such notice has been received; provided that the failure of the Administrative Agent or the
-Lender to provide such notice shall not relieve the Borrowers of the obligation to make any indemnification payment under this
-Agreement, unless the delay is more than two years from the date of receipt of such notice, in which case the Company shall have no
-obligation to make any indemnification payment under this Agreement. Each of the Borrowers shall, and does hereby, severally
-indemnify the Administrative Agent, and shall make payment in respect thereof within 10 days after demand therefor, for any amount
-which a Lender for any reason fails to pay indefeasibly to the Administrative Agent as required pursuant to Section 3.01(c)(ii) below.
-
-(ii) Each Lender shall, and does hereby, severally indemnify, and shall make payment in respect thereof within 10
-
-days after demand therefor, (w) the Administrative Agent against any Indemnified Taxes attributable to such Lender (but only
-to the extent that any Borrower has not already indemnified the Administrative Agent for such Indemnified Taxes and without
-limiting the obligation of the Borrowers to do so), (x) the Administrative Agent and each Borrower, as applicable, against any
-Taxes attributable to such Lender’s failure to comply with the provisions of Section 11.06(d) relating to the maintenance of a
-Participant Register, (y) the Administrative Agent and each Borrower, as applicable, against any Taxes incurred by or asserted
-against the Administrative Agent or such Borrower by any Governmental Authority as a result of the failure by such Lender to
-deliver, or as a result of the inaccuracy, inadequacy or deficiency of, any documentation required to be delivered pursuant to
-subsection (e) and (z) the Administrative Agent and each Borrower, as applicable, against any Excluded Taxes attributable to
-such Lender that are payable or paid by the Administrative Agent or such Borrower in connection with any Loan Document,
-and any related losses, claims, liabilities, penalties, interest and reasonable expenses (including the reasonable fees, charges
-and disbursements of any counsel for the Borrowers or the Administrative Agent) arising therefrom or with respect thereto,
-whether or not such Taxes were correctly or legally imposed or asserted by the relevant Governmental Authority. A certificate
-as to the amount of such payment or liability delivered to any Lender by the Administrative Agent shall be conclusive absent
-manifest error. Each Lender hereby authorizes the Administrative Agent to set off and apply any and all amounts at any time
-owing to such Lender under this Agreement or any other Loan Document against any amount due to the Administrative Agent
+Chunk 53:(c due to the Administrative Agent
 under this clause (ii).
 
 47
@@ -2912,10 +2616,7 @@ under this clause (ii).
 -----
 
 
-========================================
-Page 51:
-========================================
-(d)      Evidence of Payments. As soon as practicable after any payment of Taxes by any Borrower or by the Administrative
+Chunk 54:(d)      Evidence of Payments. As soon as practicable after any payment of Taxes by any Borrower or by the Administrative
 
 Agent to a Governmental Authority as provided in this Section, the Company shall deliver to the Administrative Agent or the
 Administrative Agent shall deliver to the Company, as the case may be, the original or a certified copy of a receipt issued by such
@@ -2957,10 +2658,7 @@ Taxes;
 -----
 
 
-========================================
-Page 52:
-========================================
-(B)    any Foreign Lender shall, to the extent it is legally entitled to do so, deliver to the Company and the
+Chunk 55:(B)    any Foreign Lender shall, to the extent it is legally entitled to do so, deliver to the Company and the
 
 Administrative Agent (in such number of copies as shall be requested by the recipient) on or prior to the date on
 which such Foreign Lender becomes a Lender under this Agreement (and from time to time thereafter upon the
@@ -3021,10 +2719,7 @@ Agreement.
 -----
 
 
-========================================
-Page 53:
-========================================
-(iii)      Each Lender agrees that if any form or certification it previously delivered pursuant to this Section expires
+Chunk 56:(iii)      Each Lender agrees that if any form or certification it previously delivered pursuant to this Section expires
 
 or becomes obsolete or inaccurate in any respect, it shall update such form or certification or promptly notify the Company
 and the Administrative Agent in writing of its legal inability to do so.
@@ -3067,10 +2762,7 @@ satisfaction or discharge of all other Obligations.
 -----
 
 
-========================================
-Page 54:
-========================================
-**3.02    Illegality.** If any Lender reasonably determines that any Law has made it unlawful, or that any Governmental
+Chunk 57:**3.02    Illegality.** If any Lender reasonably determines that any Law has made it unlawful, or that any Governmental
 
 Authority has asserted that it is unlawful, for such Lender or its applicable Lending Office to make, maintain or fund Loans whose
 interest is determined by reference to a Relevant Rate, or to determine or charge interest rates based upon a Relevant Rate, or any
@@ -3093,30 +2785,8 @@ Upon any such prepayment or conversion, the Borrowers shall also pay accrued int
 
 **3.03    Alternate Rate of Interest. (a) Subject to the provisions of Section 3.03(b), if:**
 
-(i)     the Administrative Agent reasonably determines (which determination shall be conclusive absent
 
-manifest error) (A) prior to the commencement of any Interest Period for a Term Benchmark Borrowing, that
-adequate and reasonable means do not exist for determining the Term SOFR, the EURIBO Rate, the TIBO Rate, the
-CDO Rate or the AUD Bank Bill Rate (including because the Relevant Screen Rate is not available or published on a
-current basis) for the applicable Agreed Currency and such Interest Period or (B) at any time, that adequate and
-reasonable means do not exist for determining the RFR for the applicable Agreed Currency; or
-
-(ii)    the Administrative Agent is advised by the Required Lenders that such Lenders have reasonably
-
-determined (A) prior to the commencement of any Interest Period for a Term Benchmark Borrowing, that the Term
-SOFR, the EURIBO Rate, the TIBO Rate, the CDO Rate or the AUD Bank Bill Rate for the applicable Agreed
-Currency and such Interest Period will not adequately and fairly reflect the cost to such Lenders of making or
-maintaining their Loans included in such Borrowing or (B) at any time, that the Daily Simple SOFR, the Daily
-Simple SONIA or the Daily Simple SARON, as applicable, will not adequately and fairly reflect the cost to such
-Lenders of making or maintaining their RFR Loans denominated in the applicable Agreed Currency;
-
-then the Administrative Agent will promptly so notify the Company and each Lender. Upon receipt of such notice and until the
-Administrative Agent (upon the instruction of the Required Lenders) revokes such notice with respect to the relevant Benchmark, (A)
-any Loan Notice that requests the making of, conversion to, or continuation of an affected Term Benchmark Borrowing or an affected
-RFR Borrowing shall be ineffective, (B) in the case of Loans denominated in US Dollars, any request for the making of, conversion to
-or continuation of an affected Term Benchmark Borrowing shall instead be deemed to be a request for the making of, or conversion to,
-as applicable, (x) an RFR Borrowing denominated in US Dollars so long as the Daily Simple SOFR is not also the subject of clause (i)
-or (ii) above or (y) a Base Rate Borrowing if the Daily Simple SOFR is also the subject of clause (i) or (ii) above, and (C) if any
+Chunk 58:(i SOFR is also the subject of clause (i) or (ii) above, and (C) if any
 affected Term Benchmark Loan or RFR Loan in any Agreed Currency is outstanding on the day of the Company’s receipt of such
 notice from the Administrative Agent with respect to a Relevant Rate applicable to such Term Benchmark Loan or RFR Loan, then (1)
 in the case of Loans denominated in US Dollars, such affected Term Benchmark Loans shall automatically, on the last day of the then
@@ -3132,10 +2802,7 @@ Business Day after the date the Company receives such notice from the Administra
 -----
 
 
-========================================
-Page 55:
-========================================
-(b)      (i) Notwithstanding anything to the contrary herein or in any other Loan Document, if a Benchmark
+Chunk 59:(b)      (i) Notwithstanding anything to the contrary herein or in any other Loan Document, if a Benchmark
 
 Transition Event and its related Benchmark Replacement Date have occurred prior to the Reference Time in respect of any setting of
 the then-current Benchmark, then (x) if a Benchmark Replacement is determined in accordance with clause (1) or (2) of the definition
@@ -3175,10 +2842,7 @@ each case, as expressly required pursuant to this Section 3.03(b).
 -----
 
 
-========================================
-Page 56:
-========================================
-(iv)     Notwithstanding anything to the contrary herein or in any other Loan Document, at any time (including in
+Chunk 60:(iv)     Notwithstanding anything to the contrary herein or in any other Loan Document, at any time (including in
 
 connection with the implementation of a Benchmark Replacement), (A) if the then-current Benchmark is a term rate
 (including the Term SOFR, the EURIBO Rate, the TIBO Rate, the CDO Rate or the AUD Bank Bill Rate) and either (x) any
@@ -3202,29 +2866,8 @@ to, or further action or consent of any other party to, this Agreement or any ot
 denominated in Canadian Dollars outstanding on the Term CORRA Transition Date bearing interest based on the then-current
 Benchmark shall convert, at the start of the next interest payment period, into a Loan bearing interest at the Benchmark
 Replacement described in clause (2)(a) of the definition of such term for the respective Available Tenor as selected by the
-applicable Borrower as is available for the then-current Benchmark; provided that this clause (v) shall not be effective unless
-the Administrative Agent has delivered to the Lenders and the Company a Term CORRA Notice, and so long as the
-Administrative Agent has not received, by 5:00 p.m., New York City time, on the fifth Business Day after the date of the Term
-CORRA Notice, written notice of objection to such conversion to Term CORRA from Lenders comprising the Required
-Lenders or from the Company.
-
-(vi)     Upon the Company’s receipt of notice of the commencement of a Benchmark Unavailability Period, the
-
-applicable Borrower may revoke any request for the borrowing of, conversion to or continuation of any Term Benchmark
-Loans or RFR Loans, as applicable, to be made, converted or continued during any Benchmark Unavailability Period and,
-failing that, either (A) in the case of Loans denominated in US Dollars, such Borrower will be deemed to have converted any
-request for the making of, conversion to or continuation of any Term Benchmark Borrowing into a request for the making of,
-or conversion to, as applicable, (x) an RFR Borrowing denominated in US Dollars so long as the Daily Simple SOFR is not
-the subject of a Benchmark Transition Event or (y) a Base Rate Borrowing if the Daily Simple SOFR is the subject of a
-Benchmark Transition Event or (B) in the case of Loans denominated in any Alternative Currency, such request shall be
-ineffective. Furthermore, if any Loan in any Agreed Currency is outstanding on the date of the Company’s receipt of notice of
-the commencement of a Benchmark Unavailability Period with respect to the Relevant Rate applicable to such Loan, then
-until such time as a Benchmark Replacement for such Agreed Currency is implemented pursuant to this Section 3.03(b), (1) in
-the case of Loans denominated in US Dollars, such Loans shall on the last day of the then current Interest Period applicable
-thereto, unless prepaid, convert to, and shall constitute, (x) an RFR Borrowing denominated in US Dollars so long as the Daily
-Simple SOFR is not the subject of a Benchmark Transition Event or (y) a Base Rate Borrowing if the Daily Simple SOFR is
-the subject of a Benchmark Transition Event and (2) in the case of Loans denominated in any Alternative Currency, such
-Loans shall be prepaid by the applicable Borrower on the first Business Day after the date the Company receives such notice.
+applicable Borrower as is available for the then-current
+Chunk 61: Benchmark by the applicable Borrower on the first Business Day after the date the Company receives such notice.
 
 53
 
@@ -3232,10 +2875,7 @@ Loans shall be prepaid by the applicable Borrower on the first Business Day afte
 -----
 
 
-========================================
-Page 57:
-========================================
-**3.04    Increased Costs.**
+Chunk 62:**3.04    Increased Costs.**
 
 (a)      Increased Costs Generally. If any Change in Law shall:
 
@@ -3289,10 +2929,7 @@ the period of retroactive effect thereof).
 -----
 
 
-========================================
-Page 58:
-========================================
-**3.05    Compensation for Losses. Upon demand of any Lender (with a copy to the Administrative Agent) from time to time,**
+Chunk 63:**3.05    Compensation for Losses. Upon demand of any Lender (with a copy to the Administrative Agent) from time to time,**
 
 the Company shall promptly compensate (or cause the applicable Designated Borrower to promptly compensate) such Lender for and
 hold such Lender harmless from any loss (other than lost profit), cost or expense incurred by it (other than by reason of such Lender
@@ -3348,10 +2985,7 @@ all reasonable costs and expenses incurred by any Lender in connection with any 
 -----
 
 
-========================================
-Page 59:
-========================================
-(b)      Replacement of Lenders. If any Lender requests compensation under Section 3.04, or if any Borrower is required to
+Chunk 64:(b)      Replacement of Lenders. If any Lender requests compensation under Section 3.04, or if any Borrower is required to
 
 pay any Indemnified Taxes or additional amounts to any Lender or any Governmental Authority for the account of any Lender pursuant
 to Section 3.01 and, in each case, such Lender has declined or is unable to designate a different Lending Office in accordance with
@@ -3403,10 +3037,7 @@ materiality, in which case they shall be certified as true and correct in all re
 -----
 
 
-========================================
-Page 60:
-========================================
-(b)      Any fees required to be paid by the Company to the Arranger, the Administrative Agent and the Lenders on or before
+Chunk 65:(b)      Any fees required to be paid by the Company to the Arranger, the Administrative Agent and the Lenders on or before
 
 the Closing Date shall have been paid.
 
@@ -3462,10 +3093,7 @@ statements so subsequently delivered).
 -----
 
 
-========================================
-Page 61:
-========================================
-(d)      If the applicable Borrower is a Designated Borrower, then the conditions of Section 2.14 to the designation of such
+Chunk 66:(d)      If the applicable Borrower is a Designated Borrower, then the conditions of Section 2.14 to the designation of such
 
 Borrower as a Designated Borrower shall have been met.
 
@@ -3524,10 +3152,7 @@ noted therein.
 -----
 
 
-========================================
-Page 62:
-========================================
-(b)      Since the date of the Audited Financial Statements, there has been no event or circumstance, either individually or in
+Chunk 67:(b)      Since the date of the Audited Financial Statements, there has been no event or circumstance, either individually or in
 
 the aggregate, that has had or would reasonably be expected to have a Material Adverse Effect.
 
@@ -3581,10 +3206,7 @@ designed to promote and achieve compliance with such laws.
 -----
 
 
-========================================
-Page 63:
-========================================
-**5.11    Sanctions. Neither the Borrowers nor any of their respective Subsidiaries nor, to the knowledge of the Borrowers, any**
+Chunk 68:**5.11    Sanctions. Neither the Borrowers nor any of their respective Subsidiaries nor, to the knowledge of the Borrowers, any**
 
 director, officer or (other than with respect to clause (c) below) employee thereof, is an individual or entity that is (a) currently the
 subject or target of any Sanctions, (b) included on OFAC’s List of Specially Designated Nationals, His Majesty’s Treasury’s
@@ -3640,10 +3262,7 @@ Exchange Act of 1934, and not otherwise required to be delivered to the Administ
 -----
 
 
-========================================
-Page 64:
-========================================
-(b)     promptly following any reasonable request therefor, such additional information regarding the financial condition of
+Chunk 69:(b)     promptly following any reasonable request therefor, such additional information regarding the financial condition of
 
 the Company or any Borrower’s compliance with the terms of the Loan Documents, as the Administrative Agent or any Lender may
 from time to time reasonably request; provided that the Administrative Agent and the Lenders shall only be permitted to make a request
@@ -3700,10 +3319,7 @@ financial statements of the Company materially in accordance with GAAP.
 -----
 
 
-========================================
-Page 65:
-========================================
-**6.08    Use of Proceeds. Use the proceeds of each Loan solely (a) to refinance borrowings, if any, under the Existing Credit**
+Chunk 70:**6.08    Use of Proceeds. Use the proceeds of each Loan solely (a) to refinance borrowings, if any, under the Existing Credit**
 
 Agreements and (b) for working capital, capital expenditures, acquisitions (including any related expenses, earn-outs and deferred
 payments incurred in connection with any such acquisition), payment of fees and expenses associated with this Agreement and other
@@ -3765,10 +3381,7 @@ course of business to secure liability for premiums to insurance carriers;
 -----
 
 
-========================================
-Page 66:
-========================================
-(g)     easements, rights-of-way, restrictions (including zoning restrictions), licenses, encroachments, protrusions and other
+Chunk 71:(g)     easements, rights-of-way, restrictions (including zoning restrictions), licenses, encroachments, protrusions and other
 
 similar charges or encumbrances, and minor title deficiencies, affecting real property which, in the aggregate, are not substantial in
 amount, and which do not in any case materially detract from the value of the property subject thereto or materially interfere with the
@@ -3822,10 +3435,7 @@ agreements and similar transactions, in each case entered into or otherwise cons
 -----
 
 
-========================================
-Page 67:
-========================================
-(o)      Liens in favor of customs and revenue authorities arising as a matter of law to secure payment of customs duties in
+Chunk 72:(o)      Liens in favor of customs and revenue authorities arising as a matter of law to secure payment of customs duties in
 
 connection with the importation of goods;
 
@@ -3879,10 +3489,7 @@ the Federal Reserve Board) in excess of 25% in value of the assets of the Compan
 -----
 
 
-========================================
-Page 68:
-========================================
-**7.02    Fundamental Changes. No Borrower shall, directly or indirectly:**
+Chunk 73:**7.02    Fundamental Changes. No Borrower shall, directly or indirectly:**
 
 (a)      Merge or consolidate with or into another Person or dissolve or liquidate except that, so long as no Default exists or
 
@@ -3944,10 +3551,7 @@ incorrect in any respect) when made or deemed made; or
 -----
 
 
-========================================
-Page 69:
-========================================
-(e)      Cross-Acceleration. (i) The Company or any Subsidiary fails to pay any Material Indebtedness within five days of the
+Chunk 74:(e)      Cross-Acceleration. (i) The Company or any Subsidiary fails to pay any Material Indebtedness within five days of the
 
 date such payment is due (or within any longer grace period, if any, applicable to such payment pursuant to the terms of such Material
 Indebtedness); or (ii) any Material Indebtedness, with the giving of notice if required, is demanded or becomes due or is required to be
@@ -3998,10 +3602,7 @@ demand, protest or other notice of any kind, all of which are hereby expressly w
 -----
 
 
-========================================
-Page 70:
-========================================
-(c)      exercise on behalf of itself and the Lenders all rights and remedies available to it and the Lenders under the Loan
+Chunk 75:(c)      exercise on behalf of itself and the Lenders all rights and remedies available to it and the Lenders under the Loan
 
 Documents;
 
@@ -4058,10 +3659,7 @@ contracting parties.
 -----
 
 
-========================================
-Page 71:
-========================================
-**9.02    Rights as a Lender. The Person serving as the Administrative Agent hereunder shall have the same rights and powers**
+Chunk 76:**9.02    Rights as a Lender. The Person serving as the Administrative Agent hereunder shall have the same rights and powers**
 
 in its capacity as a Lender as any other Lender and may exercise the same as though it were not the Administrative Agent, and the term
 “Lender” or “Lenders” shall, unless otherwise expressly indicated or unless the context otherwise requires, include the Person serving
@@ -4109,10 +3707,7 @@ the Company or a Lender.
 -----
 
 
-========================================
-Page 72:
-========================================
-The Administrative Agent shall not be responsible for or have any duty to ascertain or inquire into (i) any statement, warranty
+Chunk 77:The Administrative Agent shall not be responsible for or have any duty to ascertain or inquire into (i) any statement, warranty
 
 or representation made in or in connection with this Agreement or any other Loan Document, (ii) the contents of any certificate, report
 or other document delivered hereunder or thereunder or in connection herewith or therewith, (iii) the performance or observance of any
@@ -4167,10 +3762,7 @@ with such notice on the Resignation Effective Date.
 -----
 
 
-========================================
-Page 73:
-========================================
-(b)      If the Person serving as Administrative Agent is a Defaulting Lender pursuant to clause (d) of the definition thereof,
+Chunk 78:(b)      If the Person serving as Administrative Agent is a Defaulting Lender pursuant to clause (d) of the definition thereof,
 
 the Required Lenders may, to the extent permitted by applicable Law, by notice in writing to the Company and such Person remove
 such Person as Administrative Agent and, with the written consent of the Company, appoint a successor, which successor shall be a
@@ -4198,23 +3790,8 @@ taken or omitted to be taken by any of them while the retiring or removed Admini
 
 **9.07    Acknowledgements of Lenders. (a) Each Lender represents and warrants that (i) the Loan Documents set forth the**
 
-terms of a commercial lending facility, (ii) in participating as a Lender, it is engaged in making, acquiring or holding commercial loans
-and in providing other facilities set forth herein as may be applicable to such Lender, in each case, in the ordinary course of business,
-and not for the purpose of investing in the general performance or operations of the Company or any Subsidiary, or for the purpose of
-purchasing, acquiring or holding any other type of financial instrument such as a security (and each Lender agrees not to assert a claim
-in contravention of the foregoing, such as a claim under the federal or state securities law), (iii) it has, independently and without
-reliance upon the Administrative Agent, the Arranger or any other Lender or any of their respective Related Parties, and based on such
-documents and information as it has deemed appropriate, made its own credit analysis and decision to enter into this Agreement as a
-Lender, and to make, acquire or hold Loans hereunder and (iv) it is sophisticated with respect to decisions to make, acquire and/or hold
-commercial loans and to provide other facilities set forth herein, as may be applicable to such Lender, and either it, or the Person
-exercising discretion in making its decision to make, acquire and/or hold such commercial loans or to provide such other facilities, is
-experienced in making, acquiring or holding such commercial loans or providing such other facilities. Each Lender also acknowledges
-that it will, independently and without reliance upon the Administrative Agent, the Arranger or any other Lender or any of their
-respective Related Parties, and based on such documents and information as it shall from time to time deem appropriate, continue to
-make its own decisions in taking or not taking action under or based upon this Agreement, any other Loan Document or any related
-agreement or any document furnished hereunder or thereunder. Each Lender, by delivering its signature page to this Agreement on the
-Closing Date, or delivering its signature page to an Assignment and Assumption or any other Loan Document pursuant to which it shall
-become a Lender hereunder, shall be deemed to have acknowledged receipt of, and consented to and approved, each Loan Document
+
+Chunk 79:terms Loan Document
 and each other document required to be delivered to, or be approved by or satisfactory to, the Administrative Agent or the Lenders on
 the Closing Date.
 
@@ -4224,10 +3801,7 @@ the Closing Date.
 -----
 
 
-========================================
-Page 74:
-========================================
-(b) (i) Each Lender hereby agrees that (x) if the Administrative Agent notifies such Lender that the Administrative
+Chunk 80:(b) (i) Each Lender hereby agrees that (x) if the Administrative Agent notifies such Lender that the Administrative
 
 Agent has determined in its sole discretion that any funds received by such Lender from the Administrative Agent or any of its
 Affiliates (whether as a payment, prepayment or repayment of principal, interest, fees or otherwise; individually and collectively, a
@@ -4268,10 +3842,7 @@ any Borrower, as applicable.
 -----
 
 
-========================================
-Page 75:
-========================================
-(iv) Each Lender hereby authorizes the Administrative Agent to set off, net and apply any and all amounts at any time
+Chunk 81:(iv) Each Lender hereby authorizes the Administrative Agent to set off, net and apply any and all amounts at any time
 
 owing to such Lender under this Agreement, or otherwise payable or distributable by the Administrative Agent to such Lender
 under this Agreement with respect to any payment of principal, interest, fees or other amounts, against any amount that the
@@ -4323,10 +3894,7 @@ any Lender to authorize the Administrative Agent to vote in respect of the claim
 -----
 
 
-========================================
-Page 76:
-========================================
-**ARTICLE X.**
+Chunk 82:**ARTICLE X.**
 
 **COMPANY GUARANTY**
 
@@ -4373,8 +3941,8 @@ by, and construed in accordance with, the Laws of the State of New York.
 
 **10.04   Obligations Independent. The obligations of the Company hereunder are those of primary obligor, and not merely as**
 
-surety, and are independent of the Guarantee Obligations and the obligations of any other guarantor, and a separate action may be
-brought against the Company to enforce this Guaranty whether or not any Designated Borrower or any other Person is joined as a party.
+
+Chunk 83:sure any Designated Borrower or any other Person is joined as a party.
 
 73
 
@@ -4382,10 +3950,7 @@ brought against the Company to enforce this Guaranty whether or not any Designat
 -----
 
 
-========================================
-Page 77:
-========================================
-**10.05   Subrogation. The Company shall not exercise any right of subrogation, contribution, indemnity, reimbursement or**
+Chunk 84:**10.05   Subrogation. The Company shall not exercise any right of subrogation, contribution, indemnity, reimbursement or**
 
 similar rights with respect to any payments it makes under this Guaranty until all of the Obligations and any other amounts payable
 under this Guaranty have been paid and performed in full (other than unasserted indemnification, tax gross up, expense reimbursement
@@ -4427,10 +3992,7 @@ failure to provide the same).
 -----
 
 
-========================================
-Page 78:
-========================================
-**ARTICLE XI.**
+Chunk 85:**ARTICLE XI.**
 
 **MISCELLANEOUS**
 
@@ -4475,31 +4037,14 @@ provided further that (i) no amendment, waiver or consent shall, unless in writi
 the Lenders required above, affect the rights or duties of the Administrative Agent under this Agreement or any other Loan Document;
 (ii) the Fee Letter may be amended, or rights or privileges thereunder waived, in a writing executed only by the parties thereto (and no
 consent of any other Person shall be required therefor); (iii) this Agreement and the other Loan Documents may be amended with only
-the written consent of the Administrative Agent and the Borrowers solely to effect technical or jurisdiction-specific amendments
-relating to (A) the availability of Loans in an additional currency approved by the Administrative Agent and the Lenders in accordance
-with Section 1.05 or (B) the designation of a Foreign Subsidiary as a Designated Borrower approved by the Administrative Agent and
-the Lenders in accordance with Section 2.14, (iv) this Agreement may be amended in the manner provided in Sections 2.12 and 3.03(b)
-and (v) any provision of this Agreement or any other Loan Document may be amended by an agreement in writing entered into by the
-Borrowers (or, in the case of any Loan Document other than this Agreement, the applicable Borrowers) and the Administrative Agent to
-cure any ambiguity, omission, defect or inconsistency so long as, in each case, the Lenders shall have received at least five Business
-Days’ prior written notice and copy thereof and the Administrative Agent shall not have received, within five Business Days of the date
-of such notice to the Lenders, a written notice from the Required Lenders stating that the Required Lenders object to such amendment.
-Notwithstanding anything to the contrary herein, no Defaulting Lender shall have any right to approve or disapprove any amendment,
-waiver or consent hereunder or under any other Loan Document (and any amendment, waiver or consent which by its terms requires
-the consent of all Lenders or each affected Lender may be effected with the consent of the applicable Lenders other than Defaulting
-Lenders), except with respect to any amendment, waiver or consent referred to in clause (a), (b) or (c) above and then only in the event
-such Defaulting Lender shall be directly affected by such amendment, waiver or consent.
-
-75
+the written consent of the Administrative Agent and the Borrowers solely to effect technical or jurisdiction-specific
+Chunk 86: amendments
 
 
 -----
 
 
-========================================
-Page 79:
-========================================
-**11.02   Notices; Effectiveness; Electronic Communication.**
+Chunk 87:**11.02   Notices; Effectiveness; Electronic Communication.**
 
 (a)      Notices Generally. Except in the case of notices and other communications expressly permitted to be given by
 
@@ -4550,10 +4095,7 @@ notice, email or communication shall be deemed to have been sent at the opening 
 -----
 
 
-========================================
-Page 80:
-========================================
-(c)      The Platform. THE PLATFORM IS PROVIDED “AS IS” AND “AS AVAILABLE.” THE AGENT PARTIES (AS
+Chunk 88:(c)      The Platform. THE PLATFORM IS PROVIDED “AS IS” AND “AS AVAILABLE.” THE AGENT PARTIES (AS
 
 DEFINED BELOW) DO NOT WARRANT THE ACCURACY OR COMPLETENESS OF THE BORROWER MATERIALS OR THE
 ADEQUACY OF THE PLATFORM, AND EXPRESSLY DISCLAIM LIABILITY FOR ERRORS IN OR OMISSIONS FROM THE
@@ -4581,28 +4123,8 @@ may be recorded by the Administrative Agent, and each of the parties hereto here
 
 **11.03   No Waiver; Cumulative Remedies; Enforcement. No failure by any Lender or the Administrative Agent to**
 
-exercise, and no delay by any such Person in exercising, any right, remedy, power or privilege hereunder or under any other Loan
-Document shall operate as a waiver thereof; nor shall any single or partial exercise of any right, remedy, power or privilege hereunder
-preclude any other or further exercise thereof or the exercise of any other right, remedy, power or privilege. The rights, remedies,
-powers and privileges herein provided, and provided under each other Loan Document, are cumulative and not exclusive of any rights,
-remedies, powers and privileges provided by law. Without limiting the generality of the foregoing, the execution and delivery of this
-Agreement or any other Loan Document or the making of a Loan shall not be construed as a waiver of any Default, regardless of
-whether the Administrative Agent, any Lender or any of their respective Related Parties may have had notice or knowledge of such
-Default at the time.
 
-Notwithstanding anything to the contrary contained herein or in any other Loan Document, the authority to enforce rights and
-
-remedies hereunder and under the other Loan Documents against the Borrowers or any of them shall be vested exclusively in, and all
-actions and proceedings at law in connection with such enforcement shall be instituted and maintained exclusively by, the
-Administrative Agent in accordance with Section 8.02 for the benefit of all the Lenders; provided that the foregoing shall not prohibit
-(a) the Administrative Agent from exercising on its own behalf the rights and remedies that inure to its benefit (solely in its capacity as
-Administrative Agent) hereunder and under the other Loan Documents, (b) any Lender from exercising setoff rights in accordance with
-Section 11.08 (subject to the terms of Section 2.11), or (c) any Lender from filing proofs of claim or appearing and filing pleadings on
-its own behalf during the pendency of a proceeding relating to any Borrower under any Debtor Relief Law; and provided further that if
-at any time there is no Person acting as Administrative Agent hereunder and under the other Loan Documents, then (i) the Required
-Lenders shall have the rights otherwise ascribed to the Administrative Agent pursuant to Section 8.02 and (ii) in addition to the matters
-set forth in clauses (b) and (c) of the preceding proviso and subject to Section 2.11, any Lender may, with the consent of the Required
-Lenders, enforce any rights and remedies available to it and as authorized by the Required Lenders.
+Chunk 89:exercise Required Lenders.
 
 77
 
@@ -4610,10 +4132,7 @@ Lenders, enforce any rights and remedies available to it and as authorized by th
 -----
 
 
-========================================
-Page 81:
-========================================
-**11.04   Expenses; Indemnity; Limitation of Liability.**
+Chunk 90:**11.04   Expenses; Indemnity; Limitation of Liability.**
 
 (a)      Costs and Expenses. The Company shall pay (i) all reasonable and documented out-of-pocket expenses incurred by
 
@@ -4647,15 +4166,8 @@ proposed use of the proceeds therefrom or (iii) any actual or prospective claim,
 the foregoing, whether based on contract, tort or any other theory, whether brought by a third party or by any Borrower, and regardless
 of whether any Indemnitee is a party thereto, IN ALL CASES, WHETHER OR NOT CAUSED BY OR ARISING, IN WHOLE
 **OR IN PART, OUT OF THE COMPARATIVE, CONTRIBUTORY OR SOLE NEGLIGENCE OF THE INDEMNITEE;**
-provided that such indemnity shall not, as to any Indemnitee, be available to the extent that such Liabilities or related expenses (x) are
-determined by a court of competent jurisdiction by final and nonappealable judgment to have resulted from the gross negligence, bad
-faith or willful misconduct of such Indemnitee or any of its Related Indemnitees, (y) result from a claim brought by the Company or
-any other Borrower against an Indemnitee for material breach by such Indemnitee or any of its Related Indemnitees of its obligations
-hereunder or under any other Loan Document, if the Company or such Borrower has obtained a final and nonappealable judgment in its
-favor on such claim as determined by a court of competent jurisdiction, or (z) relate to disputes among Indemnitees (other than claims
-against any Indemnitee in its capacity as the Administrative Agent or the Arranger or in fulfilling its role as such) that do not arise out
-of or in connection with any act or omission of a Borrower or any of its Affiliates. Without limiting the provisions of Section 3.01(c),
-this Section 11.04(b) shall not apply with respect to Taxes, other than any Taxes that represent Liabilities or related expenses arising
+
+Chunk 91:providedthis Section 11.04(b) shall not apply with respect to Taxes, other than any Taxes that represent Liabilities or related expenses arising
 from any non-Tax claim. For purposes of this Section 11.04(b), “Related Indemnitee” means, with respect to any Indemnitee, (i) any
 Subsidiary or Affiliate thereof, (ii) any director, officer or employee of such Indemnitee or any Subsidiary or Affiliate thereof or (iii)
 solely to the extent acting on behalf of or at the express instructions of any of the foregoing, any agent or advisor of the foregoing.
@@ -4666,10 +4178,7 @@ solely to the extent acting on behalf of or at the express instructions of any o
 -----
 
 
-========================================
-Page 82:
-========================================
-(c)      Reimbursement by Lenders. To the extent that the Company for any reason fails to indefeasibly pay any amount
+Chunk 92:(c)      Reimbursement by Lenders. To the extent that the Company for any reason fails to indefeasibly pay any amount
 
 required under subsection (a) or (b) of this Section to be paid by it to the Administrative Agent (or any sub-agent thereof) or any
 Related Party of any of the foregoing, each Lender severally agrees to pay to the Administrative Agent (or any such sub-agent) or such
@@ -4710,10 +4219,7 @@ any Lender, the termination of the Aggregate Commitments and the repayment, sati
 -----
 
 
-========================================
-Page 83:
-========================================
-**11.05   Payments Set Aside. To the extent that any payment by or on behalf of any Borrower is made to the Administrative**
+Chunk 93:**11.05   Payments Set Aside. To the extent that any payment by or on behalf of any Borrower is made to the Administrative**
 
 Agent or any Lender, or the Administrative Agent or any Lender exercises its right of setoff, and such payment or the proceeds of such
 setoff or any part thereof is subsequently invalidated, declared to be fraudulent or preferential, set aside or required (including pursuant
@@ -4760,10 +4266,7 @@ Approved Fund, no minimum amount need be assigned; and
 -----
 
 
-========================================
-Page 84:
-========================================
-(B)    in any case not described in subsection (b)(i)(A) of this Section, the aggregate amount of the
+Chunk 94:(B)    in any case not described in subsection (b)(i)(A) of this Section, the aggregate amount of the
 
 Commitment (which for this purpose includes Loans outstanding thereunder) or, if the Commitment is not then in
 effect, the aggregate principal amount of the Loans of the assigning Lender subject to each such assignment,
@@ -4815,10 +4318,7 @@ of, a natural person).
 -----
 
 
-========================================
-Page 85:
-========================================
-(vi)     Certain Additional Payments. In connection with any assignment of rights and obligations of any Defaulting
+Chunk 95:(vi)     Certain Additional Payments. In connection with any assignment of rights and obligations of any Defaulting
 
 Lender hereunder, no such assignment shall be effective unless and until, in addition to the other conditions thereto set forth
 herein, the parties to the assignment shall make such additional payments to the Administrative Agent in an aggregate amount
@@ -4846,24 +4346,8 @@ request, each Borrower (at its expense) shall execute and deliver a Note to the 
 of rights or obligations under this Agreement that does not comply with this subsection shall be treated for purposes of this Agreement
 as a sale by such Lender of a participation in such rights and obligations in accordance with subsection (d) of this Section.
 
-(c)      Register. The Administrative Agent, acting solely for this purpose as a non-fiduciary agent of the Borrowers, shall
-
-maintain at one of its offices in the City of New York a copy of each Assignment and Assumption delivered to it (or the equivalent
-thereof in electronic form) and a register for the recordation of the names and addresses of the Lenders, and the Commitments of, and
-principal amounts (and stated interest) of the Loans owing to, each Lender pursuant to the terms hereof from time to time (the
-“Register”). The entries in the Register shall be conclusive absent manifest error, and the Borrowers, the Administrative Agent and the
-Lenders shall treat each Person whose name is recorded in the Register pursuant to the terms hereof as a Lender hereunder for all
-purposes of this Agreement. The Register shall be available for inspection by the Borrowers and any Lender, at any reasonable time and
-from time to time upon reasonable prior notice.
-
-(d)      Participations. Any Lender may at any time, without the consent of, or notice to, any Borrower or the Administrative
-
-Agent, sell participations to any Person (other than a natural person (or a holding company, investment vehicle or trust for, or owned
-and operated for the primary benefit of, a natural person), a Defaulting Lender or the Company, any Borrower or any such Person’s
-Subsidiaries or other Affiliates) (each, a “Participant”) in all or a portion of such Lender’s rights and/or obligations under this
-Agreement (including all or a portion of its Commitment and/or the Loans owing to it); provided that (i) such Lender’s obligations
-under this Agreement shall remain unchanged, (ii) such Lender shall remain solely responsible to the other parties hereto for the
-performance of such obligations and (iii) the Borrowers, the Administrative Agent and the Lenders shall continue to deal solely and
+(c)      Register. The Administrative Agent, acting solely for this purpose as a non-f
+Chunk 96:id and the Lenders shall continue to deal solely and
 directly with such Lender in connection with such Lender’s rights and obligations under this Agreement. For the avoidance of doubt,
 each Lender shall be responsible for the indemnity under Section 11.04(c) without regard to the existence of any participation.
 
@@ -4873,10 +4357,7 @@ each Lender shall be responsible for the indemnity under Section 11.04(c) withou
 -----
 
 
-========================================
-Page 86:
-========================================
-Any agreement or instrument pursuant to which a Lender sells such a participation shall provide that such Lender shall retain
+Chunk 97:Any agreement or instrument pursuant to which a Lender sells such a participation shall provide that such Lender shall retain
 
 the sole right to enforce this Agreement and to approve any amendment, modification or waiver of any provision of this Agreement or
 any other Loan Document; provided that such agreement or instrument may provide that such Lender will not, without the consent of
@@ -4912,10 +4393,7 @@ obligations hereunder or substitute any such pledgee or assignee for such Lender
 -----
 
 
-========================================
-Page 87:
-========================================
-**11.07   Treatment of Certain Information; Confidentiality. Subject to the last sentence of this Section, each of the**
+Chunk 98:**11.07   Treatment of Certain Information; Confidentiality. Subject to the last sentence of this Section, each of the**
 
 Administrative Agent and the Lenders agrees to maintain the confidentiality of the Information (as defined below), except that
 Information may be disclosed (a) to those of its Affiliates and its and their Related Parties that the Administrative Agent or any such
@@ -4951,12 +4429,8 @@ hereunder or (v) in the case of this Agreement, any market data collector or ser
 hereby authorized at any time and from time to time, to the fullest extent permitted by applicable Law, to set off and apply any and all
 deposits (general or special, time or demand, provisional or final, in whatever currency, but excluding deposits in (i) trust or other
 fiduciary accounts (to the extent of amounts held therein in trust in the ordinary course of business on behalf of third parties that are not
-Borrowers or their Subsidiaries), (ii) payroll accounts, (iii) health-savings accounts and worker’s compensation accounts, (iv)
-withholding tax accounts and (v) zero balance accounts used in the ordinary course of business) at any time held and other obligations
-(in whatever currency) at any time owing by such Lender or any such Affiliate to or for the credit or the account of the Company or any
-other Borrower against any and all of the obligations of the Company or such Borrower now or hereafter existing under this Agreement
-or any other Loan Document to such Lender or its Affiliates, irrespective of whether or not such obligations of the Company or such
-Borrower are owed to a branch, office or Affiliate of such Lender different from the branch, office or Affiliate holding such deposit or
+Borrowers or their Subsidiaries), (ii) payroll accounts, (iii) health-s
+Chunk 99:avings of such Lender different from the branch, office or Affiliate holding such deposit or
 obligated on such indebtedness; provided that in the event that any Defaulting Lender shall exercise any such right of setoff, (x) all
 amounts so set off shall be paid over immediately to the Administrative Agent for further application in accordance with the provisions
 of Section 2.13 and, pending such payment, shall be segregated by such Defaulting Lender from its other funds and deemed held in
@@ -4973,10 +4447,7 @@ validity of such setoff and application.
 -----
 
 
-========================================
-Page 88:
-========================================
-**11.09   Interest Rate Limitation. Notwithstanding anything to the contrary contained in any Loan Document, the interest**
+Chunk 100:**11.09   Interest Rate Limitation. Notwithstanding anything to the contrary contained in any Loan Document, the interest**
 
 paid or agreed to be paid under the Loan Documents shall not exceed the maximum rate of non-usurious interest permitted by
 applicable Law (the “Maximum Rate”). If the Administrative Agent or any Lender shall receive interest in an amount that exceeds the
@@ -5031,10 +4502,7 @@ by the Administrative Agent, then such provisions shall be deemed to be in effec
 -----
 
 
-========================================
-Page 89:
-========================================
-**11.13   Replacement of Lenders. If the Company is entitled to replace a Lender pursuant to the provisions of Section 3.06,**
+Chunk 101:**11.13   Replacement of Lenders. If the Company is entitled to replace a Lender pursuant to the provisions of Section 3.06,**
 
 or if any Lender is a Defaulting Lender, a Non-Extending Lender or a Non-Consenting Lender, then the Company may, at its sole
 expense and effort, upon notice to such Lender and the Administrative Agent, require such Lender to assign and delegate, without
@@ -5082,10 +4550,7 @@ ACCORDANCE WITH, THE LAW OF THE STATE OF NEW YORK.
 -----
 
 
-========================================
-Page 90:
-========================================
-(b)      SUBMISSION TO JURISDICTION. EACH OF THE PARTIES HERETO IRREVOCABLY AND
+Chunk 102:(b)      SUBMISSION TO JURISDICTION. EACH OF THE PARTIES HERETO IRREVOCABLY AND
 
 UNCONDITIONALLY AGREES THAT IT WILL NOT COMMENCE ANY ACTION, LITIGATION OR PROCEEDING OF ANY
 KIND OR DESCRIPTION, WHETHER IN LAW OR EQUITY, WHETHER IN CONTRACT OR IN TORT OR OTHERWISE,
@@ -5141,10 +4606,7 @@ ACCEPT SUCH SERVICE ON ITS BEHALF.
 -----
 
 
-========================================
-Page 91:
-========================================
-(f)      NO IMMUNITY. IN THE EVENT ANY DESIGNATED BORROWER THAT IS A FOREIGN SUBSIDIARY OR
+Chunk 103:(f)      NO IMMUNITY. IN THE EVENT ANY DESIGNATED BORROWER THAT IS A FOREIGN SUBSIDIARY OR
 
 ANY OF ITS ASSETS HAS OR HEREAFTER ACQUIRES, IN ANY JURISDICTION IN WHICH JUDICIAL PROCEEDINGS
 MAY AT ANY TIME BE COMMENCED WITH RESPECT TO THIS AGREEMENT OR ANY OTHER LOAN DOCUMENT, ANY
@@ -5171,25 +4633,8 @@ AND CERTIFICATIONS IN THIS SECTION.
 by any other Loan Document (including in connection with any amendment, waiver or other modification hereof or of any other Loan
 Document), the Company and each other Borrower acknowledges and agrees, and acknowledges its Affiliates’ understanding, that: (i)
 (A) the arranging and other services regarding this Agreement provided by the Administrative Agent, the Arranger, the Lenders and
-their respective Affiliates are arm’s-length commercial transactions between the Company, each other Borrower and their respective
-Affiliates, on the one hand, and the Administrative Agent, the Arranger, the Lenders and their respective Affiliates, on the other hand,
-(B) each of the Company and the other Borrowers has consulted its own legal, accounting, regulatory and tax advisors to the extent it
-has deemed appropriate, and none of the Administrative Agent, the Arranger, the Lenders or their respective Affiliates has provided any
-legal, accounting, regulatory, investment or tax advice with respect to any of the transactions contemplated hereby and by the other
-Loan Documents, and (C) each of the Company and the other Borrowers is capable of evaluating, and understands and accepts, the
-terms, risks and conditions of the transactions contemplated hereby and by the other Loan Documents; (ii) in connection with the
-transactions contemplated hereby and by the other Loan Documents and the process leading thereto (and irrespective of whether the
-Administrative Agent, the Arranger, the Lenders or any of their respective Affiliates has advised or is currently advising the Company
-or any of its Affiliates on other matters), (A) each of the Administrative Agent, the Arranger, each Lender and each of their respective
-Affiliates is and has been acting solely as a principal and, except as expressly agreed in writing by the relevant parties, has not been, is
-not, and will not be acting as, or be deemed to have assumed any responsibility as, an advisor, agent or fiduciary for the Company, any
-other Borrower or any of their respective Affiliates, or any other Person and (B) none of the Administrative Agent, the Arranger, any
-Lender or any of their respective Affiliates has any obligation or implied duties to the Company, any other Borrower or any of their
-respective Affiliates with respect to the transactions contemplated hereby except those obligations expressly set forth herein and in the
-other Loan Documents; and (iii) the Administrative Agent, the Arranger, the Lenders and their respective Affiliates may be engaged in a
-broad range of transactions that involve interests that differ from those of the Company, the other Borrowers and their respective
-Affiliates, and none of the Administrative Agent, the Arranger, any Lender or any of their respective Affiliates has any obligation to
-disclose any of such interests to the Company, any other Borrower or any of their respective Affiliates. To the fullest extent permitted
+their respective Affiliates are arm’s-length
+Chunk 104: commercial. To the fullest extent permitted
 by applicable Law, each of the Company and each other Borrower hereby agrees not to assert any claims against the Administrative
 Agent, the Arranger, any Lender or any of their respective Affiliates based on an alleged breach of agency or fiduciary duty in
 connection with any aspect of any transaction contemplated hereby or by any other Loan Document.
@@ -5200,10 +4645,7 @@ connection with any aspect of any transaction contemplated hereby or by any othe
 -----
 
 
-========================================
-Page 92:
-========================================
-**11.17   Electronic Execution. The words “execute”, “execution”, “signed”, “signature”, “delivery”, and words of like import**
+Chunk 105:**11.17   Electronic Execution. The words “execute”, “execution”, “signed”, “signature”, “delivery”, and words of like import**
 
 in or relating to any Ancillary Document shall be deemed to include Electronic Signatures and deliveries or the keeping of records in
 electronic form, each of which shall be of the same legal effect, validity or enforceability as a manually executed signature, physical
@@ -5253,10 +4695,7 @@ Borrower (or to any other Person who may be entitled thereto under applicable La
 -----
 
 
-========================================
-Page 93:
-========================================
-**11.20   Non-Public Information. Each Lender acknowledges that all information (including requests for waivers and**
+Chunk 106:**11.20   Non-Public Information. Each Lender acknowledges that all information (including requests for waivers and**
 
 amendments as well as certain of the Information) furnished by or on behalf of any Borrower or the Administrative Agent pursuant to
 or in connection with, or in the course of administering, this Agreement will be syndicate-level information, which may contain MNPI.
@@ -5285,10 +4724,7 @@ of any applicable Resolution Authority.
 -----
 
 
-========================================
-Page 94:
-========================================
-**11.22   ERISA Matters.**
+Chunk 107:**11.22   ERISA Matters.**
 
 (a)      Each Lender (i) represents and warrants, as of the date such Person became a Lender party hereto, to, and (ii)
 
@@ -5325,11 +4761,8 @@ Document or any documents related to hereto or thereto); (B) the Person making t
 Lender with respect to the entrance into, participation in, administration of and performance of the Loans, the Commitments
 and this Agreement is independent (within the meaning of 29 CFR § 2510.3-21) and is a bank, an insurance carrier, an
 investment adviser, a broker-dealer or other person that holds, or has under management or control, total assets of at least
-US$50 million, in each case as described in 29 CFR § 2510.3-21(c)(1)(i)(A)-(E); (C) the Person making the investment
-decision on behalf of such Lender with respect to the entrance into, participation in, administration of and performance of the
-Loans, the Commitments and this Agreement is capable of evaluating investment risks independently, both in general and with
-regard to particular transactions and investment strategies (including in respect of the Obligations); (D) the Person making the
-investment decision on behalf of such Lender with respect to the entrance into, participation in, administration of and
+US$50 million, in each case as described in 29 CFR § 2510.3-
+Chunk 108:21 participation in, administration of and
 performance of the Loans, the Commitments and this Agreement is a fiduciary under ERISA or the Code, or both, with respect
 to the Loans, the Commitments and this Agreement and is responsible for exercising independent judgment in evaluating the
 transactions hereunder; and (E) no fee or other compensation is being paid directly to the Administrative Agent, the Arranger
@@ -5342,10 +4775,7 @@ Commitments or this Agreement.
 -----
 
 
-========================================
-Page 95:
-========================================
-(c)      The Administrative Agent and the Arranger hereby informs the Lenders that each such Person is not
+Chunk 109:(c)      The Administrative Agent and the Arranger hereby informs the Lenders that each such Person is not
 
 undertaking to provide impartial investment advice, or to give advice in a fiduciary capacity, in connection with the
 transactions contemplated hereby, and that such Person has a financial interest in the transactions contemplated hereby in that
@@ -5366,10 +4796,7 @@ termination fees or fees similar to the foregoing.
 -----
 
 
-========================================
-Page 96:
-========================================
-_IN WITNESS WHEREOF, the parties hereto have caused this Agreement to be duly executed as of the date first above written._
+Chunk 110:_IN WITNESS WHEREOF, the parties hereto have caused this Agreement to be duly executed as of the date first above written._
 
 AMAZON.COM, INC.
 
@@ -5387,10 +4814,7 @@ FIVE-YEAR REVOLVING CREDIT AGREEMENT
 -----
 
 
-========================================
-Page 97:
-========================================
-CITIBANK, N.A.,
+Chunk 111:CITIBANK, N.A.,
 as individually and as Administrative Agent
 
 By: /s/ Susan Olsen
@@ -5407,10 +4831,7 @@ FIVE-YEAR REVOLVING CREDIT AGREEMENT
 -----
 
 
-========================================
-Page 98:
-========================================
-SIGNATURE PAGE TO
+Chunk 112:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5428,10 +4849,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 99:
-========================================
-SIGNATURE PAGE TO
+Chunk 113:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5457,10 +4875,7 @@ Title: Director
 -----
 
 
-========================================
-Page 100:
-========================================
-SIGNATURE PAGE TO
+Chunk 114:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5478,10 +4893,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 101:
-========================================
-SIGNATURE PAGE TO
+Chunk 115:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5501,10 +4913,7 @@ The Hongkong and Shanghai Bank Corporation Limited
 -----
 
 
-========================================
-Page 102:
-========================================
-SIGNATURE PAGE TO
+Chunk 116:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5522,10 +4931,7 @@ Title: Executive Director
 -----
 
 
-========================================
-Page 103:
-========================================
-SIGNATURE PAGE TO
+Chunk 117:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5543,10 +4949,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 104:
-========================================
-SIGNATURE PAGE TO
+Chunk 118:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5564,10 +4967,7 @@ Title: Director
 -----
 
 
-========================================
-Page 105:
-========================================
-SIGNATURE PAGE TO
+Chunk 119:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5591,10 +4991,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 106:
-========================================
-SIGNATURE PAGE TO
+Chunk 120:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5612,10 +5009,7 @@ Title: Authorized Signatory
 -----
 
 
-========================================
-Page 107:
-========================================
-SIGNATURE PAGE TO
+Chunk 121:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5641,10 +5035,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 108:
-========================================
-SIGNATURE PAGE TO
+Chunk 122:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5662,10 +5053,7 @@ Title: Authorized Signatory
 -----
 
 
-========================================
-Page 109:
-========================================
-SIGNATURE PAGE TO
+Chunk 123:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5683,10 +5071,7 @@ Title: Managing Director
 -----
 
 
-========================================
-Page 110:
-========================================
-SIGNATURE PAGE TO
+Chunk 124:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5704,10 +5089,7 @@ Title: Authorized Signatory
 -----
 
 
-========================================
-Page 111:
-========================================
-SIGNATURE PAGE TO
+Chunk 125:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5725,10 +5107,7 @@ Title: Director
 -----
 
 
-========================================
-Page 112:
-========================================
-SIGNATURE PAGE TO
+Chunk 126:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5752,10 +5131,7 @@ Title: Managing Director
 -----
 
 
-========================================
-Page 113:
-========================================
-SIGNATURE PAGE TO
+Chunk 127:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5781,10 +5157,7 @@ Title: Executive Director
 -----
 
 
-========================================
-Page 114:
-========================================
-SIGNATURE PAGE TO
+Chunk 128:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5802,10 +5175,7 @@ Title: SVP & Deputy Branch Manager
 -----
 
 
-========================================
-Page 115:
-========================================
-SIGNATURE PAGE TO
+Chunk 129:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5823,10 +5193,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 116:
-========================================
-SIGNATURE PAGE TO
+Chunk 130:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5844,10 +5211,7 @@ Title: Director, Financing Solutions
 -----
 
 
-========================================
-Page 117:
-========================================
-SIGNATURE PAGE TO
+Chunk 131:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -5865,10 +5229,7 @@ Title: Senior Vice President
 -----
 
 
-========================================
-Page 1:
-========================================
-EX-10.1 2 tm2329405d1_ex10-1.htm EXHIBIT 10.1
+Chunk 1:EX-10.1 2 tm2329405d1_ex10-1.htm EXHIBIT 10.1
 
 **Exhibit 10.1**
 
@@ -5965,10 +5326,7 @@ as Co-Documentation Agents
 -----
 
 
-========================================
-Page 2:
-========================================
-and
+Chunk 2:and
 
 **U.S. BANK NATIONAL ASSOCIATION,**
 
@@ -5978,10 +5336,7 @@ as Co-Managing Agents
 -----
 
 
-========================================
-Page 3:
-========================================
-**TABLE OF CONTENTS**
+Chunk 3:**TABLE OF CONTENTS**
 
 ARTICLE I. DEFINITIONS AND ACCOUNTING TERMS
 
@@ -6079,10 +5434,7 @@ ARTICLE V. REPRESENTATIONS AND WARRANTIES
 -----
 
 
-========================================
-Page 4:
-========================================
-5.10 Anti-Corruption 59
+Chunk 4:5.10 Anti-Corruption 59
 
 5.11 Sanctions 60
 
@@ -6094,10 +5446,7 @@ i
 -----
 
 
-========================================
-Page 5:
-========================================
-ARTICLE VI. AFFIRMATIVE COVENANTS
+Chunk 5:ARTICLE VI. AFFIRMATIVE COVENANTS
 
 6.01 Financial Statements 60
 
@@ -6179,10 +5528,7 @@ ii
 -----
 
 
-========================================
-Page 6:
-========================================
-ARTICLE XI. MISCELLANEOUS
+Chunk 6:ARTICLE XI. MISCELLANEOUS
 
 11.01 Amendments, Etc. 75
 
@@ -6234,10 +5580,7 @@ iii
 -----
 
 
-========================================
-Page 7:
-========================================
-**SCHEDULES**
+Chunk 7:**SCHEDULES**
 
 2.01 Commitments
 
@@ -6273,10 +5616,7 @@ iv
 -----
 
 
-========================================
-Page 8:
-========================================
-**FIVE-YEAR REVOLVING CREDIT AGREEMENT**
+Chunk 8:**FIVE-YEAR REVOLVING CREDIT AGREEMENT**
 
 This FIVE-YEAR REVOLVING CREDIT AGREEMENT dated as of November 1, 2023 (this “Agreement”), is entered into
 
@@ -6333,10 +5673,7 @@ Aggregate Commitments equal to US$15,000,000,000.
 -----
 
 
-========================================
-Page 9:
-========================================
-“Alternative Currency” means Euro, Sterling, Yen, Canadian Dollars, Australian Dollars, Swiss Francs and each other
+Chunk 9:“Alternative Currency” means Euro, Sterling, Yen, Canadian Dollars, Australian Dollars, Swiss Francs and each other
 
 currency (other than US Dollars) that is approved in accordance with Section 1.05.
 
@@ -6399,10 +5736,7 @@ to the Administrative Agent.
 -----
 
 
-========================================
-Page 10:
-========================================
-“Attributable Indebtedness” means, on any date, (a) in respect of any capital lease of any Person, the capitalized amount
+Chunk 10:“Attributable Indebtedness” means, on any date, (a) in respect of any capital lease of any Person, the capitalized amount
 
 thereof that would appear on a balance sheet of such Person prepared as of such date in accordance with GAAP, and (b) in respect of
 any Synthetic Lease Obligation, the capitalized amount of the remaining lease payments under the relevant lease that would appear on
@@ -6458,10 +5792,7 @@ or their Affiliates (other than through liquidation, administration or other ins
 -----
 
 
-========================================
-Page 11:
-========================================
-“Base Rate” means, for any day, a rate per annum equal to the highest of (a) the NYFRB Rate in effect on such day plus 1/2 of
+Chunk 11:“Base Rate” means, for any day, a rate per annum equal to the highest of (a) the NYFRB Rate in effect on such day plus 1/2 of
 
 1.00% per annum, (b) the Prime Rate in effect on such day, and (c) the Term SOFR for a one month Interest Period as published two
 U.S. Government Securities Business Days prior to such day (or, if such day is not a U.S. Government Securities Business Day, the
@@ -6517,10 +5848,7 @@ Currency at such time in the United States and (b) the related Benchmark Replace
 -----
 
 
-========================================
-Page 12:
-========================================
-If the Benchmark Replacement as determined pursuant to clause (1), (2) or (3) above would be less than the Floor, the
+Chunk 12:If the Benchmark Replacement as determined pursuant to clause (1), (2) or (3) above would be less than the Floor, the
 
 Benchmark Replacement will be deemed to be the Floor for the purposes of this Agreement and the other Loan Documents.
 
@@ -6574,10 +5902,7 @@ such Benchmark (or such component thereof) continues to be provided on such date
 -----
 
 
-========================================
-Page 13:
-========================================
-For the avoidance of doubt, (i) if the event giving rise to the Benchmark Replacement Date occurs on the same day as, but
+Chunk 13:For the avoidance of doubt, (i) if the event giving rise to the Benchmark Replacement Date occurs on the same day as, but
 
 earlier than, the Reference Time in respect of any determination, the Benchmark Replacement Date will be deemed to have occurred
 prior to the Reference Time for such determination and (ii) the “Benchmark Replacement Date” will be deemed to have occurred in the
@@ -6626,10 +5951,7 @@ such Benchmark (or the published component used in the calculation thereof).
 -----
 
 
-========================================
-Page 14:
-========================================
-“Benchmark Unavailability Period” means, with respect to any Benchmark, the period (if any) (x) beginning at the time that a
+Chunk 14:“Benchmark Unavailability Period” means, with respect to any Benchmark, the period (if any) (x) beginning at the time that a
 
 Benchmark Replacement Date pursuant to clause (1) or (2) of that definition has occurred if, at such time, no Benchmark Replacement
 has replaced such then-current Benchmark for all purposes hereunder and under any other Loan Document in accordance with Section
@@ -6684,10 +6006,7 @@ Loan, such day shall also be an RFR Business Day.
 -----
 
 
-========================================
-Page 15:
-========================================
-“Canadian Dollar” and “C$” mean the lawful money of Canada.
+Chunk 15:“Canadian Dollar” and “C$” mean the lawful money of Canada.
 
 “CDO Rate” means, with respect to any Term Benchmark Borrowing denominated in Canadian Dollars for any Interest
 
@@ -6739,10 +6058,7 @@ Section 11.01.
 -----
 
 
-========================================
-Page 16:
-========================================
-“CME Term SOFR Administrator” means CME Group Benchmark Administration Limited as administrator of the forward
+Chunk 16:“CME Term SOFR Administrator” means CME Group Benchmark Administration Limited as administrator of the forward
 looking term Secured Overnight Financing Rate (SOFR) (or a successor administrator).
 
 “Code” means the U.S. Internal Revenue Code of 1986.
@@ -6798,10 +6114,7 @@ CORRA is required, references to CORRA will be deemed to be references to the la
 -----
 
 
-========================================
-Page 17:
-========================================
-“Daily Compounded CORRA Borrowing” means, if available pursuant to Section 3.03, any Borrowing comprised of Daily
+Chunk 17:“Daily Compounded CORRA Borrowing” means, if available pursuant to Section 3.03, any Borrowing comprised of Daily
 
 Compounded CORRA Loans.
 
@@ -6861,10 +6174,7 @@ Default Rate shall be an interest rate equal to the interest rate (including any
 -----
 
 
-========================================
-Page 18:
-========================================
-“Defaulting Lender” means, subject to Section 2.13(b), any Lender that (a) has failed to (i) fund all or any portion of its Loans
+Chunk 18:“Defaulting Lender” means, subject to Section 2.13(b), any Lender that (a) has failed to (i) fund all or any portion of its Loans
 
 within two Business Days of the date such Loans were required to be funded hereunder unless such Lender notifies the Administrative
 Agent and the Company in writing that such failure is the result of such Lender’s determination that one or more conditions precedent
@@ -6915,10 +6225,7 @@ receivable or any rights and claims associated therewith. “Dispose” shall ha
 -----
 
 
-========================================
-Page 19:
-========================================
-“EEA Financial Institution” means (a) any credit institution or investment firm established in any EEA Member Country
+Chunk 19:“EEA Financial Institution” means (a) any credit institution or investment firm established in any EEA Member Country
 
 which is subject to the supervision of an EEA Resolution Authority, (b) any entity established in an EEA Member Country which is a
 parent of an institution described in clause (a) of this definition, or (c) any financial institution established in an EEA Member Country
@@ -6978,10 +6285,7 @@ Period.
 -----
 
 
-========================================
-Page 20:
-========================================
-“EURIBO Screen Rate” means a rate per annum equal to the euro interbank offered rate administered by the European Money
+Chunk 20:“EURIBO Screen Rate” means a rate per annum equal to the euro interbank offered rate administered by the European Money
 
 Market Institute (or any other Person that takes over the administration of such rate) for the applicable period, as displayed (before any
 correction, recalculation or republication by the administrator) on the Reuters screen page that displays such rate (currently
@@ -7033,10 +6337,7 @@ by and among the Company, the lenders party thereto and JPMorgan Chase Bank, N.A
 -----
 
 
-========================================
-Page 21:
-========================================
-“Existing 364-Day Credit Agreement” means that certain 364-Day Revolving Credit Agreement dated as of November 18,
+Chunk 21:“Existing 364-Day Credit Agreement” means that certain 364-Day Revolving Credit Agreement dated as of November 18,
 
 2022, by and among the Company, the lenders party thereto and JPMorgan Chase Bank, N.A., as administrative agent.
 
@@ -7089,10 +6390,7 @@ otherwise investing in commercial loans and similar extensions of credit in the 
 -----
 
 
-========================================
-Page 22:
-========================================
-“GAAP” means generally accepted accounting principles in the United States as set forth in the Accounting Standards
+Chunk 22:“GAAP” means generally accepted accounting principles in the United States as set forth in the Accounting Standards
 
 Codification established by the Financial Accounting Standards Board and defined in FASB ASC 105.
 
@@ -7151,10 +6449,7 @@ accounts payable in the ordinary course of business);
 -----
 
 
-========================================
-Page 23:
-========================================
-(e)     indebtedness (excluding prepaid interest thereon) of others secured by a Lien on property owned or being
+Chunk 23:(e)     indebtedness (excluding prepaid interest thereon) of others secured by a Lien on property owned or being
 
 purchased by such Person (including indebtedness arising under conditional sales or other title retention agreements) whether
 or not such indebtedness shall have been assumed by such Person or is limited in recourse (but limited, in the event such
@@ -7210,10 +6505,7 @@ calendar month, in which case such Interest Period shall end on the next precedi
 -----
 
 
-========================================
-Page 24:
-========================================
-(ii)     any Interest Period of one month or longer that begins on the last Business Day of a calendar month (or on a
+Chunk 24:(ii)     any Interest Period of one month or longer that begins on the last Business Day of a calendar month (or on a
 
 day for which there is no numerically corresponding day in the calendar month at the end of such Interest Period) shall end on
 the last Business Day of the calendar month at the end of such Interest Period; and
@@ -7272,10 +6564,7 @@ enforceability against any Borrower of any Loan Document to which it is a party.
 -----
 
 
-========================================
-Page 25:
-========================================
-“Material Indebtedness” means Indebtedness of the Company or any Subsidiary in an aggregate outstanding principal amount
+Chunk 25:“Material Indebtedness” means Indebtedness of the Company or any Subsidiary in an aggregate outstanding principal amount
 
 of $1,500,000,000 or more, other than (i) Indebtedness outstanding under this Agreement, (ii) Indebtedness of any Amazon Seller
 Lending Entity or other relevant special purpose entity Subsidiary under any financing described in Section 7.01(v), provided that such
@@ -7332,10 +6621,7 @@ shall be deemed to be zero.
 -----
 
 
-========================================
-Page 26:
-========================================
-“Obligations” means all advances to, and debts, liabilities, obligations, covenants and duties of, any Borrower arising under
+Chunk 26:“Obligations” means all advances to, and debts, liabilities, obligations, covenants and duties of, any Borrower arising under
 
 any Loan Document or otherwise with respect to any Loan, whether direct or indirect (including those acquired by assumption),
 absolute or contingent, due or to become due, now existing or hereafter arising and including interest and fees that accrue after the
@@ -7389,10 +6675,7 @@ Connection Taxes imposed with respect to an assignment (other than an assignment
 -----
 
 
-========================================
-Page 27:
-========================================
-“Outstanding Amount” means, on any date with respect to any Loans, the sum of the US Dollar Equivalents of the outstanding
+Chunk 27:“Outstanding Amount” means, on any date with respect to any Loans, the sum of the US Dollar Equivalents of the outstanding
 
 principal amount of such Loans after giving effect to any borrowings and prepayments or repayments of such Loans occurring on such
 date.
@@ -7452,10 +6735,7 @@ indirectly, voting equity securities of the Company.
 -----
 
 
-========================================
-Page 28:
-========================================
-“Person” means any natural person, corporation, limited liability company, trust, joint venture, association, company,
+Chunk 28:“Person” means any natural person, corporation, limited liability company, trust, joint venture, association, company,
 
 partnership, Governmental Authority or other entity.
 
@@ -7477,41 +6757,8 @@ amended from time to time.
 
 of any obligation of any Borrower hereunder or under any other Loan Document.
 
-“Reference Time” with respect to any setting of the then-current Benchmark means (a) if such Benchmark is Term SOFR, 5:00
-
-a.m., Chicago time, on the day that is two U.S. Government Securities Business Days preceding the date of such setting, (b) if such
-Benchmark is the EURIBO Rate, 11:00 a.m., Brussels time, two TARGET Days preceding the date of such setting, (c) if such
-Benchmark is the TIBO Rate, 11:00 a.m., Tokyo time, two Business Days preceding the date of such setting, (d) if such Benchmark is
-the CDO Rate, 10:15 a.m., Toronto time, on the first date of such setting, (e) if such Benchmark is the AUD Bank Bill Rate, 11:00 a.m.,
-Sydney time, on the first date of such setting, (f) if the RFR for such Benchmark is SONIA or Daily Simple SOFR, then four RFR
-Business Days prior to such setting, (g) if the RFR for such Benchmark is SARON, then five RFR Business Days prior to such setting
-or (h) otherwise, the time determined by the Administrative Agent in its reasonable discretion.
-
-“Register” has the meaning specified in Section 11.06(c).
-
-“Regulatory Information” has the meaning specified in Section 2.14(a).
-
-“Related Parties” means, with respect to any Person, such Person’s Affiliates and the partners, directors, officers and
-
-employees (and, solely to the extent acting on behalf of or at the express instructions of any of the foregoing, agents and advisors of the
-foregoing) of such Person and of such Person’s Affiliates.
-
-“Relevant Governmental Body” means (a) with respect to a Benchmark Replacement in respect of Loans denominated in US
-
-Dollars, the Federal Reserve Board and/or the NYFRB or a committee officially endorsed or convened by the Federal Reserve Board
-and/or the NYFRB or, in each case, any successor thereto, (b) with respect to a Benchmark Replacement in respect of Loans
-denominated in Euro, the European Central Bank, or a committee officially endorsed or convened by the European Central Bank or, in
-each case, any successor thereto, (c) with respect to a Benchmark Replacement in respect of Loans denominated in Sterling, the Bank
-of England, or a committee officially endorsed or convened by the Bank of England or, in each case, any successor thereto, (d) with
-respect to a Benchmark Replacement in respect of Loans denominated in Yen, the Bank of Japan, or a committee officially endorsed or
-convened by the Bank of Japan or, in each case, any successor thereto, (e) with respect to a Benchmark Replacement in respect of
-Loans denominated in Swiss Francs, the Swiss National Bank, or a committee officially endorsed or convened by the Swiss National
-Bank or, in each case, any successor thereto, (f) with respect to a Benchmark Replacement in respect of Loans denominated in
-Canadian Dollars, the Bank of Canada, or a committee officially endorsed or convened by the Bank of Canada or, in each case, any
-successor thereto and (g) with respect to a Benchmark Replacement in respect of Loans denominated in any other Agreed Currency, (i)
-the central bank for the Agreed Currency in which such Benchmark Replacement is denominated or any central bank or other
-supervisor which is responsible for supervising either (A) such Benchmark Replacement or (B) the administrator of such Benchmark
-Replacement or (ii) any working group or committee officially endorsed or convened by (A) the central bank for the Agreed Currency
+“Reference Time” with respect to any setting of the then-current
+Chunk 29: BenchmarkReplacement or (ii) any working group or committee officially endorsed or convened by (A) the central bank for the Agreed Currency
 in which such Benchmark Replacement is denominated, (B) any central bank or other supervisor that is responsible for supervising
 either (1) such Benchmark Replacement or (2) the administrator of such Benchmark Replacement, (C) a group of those central banks or
 other supervisors or (D) the Financial Stability Board or any part thereof.
@@ -7522,10 +6769,7 @@ other supervisors or (D) the Financial Stability Board or any part thereof.
 -----
 
 
-========================================
-Page 29:
-========================================
-“Relevant Rate” means (a) with respect to any Term Benchmark Loan or Term Benchmark Borrowing denominated in US
+Chunk 30:“Relevant Rate” means (a) with respect to any Term Benchmark Loan or Term Benchmark Borrowing denominated in US
 
 Dollars, the Term SOFR, (b) with respect to any RFR Loan or RFR Borrowing denominated in US Dollars, the Daily Simple SOFR, (c)
 with respect to any Loan or Borrowing denominated in Euro, the EURIBO Rate, (d) with respect to any Loan or Borrowing
@@ -7572,10 +6816,7 @@ Responsible Officer shall be conclusively presumed to have acted on behalf of su
 -----
 
 
-========================================
-Page 30:
-========================================
-“Reuters” means Thomson Reuters Corporation, Refinitiv or, in each case, a successor thereto.
+Chunk 31:“Reuters” means Thomson Reuters Corporation, Refinitiv or, in each case, a successor thereto.
 
 “Revaluation Date” means, with respect to any Loan denominated in an Alternative Currency, (a) the date of the
 
@@ -7638,10 +6879,7 @@ successor source for the Swiss Average Rate Overnight identified as such by the 
 -----
 
 
-========================================
-Page 31:
-========================================
-“SARON Loan” means a Loan that bears interest at a rate based on the Daily Simple SARON.
+Chunk 32:“SARON Loan” means a Loan that bears interest at a rate based on the Daily Simple SARON.
 
 “SEC” means the Securities and Exchange Commission, or any Governmental Authority succeeding to any of its principal
 
@@ -7698,10 +6936,7 @@ related schedules, a “Master Agreement”), including any such obligations or 
 -----
 
 
-========================================
-Page 32:
-========================================
-“Swap Termination Value” means, in respect of any one or more Swap Contracts, after taking into account the effect of any
+Chunk 33:“Swap Termination Value” means, in respect of any one or more Swap Contracts, after taking into account the effect of any
 
 legally enforceable netting agreement relating to such Swap Contracts, (a) for any date on or after the date such Swap Contracts have
 been closed out and termination value(s) determined in accordance therewith, such termination value(s), and (b) for any date prior to
@@ -7765,10 +7000,7 @@ Business Days from the date of the Term CORRA Notice.
 -----
 
 
-========================================
-Page 33:
-========================================
-“Term CORRA Transition Event” means the determination by the Administrative Agent that (a) Term CORRA has been
+Chunk 34:“Term CORRA Transition Event” means the determination by the Administrative Agent that (a) Term CORRA has been
 
 recommended for use by the Relevant Governmental Body, and is determinable for any Available Tenor, (b) the administration of Term
 CORRA is administratively feasible for the Administrative Agent (as determined by the Administrative Agent in its reasonable
@@ -7819,10 +7051,7 @@ to time in its reasonable discretion); provided that if the TIBO Screen Rate sha
 -----
 
 
-========================================
-Page 34:
-========================================
-“TIBOR Loan” means a Loan that bears interest at a rate based on the TIBO Rate.
+Chunk 35:“TIBOR Loan” means a Loan that bears interest at a rate based on the TIBO Rate.
 
 “Total Credit Exposure” means, as to any Lender at any time, the unused Commitment and the Revolving Credit Exposure of
 
@@ -7886,10 +7115,7 @@ powers under that Bail-In Legislation that are related to or ancillary to any of
 -----
 
 
-========================================
-Page 35:
-========================================
-**1.02    Other Interpretive Provisions. With reference to this Agreement and each other Loan Document, unless otherwise**
+Chunk 36:**1.02    Other Interpretive Provisions. With reference to this Agreement and each other Loan Document, unless otherwise**
 
 specified herein or in such other Loan Document:
 
@@ -7944,10 +7170,7 @@ change in GAAP.
 -----
 
 
-========================================
-Page 36:
-========================================
-(c)      Consolidation of Variable Interest Entities. All references herein to consolidated financial statements of the Company
+Chunk 37:(c)      Consolidation of Variable Interest Entities. All references herein to consolidated financial statements of the Company
 
 and its Subsidiaries or to the determination of any amount for the Company and its Subsidiaries on a consolidated basis or any similar
 reference shall, in each case, be deemed to include each variable interest entity that the Company is required to consolidate pursuant to
@@ -8006,10 +7229,7 @@ service.
 -----
 
 
-========================================
-Page 37:
-========================================
-**1.07    Divisions. For all purposes under this Agreement, in connection with any division or plan of division under Delaware**
+Chunk 38:**1.07    Divisions. For all purposes under this Agreement, in connection with any division or plan of division under Delaware**
 
 law (or any comparable event under a different jurisdiction’s laws): (a) if any asset, right, obligation or liability of any Person becomes
 the asset, right, obligation or liability of a different Person, then it shall be deemed to have been transferred from the original Person to
@@ -8040,50 +7260,10 @@ denominated in Yen may only be TIBOR Loans, in each case, as further provided he
 -----
 
 
-========================================
-Page 38:
-========================================
-**2.02    Borrowings, Conversions and Continuations of Loans.**
+Chunk 39:**2.02    Borrowings, Conversions and Continuations of Loans.**
 
-(a)      Each borrowing of Loans, each conversion of Loans denominated in US Dollars from one Type to another and each
 
-continuation of Term Benchmark Loans shall be made upon the applicable Borrower’s irrevocable notice to the Administrative Agent,
-which may be given by telephone or delivery of a Loan Notice; provided that any telephonic notice must be confirmed immediately by
-delivery to the Administrative Agent of a Loan Notice. Each Loan Notice must be received by the Administrative Agent not later than
-1:00 p.m., New York City time, (i) three Business Days prior to the requested date of any borrowing of, conversion to or continuation
-of Term Benchmark Loans denominated in US Dollars, Euro or Canadian Dollars or of any conversion of Term Benchmark Loans
-denominated in US Dollars to Base Rate Loans, (ii) four Business Days prior to the requested date of any borrowing or continuation of
-Term Benchmark Loans denominated in other Alternative Currencies, (iii) if applicable pursuant to Section 3.03, one Business Day
-prior to the requested date of any borrowing of or conversion to RFR Loans denominated in US Dollars, (iv) three Business Days prior
-to the requested date of any borrowing of or conversion to RFR Loans denominated in Sterling or, if applicable pursuant to Section
-3.03, Canadian Dollars, (v) four Business Days prior to the requested date of any borrowing of RFR Loans denominated in Swiss
-Francs and (vi) on the requested date of any borrowing of Base Rate Loans; provided that if the applicable Borrower wishes to request
-Term Benchmark Loans having an Interest Period that, pursuant to the definition of “Interest Period” requires the consent of all the
-Lenders, then (A) the applicable notice must be received by the Administrative Agent not later than 1:00 p.m., New York City time, (1)
-four Business Days prior to the requested date of such borrowing, conversion to or continuation of Term Benchmark Loans
-denominated in US Dollars, Euro or Canadian Dollars, or (2) five Business Days prior to the requested date of such borrowing or
-continuation of Term Benchmark Loans denominated in other Alternative Currencies, whereupon the Administrative Agent shall give
-prompt notice to the Lenders of such request and determine whether the requested Interest Period is acceptable to all of them and (B)
-not later than 1:00 p.m., New York City time, (1) three Business Days before the requested date of such borrowing, conversion to or
-continuation of Term Benchmark Loans denominated in US Dollars, Euro or Canadian Dollars, or (2) four Business Days prior to the
-requested date of such borrowing or continuation of Term Benchmark Loans denominated in other Alternative Currencies, the
-Administrative Agent shall notify the Company (which notice may be by telephone) whether or not the requested Interest Period has
-been consented to by all the Lenders. Each borrowing of, conversion to or continuation of Term Benchmark Loans shall be in an
-aggregate amount that is an integral multiple of the Borrowing Multiple and not less than the Borrowing Minimum. Each borrowing of
-or conversion to Base Rate Loans or RFR Loans shall be in an aggregate amount that is an integral multiple of the Borrowing Multiple
-and not less than the Borrowing Minimum. Each Loan Notice shall specify (i) whether the applicable Borrower is requesting a
-borrowing of Loans, a conversion of Loans denominated in US Dollars from one Type to another or a continuation of Term Benchmark
-Loans, (ii) the requested date of the borrowing, conversion or continuation, as the case may be (which shall be a Business Day), (iii) the
-principal amount of Loans to be borrowed, converted or continued, (iv) the Type of Loans to be borrowed, continued or to which
-existing Loans are to be converted, (v) if applicable, the duration of the Interest Period with respect thereto, (vi) the currency of the
-Loans to be borrowed and (vii) if applicable, the Designated Borrower. In the case of any conversion or continuation of any Loans,
-such conversion or continuation shall apply to Loans comprising the same existing Borrowing, it being understood that the applicable
-Borrower may elect different conversion or continuation options with respect to different portions of the affected existing Borrowing,
-in which case each such portion shall be allocated ratably among the Lenders holding the Loans comprising such Borrowing, and the
-Loans comprising each such portion shall be considered a separate Borrowing. If the applicable Borrower fails to specify a currency in
-a Loan Notice requesting a borrowing of Loans, then the Loans so requested shall be made in US Dollars. If the applicable Borrower
-fails to specify a Type of Loan in a Loan Notice or if the applicable Borrower fails to give a timely notice requesting a conversion or
-continuation of any Term Benchmark Borrowing, then, subject to Section 3.03, the applicable Loans shall be made as, or continued as,
+Chunk 40:(a Loans shall be made as, or continued as,
 (i) in the case of Loans denominated in US Dollars, Term SOFR Loans, (ii) in the case of Loans denominated in Euro, EURIBOR
 Loans, (iii) in the case of Loans denominated in Yen, TIBOR Loans, (iv) in the case of Loans denominated in Sterling, SONIA Loans,
 (v) in the case of Loans denominated in Canadian Dollars, CDOR Loans (or, if applicable pursuant to Section 3.03, Term CORRA
@@ -8102,10 +7282,7 @@ reborrowed in the other currency.
 -----
 
 
-========================================
-Page 39:
-========================================
-(b)      Following receipt of a Loan Notice, the Administrative Agent shall promptly notify each Lender of the details thereof
+Chunk 41:(b)      Following receipt of a Loan Notice, the Administrative Agent shall promptly notify each Lender of the details thereof
 
 and, in the case of a Loan Notice requesting a borrowing of Loans, of the principal amount (and currency) of its Loans to be made as
 part of the requested borrowing, and if no timely notice of a conversion or continuation of any Term Benchmark Borrowing is provided
@@ -8139,23 +7316,8 @@ outstanding at any given time.
 
 **2.03    Prepayments.**
 
-(a)      Any Borrower may, upon notice to the Administrative Agent from such Borrower, at any time or from time to time
 
-voluntarily prepay any Borrowing in whole or in part without premium or penalty; provided that (i) such notice must be received by the
-Administrative Agent not later than 1:00 p.m., New York City time, (A) three Business Days prior to any date of prepayment of Term
-Benchmark Loans denominated in US Dollars, Euro or Canadian Dollars, (B) four Business Days prior to any date of prepayment of
-Term Benchmark Loans denominated in the other Alternative Currencies, (C) one Business Day prior to any date of prepayment of
-RFR Loans denominated in US Dollars, (D) three Business Days prior to any date of prepayment of RFR Loans denominated in
-Sterling or Canadian Dollars, (E) four Business Days prior to any date of prepayment of RFR Loans denominated in Swiss Francs and
-(F) on the date of prepayment of Base Rate Loans and (ii) any prepayment of any Borrowing shall be in an aggregate amount that is an
-integral multiple of the Borrowing Multiple and not less than the Borrowing Minimum or, if less, the entire principal amount of such
-Borrowing then outstanding. Each such notice shall specify the date and amount of such prepayment and the Borrowing or Borrowings
-to be prepaid and, if a Term Benchmark Borrowing is to be prepaid, the Interest Period applicable thereto. The Administrative Agent
-will promptly notify each Lender of its receipt of each such notice, and of the amount of such Lender’s Applicable Percentage of such
-prepayment. If such notice is given by a Borrower, such Borrower shall make such prepayment, and the payment amount specified in
-such notice shall be due and payable, on the date specified in the applicable notice; provided that such notice of prepayment may state
-that such prepayment is conditioned upon the occurrence of one or more events specified therein, in which case such notice may be
-revoked by such Borrower (by notice to the Administrative Agent on or prior to the date of such prepayment) if any applicable
+Chunk 42:(aoked by such Borrower (by notice to the Administrative Agent on or prior to the date of such prepayment) if any applicable
 condition is not satisfied. Any prepayment of a Term Benchmark Loan or RFR Loan shall be accompanied by all accrued interest on the
 amount prepaid. Subject to Section 2.13, each prepayment of a Borrowing shall be applied to the Loans of the Lenders comprising such
 Borrowing in accordance with their respective Applicable Percentages.
@@ -8166,10 +7328,7 @@ Borrowing in accordance with their respective Applicable Percentages.
 -----
 
 
-========================================
-Page 40:
-========================================
-(b)      If the Administrative Agent notifies the Borrowers at any time that (i) solely as a result of fluctuations in currency
+Chunk 43:(b)      If the Administrative Agent notifies the Borrowers at any time that (i) solely as a result of fluctuations in currency
 
 exchange rates, the Total Outstandings at such time exceed an amount equal to 105% of the Aggregate Commitments then in effect or
 (ii) other than as a result of fluctuations in currency exchange rates, the Total Outstandings at such time exceed the Aggregate
@@ -8213,10 +7372,7 @@ of such reduction or termination.
 -----
 
 
-========================================
-Page 41:
-========================================
-**2.05    Repayment of Loans. Each Borrower shall repay to the Lenders on the Maturity Date the aggregate principal amount**
+Chunk 44:**2.05    Repayment of Loans. Each Borrower shall repay to the Lenders on the Maturity Date the aggregate principal amount**
 
 of Loans made to such Borrower and outstanding on the Maturity Date.
 
@@ -8272,10 +7428,7 @@ the Daily Simple SOFR plus the Applicable Rate;
 -----
 
 
-========================================
-Page 42:
-========================================
-(x)    each Term CORRA Borrowing, if available pursuant to Section 3.03, shall bear interest on the
+Chunk 45:(x)    each Term CORRA Borrowing, if available pursuant to Section 3.03, shall bear interest on the
 
 outstanding principal amount thereof for the Interest Period applicable to such Borrowing at a rate per annum equal
 to the Term CORRA (plus the applicable Benchmark Replacement Adjustment set forth in clause (2) of the definition
@@ -8333,10 +7486,7 @@ Administrative Agent of an interest rate or fee hereunder shall be conclusive an
 -----
 
 
-========================================
-Page 43:
-========================================
-**2.09    Evidence of Debt.** The Loans made by each Lender shall be evidenced by one or more accounts or records
+Chunk 46:**2.09    Evidence of Debt.** The Loans made by each Lender shall be evidenced by one or more accounts or records
 
 maintained by such Lender and by the Administrative Agent in the ordinary course of business. The accounts or records maintained by
 the Administrative Agent and each Lender shall be conclusive absent manifest error of the amount of the Loans made by the Lenders to
@@ -8382,10 +7532,7 @@ be reflected in computing interest or fees, as the case may be.
 -----
 
 
-========================================
-Page 44:
-========================================
-(b)      (i)       Funding by Lenders; Presumption by Administrative Agent. Unless the Administrative Agent shall have
+Chunk 47:(b)      (i)       Funding by Lenders; Presumption by Administrative Agent. Unless the Administrative Agent shall have
 
 received notice from a Lender prior to the proposed date of any borrowing of Loans that such Lender will not make available to the
 Administrative Agent such Lender’s share of the applicable Borrowing, the Administrative Agent may assume that such Lender has
@@ -8438,10 +7585,7 @@ under Section 11.04(c) or 11.05.
 -----
 
 
-========================================
-Page 45:
-========================================
-(e)      Funding Source. Nothing herein shall be deemed to obligate any Lender to obtain the funds for any Loan in any
+Chunk 48:(e)      Funding Source. Nothing herein shall be deemed to obligate any Lender to obtain the funds for any Loan in any
 
 particular place or manner or to constitute a representation by any Lender that it has obtained or will obtain the funds for any Loan in
 any particular place or manner.
@@ -8496,10 +7640,7 @@ Lender to so agree.
 -----
 
 
-========================================
-Page 46:
-========================================
-(c)      Notification by Administrative Agent. The Administrative Agent shall notify the Company of each Lender’s
+Chunk 49:(c)      Notification by Administrative Agent. The Administrative Agent shall notify the Company of each Lender’s
 
 determination under this Section promptly after the Response Date.
 
@@ -8550,10 +7691,7 @@ or consent with respect to this Agreement or any other Loan Document shall be re
 -----
 
 
-========================================
-Page 47:
-========================================
-(ii)      Defaulting Lender Waterfall. Any payment of principal, interest, fees or other amounts received by the
+Chunk 50:(ii)      Defaulting Lender Waterfall. Any payment of principal, interest, fees or other amounts received by the
 
 Administrative Agent for the account of such Defaulting Lender (whether voluntary or mandatory, at maturity, pursuant to
 Article VIII or otherwise) or received by the Administrative Agent from a Defaulting Lender pursuant to Section 11.08 shall
@@ -8600,10 +7738,7 @@ hereunder arising from that Lender’s having been a Defaulting Lender.
 -----
 
 
-========================================
-Page 48:
-========================================
-**2.14    Designated Borrowers.**
+Chunk 51:**2.14    Designated Borrowers.**
 
 (a)      The Company may at any time, upon not less than 10 Business Days’ notice from the Company to the Administrative
 
@@ -8655,10 +7790,7 @@ Administrative Agent will promptly notify the Lenders of any such termination of
 -----
 
 
-========================================
-Page 49:
-========================================
-**ARTICLE III.**
+Chunk 52:**ARTICLE III.**
 
 **TAXES, YIELD PROTECTION AND ILLEGALITY**
 
@@ -8706,51 +7838,7 @@ timely reimburse it for the payment of, any Other Taxes.
 -----
 
 
-========================================
-Page 50:
-========================================
-(c)      Tax Indemnifications. (i) Without duplication of amounts paid in Section 3.01(a), each of the Borrowers shall, and
-
-does hereby, severally indemnify each Recipient, and shall make payment in respect thereof within 10 days after demand therefor, for
-the full amount of any Indemnified Taxes (including Indemnified Taxes imposed or asserted on or attributable to amounts payable
-under this Section) payable or paid by such Recipient or required to be withheld or deducted from a payment to such Recipient, and any
-penalties, interest and reasonable expenses arising therefrom or with respect thereto, whether or not such Indemnified Taxes were
-correctly or legally imposed or asserted by the relevant Governmental Authority; provided that the Borrowers shall not be obligated to
-make payment to any Recipient pursuant to this Section 3.01(c) in respect of penalties, interest and other liabilities attributable to any
-Indemnified Taxes if (x) written demand therefor has not been made by such Recipient within 60 days from the date on which such
-Recipient received written notice of the imposition of Indemnified Taxes by the relevant Governmental Authority, but only to the extent
-such penalties, interest and other similar liabilities are attributable to such failure or delay by the Recipient in making such written
-demand, (y) such penalties, interest and other liabilities have accrued after the relevant Borrower had indemnified or paid an additional
-amount due as of the date of such payment pursuant to this Section 3.01 or (z) such penalties, interest and other liabilities are
-attributable to the gross negligence or willful misconduct of any of the Recipients or their Affiliates. A certificate as to the amount of
-such payment or liability delivered to the Company by a Lender (with a copy to the Administrative Agent), or by the Administrative
-Agent on its own behalf or on behalf of a Lender, shall be conclusive absent manifest error. If the Administrative Agent or any Lender
-receives a written notice of Tax assessment from any Governmental Authority regarding any Tax in respect of which indemnification
-may be required pursuant to this Section 3.01(c), the Administrative Agent or such Lender shall notify the Company within 120 days
-following the receipt of such notice that such notice has been received; provided that the failure of the Administrative Agent or the
-Lender to provide such notice shall not relieve the Borrowers of the obligation to make any indemnification payment under this
-Agreement, unless the delay is more than two years from the date of receipt of such notice, in which case the Company shall have no
-obligation to make any indemnification payment under this Agreement. Each of the Borrowers shall, and does hereby, severally
-indemnify the Administrative Agent, and shall make payment in respect thereof within 10 days after demand therefor, for any amount
-which a Lender for any reason fails to pay indefeasibly to the Administrative Agent as required pursuant to Section 3.01(c)(ii) below.
-
-(ii) Each Lender shall, and does hereby, severally indemnify, and shall make payment in respect thereof within 10
-
-days after demand therefor, (w) the Administrative Agent against any Indemnified Taxes attributable to such Lender (but only
-to the extent that any Borrower has not already indemnified the Administrative Agent for such Indemnified Taxes and without
-limiting the obligation of the Borrowers to do so), (x) the Administrative Agent and each Borrower, as applicable, against any
-Taxes attributable to such Lender’s failure to comply with the provisions of Section 11.06(d) relating to the maintenance of a
-Participant Register, (y) the Administrative Agent and each Borrower, as applicable, against any Taxes incurred by or asserted
-against the Administrative Agent or such Borrower by any Governmental Authority as a result of the failure by such Lender to
-deliver, or as a result of the inaccuracy, inadequacy or deficiency of, any documentation required to be delivered pursuant to
-subsection (e) and (z) the Administrative Agent and each Borrower, as applicable, against any Excluded Taxes attributable to
-such Lender that are payable or paid by the Administrative Agent or such Borrower in connection with any Loan Document,
-and any related losses, claims, liabilities, penalties, interest and reasonable expenses (including the reasonable fees, charges
-and disbursements of any counsel for the Borrowers or the Administrative Agent) arising therefrom or with respect thereto,
-whether or not such Taxes were correctly or legally imposed or asserted by the relevant Governmental Authority. A certificate
-as to the amount of such payment or liability delivered to any Lender by the Administrative Agent shall be conclusive absent
-manifest error. Each Lender hereby authorizes the Administrative Agent to set off and apply any and all amounts at any time
-owing to such Lender under this Agreement or any other Loan Document against any amount due to the Administrative Agent
+Chunk 53:(c due to the Administrative Agent
 under this clause (ii).
 
 47
@@ -8759,10 +7847,7 @@ under this clause (ii).
 -----
 
 
-========================================
-Page 51:
-========================================
-(d)      Evidence of Payments. As soon as practicable after any payment of Taxes by any Borrower or by the Administrative
+Chunk 54:(d)      Evidence of Payments. As soon as practicable after any payment of Taxes by any Borrower or by the Administrative
 
 Agent to a Governmental Authority as provided in this Section, the Company shall deliver to the Administrative Agent or the
 Administrative Agent shall deliver to the Company, as the case may be, the original or a certified copy of a receipt issued by such
@@ -8804,10 +7889,7 @@ Taxes;
 -----
 
 
-========================================
-Page 52:
-========================================
-(B)    any Foreign Lender shall, to the extent it is legally entitled to do so, deliver to the Company and the
+Chunk 55:(B)    any Foreign Lender shall, to the extent it is legally entitled to do so, deliver to the Company and the
 
 Administrative Agent (in such number of copies as shall be requested by the recipient) on or prior to the date on
 which such Foreign Lender becomes a Lender under this Agreement (and from time to time thereafter upon the
@@ -8868,10 +7950,7 @@ Agreement.
 -----
 
 
-========================================
-Page 53:
-========================================
-(iii)      Each Lender agrees that if any form or certification it previously delivered pursuant to this Section expires
+Chunk 56:(iii)      Each Lender agrees that if any form or certification it previously delivered pursuant to this Section expires
 
 or becomes obsolete or inaccurate in any respect, it shall update such form or certification or promptly notify the Company
 and the Administrative Agent in writing of its legal inability to do so.
@@ -8914,10 +7993,7 @@ satisfaction or discharge of all other Obligations.
 -----
 
 
-========================================
-Page 54:
-========================================
-**3.02    Illegality.** If any Lender reasonably determines that any Law has made it unlawful, or that any Governmental
+Chunk 57:**3.02    Illegality.** If any Lender reasonably determines that any Law has made it unlawful, or that any Governmental
 
 Authority has asserted that it is unlawful, for such Lender or its applicable Lending Office to make, maintain or fund Loans whose
 interest is determined by reference to a Relevant Rate, or to determine or charge interest rates based upon a Relevant Rate, or any
@@ -8940,30 +8016,8 @@ Upon any such prepayment or conversion, the Borrowers shall also pay accrued int
 
 **3.03    Alternate Rate of Interest. (a) Subject to the provisions of Section 3.03(b), if:**
 
-(i)     the Administrative Agent reasonably determines (which determination shall be conclusive absent
 
-manifest error) (A) prior to the commencement of any Interest Period for a Term Benchmark Borrowing, that
-adequate and reasonable means do not exist for determining the Term SOFR, the EURIBO Rate, the TIBO Rate, the
-CDO Rate or the AUD Bank Bill Rate (including because the Relevant Screen Rate is not available or published on a
-current basis) for the applicable Agreed Currency and such Interest Period or (B) at any time, that adequate and
-reasonable means do not exist for determining the RFR for the applicable Agreed Currency; or
-
-(ii)    the Administrative Agent is advised by the Required Lenders that such Lenders have reasonably
-
-determined (A) prior to the commencement of any Interest Period for a Term Benchmark Borrowing, that the Term
-SOFR, the EURIBO Rate, the TIBO Rate, the CDO Rate or the AUD Bank Bill Rate for the applicable Agreed
-Currency and such Interest Period will not adequately and fairly reflect the cost to such Lenders of making or
-maintaining their Loans included in such Borrowing or (B) at any time, that the Daily Simple SOFR, the Daily
-Simple SONIA or the Daily Simple SARON, as applicable, will not adequately and fairly reflect the cost to such
-Lenders of making or maintaining their RFR Loans denominated in the applicable Agreed Currency;
-
-then the Administrative Agent will promptly so notify the Company and each Lender. Upon receipt of such notice and until the
-Administrative Agent (upon the instruction of the Required Lenders) revokes such notice with respect to the relevant Benchmark, (A)
-any Loan Notice that requests the making of, conversion to, or continuation of an affected Term Benchmark Borrowing or an affected
-RFR Borrowing shall be ineffective, (B) in the case of Loans denominated in US Dollars, any request for the making of, conversion to
-or continuation of an affected Term Benchmark Borrowing shall instead be deemed to be a request for the making of, or conversion to,
-as applicable, (x) an RFR Borrowing denominated in US Dollars so long as the Daily Simple SOFR is not also the subject of clause (i)
-or (ii) above or (y) a Base Rate Borrowing if the Daily Simple SOFR is also the subject of clause (i) or (ii) above, and (C) if any
+Chunk 58:(i SOFR is also the subject of clause (i) or (ii) above, and (C) if any
 affected Term Benchmark Loan or RFR Loan in any Agreed Currency is outstanding on the day of the Company’s receipt of such
 notice from the Administrative Agent with respect to a Relevant Rate applicable to such Term Benchmark Loan or RFR Loan, then (1)
 in the case of Loans denominated in US Dollars, such affected Term Benchmark Loans shall automatically, on the last day of the then
@@ -8979,10 +8033,7 @@ Business Day after the date the Company receives such notice from the Administra
 -----
 
 
-========================================
-Page 55:
-========================================
-(b)      (i) Notwithstanding anything to the contrary herein or in any other Loan Document, if a Benchmark
+Chunk 59:(b)      (i) Notwithstanding anything to the contrary herein or in any other Loan Document, if a Benchmark
 
 Transition Event and its related Benchmark Replacement Date have occurred prior to the Reference Time in respect of any setting of
 the then-current Benchmark, then (x) if a Benchmark Replacement is determined in accordance with clause (1) or (2) of the definition
@@ -9022,10 +8073,7 @@ each case, as expressly required pursuant to this Section 3.03(b).
 -----
 
 
-========================================
-Page 56:
-========================================
-(iv)     Notwithstanding anything to the contrary herein or in any other Loan Document, at any time (including in
+Chunk 60:(iv)     Notwithstanding anything to the contrary herein or in any other Loan Document, at any time (including in
 
 connection with the implementation of a Benchmark Replacement), (A) if the then-current Benchmark is a term rate
 (including the Term SOFR, the EURIBO Rate, the TIBO Rate, the CDO Rate or the AUD Bank Bill Rate) and either (x) any
@@ -9049,29 +8097,8 @@ to, or further action or consent of any other party to, this Agreement or any ot
 denominated in Canadian Dollars outstanding on the Term CORRA Transition Date bearing interest based on the then-current
 Benchmark shall convert, at the start of the next interest payment period, into a Loan bearing interest at the Benchmark
 Replacement described in clause (2)(a) of the definition of such term for the respective Available Tenor as selected by the
-applicable Borrower as is available for the then-current Benchmark; provided that this clause (v) shall not be effective unless
-the Administrative Agent has delivered to the Lenders and the Company a Term CORRA Notice, and so long as the
-Administrative Agent has not received, by 5:00 p.m., New York City time, on the fifth Business Day after the date of the Term
-CORRA Notice, written notice of objection to such conversion to Term CORRA from Lenders comprising the Required
-Lenders or from the Company.
-
-(vi)     Upon the Company’s receipt of notice of the commencement of a Benchmark Unavailability Period, the
-
-applicable Borrower may revoke any request for the borrowing of, conversion to or continuation of any Term Benchmark
-Loans or RFR Loans, as applicable, to be made, converted or continued during any Benchmark Unavailability Period and,
-failing that, either (A) in the case of Loans denominated in US Dollars, such Borrower will be deemed to have converted any
-request for the making of, conversion to or continuation of any Term Benchmark Borrowing into a request for the making of,
-or conversion to, as applicable, (x) an RFR Borrowing denominated in US Dollars so long as the Daily Simple SOFR is not
-the subject of a Benchmark Transition Event or (y) a Base Rate Borrowing if the Daily Simple SOFR is the subject of a
-Benchmark Transition Event or (B) in the case of Loans denominated in any Alternative Currency, such request shall be
-ineffective. Furthermore, if any Loan in any Agreed Currency is outstanding on the date of the Company’s receipt of notice of
-the commencement of a Benchmark Unavailability Period with respect to the Relevant Rate applicable to such Loan, then
-until such time as a Benchmark Replacement for such Agreed Currency is implemented pursuant to this Section 3.03(b), (1) in
-the case of Loans denominated in US Dollars, such Loans shall on the last day of the then current Interest Period applicable
-thereto, unless prepaid, convert to, and shall constitute, (x) an RFR Borrowing denominated in US Dollars so long as the Daily
-Simple SOFR is not the subject of a Benchmark Transition Event or (y) a Base Rate Borrowing if the Daily Simple SOFR is
-the subject of a Benchmark Transition Event and (2) in the case of Loans denominated in any Alternative Currency, such
-Loans shall be prepaid by the applicable Borrower on the first Business Day after the date the Company receives such notice.
+applicable Borrower as is available for the then-current
+Chunk 61: Benchmark by the applicable Borrower on the first Business Day after the date the Company receives such notice.
 
 53
 
@@ -9079,10 +8106,7 @@ Loans shall be prepaid by the applicable Borrower on the first Business Day afte
 -----
 
 
-========================================
-Page 57:
-========================================
-**3.04    Increased Costs.**
+Chunk 62:**3.04    Increased Costs.**
 
 (a)      Increased Costs Generally. If any Change in Law shall:
 
@@ -9136,10 +8160,7 @@ the period of retroactive effect thereof).
 -----
 
 
-========================================
-Page 58:
-========================================
-**3.05    Compensation for Losses. Upon demand of any Lender (with a copy to the Administrative Agent) from time to time,**
+Chunk 63:**3.05    Compensation for Losses. Upon demand of any Lender (with a copy to the Administrative Agent) from time to time,**
 
 the Company shall promptly compensate (or cause the applicable Designated Borrower to promptly compensate) such Lender for and
 hold such Lender harmless from any loss (other than lost profit), cost or expense incurred by it (other than by reason of such Lender
@@ -9195,10 +8216,7 @@ all reasonable costs and expenses incurred by any Lender in connection with any 
 -----
 
 
-========================================
-Page 59:
-========================================
-(b)      Replacement of Lenders. If any Lender requests compensation under Section 3.04, or if any Borrower is required to
+Chunk 64:(b)      Replacement of Lenders. If any Lender requests compensation under Section 3.04, or if any Borrower is required to
 
 pay any Indemnified Taxes or additional amounts to any Lender or any Governmental Authority for the account of any Lender pursuant
 to Section 3.01 and, in each case, such Lender has declined or is unable to designate a different Lending Office in accordance with
@@ -9250,10 +8268,7 @@ materiality, in which case they shall be certified as true and correct in all re
 -----
 
 
-========================================
-Page 60:
-========================================
-(b)      Any fees required to be paid by the Company to the Arranger, the Administrative Agent and the Lenders on or before
+Chunk 65:(b)      Any fees required to be paid by the Company to the Arranger, the Administrative Agent and the Lenders on or before
 
 the Closing Date shall have been paid.
 
@@ -9309,10 +8324,7 @@ statements so subsequently delivered).
 -----
 
 
-========================================
-Page 61:
-========================================
-(d)      If the applicable Borrower is a Designated Borrower, then the conditions of Section 2.14 to the designation of such
+Chunk 66:(d)      If the applicable Borrower is a Designated Borrower, then the conditions of Section 2.14 to the designation of such
 
 Borrower as a Designated Borrower shall have been met.
 
@@ -9371,10 +8383,7 @@ noted therein.
 -----
 
 
-========================================
-Page 62:
-========================================
-(b)      Since the date of the Audited Financial Statements, there has been no event or circumstance, either individually or in
+Chunk 67:(b)      Since the date of the Audited Financial Statements, there has been no event or circumstance, either individually or in
 
 the aggregate, that has had or would reasonably be expected to have a Material Adverse Effect.
 
@@ -9428,10 +8437,7 @@ designed to promote and achieve compliance with such laws.
 -----
 
 
-========================================
-Page 63:
-========================================
-**5.11    Sanctions. Neither the Borrowers nor any of their respective Subsidiaries nor, to the knowledge of the Borrowers, any**
+Chunk 68:**5.11    Sanctions. Neither the Borrowers nor any of their respective Subsidiaries nor, to the knowledge of the Borrowers, any**
 
 director, officer or (other than with respect to clause (c) below) employee thereof, is an individual or entity that is (a) currently the
 subject or target of any Sanctions, (b) included on OFAC’s List of Specially Designated Nationals, His Majesty’s Treasury’s
@@ -9487,10 +8493,7 @@ Exchange Act of 1934, and not otherwise required to be delivered to the Administ
 -----
 
 
-========================================
-Page 64:
-========================================
-(b)     promptly following any reasonable request therefor, such additional information regarding the financial condition of
+Chunk 69:(b)     promptly following any reasonable request therefor, such additional information regarding the financial condition of
 
 the Company or any Borrower’s compliance with the terms of the Loan Documents, as the Administrative Agent or any Lender may
 from time to time reasonably request; provided that the Administrative Agent and the Lenders shall only be permitted to make a request
@@ -9547,10 +8550,7 @@ financial statements of the Company materially in accordance with GAAP.
 -----
 
 
-========================================
-Page 65:
-========================================
-**6.08    Use of Proceeds. Use the proceeds of each Loan solely (a) to refinance borrowings, if any, under the Existing Credit**
+Chunk 70:**6.08    Use of Proceeds. Use the proceeds of each Loan solely (a) to refinance borrowings, if any, under the Existing Credit**
 
 Agreements and (b) for working capital, capital expenditures, acquisitions (including any related expenses, earn-outs and deferred
 payments incurred in connection with any such acquisition), payment of fees and expenses associated with this Agreement and other
@@ -9612,10 +8612,7 @@ course of business to secure liability for premiums to insurance carriers;
 -----
 
 
-========================================
-Page 66:
-========================================
-(g)     easements, rights-of-way, restrictions (including zoning restrictions), licenses, encroachments, protrusions and other
+Chunk 71:(g)     easements, rights-of-way, restrictions (including zoning restrictions), licenses, encroachments, protrusions and other
 
 similar charges or encumbrances, and minor title deficiencies, affecting real property which, in the aggregate, are not substantial in
 amount, and which do not in any case materially detract from the value of the property subject thereto or materially interfere with the
@@ -9669,10 +8666,7 @@ agreements and similar transactions, in each case entered into or otherwise cons
 -----
 
 
-========================================
-Page 67:
-========================================
-(o)      Liens in favor of customs and revenue authorities arising as a matter of law to secure payment of customs duties in
+Chunk 72:(o)      Liens in favor of customs and revenue authorities arising as a matter of law to secure payment of customs duties in
 
 connection with the importation of goods;
 
@@ -9726,10 +8720,7 @@ the Federal Reserve Board) in excess of 25% in value of the assets of the Compan
 -----
 
 
-========================================
-Page 68:
-========================================
-**7.02    Fundamental Changes. No Borrower shall, directly or indirectly:**
+Chunk 73:**7.02    Fundamental Changes. No Borrower shall, directly or indirectly:**
 
 (a)      Merge or consolidate with or into another Person or dissolve or liquidate except that, so long as no Default exists or
 
@@ -9791,10 +8782,7 @@ incorrect in any respect) when made or deemed made; or
 -----
 
 
-========================================
-Page 69:
-========================================
-(e)      Cross-Acceleration. (i) The Company or any Subsidiary fails to pay any Material Indebtedness within five days of the
+Chunk 74:(e)      Cross-Acceleration. (i) The Company or any Subsidiary fails to pay any Material Indebtedness within five days of the
 
 date such payment is due (or within any longer grace period, if any, applicable to such payment pursuant to the terms of such Material
 Indebtedness); or (ii) any Material Indebtedness, with the giving of notice if required, is demanded or becomes due or is required to be
@@ -9845,10 +8833,7 @@ demand, protest or other notice of any kind, all of which are hereby expressly w
 -----
 
 
-========================================
-Page 70:
-========================================
-(c)      exercise on behalf of itself and the Lenders all rights and remedies available to it and the Lenders under the Loan
+Chunk 75:(c)      exercise on behalf of itself and the Lenders all rights and remedies available to it and the Lenders under the Loan
 
 Documents;
 
@@ -9905,10 +8890,7 @@ contracting parties.
 -----
 
 
-========================================
-Page 71:
-========================================
-**9.02    Rights as a Lender. The Person serving as the Administrative Agent hereunder shall have the same rights and powers**
+Chunk 76:**9.02    Rights as a Lender. The Person serving as the Administrative Agent hereunder shall have the same rights and powers**
 
 in its capacity as a Lender as any other Lender and may exercise the same as though it were not the Administrative Agent, and the term
 “Lender” or “Lenders” shall, unless otherwise expressly indicated or unless the context otherwise requires, include the Person serving
@@ -9956,10 +8938,7 @@ the Company or a Lender.
 -----
 
 
-========================================
-Page 72:
-========================================
-The Administrative Agent shall not be responsible for or have any duty to ascertain or inquire into (i) any statement, warranty
+Chunk 77:The Administrative Agent shall not be responsible for or have any duty to ascertain or inquire into (i) any statement, warranty
 
 or representation made in or in connection with this Agreement or any other Loan Document, (ii) the contents of any certificate, report
 or other document delivered hereunder or thereunder or in connection herewith or therewith, (iii) the performance or observance of any
@@ -10014,10 +8993,7 @@ with such notice on the Resignation Effective Date.
 -----
 
 
-========================================
-Page 73:
-========================================
-(b)      If the Person serving as Administrative Agent is a Defaulting Lender pursuant to clause (d) of the definition thereof,
+Chunk 78:(b)      If the Person serving as Administrative Agent is a Defaulting Lender pursuant to clause (d) of the definition thereof,
 
 the Required Lenders may, to the extent permitted by applicable Law, by notice in writing to the Company and such Person remove
 such Person as Administrative Agent and, with the written consent of the Company, appoint a successor, which successor shall be a
@@ -10045,23 +9021,8 @@ taken or omitted to be taken by any of them while the retiring or removed Admini
 
 **9.07    Acknowledgements of Lenders. (a) Each Lender represents and warrants that (i) the Loan Documents set forth the**
 
-terms of a commercial lending facility, (ii) in participating as a Lender, it is engaged in making, acquiring or holding commercial loans
-and in providing other facilities set forth herein as may be applicable to such Lender, in each case, in the ordinary course of business,
-and not for the purpose of investing in the general performance or operations of the Company or any Subsidiary, or for the purpose of
-purchasing, acquiring or holding any other type of financial instrument such as a security (and each Lender agrees not to assert a claim
-in contravention of the foregoing, such as a claim under the federal or state securities law), (iii) it has, independently and without
-reliance upon the Administrative Agent, the Arranger or any other Lender or any of their respective Related Parties, and based on such
-documents and information as it has deemed appropriate, made its own credit analysis and decision to enter into this Agreement as a
-Lender, and to make, acquire or hold Loans hereunder and (iv) it is sophisticated with respect to decisions to make, acquire and/or hold
-commercial loans and to provide other facilities set forth herein, as may be applicable to such Lender, and either it, or the Person
-exercising discretion in making its decision to make, acquire and/or hold such commercial loans or to provide such other facilities, is
-experienced in making, acquiring or holding such commercial loans or providing such other facilities. Each Lender also acknowledges
-that it will, independently and without reliance upon the Administrative Agent, the Arranger or any other Lender or any of their
-respective Related Parties, and based on such documents and information as it shall from time to time deem appropriate, continue to
-make its own decisions in taking or not taking action under or based upon this Agreement, any other Loan Document or any related
-agreement or any document furnished hereunder or thereunder. Each Lender, by delivering its signature page to this Agreement on the
-Closing Date, or delivering its signature page to an Assignment and Assumption or any other Loan Document pursuant to which it shall
-become a Lender hereunder, shall be deemed to have acknowledged receipt of, and consented to and approved, each Loan Document
+
+Chunk 79:terms Loan Document
 and each other document required to be delivered to, or be approved by or satisfactory to, the Administrative Agent or the Lenders on
 the Closing Date.
 
@@ -10071,10 +9032,7 @@ the Closing Date.
 -----
 
 
-========================================
-Page 74:
-========================================
-(b) (i) Each Lender hereby agrees that (x) if the Administrative Agent notifies such Lender that the Administrative
+Chunk 80:(b) (i) Each Lender hereby agrees that (x) if the Administrative Agent notifies such Lender that the Administrative
 
 Agent has determined in its sole discretion that any funds received by such Lender from the Administrative Agent or any of its
 Affiliates (whether as a payment, prepayment or repayment of principal, interest, fees or otherwise; individually and collectively, a
@@ -10115,10 +9073,7 @@ any Borrower, as applicable.
 -----
 
 
-========================================
-Page 75:
-========================================
-(iv) Each Lender hereby authorizes the Administrative Agent to set off, net and apply any and all amounts at any time
+Chunk 81:(iv) Each Lender hereby authorizes the Administrative Agent to set off, net and apply any and all amounts at any time
 
 owing to such Lender under this Agreement, or otherwise payable or distributable by the Administrative Agent to such Lender
 under this Agreement with respect to any payment of principal, interest, fees or other amounts, against any amount that the
@@ -10170,10 +9125,7 @@ any Lender to authorize the Administrative Agent to vote in respect of the claim
 -----
 
 
-========================================
-Page 76:
-========================================
-**ARTICLE X.**
+Chunk 82:**ARTICLE X.**
 
 **COMPANY GUARANTY**
 
@@ -10220,8 +9172,8 @@ by, and construed in accordance with, the Laws of the State of New York.
 
 **10.04   Obligations Independent. The obligations of the Company hereunder are those of primary obligor, and not merely as**
 
-surety, and are independent of the Guarantee Obligations and the obligations of any other guarantor, and a separate action may be
-brought against the Company to enforce this Guaranty whether or not any Designated Borrower or any other Person is joined as a party.
+
+Chunk 83:sure any Designated Borrower or any other Person is joined as a party.
 
 73
 
@@ -10229,10 +9181,7 @@ brought against the Company to enforce this Guaranty whether or not any Designat
 -----
 
 
-========================================
-Page 77:
-========================================
-**10.05   Subrogation. The Company shall not exercise any right of subrogation, contribution, indemnity, reimbursement or**
+Chunk 84:**10.05   Subrogation. The Company shall not exercise any right of subrogation, contribution, indemnity, reimbursement or**
 
 similar rights with respect to any payments it makes under this Guaranty until all of the Obligations and any other amounts payable
 under this Guaranty have been paid and performed in full (other than unasserted indemnification, tax gross up, expense reimbursement
@@ -10274,10 +9223,7 @@ failure to provide the same).
 -----
 
 
-========================================
-Page 78:
-========================================
-**ARTICLE XI.**
+Chunk 85:**ARTICLE XI.**
 
 **MISCELLANEOUS**
 
@@ -10322,31 +9268,14 @@ provided further that (i) no amendment, waiver or consent shall, unless in writi
 the Lenders required above, affect the rights or duties of the Administrative Agent under this Agreement or any other Loan Document;
 (ii) the Fee Letter may be amended, or rights or privileges thereunder waived, in a writing executed only by the parties thereto (and no
 consent of any other Person shall be required therefor); (iii) this Agreement and the other Loan Documents may be amended with only
-the written consent of the Administrative Agent and the Borrowers solely to effect technical or jurisdiction-specific amendments
-relating to (A) the availability of Loans in an additional currency approved by the Administrative Agent and the Lenders in accordance
-with Section 1.05 or (B) the designation of a Foreign Subsidiary as a Designated Borrower approved by the Administrative Agent and
-the Lenders in accordance with Section 2.14, (iv) this Agreement may be amended in the manner provided in Sections 2.12 and 3.03(b)
-and (v) any provision of this Agreement or any other Loan Document may be amended by an agreement in writing entered into by the
-Borrowers (or, in the case of any Loan Document other than this Agreement, the applicable Borrowers) and the Administrative Agent to
-cure any ambiguity, omission, defect or inconsistency so long as, in each case, the Lenders shall have received at least five Business
-Days’ prior written notice and copy thereof and the Administrative Agent shall not have received, within five Business Days of the date
-of such notice to the Lenders, a written notice from the Required Lenders stating that the Required Lenders object to such amendment.
-Notwithstanding anything to the contrary herein, no Defaulting Lender shall have any right to approve or disapprove any amendment,
-waiver or consent hereunder or under any other Loan Document (and any amendment, waiver or consent which by its terms requires
-the consent of all Lenders or each affected Lender may be effected with the consent of the applicable Lenders other than Defaulting
-Lenders), except with respect to any amendment, waiver or consent referred to in clause (a), (b) or (c) above and then only in the event
-such Defaulting Lender shall be directly affected by such amendment, waiver or consent.
-
-75
+the written consent of the Administrative Agent and the Borrowers solely to effect technical or jurisdiction-specific
+Chunk 86: amendments
 
 
 -----
 
 
-========================================
-Page 79:
-========================================
-**11.02   Notices; Effectiveness; Electronic Communication.**
+Chunk 87:**11.02   Notices; Effectiveness; Electronic Communication.**
 
 (a)      Notices Generally. Except in the case of notices and other communications expressly permitted to be given by
 
@@ -10397,10 +9326,7 @@ notice, email or communication shall be deemed to have been sent at the opening 
 -----
 
 
-========================================
-Page 80:
-========================================
-(c)      The Platform. THE PLATFORM IS PROVIDED “AS IS” AND “AS AVAILABLE.” THE AGENT PARTIES (AS
+Chunk 88:(c)      The Platform. THE PLATFORM IS PROVIDED “AS IS” AND “AS AVAILABLE.” THE AGENT PARTIES (AS
 
 DEFINED BELOW) DO NOT WARRANT THE ACCURACY OR COMPLETENESS OF THE BORROWER MATERIALS OR THE
 ADEQUACY OF THE PLATFORM, AND EXPRESSLY DISCLAIM LIABILITY FOR ERRORS IN OR OMISSIONS FROM THE
@@ -10428,28 +9354,8 @@ may be recorded by the Administrative Agent, and each of the parties hereto here
 
 **11.03   No Waiver; Cumulative Remedies; Enforcement. No failure by any Lender or the Administrative Agent to**
 
-exercise, and no delay by any such Person in exercising, any right, remedy, power or privilege hereunder or under any other Loan
-Document shall operate as a waiver thereof; nor shall any single or partial exercise of any right, remedy, power or privilege hereunder
-preclude any other or further exercise thereof or the exercise of any other right, remedy, power or privilege. The rights, remedies,
-powers and privileges herein provided, and provided under each other Loan Document, are cumulative and not exclusive of any rights,
-remedies, powers and privileges provided by law. Without limiting the generality of the foregoing, the execution and delivery of this
-Agreement or any other Loan Document or the making of a Loan shall not be construed as a waiver of any Default, regardless of
-whether the Administrative Agent, any Lender or any of their respective Related Parties may have had notice or knowledge of such
-Default at the time.
 
-Notwithstanding anything to the contrary contained herein or in any other Loan Document, the authority to enforce rights and
-
-remedies hereunder and under the other Loan Documents against the Borrowers or any of them shall be vested exclusively in, and all
-actions and proceedings at law in connection with such enforcement shall be instituted and maintained exclusively by, the
-Administrative Agent in accordance with Section 8.02 for the benefit of all the Lenders; provided that the foregoing shall not prohibit
-(a) the Administrative Agent from exercising on its own behalf the rights and remedies that inure to its benefit (solely in its capacity as
-Administrative Agent) hereunder and under the other Loan Documents, (b) any Lender from exercising setoff rights in accordance with
-Section 11.08 (subject to the terms of Section 2.11), or (c) any Lender from filing proofs of claim or appearing and filing pleadings on
-its own behalf during the pendency of a proceeding relating to any Borrower under any Debtor Relief Law; and provided further that if
-at any time there is no Person acting as Administrative Agent hereunder and under the other Loan Documents, then (i) the Required
-Lenders shall have the rights otherwise ascribed to the Administrative Agent pursuant to Section 8.02 and (ii) in addition to the matters
-set forth in clauses (b) and (c) of the preceding proviso and subject to Section 2.11, any Lender may, with the consent of the Required
-Lenders, enforce any rights and remedies available to it and as authorized by the Required Lenders.
+Chunk 89:exercise Required Lenders.
 
 77
 
@@ -10457,10 +9363,7 @@ Lenders, enforce any rights and remedies available to it and as authorized by th
 -----
 
 
-========================================
-Page 81:
-========================================
-**11.04   Expenses; Indemnity; Limitation of Liability.**
+Chunk 90:**11.04   Expenses; Indemnity; Limitation of Liability.**
 
 (a)      Costs and Expenses. The Company shall pay (i) all reasonable and documented out-of-pocket expenses incurred by
 
@@ -10494,15 +9397,8 @@ proposed use of the proceeds therefrom or (iii) any actual or prospective claim,
 the foregoing, whether based on contract, tort or any other theory, whether brought by a third party or by any Borrower, and regardless
 of whether any Indemnitee is a party thereto, IN ALL CASES, WHETHER OR NOT CAUSED BY OR ARISING, IN WHOLE
 **OR IN PART, OUT OF THE COMPARATIVE, CONTRIBUTORY OR SOLE NEGLIGENCE OF THE INDEMNITEE;**
-provided that such indemnity shall not, as to any Indemnitee, be available to the extent that such Liabilities or related expenses (x) are
-determined by a court of competent jurisdiction by final and nonappealable judgment to have resulted from the gross negligence, bad
-faith or willful misconduct of such Indemnitee or any of its Related Indemnitees, (y) result from a claim brought by the Company or
-any other Borrower against an Indemnitee for material breach by such Indemnitee or any of its Related Indemnitees of its obligations
-hereunder or under any other Loan Document, if the Company or such Borrower has obtained a final and nonappealable judgment in its
-favor on such claim as determined by a court of competent jurisdiction, or (z) relate to disputes among Indemnitees (other than claims
-against any Indemnitee in its capacity as the Administrative Agent or the Arranger or in fulfilling its role as such) that do not arise out
-of or in connection with any act or omission of a Borrower or any of its Affiliates. Without limiting the provisions of Section 3.01(c),
-this Section 11.04(b) shall not apply with respect to Taxes, other than any Taxes that represent Liabilities or related expenses arising
+
+Chunk 91:providedthis Section 11.04(b) shall not apply with respect to Taxes, other than any Taxes that represent Liabilities or related expenses arising
 from any non-Tax claim. For purposes of this Section 11.04(b), “Related Indemnitee” means, with respect to any Indemnitee, (i) any
 Subsidiary or Affiliate thereof, (ii) any director, officer or employee of such Indemnitee or any Subsidiary or Affiliate thereof or (iii)
 solely to the extent acting on behalf of or at the express instructions of any of the foregoing, any agent or advisor of the foregoing.
@@ -10513,10 +9409,7 @@ solely to the extent acting on behalf of or at the express instructions of any o
 -----
 
 
-========================================
-Page 82:
-========================================
-(c)      Reimbursement by Lenders. To the extent that the Company for any reason fails to indefeasibly pay any amount
+Chunk 92:(c)      Reimbursement by Lenders. To the extent that the Company for any reason fails to indefeasibly pay any amount
 
 required under subsection (a) or (b) of this Section to be paid by it to the Administrative Agent (or any sub-agent thereof) or any
 Related Party of any of the foregoing, each Lender severally agrees to pay to the Administrative Agent (or any such sub-agent) or such
@@ -10557,10 +9450,7 @@ any Lender, the termination of the Aggregate Commitments and the repayment, sati
 -----
 
 
-========================================
-Page 83:
-========================================
-**11.05   Payments Set Aside. To the extent that any payment by or on behalf of any Borrower is made to the Administrative**
+Chunk 93:**11.05   Payments Set Aside. To the extent that any payment by or on behalf of any Borrower is made to the Administrative**
 
 Agent or any Lender, or the Administrative Agent or any Lender exercises its right of setoff, and such payment or the proceeds of such
 setoff or any part thereof is subsequently invalidated, declared to be fraudulent or preferential, set aside or required (including pursuant
@@ -10607,10 +9497,7 @@ Approved Fund, no minimum amount need be assigned; and
 -----
 
 
-========================================
-Page 84:
-========================================
-(B)    in any case not described in subsection (b)(i)(A) of this Section, the aggregate amount of the
+Chunk 94:(B)    in any case not described in subsection (b)(i)(A) of this Section, the aggregate amount of the
 
 Commitment (which for this purpose includes Loans outstanding thereunder) or, if the Commitment is not then in
 effect, the aggregate principal amount of the Loans of the assigning Lender subject to each such assignment,
@@ -10662,10 +9549,7 @@ of, a natural person).
 -----
 
 
-========================================
-Page 85:
-========================================
-(vi)     Certain Additional Payments. In connection with any assignment of rights and obligations of any Defaulting
+Chunk 95:(vi)     Certain Additional Payments. In connection with any assignment of rights and obligations of any Defaulting
 
 Lender hereunder, no such assignment shall be effective unless and until, in addition to the other conditions thereto set forth
 herein, the parties to the assignment shall make such additional payments to the Administrative Agent in an aggregate amount
@@ -10693,24 +9577,8 @@ request, each Borrower (at its expense) shall execute and deliver a Note to the 
 of rights or obligations under this Agreement that does not comply with this subsection shall be treated for purposes of this Agreement
 as a sale by such Lender of a participation in such rights and obligations in accordance with subsection (d) of this Section.
 
-(c)      Register. The Administrative Agent, acting solely for this purpose as a non-fiduciary agent of the Borrowers, shall
-
-maintain at one of its offices in the City of New York a copy of each Assignment and Assumption delivered to it (or the equivalent
-thereof in electronic form) and a register for the recordation of the names and addresses of the Lenders, and the Commitments of, and
-principal amounts (and stated interest) of the Loans owing to, each Lender pursuant to the terms hereof from time to time (the
-“Register”). The entries in the Register shall be conclusive absent manifest error, and the Borrowers, the Administrative Agent and the
-Lenders shall treat each Person whose name is recorded in the Register pursuant to the terms hereof as a Lender hereunder for all
-purposes of this Agreement. The Register shall be available for inspection by the Borrowers and any Lender, at any reasonable time and
-from time to time upon reasonable prior notice.
-
-(d)      Participations. Any Lender may at any time, without the consent of, or notice to, any Borrower or the Administrative
-
-Agent, sell participations to any Person (other than a natural person (or a holding company, investment vehicle or trust for, or owned
-and operated for the primary benefit of, a natural person), a Defaulting Lender or the Company, any Borrower or any such Person’s
-Subsidiaries or other Affiliates) (each, a “Participant”) in all or a portion of such Lender’s rights and/or obligations under this
-Agreement (including all or a portion of its Commitment and/or the Loans owing to it); provided that (i) such Lender’s obligations
-under this Agreement shall remain unchanged, (ii) such Lender shall remain solely responsible to the other parties hereto for the
-performance of such obligations and (iii) the Borrowers, the Administrative Agent and the Lenders shall continue to deal solely and
+(c)      Register. The Administrative Agent, acting solely for this purpose as a non-f
+Chunk 96:id and the Lenders shall continue to deal solely and
 directly with such Lender in connection with such Lender’s rights and obligations under this Agreement. For the avoidance of doubt,
 each Lender shall be responsible for the indemnity under Section 11.04(c) without regard to the existence of any participation.
 
@@ -10720,10 +9588,7 @@ each Lender shall be responsible for the indemnity under Section 11.04(c) withou
 -----
 
 
-========================================
-Page 86:
-========================================
-Any agreement or instrument pursuant to which a Lender sells such a participation shall provide that such Lender shall retain
+Chunk 97:Any agreement or instrument pursuant to which a Lender sells such a participation shall provide that such Lender shall retain
 
 the sole right to enforce this Agreement and to approve any amendment, modification or waiver of any provision of this Agreement or
 any other Loan Document; provided that such agreement or instrument may provide that such Lender will not, without the consent of
@@ -10759,10 +9624,7 @@ obligations hereunder or substitute any such pledgee or assignee for such Lender
 -----
 
 
-========================================
-Page 87:
-========================================
-**11.07   Treatment of Certain Information; Confidentiality. Subject to the last sentence of this Section, each of the**
+Chunk 98:**11.07   Treatment of Certain Information; Confidentiality. Subject to the last sentence of this Section, each of the**
 
 Administrative Agent and the Lenders agrees to maintain the confidentiality of the Information (as defined below), except that
 Information may be disclosed (a) to those of its Affiliates and its and their Related Parties that the Administrative Agent or any such
@@ -10798,12 +9660,8 @@ hereunder or (v) in the case of this Agreement, any market data collector or ser
 hereby authorized at any time and from time to time, to the fullest extent permitted by applicable Law, to set off and apply any and all
 deposits (general or special, time or demand, provisional or final, in whatever currency, but excluding deposits in (i) trust or other
 fiduciary accounts (to the extent of amounts held therein in trust in the ordinary course of business on behalf of third parties that are not
-Borrowers or their Subsidiaries), (ii) payroll accounts, (iii) health-savings accounts and worker’s compensation accounts, (iv)
-withholding tax accounts and (v) zero balance accounts used in the ordinary course of business) at any time held and other obligations
-(in whatever currency) at any time owing by such Lender or any such Affiliate to or for the credit or the account of the Company or any
-other Borrower against any and all of the obligations of the Company or such Borrower now or hereafter existing under this Agreement
-or any other Loan Document to such Lender or its Affiliates, irrespective of whether or not such obligations of the Company or such
-Borrower are owed to a branch, office or Affiliate of such Lender different from the branch, office or Affiliate holding such deposit or
+Borrowers or their Subsidiaries), (ii) payroll accounts, (iii) health-s
+Chunk 99:avings of such Lender different from the branch, office or Affiliate holding such deposit or
 obligated on such indebtedness; provided that in the event that any Defaulting Lender shall exercise any such right of setoff, (x) all
 amounts so set off shall be paid over immediately to the Administrative Agent for further application in accordance with the provisions
 of Section 2.13 and, pending such payment, shall be segregated by such Defaulting Lender from its other funds and deemed held in
@@ -10820,10 +9678,7 @@ validity of such setoff and application.
 -----
 
 
-========================================
-Page 88:
-========================================
-**11.09   Interest Rate Limitation. Notwithstanding anything to the contrary contained in any Loan Document, the interest**
+Chunk 100:**11.09   Interest Rate Limitation. Notwithstanding anything to the contrary contained in any Loan Document, the interest**
 
 paid or agreed to be paid under the Loan Documents shall not exceed the maximum rate of non-usurious interest permitted by
 applicable Law (the “Maximum Rate”). If the Administrative Agent or any Lender shall receive interest in an amount that exceeds the
@@ -10878,10 +9733,7 @@ by the Administrative Agent, then such provisions shall be deemed to be in effec
 -----
 
 
-========================================
-Page 89:
-========================================
-**11.13   Replacement of Lenders. If the Company is entitled to replace a Lender pursuant to the provisions of Section 3.06,**
+Chunk 101:**11.13   Replacement of Lenders. If the Company is entitled to replace a Lender pursuant to the provisions of Section 3.06,**
 
 or if any Lender is a Defaulting Lender, a Non-Extending Lender or a Non-Consenting Lender, then the Company may, at its sole
 expense and effort, upon notice to such Lender and the Administrative Agent, require such Lender to assign and delegate, without
@@ -10929,10 +9781,7 @@ ACCORDANCE WITH, THE LAW OF THE STATE OF NEW YORK.
 -----
 
 
-========================================
-Page 90:
-========================================
-(b)      SUBMISSION TO JURISDICTION. EACH OF THE PARTIES HERETO IRREVOCABLY AND
+Chunk 102:(b)      SUBMISSION TO JURISDICTION. EACH OF THE PARTIES HERETO IRREVOCABLY AND
 
 UNCONDITIONALLY AGREES THAT IT WILL NOT COMMENCE ANY ACTION, LITIGATION OR PROCEEDING OF ANY
 KIND OR DESCRIPTION, WHETHER IN LAW OR EQUITY, WHETHER IN CONTRACT OR IN TORT OR OTHERWISE,
@@ -10988,10 +9837,7 @@ ACCEPT SUCH SERVICE ON ITS BEHALF.
 -----
 
 
-========================================
-Page 91:
-========================================
-(f)      NO IMMUNITY. IN THE EVENT ANY DESIGNATED BORROWER THAT IS A FOREIGN SUBSIDIARY OR
+Chunk 103:(f)      NO IMMUNITY. IN THE EVENT ANY DESIGNATED BORROWER THAT IS A FOREIGN SUBSIDIARY OR
 
 ANY OF ITS ASSETS HAS OR HEREAFTER ACQUIRES, IN ANY JURISDICTION IN WHICH JUDICIAL PROCEEDINGS
 MAY AT ANY TIME BE COMMENCED WITH RESPECT TO THIS AGREEMENT OR ANY OTHER LOAN DOCUMENT, ANY
@@ -11018,25 +9864,8 @@ AND CERTIFICATIONS IN THIS SECTION.
 by any other Loan Document (including in connection with any amendment, waiver or other modification hereof or of any other Loan
 Document), the Company and each other Borrower acknowledges and agrees, and acknowledges its Affiliates’ understanding, that: (i)
 (A) the arranging and other services regarding this Agreement provided by the Administrative Agent, the Arranger, the Lenders and
-their respective Affiliates are arm’s-length commercial transactions between the Company, each other Borrower and their respective
-Affiliates, on the one hand, and the Administrative Agent, the Arranger, the Lenders and their respective Affiliates, on the other hand,
-(B) each of the Company and the other Borrowers has consulted its own legal, accounting, regulatory and tax advisors to the extent it
-has deemed appropriate, and none of the Administrative Agent, the Arranger, the Lenders or their respective Affiliates has provided any
-legal, accounting, regulatory, investment or tax advice with respect to any of the transactions contemplated hereby and by the other
-Loan Documents, and (C) each of the Company and the other Borrowers is capable of evaluating, and understands and accepts, the
-terms, risks and conditions of the transactions contemplated hereby and by the other Loan Documents; (ii) in connection with the
-transactions contemplated hereby and by the other Loan Documents and the process leading thereto (and irrespective of whether the
-Administrative Agent, the Arranger, the Lenders or any of their respective Affiliates has advised or is currently advising the Company
-or any of its Affiliates on other matters), (A) each of the Administrative Agent, the Arranger, each Lender and each of their respective
-Affiliates is and has been acting solely as a principal and, except as expressly agreed in writing by the relevant parties, has not been, is
-not, and will not be acting as, or be deemed to have assumed any responsibility as, an advisor, agent or fiduciary for the Company, any
-other Borrower or any of their respective Affiliates, or any other Person and (B) none of the Administrative Agent, the Arranger, any
-Lender or any of their respective Affiliates has any obligation or implied duties to the Company, any other Borrower or any of their
-respective Affiliates with respect to the transactions contemplated hereby except those obligations expressly set forth herein and in the
-other Loan Documents; and (iii) the Administrative Agent, the Arranger, the Lenders and their respective Affiliates may be engaged in a
-broad range of transactions that involve interests that differ from those of the Company, the other Borrowers and their respective
-Affiliates, and none of the Administrative Agent, the Arranger, any Lender or any of their respective Affiliates has any obligation to
-disclose any of such interests to the Company, any other Borrower or any of their respective Affiliates. To the fullest extent permitted
+their respective Affiliates are arm’s-length
+Chunk 104: commercial. To the fullest extent permitted
 by applicable Law, each of the Company and each other Borrower hereby agrees not to assert any claims against the Administrative
 Agent, the Arranger, any Lender or any of their respective Affiliates based on an alleged breach of agency or fiduciary duty in
 connection with any aspect of any transaction contemplated hereby or by any other Loan Document.
@@ -11047,10 +9876,7 @@ connection with any aspect of any transaction contemplated hereby or by any othe
 -----
 
 
-========================================
-Page 92:
-========================================
-**11.17   Electronic Execution. The words “execute”, “execution”, “signed”, “signature”, “delivery”, and words of like import**
+Chunk 105:**11.17   Electronic Execution. The words “execute”, “execution”, “signed”, “signature”, “delivery”, and words of like import**
 
 in or relating to any Ancillary Document shall be deemed to include Electronic Signatures and deliveries or the keeping of records in
 electronic form, each of which shall be of the same legal effect, validity or enforceability as a manually executed signature, physical
@@ -11100,10 +9926,7 @@ Borrower (or to any other Person who may be entitled thereto under applicable La
 -----
 
 
-========================================
-Page 93:
-========================================
-**11.20   Non-Public Information. Each Lender acknowledges that all information (including requests for waivers and**
+Chunk 106:**11.20   Non-Public Information. Each Lender acknowledges that all information (including requests for waivers and**
 
 amendments as well as certain of the Information) furnished by or on behalf of any Borrower or the Administrative Agent pursuant to
 or in connection with, or in the course of administering, this Agreement will be syndicate-level information, which may contain MNPI.
@@ -11132,10 +9955,7 @@ of any applicable Resolution Authority.
 -----
 
 
-========================================
-Page 94:
-========================================
-**11.22   ERISA Matters.**
+Chunk 107:**11.22   ERISA Matters.**
 
 (a)      Each Lender (i) represents and warrants, as of the date such Person became a Lender party hereto, to, and (ii)
 
@@ -11172,11 +9992,8 @@ Document or any documents related to hereto or thereto); (B) the Person making t
 Lender with respect to the entrance into, participation in, administration of and performance of the Loans, the Commitments
 and this Agreement is independent (within the meaning of 29 CFR § 2510.3-21) and is a bank, an insurance carrier, an
 investment adviser, a broker-dealer or other person that holds, or has under management or control, total assets of at least
-US$50 million, in each case as described in 29 CFR § 2510.3-21(c)(1)(i)(A)-(E); (C) the Person making the investment
-decision on behalf of such Lender with respect to the entrance into, participation in, administration of and performance of the
-Loans, the Commitments and this Agreement is capable of evaluating investment risks independently, both in general and with
-regard to particular transactions and investment strategies (including in respect of the Obligations); (D) the Person making the
-investment decision on behalf of such Lender with respect to the entrance into, participation in, administration of and
+US$50 million, in each case as described in 29 CFR § 2510.3-
+Chunk 108:21 participation in, administration of and
 performance of the Loans, the Commitments and this Agreement is a fiduciary under ERISA or the Code, or both, with respect
 to the Loans, the Commitments and this Agreement and is responsible for exercising independent judgment in evaluating the
 transactions hereunder; and (E) no fee or other compensation is being paid directly to the Administrative Agent, the Arranger
@@ -11189,10 +10006,7 @@ Commitments or this Agreement.
 -----
 
 
-========================================
-Page 95:
-========================================
-(c)      The Administrative Agent and the Arranger hereby informs the Lenders that each such Person is not
+Chunk 109:(c)      The Administrative Agent and the Arranger hereby informs the Lenders that each such Person is not
 
 undertaking to provide impartial investment advice, or to give advice in a fiduciary capacity, in connection with the
 transactions contemplated hereby, and that such Person has a financial interest in the transactions contemplated hereby in that
@@ -11213,10 +10027,7 @@ termination fees or fees similar to the foregoing.
 -----
 
 
-========================================
-Page 96:
-========================================
-_IN WITNESS WHEREOF, the parties hereto have caused this Agreement to be duly executed as of the date first above written._
+Chunk 110:_IN WITNESS WHEREOF, the parties hereto have caused this Agreement to be duly executed as of the date first above written._
 
 AMAZON.COM, INC.
 
@@ -11234,10 +10045,7 @@ FIVE-YEAR REVOLVING CREDIT AGREEMENT
 -----
 
 
-========================================
-Page 97:
-========================================
-CITIBANK, N.A.,
+Chunk 111:CITIBANK, N.A.,
 as individually and as Administrative Agent
 
 By: /s/ Susan Olsen
@@ -11254,10 +10062,7 @@ FIVE-YEAR REVOLVING CREDIT AGREEMENT
 -----
 
 
-========================================
-Page 98:
-========================================
-SIGNATURE PAGE TO
+Chunk 112:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11275,10 +10080,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 99:
-========================================
-SIGNATURE PAGE TO
+Chunk 113:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11304,10 +10106,7 @@ Title: Director
 -----
 
 
-========================================
-Page 100:
-========================================
-SIGNATURE PAGE TO
+Chunk 114:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11325,10 +10124,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 101:
-========================================
-SIGNATURE PAGE TO
+Chunk 115:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11348,10 +10144,7 @@ The Hongkong and Shanghai Bank Corporation Limited
 -----
 
 
-========================================
-Page 102:
-========================================
-SIGNATURE PAGE TO
+Chunk 116:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11369,10 +10162,7 @@ Title: Executive Director
 -----
 
 
-========================================
-Page 103:
-========================================
-SIGNATURE PAGE TO
+Chunk 117:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11390,10 +10180,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 104:
-========================================
-SIGNATURE PAGE TO
+Chunk 118:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11411,10 +10198,7 @@ Title: Director
 -----
 
 
-========================================
-Page 105:
-========================================
-SIGNATURE PAGE TO
+Chunk 119:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11438,10 +10222,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 106:
-========================================
-SIGNATURE PAGE TO
+Chunk 120:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11459,10 +10240,7 @@ Title: Authorized Signatory
 -----
 
 
-========================================
-Page 107:
-========================================
-SIGNATURE PAGE TO
+Chunk 121:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11488,10 +10266,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 108:
-========================================
-SIGNATURE PAGE TO
+Chunk 122:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11509,10 +10284,7 @@ Title: Authorized Signatory
 -----
 
 
-========================================
-Page 109:
-========================================
-SIGNATURE PAGE TO
+Chunk 123:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11530,10 +10302,7 @@ Title: Managing Director
 -----
 
 
-========================================
-Page 110:
-========================================
-SIGNATURE PAGE TO
+Chunk 124:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11551,10 +10320,7 @@ Title: Authorized Signatory
 -----
 
 
-========================================
-Page 111:
-========================================
-SIGNATURE PAGE TO
+Chunk 125:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11572,10 +10338,7 @@ Title: Director
 -----
 
 
-========================================
-Page 112:
-========================================
-SIGNATURE PAGE TO
+Chunk 126:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11599,10 +10362,7 @@ Title: Managing Director
 -----
 
 
-========================================
-Page 113:
-========================================
-SIGNATURE PAGE TO
+Chunk 127:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11628,10 +10388,7 @@ Title: Executive Director
 -----
 
 
-========================================
-Page 114:
-========================================
-SIGNATURE PAGE TO
+Chunk 128:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11649,10 +10406,7 @@ Title: SVP & Deputy Branch Manager
 -----
 
 
-========================================
-Page 115:
-========================================
-SIGNATURE PAGE TO
+Chunk 129:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11670,10 +10424,7 @@ Title: Vice President
 -----
 
 
-========================================
-Page 116:
-========================================
-SIGNATURE PAGE TO
+Chunk 130:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11691,10 +10442,7 @@ Title: Director, Financing Solutions
 -----
 
 
-========================================
-Page 117:
-========================================
-SIGNATURE PAGE TO
+Chunk 131:SIGNATURE PAGE TO
 
 THE FIVE-YEAR REVOLVING CREDIT AGREEMENT
 
@@ -11712,4 +10460,3 @@ Title: Senior Vice President
 -----
 
 
-========================================

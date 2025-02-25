@@ -32,7 +32,7 @@ def load_legal_entities(file_path: str) -> LegalEntitySchema:
     """
     legal_entities = []
 
-    with open(file_path, "r", encoding="utf-8") as file:
+    with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
         for line in file:
             line = line.strip()
             if not line:  # Skip empty lines or malformed entries

@@ -244,8 +244,13 @@ def get_text_lines(
 
 if __name__ == "__main__":
     import pathlib
+    from pathlib2 import Path
 
-    filename = sys.argv[1]
+    doc_name = "citibank-caterpillar"
+
+    filename = (
+            Path(__file__).parent.parent.parent / 'docs' / (doc_name + ".pdf")
+    )  # Replace with your PDF file path
     doc = pymupdf.open(filename)
     text = ""
     for page in doc:

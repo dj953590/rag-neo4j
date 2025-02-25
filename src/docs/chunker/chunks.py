@@ -25,7 +25,7 @@ def merge_bounding_boxes(start_box, end_box):
 def extract_chunks_md(data: List, max_tokens: int = 500) -> tuple[list[str], str]:
     def chunk_text(text: str, chunk_token_size: int) -> List[str]:
         token_count, words_list = count_tokens(text)
-        chunks = []
+        page_chunks = []
         current_chunk = []
         current_token_count = 0
         if token_count > chunk_token_size:
@@ -38,18 +38,18 @@ def extract_chunks_md(data: List, max_tokens: int = 500) -> tuple[list[str], str
                         word = current_chunk.pop()
                         current_token_count -= 1
                     if current_chunk:
-                        chunks.append(''.join(current_chunk))
+                        page_chunks.append(''.join(current_chunk))
                     current_chunk = []
                     current_token_count = 0
                 current_chunk.append(word)
                 current_token_count += word_token_count
         else:
-            chunks.append(text)
+            page_chunks.append(text)
 
         if current_chunk:
-            chunks.append(''.join(current_chunk))
+            page_chunks.append(''.join(current_chunk))
 
-        return chunks
+        return page_chunks
 
     chunks = []
     full_text: str = ""

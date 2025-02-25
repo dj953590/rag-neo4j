@@ -29,7 +29,7 @@ Usage
 ------
 - As a CLI shell command use
 
-  python multi_column.py input.pdf footer_margin header_margin
+  python pdf_multicolumn.py input.pdf footer_margin header_margin
 
   Where margins are the height of the bottom / top stripes to ignore on each
   page.

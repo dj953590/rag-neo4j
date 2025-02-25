@@ -5,7 +5,7 @@ from PIL import Image
 import io
 from pathlib2 import Path
 from src.docs.parser.base_processor import BaseProcessor
-from src.docs.parser.helpers.pdf.pymupdf_rag import to_markdown
+from src.docs.parser.helpers.pdf.pdf_md import to_markdown
 
 
 class PDFProcessor(BaseProcessor, ABC):
@@ -15,7 +15,7 @@ class PDFProcessor(BaseProcessor, ABC):
 
     def markdown(self):
 
-        md_string = to_markdown(self.doc, page_chunks=True, extract_words=True)
+        md_string = to_markdown(self.doc, page_chunks=True, extract_words=True, margins=(0, 20, 0, 20))
         return md_string
 
 

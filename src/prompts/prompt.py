@@ -55,7 +55,7 @@ Below is a list of **valid entity types** with their **descriptions**. Use this 
      - **Relationship Keywords**: Key terms that describe the nature of the relationship.  
    - **Format each relationship** as:  
      `("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)`
-   - if an entity does not have relationships, do not include it in the output.  
+   - **DO NOT** include entities with **NO relationships** in the output.  
 
 3. **Extract key concepts and themes**  
    - Identify overarching concepts or themes in the text.  
@@ -247,7 +247,7 @@ Do not include information where the supporting evidence for it is not provided.
 
 {response_type}
 
----Documents---
+---Documents are in Markdown format---
 
 {content_data}
 
