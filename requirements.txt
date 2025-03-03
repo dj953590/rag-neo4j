@@ -39,6 +39,13 @@ aiofiles~=24.1.0
 pyvis~=0.3.2
 onnxtr~=0.6.2
 pathlib2~=2.3.6
+fastapi~=0.115.10
+streamlit~=1.42.2
+streamlit-autorefresh~=1.0.1
+
+# packages for web server
+uvicorn~=0.34.0
+httpx~=0.28.1
 # packages for docs parser and vision parser
 opencv-python~=4.11.0.86
 onnxruntime~=1.20.1

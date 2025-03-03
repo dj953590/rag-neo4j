@@ -3,16 +3,18 @@ import os
 import boto3
 from botocore.client import Config
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError, ClientError
+from dynaconf import settings
+from src.utils.log import logger
 
 
 class S3Storage:
 
-    def __init__(self, endpoint_url: str, access_key: str, secret_key: str, bucket_name: str):
+    def __init__(self, ):
 
-        self.endpoint_url = endpoint_url
-        self.access_key = access_key
-        self.secret_key = secret_key
-        self.bucket_name = bucket_name
+        self.endpoint_url = settings.get("S3_ENDPOINT_URL", "http://localhost:9000")
+        self.access_key = settings.get("S3_ACCESS_KEY", "admin")
+        self.secret_key = settings.get("S3_SECRET_KEY", "password")
+        self.bucket_name = settings.get("S3_BUCKET_NAME", "legal")
 
         # Initialize the S3 client
         self.s3_client = boto3.client(
@@ -36,19 +38,47 @@ class S3Storage:
 
         try:
             self.s3_client.upload_file(file_path, self.bucket_name, object_name)
-            print(f"File '{file_path}' uploaded to '{self.bucket_name}/{object_name}'")
+            logger.info(f"File '{file_path}' uploaded to '{self.bucket_name}/{object_name}'")
             return True
         except FileNotFoundError:
-            print(f"File '{file_path}' not found.")
+            logger.info(f"File '{file_path}' not found.")
             return False
         except NoCredentialsError:
-            print("Credentials not available.")
+            logger.info("Credentials not available.")
             return False
         except PartialCredentialsError:
-            print("Incomplete credentials provided.")
+            logger.info("Incomplete credentials provided.")
             return False
         except ClientError as e:
-            print(f"Client error: {e}")
+            logger.info(f"Client error: {e}")
+            return False
+
+    def upload_file(self, file_content: bytes, file_name: str = None):
+        """
+        Upload a file to the S3 bucket.
+        Args :
+        file : UploadFile
+            The file to upload.
+        name : str
+            The name of the file.
+
+        """
+
+        try:
+            # Upload the file to S3
+            self.s3_client.put_object(Bucket=self.bucket_name, Key=file_name, Body=file_content)
+            logger.info(f"filename: {file_name} message: File uploaded successfully")
+        except FileNotFoundError:
+            logger.info(f"File '{file_name}' not found.")
+            return False
+        except NoCredentialsError:
+            logger.info("Credentials not available.")
+            return False
+        except PartialCredentialsError:
+            logger.info("Incomplete credentials provided.")
+            return False
+        except ClientError as e:
+            logger.info(f"Client error: {e}")
             return False
 
     def download_file(self, object_name: str, download_path: str):
@@ -61,16 +91,16 @@ class S3Storage:
         """
         try:
             self.s3_client.download_file(self.bucket_name, object_name, download_path)
-            print(f"File '{object_name}' downloaded to '{download_path}'")
+            logger.info(f"File '{object_name}' downloaded to '{download_path}'")
             return True
         except NoCredentialsError:
-            print("Credentials not available.")
+            logger.info("Credentials not available.")
             return False
         except PartialCredentialsError:
-            print("Incomplete credentials provided.")
+            logger.info("Incomplete credentials provided.")
             return False
         except ClientError as e:
-            print(f"Client error: {e}")
+            logger.info(f"Client error: {e}")
             return False
 
     def delete_file(self, object_name: str):
@@ -82,16 +112,16 @@ class S3Storage:
         """
         try:
             self.s3_client.delete_object(Bucket=self.bucket_name, Key=object_name)
-            print(f"File '{object_name}' deleted from '{self.bucket_name}'")
+            logger.info(f"File '{object_name}' deleted from '{self.bucket_name}'")
             return True
         except NoCredentialsError:
-            print("Credentials not available.")
+            logger.info("Credentials not available.")
             return False
         except PartialCredentialsError:
-            print("Incomplete credentials provided.")
+            logger.info("Incomplete credentials provided.")
             return False
         except ClientError as e:
-            print(f"Client error: {e}")
+            logger.info(f"Client error: {e}")
             return False
 
     def list_files(self):
@@ -104,83 +134,95 @@ class S3Storage:
             response = self.s3_client.list_objects(Bucket=self.bucket_name)
             if "Contents" in response:
                 files = [obj["Key"] for obj in response["Contents"]]
-                print(f"Files in '{self.bucket_name}': {files}")
+                logger.info(f"Files in '{self.bucket_name}': {files}")
                 return files
             else:
-                print(f"No files found in '{self.bucket_name}'")
+                logger.info(f"No files found in '{self.bucket_name}'")
                 return []
         except NoCredentialsError:
-            print("Credentials not available.")
+            logger.info("Credentials not available.")
             return []
         except PartialCredentialsError:
-            print("Incomplete credentials provided.")
+            logger.info("Incomplete credentials provided.")
             return []
         except ClientError as e:
-            print(f"Client error: {e}")
+            logger.info(f"Client error: {e}")
             return []
 
-def create_folder(self, folder_name: str):
-    """
-    Create a folder in the S3 bucket.
 
-    :param folder_name: Name of the folder to create
-    :return: True if successful, False otherwise
-    """
-    if not folder_name.endswith('/'):
-        folder_name += '/'
-    try:
-        self.s3_client.put_object(Bucket=self.bucket_name, Key=folder_name)
-        print(f"Folder '{folder_name}' created in '{self.bucket_name}'")
-        return True
-    except NoCredentialsError:
-        print("Credentials not available.")
-        return False
-    except PartialCredentialsError:
-        print("Incomplete credentials provided.")
-        return False
-    except ClientError as e:
-        print(f"Client error: {e}")
-        return False
+    def check_folder_exists(self, folder_name: str):
+        if not folder_name.endswith('/'):
+            folder_name += '/'
 
-def delete_folder(self, folder_name: str):
-    """
-    Delete a folder and its contents from the S3 bucket.
+        # Check if the folder already exists
+        response = self.s3_client.list_objects_v2(Bucket=self.bucket_name, Prefix=folder_name, Delimiter='/')
+        if 'CommonPrefixes' in response and any(prefix['Prefix'] == folder_name for prefix in response['CommonPrefixes']):
+            logger.info(f"Folder '{folder_name}' already exists in '{self.bucket_name}'")
+            return True
+        else:
+            logger.info(f"Folder '{folder_name}' does not exist in '{self.bucket_name}'")
+            return False
 
-    :param folder_name: Name of the folder to delete
-    :return: True if successful, False otherwise
-    """
-    if not folder_name.endswith('/'):
-        folder_name += '/'
-    try:
-        # List all objects in the folder
-        response = self.s3_client.list_objects_v2(Bucket=self.bucket_name, Prefix=folder_name)
-        if 'Contents' in response:
-            # Delete all objects in the folder
-            contents = response['Contents']
-            objects_to_delete = [{'Key': obj['Key']} for obj in contents]
-            self.s3_client.delete_objects(Bucket=self.bucket_name, Delete={'Objects': objects_to_delete})
-        print(f"Folder '{folder_name}' and its contents deleted from '{self.bucket_name}'")
-        return True
-    except NoCredentialsError:
-        print("Credentials not available.")
-        return False
-    except PartialCredentialsError:
-        print("Incomplete credentials provided.")
-        return False
-    except ClientError as e:
-        print(f"Client error: {e}")
-        return False
+
+    def create_folder(self, folder_name: str):
+        """
+        Create a folder in the S3 bucket.
+
+        :param folder_name: Name of the folder to create
+        :return: True if successful, False otherwise
+        """
+        if folder_name and not self.check_folder_exists(folder_name):
+            if not folder_name.endswith('/'):
+                folder_name += '/'
+            try:
+                self.s3_client.put_object(Bucket=self.bucket_name, Key=folder_name)
+                logger.info(f"Folder '{folder_name}' created in '{self.bucket_name}'")
+                return True
+            except NoCredentialsError:
+                logger.info("Credentials not available.")
+                return False
+            except PartialCredentialsError:
+                logger.info("Incomplete credentials provided.")
+                return False
+            except ClientError as e:
+                logger.info(f"Client error: {e}")
+                return False
+        else:
+            return False
+
+    def delete_folder(self, folder_name: str):
+        """
+        Delete a folder and its contents from the S3 bucket.
+
+        :param folder_name: Name of the folder to delete
+        :return: True if successful, False otherwise
+        """
+        if not folder_name.endswith('/'):
+            folder_name += '/'
+        try:
+            # List all objects in the folder
+            response = self.s3_client.list_objects_v2(Bucket=self.bucket_name, Prefix=folder_name)
+            if 'Contents' in response:
+                # Delete all objects in the folder
+                contents = response['Contents']
+                objects_to_delete = [{'Key': obj['Key']} for obj in contents]
+                self.s3_client.delete_objects(Bucket=self.bucket_name, Delete={'Objects': objects_to_delete})
+            logger.info(f"Folder '{folder_name}' and its contents deleted from '{self.bucket_name}'")
+            return True
+        except NoCredentialsError:
+            logger.info("Credentials not available.")
+            return False
+        except PartialCredentialsError:
+            logger.info("Incomplete credentials provided.")
+            return False
+        except ClientError as e:
+            logger.info(f"Client error: {e}")
+            return False
+
 
 if __name__ == "__main__":
-    # Initialize S3 storage client
-    # Configuration for MinIO (local S3-compatible storage)
-    endpoint_url = "http://localhost:9000"  # MinIO server URL
-    access_key = "admin"  # MinIO access key
-    secret_key = "password"  # MinIO secret key
-    bucket_name = "legal"  # Bucket name
-
     # Initialize the S3Storage class
-    s3_storage = S3Storage(endpoint_url, access_key, secret_key, bucket_name)
+    s3_storage = S3Storage()
 
     filepath = os.path.join(os.getcwd(), "examples.txt")
     # Upload a file
@@ -191,4 +233,3 @@ if __name__ == "__main__":
 
     # Download a file
     s3_storage.download_file("example.txt", "downloaded_example.txt")
-
