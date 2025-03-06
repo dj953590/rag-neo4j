@@ -117,6 +117,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+
 def send_request(endpoint, **kwargs):
     try:
         response = requests.post(endpoint, **kwargs, timeout=30)
@@ -124,6 +125,7 @@ def send_request(endpoint, **kwargs):
         return response.json(), None
     except Exception as e:
         return None, str(e)
+
 
 def main():
     # Main title
@@ -151,16 +153,16 @@ def main():
             help="Supported formats: PDF, DOCX, TXT"
         )
 
-        doc_id = st.text_input(
-            "🔖 GFRN Document ID",
+        gfrn_id = st.text_input(
+            "🔖 GFRN ID",
             placeholder="Enter unique document ID",
             help="Unique identifier for the document"
         )
 
         if st.button("Upload Document", key="upload_btn"):
-            if uploaded_file and doc_id.strip():
-                files = {"file": (uploaded_file.name, uploaded_file.getvalue())}
-                data = {"doc_id": doc_id.strip()}
+            if uploaded_file and gfrn_id.strip():
+                file_data = uploaded_file.getvalue()
+                data = {"parent_id": gfrn_id.strip(), "state": "UPLOADED", "name": uploaded_file.name}
                 with st.spinner("⏳ Uploading document..."):
                     result, error = send_request("http://localhost:8000/upload", files=files, data=data)
                 if result:
@@ -268,6 +270,7 @@ def main():
                 st.info("📭 No responses yet. Submit a query to see results.")
         else:
             st.info("📥 No processed documents available. Please upload a document first.")
+
 
 if __name__ == '__main__':
     main()

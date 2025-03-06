@@ -40,20 +40,11 @@ class S3Storage:
             self.s3_client.upload_file(file_path, self.bucket_name, object_name)
             logger.info(f"File '{file_path}' uploaded to '{self.bucket_name}/{object_name}'")
             return True
-        except FileNotFoundError:
-            logger.info(f"File '{file_path}' not found.")
-            return False
-        except NoCredentialsError:
-            logger.info("Credentials not available.")
-            return False
-        except PartialCredentialsError:
-            logger.info("Incomplete credentials provided.")
-            return False
-        except ClientError as e:
-            logger.info(f"Client error: {e}")
+        except Exception as e:
+            logger.info(f"An unexpected error occurred: {e}")
             return False
 
-    def upload_file(self, file_content: bytes, file_name: str = None):
+    def upload_file_content(self, file_content: bytes, file_name: str = None):
         """
         Upload a file to the S3 bucket.
         Args :
@@ -68,17 +59,9 @@ class S3Storage:
             # Upload the file to S3
             self.s3_client.put_object(Bucket=self.bucket_name, Key=file_name, Body=file_content)
             logger.info(f"filename: {file_name} message: File uploaded successfully")
-        except FileNotFoundError:
-            logger.info(f"File '{file_name}' not found.")
-            return False
-        except NoCredentialsError:
-            logger.info("Credentials not available.")
-            return False
-        except PartialCredentialsError:
-            logger.info("Incomplete credentials provided.")
-            return False
-        except ClientError as e:
-            logger.info(f"Client error: {e}")
+            return True
+        except Exception as e:
+            logger.info(f"An unexpected error occurred: {e}")
             return False
 
     def download_file(self, object_name: str, download_path: str):

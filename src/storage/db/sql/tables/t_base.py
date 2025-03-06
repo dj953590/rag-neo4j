@@ -6,9 +6,9 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class DocumentsMaster(Base):
+class DocumentMaster(Base):
     """Table schema for storing vectors in PostgreSQL."""
-    __tablename__ = "DOCUMENTS_MASTER"
+    __tablename__ = "document_master"
     """
     id: Unique identifier for the document 
     name: Name of the file
@@ -25,14 +25,10 @@ class DocumentsMaster(Base):
 
 class DocumentsState(Base):
     """Table schema for storing vectors in PostgreSQL."""
-    __tablename__ = "DOCUMENTS_STATE"
+    __tablename__ = "document_state"
     """
     code: Unique identifier for the document state 
     description: Description of the state 
     """
     code = Column(String, primary_key=True)
     description = Column(String, nullable=False)
-
-
-class DocumentState(Enum):
-    pass

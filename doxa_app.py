@@ -3,14 +3,14 @@ from typing import Any
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import HTMLResponse
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError, ClientError
-
+from src.utils.log import logger as log
 from src.storage.s3.s3store import S3Storage
 
 app = FastAPI()
 
 
 @app.post("/upload")
-async def upload_file(file_name: str, group: str, file: UploadFile = File(...), ) -> Any:
+async def upload_file(file: UploadFile = File(...), data: dict = None) -> Any:
     """
     Upload a file to the S3 bucket.
     Args :
@@ -22,24 +22,29 @@ async def upload_file(file_name: str, group: str, file: UploadFile = File(...), 
         The group of the file.
 
     """
-    try:
-        file_content = await file.read()
-        s3store = S3Storage()
-        s3store.create_folder(group)
-        object_name = f"{group}/{file_name}"
-        s3store.upload_file(file_content, object_name)
-        print(f"File uploaded to '{s3store.bucket_name}/{object_name}'")
-        return True
-    except NoCredentialsError:
-        print("Credentials not available.")
-        return False
-    except PartialCredentialsError:
-        print("Incomplete credentials provided.")
-        return False
-    except ClientError as e:
-        print(f"Client error: {e}")
+    if data is None:
+        log.info("No data provided")
         return False
 
+    try:
+        parent_id = data.get("parent_id")
+        state = data.get("state")
+        file_name = data.get("name")
+
+        if not parent_id or not state or not file_name:
+            log.info("Incomplete data provided")
+            return False
+
+        file_content = await file.read()
+        s3store = S3Storage()
+        s3store.create_folder(parent_id)
+        object_name = f"{parent_id}/{file_name}"
+        s3store.upload_file(file_content, object_name)
+        log.info(f"File uploaded to '{s3store.bucket_name}/{object_name}'")
+        return True
+    except (NoCredentialsError, PartialCredentialsError, ClientError) as e:
+        log.info(f"Error uploading file to S3: {e}")
+        return False
 
 @app.get("/query")
 async def query() -> HTMLResponse:

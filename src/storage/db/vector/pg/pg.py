@@ -15,7 +15,7 @@ Base = declarative_base()
 
 class VectorTable(Base):
     """Table schema for storing vectors in PostgreSQL."""
-    __tablename__ = "DOCUMENTS"
+    __tablename__ = "documents"
     """
     id: Unique identifier for the document chunk
     doc_id: Unique identifier for the document

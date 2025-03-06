@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from sqlalchemy import Table, Column, Integer, String, MetaData, text, create_engine, func
 from sqlalchemy.ext.asyncio import create_async_engine
 
-from src.storage.db.sql.tables.t_base import DocumentsMaster
+from src.storage.db.sql.tables.t_base import DocumentMaster
 from src.storage.db.sqlbase import SQLBase
 from dynaconf import settings
 from sqlalchemy.orm import sessionmaker
@@ -140,13 +140,13 @@ def main():
     pgdb.insert(table_name, data)
     print("Inserted data into PostgreSQL")
 
-    master = DocumentsMaster(id="1", name="Test", state="Test", parent="Test", updated_on=func.now())
+    master = DocumentMaster(id="1", name="Test", state="Test", parent="Test", updated_on=func.now())
     pgdb.merge(master)
     # Select data from PostgreSQL
     result = pgdb.select(table_name)
     print("Selected data from PostgreSQL:", result)
 
-    result = pgdb.select("DOCUMENTS_MASTER", text("id='1'"))
+    result = pgdb.select("document_master", text("id='1'"))
     print("Selected data from PostgreSQL:", result)
     # Update data in PostgreSQL
     pgdb.update(table_name, text("id=1"), {"name": "Updated Name"})
@@ -156,7 +156,7 @@ def main():
     pgdb.delete(table_name, text("id=1"))
     print("Deleted data from PostgreSQL")
 
-    pgdb.delete("DOCUMENTS_MASTER", text("id='1'"))
+    pgdb.delete("document_master", text("id='1'"))
     print("Deleted documents master data from PostgreSQL")
     # Drop table
     pgdb.drop_table('example_table')
