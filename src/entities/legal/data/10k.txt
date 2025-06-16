@@ -1,0 +1,57 @@
+Registrant: The public company filing the 10-K report with the SEC.
+Subsidiary: A company owned or controlled by the registrant.
+Parent Company: A business entity that owns a controlling interest in the registrant.
+Affiliate: An entity with a relationship to the registrant through ownership or control.
+Operating Segment: A business unit within the registrant that is separately reported in financial statements.
+Consolidated Entity: The registrant and its subsidiaries reported as a single economic entity.
+Shell Company: A corporation with no significant operations or assets, often used for reverse mergers.
+Shareholder: An individual or institution that owns shares in the registrant.
+Board of Directors: A group of individuals elected to oversee the company’s management and strategy.
+Executive Officers: Senior management responsible for the daily operations of the registrant.
+Auditor: An independent certified public accounting firm that audits the company’s financial statements.
+Legal Counsel: Attorneys or law firms representing the registrant in legal or regulatory matters.
+Vendor: A company that supplies goods or services to the registrant.
+Lender: A financial institution that provides loans or credit facilities to the registrant.
+Borrower: The registrant or another entity receiving funds under a loan or credit agreement.
+Trustee: An entity appointed to act on behalf of bondholders in a debt issuance.
+Noteholder: An investor holding a promissory note issued by the registrant.
+Bondholder: An investor who owns a bond issued by the registrant.
+Warrant Holder: A person or entity holding rights to purchase company stock at a specified price.
+Guarantor: A party that guarantees the obligations of another entity, often the registrant.
+Equity Holder: A person or institution with an ownership interest in the registrant.
+Debtholder: A party that holds debt instruments issued by the registrant.
+Transfer Agent: An institution that manages stockholder records and transactions on behalf of the registrant.
+Rating Agency: An organization that assigns credit ratings to the registrant’s debt (e.g., Moody’s, S&P).
+Obligor: A party legally bound to repay a debt or fulfill financial obligations under a credit agreement or security instrument.
+Co-Obligor: A secondary obligor that shares legal responsibility for repayment, often used to strengthen the credit profile of the primary obligor.
+Guarantor: A third party that provides a financial guarantee of the obligor’s performance or payment.
+Risk Mitigant: Any contractual feature, asset, or third-party support that reduces the lender’s exposure to credit risk (e.g., collateral, guarantees, covenants).
+Collateral: An asset pledged by the obligor to secure a loan, which the lender may seize in case of default.
+Security Interest: A legal claim or lien on collateral securing the loan or obligation.
+Debt Instrument: A formal contract evidencing a loan or financial obligation, such as a bond, note, or loan agreement.
+Covenant: A contractual clause in a loan or bond agreement requiring or restricting specific borrower actions to protect lender interests.
+Event of Default: A specified condition under which a lender can accelerate repayment or enforce remedies, often tied to covenant breaches or non-payment.
+Credit Rating: An independent evaluation of an obligor’s creditworthiness, usually assigned by a rating agency like Moody’s or S&P.
+Internal Rating: A credit risk score or tier assigned internally by a lender or institution based on proprietary risk models.
+Probability of Default (PD): A quantitative estimate of the likelihood that an obligor will default over a given time horizon.
+Loss Given Default (LGD): An estimate of the percentage of exposure the lender would lose if the obligor defaults.
+Exposure at Default (EAD): The total value at risk in the event of default, including drawn and undrawn amounts.
+Valuation: The process of estimating the fair value of an asset, security, collateral, or business, used in impairment testing or collateral adequacy.
+Market Value: The current price at which an asset can be sold in an orderly transaction between market participants.
+Discounted Cash Flow (DCF): A valuation method that estimates the value of an asset based on expected future cash flows, discounted to present value.
+Appraised Value: A professional, often regulated estimate of the value of a physical asset, such as real estate or machinery.
+Haircut: A reduction applied to the collateral value to account for risk, volatility, or liquidity concerns.
+Stress Test: A scenario-based analysis used to assess how credit exposures or portfolios perform under adverse conditions.
+Loan-to-Value (LTV): A ratio expressing loan amount as a percentage of the appraised or market value of collateral.
+DSCR (Debt Service Coverage Ratio): A financial ratio comparing cash flow available to service debt to the total debt service requirement.
+Guarantee: A legally binding promise by a third party to fulfill the borrower’s obligation if the borrower fails to do so.
+Underwriting Criteria: The guidelines used to assess and approve credit risk, including financial metrics, credit history, and industry factors.
+Sanctioned Entity: An individual or organization subject to economic sanctions, affecting their eligibility for credit or counterparty relationships.
+Concentration Risk: The risk of loss due to overexposure to a single obligor, industry, geography, or asset class.
+Credit Exposure: The total amount at risk due to potential counterparty default.
+Credit Enhancement: Structures or tools (e.g., subordination, reserves, third-party guarantees) that improve the credit quality of a transaction.
+Default: The failure of a borrower to meet payment or performance obligations under the loan agreement.
+Restructuring: A modification to the terms of a credit obligation due to financial distress of the obligor.
+Impairment: The recognition of a reduction in the carrying value of an asset due to credit deterioration or market factors.
+Charge-Off: The recognition of a loss when a credit obligation is deemed uncollectible.
+Provision for Credit Losses: The expense recorded to account for expected losses in the loan portfolio, based on risk models.
