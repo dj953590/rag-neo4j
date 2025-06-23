@@ -51,7 +51,7 @@ class GraphMLLoader:
 
 if __name__ == "__main__":
     # Initialize the loader
-    relationship = "caterpillar"
+    relationship = "amazon"
     doc_name = "citibank-" + relationship
     graphml_loader = GraphMLLoader()
     file_loc = (

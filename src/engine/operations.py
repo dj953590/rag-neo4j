@@ -325,6 +325,7 @@ async def _merge_edges_then_upsert(
         tgt_id=tgt_id,
         description=description,
         keywords=keywords,
+        source_id=source_id,
     )
     return edge_data
 
@@ -582,6 +583,7 @@ async def extract_entities(
                 "entity_name": dp["entity_name"],
                 "doc_id": doc_id,
                 "doc_name": doc_name,
+                "s_id": dp["source_id"],
                 "chunk_sequence": entity_sequence,
             }
             entity_sequence += 1
@@ -598,6 +600,7 @@ async def extract_entities(
                 "content": dp["keywords"] + dp["src_id"] + dp["tgt_id"] + dp["description"],
                 "doc_id": doc_id,
                 "doc_name": doc_name,
+                "s_id": dp["source_id"],
                 "chunk_sequence": relationship_sequence,
             }
             relationship_sequence += 1
@@ -715,6 +718,8 @@ async def kg_query(
     )
     if query_param.only_need_prompt:
         return sys_prompt
+    logger.info(f"Query: {query}")
+    logger.info(f"System prompt: {sys_prompt}")
     response = await use_model_func(
         query,
         system_prompt=sys_prompt,
@@ -1354,8 +1359,9 @@ async def naive_query(
     if not len(results):
         return PROMPTS["fail_response"]
 
-    chunks_ids = [r["id"] for r in results]
-    chunks = await text_chunks_db.get_by_ids(chunks_ids)
+    #chunks_ids = [r["id"] for r in results]
+    chunks = [r["content"] for r in results if "content" in r]
+    #chunks = await text_chunks_db.get_by_ids(chunks_ids)
 
     # Filter out invalid chunks
     valid_chunks = [

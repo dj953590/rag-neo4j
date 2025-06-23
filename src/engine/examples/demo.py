@@ -8,7 +8,7 @@ from pathlib2 import Path
 import json
 
 from src.utils.utils import compute_mdhash_id
-relationship = "amazon"
+relationship = "caterpillar"
 WORKING_DIR = "./" + relationship
 doc_name = "citibank-" + relationship
 

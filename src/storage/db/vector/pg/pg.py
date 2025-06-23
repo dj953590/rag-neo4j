@@ -7,7 +7,7 @@ from pgvector.sqlalchemy import Vector
 from sqlalchemy import create_engine, Column, String, JSON, Integer, func, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from src.storage.db.base import BaseVectorStorage, QueryParam
+from src.storage.db.base import BaseVectorStorage, QueryParam, StorageNameSpace
 from src.utils.log import logger
 
 Base = declarative_base()
@@ -30,6 +30,7 @@ class VectorTable(Base):
     content = Column(String)
     mdata = Column(JSON)
     chunk_sequence = Column(Integer, nullable=False, default=0)
+    source_chunk = Column(String)
     updated_on = Column(DateTime, server_default=func.now(), nullable=False)
 
 
@@ -37,7 +38,7 @@ class VectorTable(Base):
 class PGVectorStorage(BaseVectorStorage):
     """PGVector vector storage implementation."""
 
-    cosine_better_than_threshold: float = 0.2
+    cosine_better_than_threshold: float = 0.4
 
     def __post_init__(self):
         try:
@@ -61,6 +62,10 @@ class PGVectorStorage(BaseVectorStorage):
             # Set batch size for upsert operations
             self._max_batch_size = settings.get("embedding_batch_num", 8)
 
+            # add meta fields
+            self.meta_fields.add("page_no")
+            self.meta_fields.add("positions")
+
         except Exception as e:
             logger.error(f"PGVector initialization failed: {str(e)}")
             raise
@@ -75,8 +80,11 @@ class PGVectorStorage(BaseVectorStorage):
             doc_ids = [v["doc_id"] for v in data.values()]
             doc_names = [v["doc_name"] for v in data.values()]
             documents = [v["content"] for v in data.values()]
+            source_ids = [v["s_id"] for v in data.values()]
+
             metadatas = [
                 {k: v for k, v in item.items() if k in self.meta_fields}
+                | {StorageNameSpace.NAME_SPACE: self.namespace}
                 or {"_default": "true"}
                 for item in data.values()
             ]
@@ -89,6 +97,7 @@ class PGVectorStorage(BaseVectorStorage):
                 batch_doc_ids = doc_ids[i:i + batch_size]
                 batch_doc_names = doc_names[i:i + batch_size]
                 batch_documents = documents[i:i + batch_size]
+                batch_source_ids = source_ids[i:i + batch_size]
                 batch_metadatas = metadatas[i:i + batch_size]
                 batch_chunk_sequences = chunk_sequences[i:i + batch_size]
 
@@ -125,6 +134,7 @@ class PGVectorStorage(BaseVectorStorage):
                         content=batch_documents[j],
                         mdata=batch_metadatas[j],
                         chunk_sequence=batch_chunk_sequences[j],
+                        source_chunk=batch_source_ids[j],
                         updated_on=func.now()
                     )
                     session.merge(vector)  # Upsert operation
@@ -177,10 +187,11 @@ class PGVectorStorage(BaseVectorStorage):
                                        "chunk_id": result.VectorTable.chunk_id,
                                        "distance": result.distance,
                                        "content": result.VectorTable.content,
+                                       "source_id": result.VectorTable.source_chunk,
                                        **result.VectorTable.mdata,
                                    }
                                    for result in results
-                                   if result.distance >= self.cosine_better_than_threshold
+                                   if result.distance >= self.cosine_better_than_threshold and result.VectorTable.mdata.get(StorageNameSpace.NAME_SPACE) == self.namespace
                                ][:top_k]
 
             session.close()

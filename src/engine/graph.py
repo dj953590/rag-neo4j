@@ -15,7 +15,7 @@ from src.engine.operations import (
     kg_query,
     naive_query,
 )
-from src.docs.chunker.chunks import extract_chunks, extract_chunks_md
+from src.docs.chunker.chunks import extract_chunks, extract_chunks_md, extract_page_chunks_md
 
 from src.utils.log import logger
 
@@ -284,7 +284,7 @@ class GraphEngine:
                 None
         """
         update_storage = False
-        combined_chunks, docs = extract_chunks_md(data, self.chunk_token_size)
+        chunk_data, docs = extract_page_chunks_md(data)
         try:
             new_docs = await self.check_docs(docs)
             if new_docs is None:
@@ -305,17 +305,22 @@ class GraphEngine:
                     new_docs.items(), desc="Chunking documents", unit="doc"
             ):
                 chunks = {}
-                for chunk in combined_chunks:
-                    # combined_text = " ".join(element['text'] for element in chunk['content'])
-                    chunk_id = compute_mdhash_id(chunk, prefix="chunk-")
+                for chunk in chunk_data:
+                    chunk_text = chunk["chunk_text"]
+                    page_no = chunk["page"]
+                    positions = chunk.get("positions", [])
+                    chunk_id = compute_mdhash_id(chunk_text, prefix="chunk-")
                     chunks[chunk_id] = {
-                        "content": chunk,
+                        "content": chunk_text,
                         # "bounding_box": chunk['bounding_box'],
                         # "token_count": chunk['token_count'],
                         "full_doc_id": doc_key,
                         "doc_id": self.doc_id,
                         "doc_name": self.doc_name,
-                        "chunk_sequence": chunk_sequence
+                        "chunk_sequence": chunk_sequence,
+                        "page_no": page_no,
+                        "positions": positions,
+                        "s_id": doc_key,  # Source ID for the chunk
                     }
                     chunk_sequence += 1  # Increment chunk sequence
                 inserting_chunks.update(chunks)

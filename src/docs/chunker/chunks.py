@@ -21,8 +21,118 @@ def merge_bounding_boxes(start_box, end_box):
         end_box[3]
     ]
 
+def extract_page_chunks_md(md_pages):
+    """
+    Splits markdown from PyMuPDF4LLM into token-limited chunks with positional metadata.
 
-def extract_chunks_md(data: List, max_tokens: int = 500) -> tuple[list[str], str]:
+    Returns:
+        chunks: List of markdown strings
+        chunk_data: List of dicts with keys:
+            - 'chunk_text': markdown string
+            - 'page': page number
+            - 'positions': list of bboxes for words in this chunk
+    """
+
+    chunk_data = []
+    full_text: str = ""
+
+    for page in md_pages:
+        page_number = page["metadata"]["page"]
+        words = page.get("words", [])
+        page_chunk = page["text"]
+        full_text += page_chunk
+        #for word in the words get the word and the bounding boxes which is first 4 in the list
+        # words are in the format [x0, y0, x1, y1, word]
+        page_word_positions = {}
+        for word in words:
+            # word[0] is x0, word[1] is y0, word[2] is x1, word[3] is y1, word[4] is the actual word
+            if len(word) >= 5:
+                word_bbox = [word[0], word[1], word[2], word[3]]
+                # store the word from fifth index
+                page_word_positions[word[4]] = word_bbox
+        # Flush the last chunk of the page
+        chunk_data.append({
+                "chunk_text": page_chunk.strip(),
+                "page": page_number,
+                "positions": page_word_positions.copy()
+            })
+
+    full_text_stripped = full_text.strip()
+    return chunk_data, full_text_stripped
+
+def extract_chunks_md(md_pages, max_tokens=1024,):
+    """
+    Splits markdown from PyMuPDF4LLM into token-limited chunks with positional metadata.
+
+    Returns:
+        chunks: List of markdown strings
+        chunk_data: List of dicts with keys:
+            - 'chunk_text': markdown string
+            - 'page': page number
+            - 'positions': list of bboxes for words in this chunk
+    """
+
+    chunk_data = []
+    full_text: str = ""
+
+    for page in md_pages:
+        page_number = page["metadata"]["page"]
+        words = page.get("words", [])
+        text = page["text"]
+        full_text += text
+
+        lines = text.split("\n")
+        current_chunk = ""
+        current_tokens = 0
+        current_positions = []
+
+        def flush_chunk():
+            nonlocal current_chunk, current_tokens, current_positions
+            if not current_chunk.strip():
+                return
+
+            # Tokenize and lowercase for matching
+            chunk_words = re.findall(r'\b\w+\b', current_chunk.lower())
+            bbox = None
+
+            if chunk_words:
+                first_word = chunk_words[0]
+                last_word = chunk_words[-1]
+
+                matched = [(i, w) for i, w in enumerate(words) if w[4].lower() == first_word]
+                first_match = matched[0][1] if matched else None
+
+                matched = [(i, w) for i, w in enumerate(words) if w[4].lower() == last_word]
+                last_match = matched[-1][1] if matched else None
+
+                if first_match and last_match:
+                    bbox = [first_match[0], first_match[1], last_match[2], last_match[3]]
+
+            if current_chunk.strip():
+                chunk_data.append({
+                    "chunk_text": current_chunk.strip(),
+                    "page": page_number,
+                    "positions": current_positions.copy()
+                })
+            current_chunk = ""
+            current_tokens = 0
+            current_positions = []
+
+        for line in lines:
+            token_count, words_list = count_tokens(line + "\n")
+            if current_tokens + token_count > max_tokens:
+                flush_chunk()
+
+            current_chunk += line + "\n"
+            current_tokens += token_count
+
+        flush_chunk()  # Final flush at page end
+
+    full_text_stripped = full_text.strip()
+    return chunk_data, full_text_stripped
+
+
+def extract_chunks_md_old(data: List, max_tokens: int = 500) -> tuple[list[str], str]:
     def chunk_text(text: str, chunk_token_size: int) -> List[str]:
         token_count, words_list = count_tokens(text)
         page_chunks = []

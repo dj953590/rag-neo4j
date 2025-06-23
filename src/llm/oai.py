@@ -130,6 +130,27 @@ async def openai_embedding(
     )
     return np.array([dp.embedding for dp in response.data])
 
+@wrap_embedding_func_with_attrs(embedding_dim=1536, max_token_size=8192)
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=4, max=60),
+    retry=retry_if_exception_type((RateLimitError, APIConnectionError, Timeout)),
+)
+async def baai_embedding(
+        texts: list[str],
+        model: str = "BAAI/bge-large-en-v1.5",
+        base_url: str = None,
+        api_key: str = None,
+) -> np.ndarray:
+    api_key = settings.get('TOGETHER_API_KEY', '')
+    base_url = settings.get('TOGETHER_BASE_URL', 'https://api.togetherapi.com/v1')
+    os.environ["OPENAI_API_KEY"] = api_key
+    openai_async_client = AsyncOpenAI(base_url=base_url)
+
+    response = await openai_async_client.embeddings.create(
+        model=model, input=texts, encoding_format="float"
+    )
+    return np.array([dp.embedding for dp in response.data])
 
 async def gpt_4o_mini_complete(
         prompt, system_prompt=None, history_messages=[], keyword_extraction=False, **kwargs
@@ -174,7 +195,7 @@ async def llama_3_3_70b_turbo(
     if keyword_extraction:
         kwargs["response_format"] = GPTKeywordExtractionFormat
     return await openai_complete_if_cache(
-        "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
         prompt,
         system_prompt=system_prompt,
         history_messages=history_messages,

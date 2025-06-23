@@ -34,6 +34,8 @@ from src.docs.parser.helpers.pdf.pdf_text import get_raw_lines, is_white
 from src.docs.parser.helpers.pdf.pdf_multicolumn import column_boxes
 from dataclasses import dataclass
 
+from src.docs.parser.helpers.splitters.markdown import CustomMarkdownSplitter
+
 # Characters recognized as bullets when starting a line.
 bullet = tuple(
     ["- ", "* ", "> ", chr(0xB6), chr(0xB7), chr(8226), chr(0xF0A7), chr(0xF0B7)]
@@ -1010,7 +1012,7 @@ if __name__ == "__main__":
     import time
     from pathlib2 import Path
 
-    doc_name = "citibank-amazon"
+    doc_name = "citibank-caterpillar"
 
     filename = (
             Path(__file__).parent.parent.parent / 'docs' / (doc_name + ".pdf")
@@ -1040,11 +1042,11 @@ if __name__ == "__main__":
 
     # get the markdown string
     extract_words=False,
-    md_string = to_markdown(doc, pages=pages, page_chunks=True, extract_words=True, margins=(0, 20, 0, 20))
+    md_data = to_markdown(doc, pages=pages, page_chunks=True, extract_words=True, margins=(0, 20, 0, 20))
     outname = doc.name.replace(".pdf", ".md")
     chunk_outname = doc.name.replace(".pdf", "-chunks.md")
 
-    for page in md_string:
+    for page in md_data:
         page_hdr = f"Page {page['metadata']['page']}:"
         page_txt = page['text']
         page_sep = "\n" + "="*40 + "\n"
@@ -1052,11 +1054,14 @@ if __name__ == "__main__":
         with Path(outname).open("ab") as f:
             f.write(page_str.encode())
 
-    chunks, docs = extract_chunks_md(md_string, max_tokens=1024)
+    md_splitter = CustomMarkdownSplitter(chunk_size = 1024, chunk_overlap = 20)
+    chunks = md_splitter.split_documents(md_data)  # split the first page text
+    #chunks, docs = extract_chunks_md(md_string, max_tokens=1024)
     with Path(chunk_outname).open("ab") as f:
         for i, chunk in enumerate(chunks):
             f.write(f"Chunk {i+1}:".encode())
-            f.write(chunk.encode())
+            f.write(chunk.page_content.encode())
             f.write("\n".encode())
+            f.write(chunk.metadata)
     t1 = time.perf_counter()  # stop timer
     print(f"Markdown creation time for {doc.name=} {round(t1-t0,2)} sec.")

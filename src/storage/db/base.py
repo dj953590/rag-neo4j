@@ -37,6 +37,10 @@ class QueryParam:
 
 @dataclass
 class StorageNameSpace:
+    """Base class for storage engines."""
+    # The name of the storage engine
+    #define the namespace static variable
+    NAME_SPACE = "ns"
     namespace: str
     global_config: dict
 

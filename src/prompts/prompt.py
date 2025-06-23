@@ -21,7 +21,7 @@ PROMPTS["process_tickers"] = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "
 
 PROMPTS["DEFAULT_ENTITY_TYPES"] = DEFAULT_ENTITY_TYPES
 
-PROMPTS["entity_extraction"] = """You are efficient named entity relationship extractor 
+PROMPTS["entity_extraction"] = """You are expert named entity relationship extractor for credit agreements.
 - **Your Goal** - 
 Given a **Markdown** text document relevant to credit agreements and a list of legal entity types, **identify all entities** from the text that match these types and extract **all relationships** among the identified entities.  
 Use **{language}** as the output language.  
@@ -35,11 +35,11 @@ Below is a list of **valid entity types** with their **descriptions**. Use this 
 ### **Steps**
 1. **Identify all entities**  
    - Extract all entities that match the provided **entity types**.  
-   - If an entity does not match an exact type but is still **credit agreement-related**, classify it appropriately.  
+   - If an entity does not match an exact type but is still **credit or legal of financial related**, classify it appropriately.  
    - For each identified entity, extract:  
      - **Entity Name**: The exact name as mentioned in the text (capitalize if in English).  
-     - **Entity Type**: One of the predefined **credit agreement-related** entity types. ** DO NOT **
-            - include any entity that does not match the entity types provided.
+     - **Entity Type**: One of the predefined **credit, legal, financial related** entity types. ** DO NOT **
+            - include any entity that does not match the entity types or are not related to **credit, legal, financial related**.
             - include any entity that is not related to credit agreements.  
             - include enity without a type
      - **Entity Description**: A **comprehensive** summary of the entity's attributes, role, and significance based on the text.
@@ -120,7 +120,7 @@ Output:
 
 PROMPTS[
     "summarize_entity_descriptions"
-] = """You are a helpful assistant responsible for generating a comprehensive summary of the data provided below.
+] = """You are a expert credit underwriter responsible for generating a comprehensive summary of the data provided below.
 Given one or two entities, and a list of descriptions, all related to the same entity or group of entities.
 Please concatenate all of these into a single, comprehensive description. Make sure to include information collected from all the descriptions.
 If the provided descriptions are contradictory, please resolve the contradictions and provide a single, coherent summary.
@@ -149,7 +149,7 @@ PROMPTS["fail_response"] = "Sorry, I'm not able to provide an answer to that que
 
 PROMPTS["rag_response"] = """---Role---
 
-You are a helpful assistant responding to questions about data in the tables provided.
+You are a expert credit underwriter responding to questions about data in the tables provided.
 
 
 ---Goal---
@@ -171,7 +171,7 @@ Add sections and commentary to the response as appropriate for the length and fo
 
 PROMPTS["keywords_extraction"] = """---Role---
 
-You are a helpful assistant tasked with identifying both high-level and low-level keywords in the user's query.
+You are a expert credit underwriter tasked with identifying both high-level and low-level keywords in the user's query.
 
 ---Goal---
 
@@ -181,8 +181,8 @@ Given the query, list both high-level and low-level keywords. High-level keyword
 
 - Output the keywords in JSON format.
 - The JSON should have two keys:
-  - "high_level_keywords" for overarching concepts or themes.
-  - "low_level_keywords" for specific entities or details.
+  - "high_level_keywords" for overarching concepts or themes in **credit, legal, financial**  domain.
+  - "low_level_keywords" for specific entities or details **credit, legal, financial**  domain.
 
 ######################
 -Examples-
@@ -234,7 +234,7 @@ Output:
 
 PROMPTS["naive_rag_response"] = """---Role---
 
-You are a helpful assistant responding to questions about documents provided.
+You are a expert credit underwriter responding to questions about documents provided.
 
 
 ---Goal---
