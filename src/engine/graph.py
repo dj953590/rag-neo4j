@@ -405,6 +405,7 @@ class GraphEngine:
         Returns:
                 list: The results of the query.
         """
+        chunk_ids = []
         if param.mode in ["hybrid"]:
             response = await kg_query(
                 query,
@@ -417,16 +418,15 @@ class GraphEngine:
                 asdict(self),
             )
         elif param.mode == "naive":
-            response = await naive_query(
+            response, chunk_ids = await naive_query(
                 query,
                 self.chunks_vdb,
-                self.text_chunks,
                 param,
                 asdict(self),
             )
         else:
             raise ValueError(f"Unknown mode {param.mode}")
-        return response
+        return response, chunk_ids
 
     def delete_by_entity(self, entity_name: str):
         """

@@ -179,7 +179,7 @@ class PGVectorStorage(BaseVectorStorage):
             results = session.query(VectorTable,
                                     VectorTable.embedding.cosine_distance(query_embedding).label("distance")
                                     ).filter(doc_id == VectorTable.doc_id if doc_id is not None else True
-                                             ).order_by("distance").limit(top_k * 2).all()
+                                             ).order_by(VectorTable.chunk_sequence).limit(top_k * 2).all()
 
             # Filter results by cosine similarity threshold and take top k
             filtered_results = [

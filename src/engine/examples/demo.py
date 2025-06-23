@@ -8,7 +8,7 @@ from pathlib2 import Path
 import json
 
 from src.utils.utils import compute_mdhash_id
-relationship = "caterpillar"
+relationship = "gxo"
 WORKING_DIR = "./" + relationship
 doc_name = "citibank-" + relationship
 
@@ -42,6 +42,9 @@ while True:
     query = input("Enter your query (or type 'exit' to quit): ")
     if query.lower() == 'bye' or query.lower() == 'exit':
         break
-    query_param = QueryParam(mode="hybrid", doc_id=doc_id)
-    result = engine.query(query, param=query_param)
+    query_param = QueryParam(mode="naive", doc_id=doc_id)
+    result, ids = engine.query(query, param=query_param)
+    print("Query Results:")
     print(result)
+    print("Chunk IDs used :")
+    print(ids)

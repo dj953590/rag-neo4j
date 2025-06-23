@@ -230,6 +230,16 @@ def truncate_list_by_token_size(list_data: list, key: callable, max_token_size: 
             return list_data[:i]
     return list_data
 
+def truncate_list_ids_by_token_size(list_data: list, ids_data:list, key: callable, max_token_size: int):
+    """Truncate a list of data by token size"""
+    if max_token_size <= 0:
+        return []
+    tokens = 0
+    for i, data in enumerate(list_data):
+        tokens += len(encode_string_by_tiktoken(key(data)))
+        if tokens > max_token_size:
+            return list_data[:i], ids_data[:i]
+    return list_data, ids_data
 
 def cosine_similarity(v1, v2):
     """Calculate cosine similarity between two vectors"""

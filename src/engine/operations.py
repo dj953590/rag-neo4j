@@ -20,7 +20,7 @@ from src.utils.utils import (
     pack_user_ass_to_openai_messages,
     split_string_by_multi_markers,
     truncate_list_by_token_size,
-    compute_args_hash,
+    compute_args_hash, truncate_list_ids_by_token_size,
 )
 from src.storage.db.base import (
     BaseGraphStorage,
@@ -1337,7 +1337,6 @@ def combine_contexts(entities, relationships, sources):
 async def naive_query(
         query,
         chunks_vdb: BaseVectorStorage,
-        text_chunks_db: BaseKVStorage[TextChunkSchema],
         query_param: QueryParam,
         global_config: dict,
 ):
@@ -1346,7 +1345,6 @@ async def naive_query(
     Args:
         query: The query.
         chunks_vdb: The chunks vector database instance.
-        text_chunks_db: The text chunks database instance.
         query_param: The query parameters.
         global_config: The global configuration.
     Returns:
@@ -1355,12 +1353,12 @@ async def naive_query(
     """
     use_model_func = global_config["llm_model_func"]
     args_hash = compute_args_hash(query_param.mode, query)
-    results = await chunks_vdb.query(query, param=query_param)
-    if not len(results):
+    chunks = await chunks_vdb.query(query, param=query_param)
+    if not len(chunks):
         return PROMPTS["fail_response"]
 
-    #chunks_ids = [r["id"] for r in results]
-    chunks = [r["content"] for r in results if "content" in r]
+    chunks_ids = [r["chunk_id"] for r in chunks]
+    #chunks = [r["content"] for r in results if "content" in r]
     #chunks = await text_chunks_db.get_by_ids(chunks_ids)
 
     # Filter out invalid chunks
@@ -1372,8 +1370,9 @@ async def naive_query(
         logger.warning("No valid chunks found after filtering")
         return PROMPTS["fail_response"]
 
-    maybe_trun_chunks = truncate_list_by_token_size(
+    maybe_trun_chunks, chunks_ids = truncate_list_ids_by_token_size(
         valid_chunks,
+        chunks_ids,
         key=lambda x: x["content"],
         max_token_size=query_param.max_token_for_text_unit,
     )
@@ -1392,6 +1391,8 @@ async def naive_query(
     sys_prompt = sys_prompt_temp.format(
         content_data=section, response_type=query_param.response_type
     )
+
+    logger.info(f"System prompt: {sys_prompt}")
 
     if query_param.only_need_prompt:
         return sys_prompt
@@ -1413,4 +1414,4 @@ async def naive_query(
             .strip()
         )
 
-    return response
+    return response, chunks_ids
