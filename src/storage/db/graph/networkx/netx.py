@@ -6,14 +6,11 @@ import numpy as np
 from typing import Any, Union
 
 from pathlib2 import Path
-
-from src.llm.oai import openai_embedding
 from src.utils.log import logger
 from src.storage.db.base import BaseGraphStorage, QueryParam
 import networkx as nx
 from typing_extensions import cast
 
-from src.utils.utils import EmbeddingFunc
 
 
 @dataclass
