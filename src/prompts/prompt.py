@@ -21,7 +21,7 @@ PROMPTS["process_tickers"] = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "
 
 PROMPTS["DEFAULT_ENTITY_TYPES"] = DEFAULT_ENTITY_TYPES
 
-PROMPTS["entity_extraction"] = """You are expert named entity relationship extractor for credit agreements.
+PROMPTS["entity_extraction"] = """You are credit analyst, expert in named entity relationship extractor for credit, legal and financial domains.
 - **Your Goal** - 
 Given a **Markdown** text document relevant to credit agreements and a list of legal entity types, **identify all entities** from the text that match these types and extract **all relationships** among the identified entities.  
 Use **{language}** as the output language.  
@@ -38,11 +38,10 @@ Below is a list of **valid entity types** with their **descriptions**. Use this 
    - If an entity does not match an exact type but is still **credit or legal of financial related**, classify it appropriately.  
    - For each identified entity, extract:  
      - **Entity Name**: The exact name as mentioned in the text (capitalize if in English).  
-     - **Entity Type**: One of the predefined **credit, legal, financial related** entity types. ** DO NOT **
-            - include any entity that does not match the entity types or are not related to **credit, legal, financial related**.
-            - include any entity that is not related to credit agreements.  
-            - include enity without a type
-     - **Entity Description**: A **comprehensive** summary of the entity's attributes, role, and significance based on the text.
+     - **Entity Type**: One of the predefined **credit, legal, financial related** entity types. 
+            - ** DO NOT ** include any entity that does not match the entity types or are not related to **credit, legal, financial related**.
+            - ** DO NOT ** include enity without a type
+     - **Entity Description**: A **comprehensive** summary of the entity's obligations, rights, attributes, role, and significance based on the text.
     - **Format each entity** as:  
      `("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)`  
 
@@ -55,10 +54,12 @@ Below is a list of **valid entity types** with their **descriptions**. Use this 
      - **Relationship Keywords**: Key terms that describe the nature of the relationship.  
    - **Format each relationship** as:  
      `("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)`
-   - **DO NOT** include entities with **NO relationships** in the output.  
+   - **DO NOT** include entities with **NO relationships** in the output.
+   - **DO NOT** include relationships that do not have a **source entity** and a **target entity**.
 
 3. **Extract key concepts and themes**  
-   - Identify overarching concepts or themes in the text.  
+   - Extract high level keywords that capture essence of the text in **credit, legal, financial** domain.
+   - Extract content keywords that capture entities details or concrete terms in the text for **credit, legal, financial** domain  
    - **Format as**:  
      `("content_keywords"{tuple_delimiter}<high_level_keywords>)` 
 
@@ -67,13 +68,13 @@ Below is a list of **valid entity types** with their **descriptions**. Use this 
    - End response with `{completion_delimiter}`.
 
 ######################
--Examples-
-######################
-{examples}
-######################
 -Real Data-
 ######################
 Text: {input_text}
+######################
+-Examples-
+######################
+{examples}
 ######################
 Output:
 """
@@ -120,7 +121,7 @@ Output:
 
 PROMPTS[
     "summarize_entity_descriptions"
-] = """You are a expert credit underwriter responsible for generating a comprehensive summary of the data provided below.
+] = """You are a expert credit underwriter responsible for generating a comprehensive summary of the data from **credit, legal, financial** document provided below.
 Given one or two entities, and a list of descriptions, all related to the same entity or group of entities.
 Please concatenate all of these into a single, comprehensive description. Make sure to include information collected from all the descriptions.
 If the provided descriptions are contradictory, please resolve the contradictions and provide a single, coherent summary.

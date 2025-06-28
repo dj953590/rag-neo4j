@@ -9,7 +9,7 @@ from src.docs.parser.pdf_processor import PDFProcessor
 from pathlib2 import Path
 
 from src.utils.utils import compute_mdhash_id
-relationship = "gxo"
+relationship = "puerto"
 WORKING_DIR = "./" + relationship
 doc_name = "citibank-" + relationship
 

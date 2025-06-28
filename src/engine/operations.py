@@ -1,5 +1,6 @@
 import asyncio
 import json
+import math
 import re
 
 from tqdm import tqdm
@@ -21,6 +22,7 @@ from src.utils.utils import (
     split_string_by_multi_markers,
     truncate_list_by_token_size,
     compute_args_hash, truncate_list_ids_by_token_size,
+    process_combine_chunks_ids,
 )
 from src.storage.db.base import (
     BaseGraphStorage,
@@ -530,36 +532,52 @@ async def extract_entities(
 
     logger.info(f"Inserting entities into storage...{len(maybe_nodes)}")
 
-    all_entities_data = []
-    for result in tqdm_async(
-            asyncio.as_completed(
-                [
-                    _merge_nodes_then_upsert(k, v, knowledge_graph_inst, kg_db, global_config)
-                    for k, v in maybe_nodes.items()
-                ]
-            ),
-            total=len(maybe_nodes),
-            desc="Inserting entities",
-            unit="entity",
-    ):
-        all_entities_data.append(await result)
+    BATCH_SIZE = global_config.get("GRAHDB_BATCH_SIZE", 200)  # Example batch size, adjust as needed
 
+    # Process entities in batches
+    logger.info("Inserting entities into storage...")
+    all_entities_data = []
+    maybe_nodes_items = list(maybe_nodes.items())
+    num_entity_batches = math.ceil(len(maybe_nodes_items) / BATCH_SIZE)
+
+    for batch_idx in range(num_entity_batches):
+        batch = maybe_nodes_items[batch_idx * BATCH_SIZE : (batch_idx + 1) * BATCH_SIZE]
+        for result in tqdm_async(
+                asyncio.as_completed(
+                    [
+                        _merge_nodes_then_upsert(k, v, knowledge_graph_inst, kg_db, global_config)
+                        for k, v in batch
+                    ]
+                ),
+                total=len(batch),
+                desc=f"Inserting entities (Batch {batch_idx + 1}/{num_entity_batches})",
+                unit="entity",
+        ):
+            all_entities_data.append(await result)
+
+    # Process relationships in batches
     logger.info("Inserting relationships into storage...")
     all_relationships_data = []
-    for result in tqdm_async(
-            asyncio.as_completed(
-                [
-                    _merge_edges_then_upsert(
-                        k[0], k[1], v, knowledge_graph_inst, kg_db, global_config
-                    )
-                    for k, v in maybe_edges.items()
-                ]
-            ),
-            total=len(maybe_edges),
-            desc="Inserting relationships",
-            unit="relationship",
-    ):
-        all_relationships_data.append(await result)
+    maybe_edges_items = list(maybe_edges.items())
+    num_relationship_batches = math.ceil(len(maybe_edges_items) / BATCH_SIZE)
+
+    for batch_idx in range(num_relationship_batches):
+        batch = maybe_edges_items[batch_idx * BATCH_SIZE : (batch_idx + 1) * BATCH_SIZE]
+        for result in tqdm_async(
+                asyncio.as_completed(
+                    [
+                        _merge_edges_then_upsert(
+                            k[0], k[1], v, knowledge_graph_inst, kg_db, global_config
+                        )
+                        for k, v in batch
+                    ]
+                ),
+                total=len(batch),
+                desc=f"Inserting relationships (Batch {batch_idx + 1}/{num_relationship_batches})",
+                unit="relationship",
+        ):
+            all_relationships_data.append(await result)
+
 
     if not len(all_entities_data) and not len(all_relationships_data):
         logger.warning(
@@ -618,7 +636,7 @@ async def kg_query(
         text_chunks_db: BaseKVStorage[TextChunkSchema],
         query_param: QueryParam,
         global_config: dict,
-) -> str:
+) -> tuple[str, list[str], list[str]]:
     """
     Performs a graph query on the knowledge graph.
 
@@ -697,7 +715,9 @@ async def kg_query(
 
     # Build context
     keywords = [ll_keywords, hl_keywords]
-    context = await _build_query_context(
+    key_words = ll_keywords + "," + hl_keywords
+    chunks_ids = []
+    context, chunks_ids  = await _build_query_context(
         keywords,
         knowledge_graph_inst,
         kg_db,
@@ -736,7 +756,7 @@ async def kg_query(
             .strip()
         )
 
-    return response
+    return response, chunks_ids, key_words
 
 
 async def _build_query_context(
@@ -767,80 +787,73 @@ async def _build_query_context(
     """
 
     ll_kewwords, hl_keywrds = query[0], query[1]
-    if query_param.mode in ["hybrid"]:
-        if ll_kewwords == "":
-            ll_entities_context, ll_relations_context, ll_text_units_context = (
-                "",
-                "",
-                "",
-            )
-            warnings.warn(
-                "Low Level context is None. Return empty Low entity/relationship/source"
-            )
-        else:
-            (
-                ll_entities_context,
-                ll_relations_context,
-                ll_text_units_context,
-            ) = await _get_node_data(
-                ll_kewwords,
-                knowledge_graph_inst,
-                kg_db,
-                entities_vdb,
-                text_chunks_db,
-                query_param,
-                global_config,
-            )
-    if query_param.mode in ["hybrid"]:
-        if hl_keywrds == "":
-            hl_entities_context, hl_relations_context, hl_text_units_context = (
-                "",
-                "",
-                "",
-            )
-            warnings.warn(
-                "High Level context is None. Return empty High entity/relationship/source"
-            )
-        else:
-            (
-                hl_entities_context,
-                hl_relations_context,
-                hl_text_units_context,
-            ) = await _get_edge_data(
-                hl_keywrds,
-                knowledge_graph_inst,
-                kg_db,
-                relationships_vdb,
-                text_chunks_db,
-                query_param,
-            )
-            if (
-                    hl_entities_context == ""
-                    and hl_relations_context == ""
-                    and hl_text_units_context == ""
-            ):
-                logger.warn("No high level context found. Switching to local mode.")
-                query_param.mode = "local"
-    if query_param.mode == "hybrid":
-        entities_context, relations_context, text_units_context = combine_contexts(
+    ll_chunks_ids, hl_chunks_ids = [], []
+    if ll_kewwords == "":
+        ll_entities_context, ll_relations_context, ll_text_units_context = (
+            "",
+            "",
+            "",
+        )
+        warnings.warn(
+            "Low Level context is None. Return empty Low entity/relationship/source"
+        )
+    else:
+        (
+            ll_entities_context,
+            ll_relations_context,
+            ll_text_units_context,
+        ) = await _get_node_data(
+            ll_kewwords,
+            knowledge_graph_inst,
+            kg_db,
+            entities_vdb,
+            text_chunks_db,
+            query_param,
+            global_config,
+        )
+    if hl_keywrds == "":
+        hl_entities_context, hl_relations_context, hl_text_units_context = (
+            "",
+            "",
+            "",
+        )
+        warnings.warn(
+            "High Level context is None. Return empty High entity/relationship/source"
+        )
+    else:
+        (
+            hl_entities_context,
+            hl_relations_context,
+            hl_text_units_context,
+        ) = await _get_edge_data(
+            hl_keywrds,
+            knowledge_graph_inst,
+            kg_db,
+            relationships_vdb,
+            text_chunks_db,
+            query_param,
+        )
+    entities_context, relations_context, text_units_context, chunks_ids = combine_contexts(
             [hl_entities_context, ll_entities_context],
             [hl_relations_context, ll_relations_context],
             [hl_text_units_context, ll_text_units_context],
-        )
-    return f"""
------Entities-----
-```csv
-{entities_context}
-```
------Relationships-----
-```csv
-{relations_context}
-```
------Sources-----
-```csv
-{text_units_context}
-```
-"""
+            [hl_chunks_ids, ll_chunks_ids],
+    )
+    completed_context = f"""
+            -----Entities-----
+            ```csv
+            {entities_context}
+            ```
+            -----Relationships-----
+            ```csv
+            {relations_context}
+            ```
+            -----Sources-----
+            ```csv
+            {text_units_context}
+            ```
+            """
+    return completed_context
 
 
 async def _get_node_data(
@@ -867,6 +880,7 @@ async def _get_node_data(
 
     # get similar entities
     """
+    chunks_ids = []
     results = await entities_vdb.query(query, param=query_param)
     if not len(results):
         return "", "", ""
@@ -896,7 +910,7 @@ async def _get_node_data(
         if n is not None and "entity_name" in k
     ]  # what is this text_chunks_db doing.  dont remember it in airvx.  check the diagram.
     # get entity text chunk
-    use_text_units = await _find_most_related_text_unit_from_entities(
+    use_text_units, chunks_ids = await _find_most_related_text_unit_from_entities(
         node_datas, query_param, text_chunks_db, knowledge_graph_inst, kg_db
     )
     # get relate edges
@@ -942,7 +956,7 @@ async def _get_node_data(
     for i, t in enumerate(use_text_units):
         text_units_section_list.append([i, t["content"]])
     text_units_context = list_of_list_to_csv(text_units_section_list)
-    return entities_context, relations_context, text_units_context
+    return entities_context, relations_context, text_units_context, chunks_ids
 
 
 async def _find_most_related_text_unit_from_entities(
@@ -1035,8 +1049,9 @@ async def _find_most_related_text_unit_from_entities(
         max_token_size=query_param.max_token_for_text_unit,
     )
     # Extracts the data from all_text_units and returns the list of text units.
-    all_text_units = [t["data"] for t in all_text_units]
-    return all_text_units
+    all_text_data = [t["data"] for t in all_text_units]
+    all_text_ids = [t["id"] for t in all_text_units]
+    return all_text_data, all_text_ids
 
 
 async def _find_most_related_edges_from_entities(
@@ -1114,6 +1129,7 @@ async def _get_edge_data(
     Returns:
         A tuple of edge data, entities, and text units.
     """
+    chunks_ids =[]
     results = await relationships_vdb.query(keywords, param=query_param)
 
     if not len(results):
@@ -1153,7 +1169,7 @@ async def _get_edge_data(
     use_entities = await _find_most_related_entities_from_relationships(
         edge_datas, query_param, knowledge_graph_inst, kg_db
     )
-    use_text_units = await _find_related_text_unit_from_relationships(
+    use_text_units, chunks_ids = await _find_related_text_unit_from_relationships(
         edge_datas, query_param, text_chunks_db
     )
     logger.info(
@@ -1194,7 +1210,7 @@ async def _get_edge_data(
     for i, t in enumerate(use_text_units):
         text_units_section_list.append([i, t["content"]])
     text_units_context = list_of_list_to_csv(text_units_section_list)
-    return entities_context, relations_context, text_units_context
+    return entities_context, relations_context, text_units_context, chunks_ids
 
 
 async def _find_most_related_entities_from_relationships(
@@ -1302,11 +1318,12 @@ async def _find_related_text_unit_from_relationships(
     )
 
     all_text_units: list[TextChunkSchema] = [t["data"] for t in truncated_text_units]
+    all_text_units_ids = [t["id"] for t in truncated_text_units]
 
-    return all_text_units
+    return all_text_units, all_text_units_ids
 
 
-def combine_contexts(entities, relationships, sources):
+def combine_contexts(entities, relationships, sources, chunks_ids):
     """
     Combine and deduplicate entities, relationships, and sources.
     Args:
@@ -1331,7 +1348,9 @@ def combine_contexts(entities, relationships, sources):
     # Combine and deduplicate the sources
     combined_sources = process_combine_contexts(hl_sources, ll_sources)
 
-    return combined_entities, combined_relationships, combined_sources
+    combined_chunks_ids =     process_combine_chunks_ids(chunks_ids[0], chunks_ids[1])
+
+    return combined_entities, combined_relationships, combined_sources, combined_chunks_ids
 
 
 async def naive_query(

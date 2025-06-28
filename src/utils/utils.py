@@ -393,6 +393,15 @@ def process_combine_contexts(hl, ll):
     combined_sources_result = "\n".join(combined_sources_result)
     return combined_sources_result
 
+def process_combine_chunks_ids(hl, ll):
+    combined_chunks = []
+    seen = set()
+    for item in hl + ll:
+        if item and item not in seen:
+            combined_chunks.append(item)
+            seen.add(item)
+
+    return combined_chunks
 
 def csv_string_to_list(csv_string: str) -> List[List[str]]:
     output = io.StringIO(csv_string)

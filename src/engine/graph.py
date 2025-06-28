@@ -1,5 +1,7 @@
 import asyncio
 import os
+
+from dynaconf import settings
 from tqdm.asyncio import tqdm as tqdm_async
 from dataclasses import asdict, dataclass, field
 from datetime import datetime
@@ -172,6 +174,8 @@ class GraphEngine:
     # storage
     doc_id: str = None
     doc_name: str = None
+
+    GRAHDB_BATCH_SIZE = settings.get("GRAHDB_BATCH_SIZE", 200)
 
     vector_db_storage_cls_kwargs: dict = field(default_factory=dict)
 
@@ -406,8 +410,9 @@ class GraphEngine:
                 list: The results of the query.
         """
         chunk_ids = []
+        keywords = []
         if param.mode in ["hybrid"]:
-            response = await kg_query(
+            response, chunk_ids, keywords = await kg_query(
                 query,
                 self.chunk_entity_relation_graph,
                 self.chunk_entity_relation_graphdb,
@@ -426,7 +431,42 @@ class GraphEngine:
             )
         else:
             raise ValueError(f"Unknown mode {param.mode}")
-        return response, chunk_ids
+        return response, chunk_ids, keywords
+
+    def classify_document(self, doc: str):
+        """
+        Classify the document using the LLM model.
+
+        Args:
+            doc (str): The document to be classified.
+        Returns:
+                str: The classification result.
+        """
+        loop = always_get_an_event_loop()
+        return loop.run_until_complete(self.aclassify_document(doc))
+
+    async def aclassify_document(self, doc: str):
+        """
+        Classify the document using the LLM model.
+
+        Args:
+            doc (str): The document to be classified.
+        Returns:
+                str: The classification result.
+        """
+        if not doc:
+            raise ValueError("Document content cannot be empty.")
+
+        try:
+            response = await self.llm_model_func(
+                doc,
+                max_tokens=self.llm_model_max_token_size,
+                **self.llm_model_kwargs,
+            )
+            return response
+        except Exception as e:
+            logger.error(f"Error during document classification: {e}")
+            raise e
 
     def delete_by_entity(self, entity_name: str):
         """

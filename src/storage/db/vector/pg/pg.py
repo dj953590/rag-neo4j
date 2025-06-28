@@ -176,22 +176,20 @@ class PGVectorStorage(BaseVectorStorage):
                 query_embedding=query_embedding
             ).limit(top_k * 2).all()
             """
-            results = session.query(VectorTable,
-                                    VectorTable.embedding.cosine_distance(query_embedding).label("distance")
-                                    ).filter(doc_id == VectorTable.doc_id if doc_id is not None else True
-                                             ).order_by(VectorTable.chunk_sequence).limit(top_k * 2).all()
-
+            results = session.query(VectorTable, (1 - VectorTable.embedding.cosine_distance(query_embedding)).label("cosine")
+                                        ).filter(VectorTable.doc_id == doc_id if doc_id is not None else True
+                                        ).order_by((1 - VectorTable.embedding.cosine_distance(query_embedding)).desc()).limit(top_k * 2).all()
             # Filter results by cosine similarity threshold and take top k
             filtered_results = [
                                    {
                                        "chunk_id": result.VectorTable.chunk_id,
-                                       "distance": result.distance,
+                                       "cosine": result.cosine,
                                        "content": result.VectorTable.content,
                                        "source_id": result.VectorTable.source_chunk,
                                        **result.VectorTable.mdata,
                                    }
                                    for result in results
-                                   if result.distance >= self.cosine_better_than_threshold and result.VectorTable.mdata.get(StorageNameSpace.NAME_SPACE) == self.namespace
+                                   if result.cosine >= self.cosine_better_than_threshold and result.VectorTable.mdata.get(StorageNameSpace.NAME_SPACE) == self.namespace
                                ][:top_k]
 
             session.close()

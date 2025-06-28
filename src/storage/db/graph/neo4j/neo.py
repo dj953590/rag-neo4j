@@ -39,9 +39,13 @@ class Neo4JStorage(BaseGraphStorage):
         uri = settings.get('NEO4j_URI', None)
         user = settings.get('NEO4J_USERNAME', None)
         pwd = settings.get('NEO4J_PASSWORD', None)
+        max_pool_size = settings.get('NEO4J_MAX_POOL_SIZE', 200)
+        max_connect_timeout = settings.get('NEO4J_MAX_CONNECT_TIMEOUT', 120)
         self._database = settings.get('NEO4J_DATABASE', "neo4j")
         self._driver: AsyncDriver = AsyncGraphDatabase.driver(
-            uri, auth=(user, pwd)
+            uri, auth=(user, pwd),
+            max_connection_pool_size=max_pool_size,
+            connection_timeout=max_connect_timeout,
         )
 
     def __post_init__(self):
@@ -268,6 +272,11 @@ class Neo4JStorage(BaseGraphStorage):
             node_data: Dictionary of node properties
         """
         label = node_id.strip('"')
+        if not label:
+            logger.info(
+                f"Node label is empty. Cannot upsert node for data: {node_data}"
+            )
+            return
         properties = node_data
 
         async def _do_upsert(tx: AsyncManagedTransaction):
@@ -311,6 +320,11 @@ class Neo4JStorage(BaseGraphStorage):
         """
         source_node_label = source_node_id.strip('"')
         target_node_label = target_node_id.strip('"')
+        if not source_node_label or not target_node_label:
+            logger.info(
+                f"Source or target node label is empty. Cannot upsert edge for data: {edge_data}"
+            )
+            return
         edge_properties = edge_data
 
         async def _do_upsert_edge(tx: AsyncManagedTransaction):
