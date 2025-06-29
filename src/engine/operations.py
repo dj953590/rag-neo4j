@@ -802,6 +802,7 @@ async def _build_query_context(
             ll_entities_context,
             ll_relations_context,
             ll_text_units_context,
+            ll_chunks_ids,
         ) = await _get_node_data(
             ll_kewwords,
             knowledge_graph_inst,
@@ -825,6 +826,7 @@ async def _build_query_context(
             hl_entities_context,
             hl_relations_context,
             hl_text_units_context,
+            hl_chunks_ids,
         ) = await _get_edge_data(
             hl_keywrds,
             knowledge_graph_inst,
@@ -853,7 +855,7 @@ async def _build_query_context(
             {text_units_context}
             ```
             """
-    return completed_context
+    return completed_context, chunks_ids
 
 
 async def _get_node_data(
@@ -883,7 +885,7 @@ async def _get_node_data(
     chunks_ids = []
     results = await entities_vdb.query(query, param=query_param)
     if not len(results):
-        return "", "", ""
+        return "", "", "",""
     # get entity information
     node_datas = await asyncio.gather(
         *[

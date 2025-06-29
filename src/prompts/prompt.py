@@ -1,7 +1,11 @@
 import os
+import pathlib
 from src.entities.legal.legal import load_legal_entities
 
-file_path = os.path.join(os.path.dirname(__file__), "..\\entities\\\\legal\\data\\Agreement.txt")
+from pathlib import Path
+
+base_dir = Path(__file__).parent
+file_path = (base_dir / '..' / 'entities' / 'legal' / 'data' / 'Agreement.txt').resolve()
 
 
 def default_entities_types(file_path):
