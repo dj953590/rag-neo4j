@@ -1,0 +1,7 @@
+Financial Reporting : Documents that disclose a company’s financial condition and performance, including 10-Ks, 10-Qs, and audited financial statements. Used to assess creditworthiness.
+Legal Agreements : Binding contracts that define the terms of a credit relationship, such as credit agreements, loan agreements, and fee letters. Core to understanding rights and obligations.
+Risk Management : Documents related to mitigating lender risk, such as guarantees, letters of credit, and insurance policies. They offer protection in case of borrower default.
+Credit Approval : Internal and external documents used to support underwriting decisions, including borrowing base certificates, covenant compliance reports, and internal memos.
+Collateral Documentation : Documents that describe or perfect security interests in pledged assets, such as UCC filings, mortgages, appraisals, and lien certificates.
+Regulatory & Compliance : Documents required to meet legal and regulatory standards, like KYC forms, OFAC certifications, and regulatory filings (e.g., FR Y-14, CECL support).
+Supporting / Correspondence : Additional materials such as legal opinions, board resolutions, emails, and internal notes that clarify or support the credit file or transaction.

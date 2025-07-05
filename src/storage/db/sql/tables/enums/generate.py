@@ -4,12 +4,13 @@ from datetime import datetime
 from typing import Tuple
 
 from src.storage.db.sql.pgdb import PGDB
+from src.storage.db.sql.tables.engine_tables import DocumentsState
 
 
-def get_document_codes():
+async def get_document_codes():
     try:
         pg = PGDB()
-        result = pg.select("document_state")
+        result = pg.select(DocumentsState.__tablename__)
         return [(row.code, row.description) for row in result]
 
     except Exception as e:
@@ -55,9 +56,10 @@ def save_enum_file(content, filename="document_states.py"):
     print(f"Enum file generated: {filename}")
 
 
-if __name__ == "__main__":
 
-    document_states = get_document_codes()
+async def main():
+
+    document_states = await get_document_codes()
 
     if not document_states:
         print("No document states found in the database!")
@@ -65,3 +67,7 @@ if __name__ == "__main__":
 
     enum_content = generate_documented_enum_class(document_states)
     save_enum_file(enum_content)
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())

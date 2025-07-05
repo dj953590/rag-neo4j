@@ -5,15 +5,19 @@ from src.entities.legal.legal import load_legal_entities
 from pathlib import Path
 
 base_dir = Path(__file__).parent
-file_path = (base_dir / '..' / 'entities' / 'legal' / 'data' / 'Agreement.txt').resolve()
-
+agreement_entities_path = (base_dir / '..' / 'entities' / 'legal' / 'data' / 'Agreement.txt').resolve()
+document_definition_path = (base_dir / '..' / 'entities' / 'legal' / 'data' / 'DocumentsDefinition.txt').resolve()
+ten_k_entities_path = (base_dir / '..' / 'entities' / 'legal' / 'data' / '10KEntities.txt').resolve()
 
 def default_entities_types(file_path):
     default_entities = load_legal_entities(file_path)
     return default_entities.dump()
 
 
-DEFAULT_ENTITY_TYPES = default_entities_types(file_path)
+DEFAULT_ENTITY_TYPES = default_entities_types(agreement_entities_path)
+DEFAULT_DOCUMENT_DEFINITION = default_entities_types(document_definition_path)
+DEFAULT_10K_ENTITIES = default_entities_types(ten_k_entities_path)
+
 GRAPH_FIELD_SEP = "<SEP>"
 PROMPTS = {}
 
@@ -24,6 +28,8 @@ PROMPTS["DEFAULT_COMPLETION_DELIMITER"] = "<|COMPLETE|>"
 PROMPTS["process_tickers"] = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
 
 PROMPTS["DEFAULT_ENTITY_TYPES"] = DEFAULT_ENTITY_TYPES
+PROMPTS["DEFAULT_DOCUMENT_DEFINITION"] = DEFAULT_DOCUMENT_DEFINITION
+PROMPTS["DEFAULT_10K_ENTITIES"] = DEFAULT_10K_ENTITIES
 
 PROMPTS["entity_extraction"] = """You are credit analyst, expert in named entity relationship extractor for credit, legal and financial domains.
 - **Your Goal** - 
@@ -281,4 +287,53 @@ Similarity score criteria:
 1: Identical and answer can be directly reused
 0.5: Partially related and answer needs modification to be used
 Return only a number between 0-1, without any additional content.
+"""
+
+PROMPTS[
+    "documents_base_classification"
+] = """
+You are a financial document classification expert.
+
+Analyze the following document excerpt and determine the most likely category and subcategory. This excerpt is from the first few pages of the document.
+
+Categories to choose from:
+{categories}
+
+Excerpt:
+{initial_text}
+
+Respond in JSON:
+{{
+    "category": "<best category>",
+    "subcategory": "<keyword or phrase from document>",
+    "justification": "<why you chose this category>"
+}}
+"""
+
+PROMPTS[
+    "documents_progressive_classification"
+] = """
+You are continuing the classification of a financial document using a progressive strategy.
+
+You previously classified the document as:
+{prev_summary}
+
+Now analyze the next chunk (Chunk {chunk_num}) and determine whether this chunk:
+1. Supports the previous classification
+2. Introduces a new classification
+3. Is irrelevant or inconclusive
+
+Chunk {chunk_num}:
+{chunk_text}
+
+Respond in JSON:
+{{
+  "chunk_number": {chunk_num},
+  "chunk_classification": "<category or 'inconclusive'>",
+  "is_consistent_with_initial": true/false,
+  "confidence": 0.0 to 1.0,
+  "new_keywords": ["<if any>"],
+  "justification": "<reasoning>",
+  "refined_category": "<refined suggestion, or same>"
+}}
 """

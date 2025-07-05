@@ -8,31 +8,10 @@ from sqlalchemy import create_engine, Column, String, JSON, Integer, func, DateT
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from src.storage.db.base import BaseVectorStorage, QueryParam, StorageNameSpace
+from src.storage.db.sql.tables.engine_tables import Documents
 from src.utils.log import logger
 
 Base = declarative_base()
-
-
-class VectorTable(Base):
-    """Table schema for storing vectors in PostgreSQL."""
-    __tablename__ = "documents"
-    """
-    id: Unique identifier for the document chunk
-    doc_id: Unique identifier for the document
-    doc_name: Name of the file
-    embedding: Vector embedding of the document
-    content: Content of the document
-    mdata: Metadata of the document
-    """
-    chunk_id = Column(String, primary_key=True)
-    doc_id = Column(String, nullable=False)
-    embedding = Column(Vector)  # PGVector column type
-    content = Column(String)
-    mdata = Column(JSON)
-    chunk_sequence = Column(Integer, nullable=False, default=0)
-    source_chunk = Column(String)
-    updated_on = Column(DateTime, server_default=func.now(), nullable=False)
-
 
 @dataclass
 class PGVectorStorage(BaseVectorStorage):
@@ -127,7 +106,7 @@ class PGVectorStorage(BaseVectorStorage):
 
                 # Process each batch
                 for j in range(len(batch_ids)):
-                    vector = VectorTable(
+                    vector = Documents(
                         chunk_id=batch_ids[j],
                         doc_id=batch_doc_ids[j],
                         embedding=embeddings[j].tolist(),
@@ -166,9 +145,9 @@ class PGVectorStorage(BaseVectorStorage):
             # (for calculating the cosine similarity with the query)
             """
             results = session.query(
-                VectorTable.id,
-                VectorTable.content,
-                VectorTable.mdata,
+                Documents.id,
+                Documents.content,
+                Documents.mdata,
                 text("1 - (embedding <=> :query_embedding) as distance")
             ).order_by(
                 text("embedding <=> :query_embedding")
@@ -176,20 +155,20 @@ class PGVectorStorage(BaseVectorStorage):
                 query_embedding=query_embedding
             ).limit(top_k * 2).all()
             """
-            results = session.query(VectorTable, (1 - VectorTable.embedding.cosine_distance(query_embedding)).label("cosine")
-                                        ).filter(VectorTable.doc_id == doc_id if doc_id is not None else True
-                                        ).order_by((1 - VectorTable.embedding.cosine_distance(query_embedding)).desc()).limit(top_k * 2).all()
+            results = session.query(Documents, (1 - Documents.embedding.cosine_distance(query_embedding)).label("cosine")
+                                        ).filter(Documents.doc_id == doc_id if doc_id is not None else True
+                                        ).order_by((1 - Documents.embedding.cosine_distance(query_embedding)).desc()).limit(top_k * 2).all()
             # Filter results by cosine similarity threshold and take top k
             filtered_results = [
                                    {
-                                       "chunk_id": result.VectorTable.chunk_id,
+                                       "chunk_id": result.Documents.chunk_id,
                                        "cosine": result.cosine,
-                                       "content": result.VectorTable.content,
-                                       "source_id": result.VectorTable.source_chunk,
-                                       **result.VectorTable.mdata,
+                                       "content": result.Documents.content,
+                                       "source_id": result.Documents.source_chunk,
+                                       **result.Documents.mdata,
                                    }
                                    for result in results
-                                   if result.cosine >= self.cosine_better_than_threshold and result.VectorTable.mdata.get(StorageNameSpace.NAME_SPACE) == self.namespace
+                                   if result.cosine >= self.cosine_better_than_threshold and result.Documents.mdata.get(StorageNameSpace.NAME_SPACE) == self.namespace
                                ][:top_k]
 
             session.close()
