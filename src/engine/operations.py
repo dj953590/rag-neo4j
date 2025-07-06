@@ -1436,3 +1436,71 @@ async def naive_query(
         )
 
     return response, chunks_ids
+
+async def classify_progressively(chunks_vdb: BaseVectorStorage,
+                                 query_param: QueryParam,
+                                 global_config: dict,
+                                 summary_pages=5,
+                                 chunk_size=10):
+    reader = PyPDF2.PdfReader(pdf_path)
+    total_pages = len(reader.pages)
+
+    summary_text = extract_pages_text(pdf_path, 0, summary_pages)
+    init_prompt = build_initial_classification_prompt(summary_text)
+    init_response = await llama_3_3_70b_turbo(init_prompt)
+    init_json = json.loads(init_response)
+
+    result = {
+        "initial_summary": init_json,
+        "refined_category": init_json["category"],
+        "chunks": []
+    }
+
+    for i, start in enumerate(range(summary_pages, total_pages, chunk_size), 1):
+        chunk_text = extract_pages_text(pdf_path, start, start + chunk_size)
+        chunk_prompt = build_chunk_classification_prompt(json.dumps(init_json, indent=2), chunk_text, i)
+        chunk_response = await llama_3_3_70b_turbo(chunk_prompt)
+
+        try:
+            chunk_data = json.loads(chunk_response)
+            result["chunks"].append(chunk_data)
+        except Exception:
+            result["chunks"].append({
+                "chunk_number": i,
+                "error": "Failed to parse LLM response",
+                "raw": chunk_response
+            })
+
+    category_scores = defaultdict(float)
+    category_counts = defaultdict(int)
+    consistent_count = 0
+    total_chunks = len(result["chunks"])
+
+    for chunk in result["chunks"]:
+        if "chunk_classification" in chunk and chunk["chunk_classification"] != "inconclusive":
+            category = chunk["chunk_classification"]
+            score = chunk.get("confidence", 1.0)
+            category_scores[category] += score
+            category_counts[category] += 1
+            if chunk.get("is_consistent_with_initial"):
+                consistent_count += 1
+
+    if category_scores:
+        final_category = max(category_scores.items(), key=lambda x: x[1])[0]
+    else:
+        final_category = "Unknown"
+
+    result["refined_category"] = final_category
+    result["category_votes"] = dict(category_counts)
+    result["confidence_score"] = round(consistent_count / total_chunks, 3) if total_chunks > 0 else 0.0
+    result["refined_subcategory"] = result["initial_summary"].get("subcategory") \
+        if result["refined_category"] == result["initial_summary"]["category"] else "Mixed"
+
+    return result
+
+def extract_pages_text(doc_id: str, start: int, end: int) -> str:
+    with open(pdf_path, "rb") as file:
+        reader = PyPDF2.PdfReader(file)
+        total_pages = len(reader.pages)
+        end = min(end, total_pages)
+        return " ".join(reader.pages[i].extract_text() or "" for i in range(start, end)).lower()

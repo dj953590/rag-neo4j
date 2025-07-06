@@ -18,6 +18,7 @@ from src.engine.operations import (
     naive_query,
 )
 from src.docs.chunker.chunks import extract_chunks, extract_chunks_md, extract_page_chunks_md
+from src.storage.db.sql.pgdb import PGDB
 
 from src.utils.log import logger
 
@@ -242,6 +243,7 @@ class GraphEngine:
                                            embedding_func=self.embedding_func,
                                            )
                            )
+        self.chunks_db = (PGDB(namespace="chunks", global_config=asdict(self),))
 
     def insert(self, data: list):
         """
