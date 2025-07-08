@@ -1,22 +1,31 @@
 from abc import ABC, abstractmethod
+from dataclasses import dataclass
+
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
 
-
+@dataclass
 class SQLBase(ABC):
-
+    """Base class for SQL database operations."""
+    NAME_SPACE = "ns"
+    namespace: str
+    global_config: dict
     @abstractmethod
-    async def insert(self, table_name, data):
+    def insert(self, table_name, data):
         pass
 
     @abstractmethod
-    async def delete(self, table_name, condition):
+    def delete(self, table_name, condition):
         pass
 
     @abstractmethod
-    async def update(self, table_name, condition, data):
+    def update(self, table_name, condition, data):
         pass
 
     @abstractmethod
-    async def select(self, table_name, condition=None):
+    def select(self, table_name, condition=None):
         pass
+
+    def execute(self, query):
+        raise NotImplementedError("Subclasses should implement this method.")
+

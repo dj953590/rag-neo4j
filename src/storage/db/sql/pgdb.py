@@ -1,7 +1,9 @@
 
 from dataclasses import dataclass, field
-from sqlalchemy import Table, Column, Integer, String, MetaData, text, func, create_engine
+from sqlalchemy import Table, Column, Integer, String, MetaData, text, func, create_engine, and_
 from sqlalchemy.orm import declarative_base, sessionmaker
+
+from src.storage.db.base import StorageNameSpace
 from src.storage.db.sql.tables.engine_tables import DocumentMaster
 from src.storage.db.sqlbase import SQLBase
 from dynaconf import settings
@@ -54,18 +56,40 @@ class PGDB(SQLBase):
             session.execute(table.update().where(condition).values(data))
             session.commit()
 
-    def select(self, table_name, condition=None):
-        table = Table(table_name, self.metadata, autoload_with=self.engine)
-        with self.Session() as session:
-            if condition is not None:
-                result = session.execute(table.select().where(condition))
-            else:
-                result = session.execute(table.select())
-            return result.fetchall()
+    def select(self, tables, conditions=None):
+        session = self.Session()
+        try:
+            query = session.query(*tables)
+            # Always add namespace filter
+            namespace_condition = None
+            for table in tables:
+                if hasattr(table, "mdata"):
+                    namespace_condition = table.mdata[StorageNameSpace.NAME_SPACE].astext == self.namespace
+                    break
+            all_conditions = []
+            if conditions:
+                all_conditions.extend(conditions)
+            if namespace_condition is not None:
+                all_conditions.append(namespace_condition)
+            if all_conditions:
+                query = query.filter(and_(*all_conditions))
+            result = query.all()
+            return result
+        finally:
+            session.close()
 
+    def execute(self, query):
+        with self.engine.connect() as conn:
+            result = conn.execute(query)
+            try:
+                return result.fetchall()
+            except Exception:
+                return result.rowcount
 
 async def main():
-    pgdb = PGDB()
+    namespace = "example"  # Replace with actual value
+    global_config = {}
+    pgdb = PGDB(namespace, global_config)
     columns = [
         Column('id', Integer, primary_key=True),
         Column('name', String)
@@ -88,6 +112,16 @@ async def main():
     print("Selected data from PostgreSQL:", result)
     pgdb.update(table_name, text("id=1"), {"name": "Updated Name"})
     print("Updated data in PostgreSQL")
+
+    # SELECT using execute
+    select_query = text(f"SELECT * FROM {table_name} WHERE id=1")
+    result = pgdb.execute(select_query)
+    print("Execute SELECT result:", result)
+
+    # UPDATE using execute
+    update_query = text(f"UPDATE {table_name} SET name='Execute Updated' WHERE id=1")
+    update_count = pgdb.execute(update_query)
+    print("Execute UPDATE affected rows:", update_count)
 
     pgdb.delete(table_name, text("id=1"))
     print("Deleted data from PostgreSQL")
