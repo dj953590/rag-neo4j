@@ -290,7 +290,7 @@ Return only a number between 0-1, without any additional content.
 """
 
 PROMPTS[
-    "documents_base_classification"
+    "basic_document_classification"
 ] = """
 You are a financial document classification expert.
 
@@ -305,13 +305,13 @@ Excerpt:
 Respond in JSON:
 {{
     "category": "<best category>",
-    "subcategory": "<keyword or phrase from document>",
+    "subcategory": "<underlying type or subcategory>",
     "justification": "<why you chose this category>"
 }}
 """
 
 PROMPTS[
-    "documents_progressive_classification"
+    "progressive_document_classification"
 ] = """
 You are continuing the classification of a financial document using a progressive strategy.
 

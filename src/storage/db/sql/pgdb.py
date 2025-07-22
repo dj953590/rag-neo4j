@@ -5,7 +5,9 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 
 from src.storage.db.base import StorageNameSpace
 from src.storage.db.sql.tables.engine_tables import DocumentMaster
+from src.storage.db.sql.templates.classifier import SQL_TEMPLATE_CLASSIFIER
 from src.storage.db.sqlbase import SQLBase
+from src.utils.log import logger
 from dynaconf import settings
 
 Base = declarative_base()
@@ -23,62 +25,11 @@ class PGDB(SQLBase):
         self.engine = create_engine(self._connection_string, connect_args=args)
         self.Session = sessionmaker(bind=self.engine)
 
-    def create_table(self, table_name, columns):
-        table = Table(table_name, self.metadata, *columns)
-        with self.engine.begin() as conn:
-            self.metadata.create_all(conn)
 
-    def drop_table(self, table_name):
-        table = Table(table_name, self.metadata, autoload_with=self.engine)
-        with self.engine.begin() as conn:
-            self.metadata.drop_all(conn, tables=[table])
-
-    def insert(self, table_name, data):
-        table = Table(table_name, self.metadata, autoload_with=self.engine)
-        with self.Session() as session:
-            session.execute(table.insert().values(data))
-            session.commit()
-
-    def merge(self, base: Base):
-        with self.Session() as session:
-            session.merge(base)
-            session.commit()
-
-    def delete(self, table_name, condition):
-        table = Table(table_name, self.metadata, autoload_with=self.engine)
-        with self.Session() as session:
-            session.execute(table.delete().where(condition))
-            session.commit()
-
-    def update(self, table_name, condition, data):
-        table = Table(table_name, self.metadata, autoload_with=self.engine)
-        with self.Session() as session:
-            session.execute(table.update().where(condition).values(data))
-            session.commit()
-
-    def select(self, tables, conditions=None):
-        session = self.Session()
-        try:
-            query = session.query(*tables)
-            # Always add namespace filter
-            namespace_condition = None
-            for table in tables:
-                if hasattr(table, "mdata"):
-                    namespace_condition = table.mdata[StorageNameSpace.NAME_SPACE].astext == self.namespace
-                    break
-            all_conditions = []
-            if conditions:
-                all_conditions.extend(conditions)
-            if namespace_condition is not None:
-                all_conditions.append(namespace_condition)
-            if all_conditions:
-                query = query.filter(and_(*all_conditions))
-            result = query.all()
-            return result
-        finally:
-            session.close()
 
     def execute(self, query):
+        compiled = query.compile(self.engine, compile_kwargs={"literal_binds": True})
+        logger.info(f"SQL: {compiled}")
         with self.engine.connect() as conn:
             result = conn.execute(query)
             try:
@@ -87,48 +38,56 @@ class PGDB(SQLBase):
                 return result.rowcount
 
 async def main():
+
     namespace = "example"  # Replace with actual value
     global_config = {}
     pgdb = PGDB(namespace, global_config)
-    columns = [
-        Column('id', Integer, primary_key=True),
-        Column('name', String)
-    ]
-    table_name = "example_table"
-    data = {"id": 1, "name": "Test Name"}
+    
+    """
+        columns = [
+            Column('id', Integer, primary_key=True),
+            Column('name', String)
+        ]
+        table_name = "example_table"
+        data = {"id": 1, "name": "Test Name"}
 
-    pgdb.create_table(table_name, columns)
-    pgdb.delete(table_name, text("id=1"))
-    print("Deleted data from PostgreSQL")
-    pgdb.insert(table_name, data)
-    print("Inserted data into PostgreSQL")
+        pgdb.create_table(table_name, columns)
+        pgdb.delete(table_name, text("id=1"))
+        print("Deleted data from PostgreSQL")
+        pgdb.insert(table_name, data)
+        print("Inserted data into PostgreSQL")
 
-    master = DocumentMaster(id="1", name="Test", state="Test", parent="Test", updated_on=func.now())
-    pgdb.merge(master)
-    result =  pgdb.select(table_name)
-    print("Selected data from PostgreSQL:", result)
+        master = DocumentMaster(id="1", name="Test", state="Test", parent="Test", updated_on=func.now())
+        pgdb.merge(master)
+        result =  pgdb.select(table_name)
+        print("Selected data from PostgreSQL:", result)
 
-    result =  pgdb.select("document_master", text("id='1'"))
-    print("Selected data from PostgreSQL:", result)
-    pgdb.update(table_name, text("id=1"), {"name": "Updated Name"})
-    print("Updated data in PostgreSQL")
+        result =  pgdb.select("document_master", text("id='1'"))
+        print("Selected data from PostgreSQL:", result)
+        pgdb.update(table_name, text("id=1"), {"name": "Updated Name"})
+        print("Updated data in PostgreSQL")
 
-    # SELECT using execute
-    select_query = text(f"SELECT * FROM {table_name} WHERE id=1")
-    result = pgdb.execute(select_query)
-    print("Execute SELECT result:", result)
+        # SELECT using execute
+        select_query = text(f"SELECT * FROM {table_name} WHERE id=1")
+        result = pgdb.execute(select_query)
+        print("Execute SELECT result:", result)
 
-    # UPDATE using execute
-    update_query = text(f"UPDATE {table_name} SET name='Execute Updated' WHERE id=1")
-    update_count = pgdb.execute(update_query)
-    print("Execute UPDATE affected rows:", update_count)
+        # UPDATE using execute
+        update_query = text(f"UPDATE {table_name} SET name='Execute Updated' WHERE id=1")
+        update_count = pgdb.execute(update_query)
+        print("Execute UPDATE affected rows:", update_count)
 
-    pgdb.delete(table_name, text("id=1"))
-    print("Deleted data from PostgreSQL")
-    pgdb.delete("document_master", text("id='1'"))
-    print("Deleted documents master data from PostgreSQL")
-    pgdb.drop_table(table_name)
-
+        pgdb.delete(table_name, text("id=1"))
+        print("Deleted data from PostgreSQL")
+        pgdb.delete("document_master", text("id='1'"))
+        print("Deleted documents master data from PostgreSQL")
+        pgdb.drop_table(table_name)
+    """
+    classic_sql = text(SQL_TEMPLATE_CLASSIFIER["classic_sql"])
+    doc_id = "DOC-236032ad52b5c77d76ca8b5b9d3ee21fa9d36f49e15211204ee2de8f5df0e70a"
+    namespace = "chunks"
+    result = pgdb.execute(classic_sql.bindparams(doc_id=doc_id, namespace=namespace))
+    print(result)
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main())

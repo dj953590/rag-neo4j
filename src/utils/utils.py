@@ -407,3 +407,19 @@ def csv_string_to_list(csv_string: str) -> List[List[str]]:
     output = io.StringIO(csv_string)
     reader = csv.reader(output)
     return [row for row in reader]
+
+def escape_cypher_node(label: str) -> str:
+    # Escape backslashes and single quotes for Cypher label usage
+    return label.strip().replace("\\", "\\\\").replace("'", "\\'")
+
+def escape_cypher_properties(properties: dict) -> dict:
+    # Recursively escape single quotes in string property values
+    def escape_value(val):
+        if isinstance(val, str):
+            return val.strip().replace("\\", "\\\\").replace("'", "\\'")
+        elif isinstance(val, dict):
+            return {k: escape_value(v) for k, v in val.items()}
+        elif isinstance(val, list):
+            return [escape_value(v) for v in val]
+        return val
+    return {k: escape_value(v) for k, v in properties.items()}
