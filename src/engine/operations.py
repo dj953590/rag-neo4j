@@ -13,6 +13,7 @@ import warnings
 
 from src.storage.db.sql.pgdb import PGDB
 from src.storage.db.sql.templates.classifier import SQL_TEMPLATE_CLASSIFIER
+from src.storage.db.sqlbase import SQLBase
 from src.utils.log import logger
 from src.utils.utils import (
     clean_str,
@@ -33,7 +34,7 @@ from src.storage.db.base import (
     BaseKVStorage,
     BaseVectorStorage,
     TextChunkSchema,
-    QueryParam,
+    QueryParam, ClassifyParam,
 )
 from src.prompts.prompt import GRAPH_FIELD_SEP, PROMPTS
 
@@ -1441,16 +1442,28 @@ async def naive_query(
 
     return response, chunks_ids
 
-async def basic_document_classification(chunks_vdb: BaseVectorStorage,
-                                 query_param: QueryParam,
-                                 global_config: dict,
-                                 summary_pages=5,
-                                 chunk_size=10):
+async def basic_document_classification(chunks_db: SQLBase,
+                                 classify_param: ClassifyParam,
+                                 global_config: dict,):
+    """
+        Classifies a document based on its content.
+    Args:
+        chunks_db: The database containing text chunks.
+        classify_param: The classification parameters.
+        global_config: The global configuration.
+    Returns:
+        A dictionary containing the initial summary and refined category.
+    """
+    use_llm_func = global_config["llm_model_func"]
+    # check if required data is provided
+    if not classify_param.doc_id or not classify_param.pages:
+        logger.error("Document ID and pages are required for classification.")
+        return {"error": "Document ID and pages are required for classification."}
 
-    summary_text = extract_pages_text(pdf_path, 0, summary_pages)
+    chunks, summary_text = extract_pages_text(chunks_db, classify_param.doc_id, classify_param.pages)
 
     init_prompt = build_initial_classification_prompt(summary_text)
-    init_response = await llama_3_3_70b_turbo(init_prompt)
+    init_response = await use_llm_func(init_prompt)
     init_json = json.loads(init_response)
 
     result = {
@@ -1470,13 +1483,10 @@ async def  build_initial_classification_prompt(initial_text: str) -> str:
     classify_prompt = basic_classification_prompt.format(**context_base)
     return classify_prompt
 
-async def extract_pages_text(doc_id: str, start_chunks: int) -> tuple[list[str], str]:
-    global_config = {}
-    namespace = "chunks"
-    pgdb = PGDB(namespace, global_config)
+async def extract_pages_text(chunks_db: SQLBase, doc_id: str, start_chunks: int) -> tuple[list[str], str]:
     classic_sql = text(SQL_TEMPLATE_CLASSIFIER["classic_sql"])
     # Await the result if pgdb.execute is async, otherwise remove await
-    result = await pgdb.execute(classic_sql.bindparams(doc_id=doc_id, namespace=namespace, pages=start_chunks))
+    result = await chunks_db.execute(classic_sql.bindparams(doc_id=doc_id, namespace=chunks_db.namespace, pages=start_chunks))
     # Assuming result is a list of dicts with 'chunk_id' and 'content'
     chunk_ids = [row["chunk_id"] for row in result]
     combined_text = "\n".join(row["content"] for row in result)

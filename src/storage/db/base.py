@@ -32,7 +32,14 @@ class QueryParam:
     max_token_for_local_context: int = 8000
     # document id
     doc_id: str = None
-    
+
+@dataclass
+class ClassifyParam:
+    mode: Literal["basic", "progressive"] = "basic"
+    # Number of pages to consider from top
+    pages: int = 5
+    # document id
+    doc_id: str = None
 
 
 @dataclass

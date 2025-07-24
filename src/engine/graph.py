@@ -30,7 +30,7 @@ from src.utils.utils import (
 )
 from src.storage.db.base import (
     StorageNameSpace,
-    QueryParam,
+    QueryParam, ClassifyParam,
 )
 
 from src.storage.db.kv.kv_json import JsonKVStorage
@@ -435,40 +435,51 @@ class GraphEngine:
             raise ValueError(f"Unknown mode {param.mode}")
         return response, chunk_ids, keywords
 
-    def classify_document(self, doc: str):
+    def classify_document(self, param: ClassifyParam = ClassifyParam()):
         """
         Classify the document using the LLM model.
 
         Args:
-            doc (str): The document to be classified.
+              param: The parameters used for classification.
         Returns:
                 str: The classification result.
         """
         loop = always_get_an_event_loop()
         return loop.run_until_complete(self.aclassify_document(doc))
 
-    async def aclassify_document(self, doc: str):
+    async def aclassify_document(self, param: ClassifyParam = ClassifyParam()):
         """
         Classify the document using the LLM model.
 
         Args:
-            doc (str): The document to be classified.
+               param: The parameters used for classification.
         Returns:
                 str: The classification result.
         """
-        if not doc:
+        if not param.doc_id:
             raise ValueError("Document content cannot be empty.")
-
-        try:
-            response = await self.llm_model_func(
-                doc,
-                max_tokens=self.llm_model_max_token_size,
-                **self.llm_model_kwargs,
+        response = ""
+        if param.mode in ["basic"]:
+            response = await kg_query(
+                query,
+                self.chunk_entity_relation_graph,
+                self.chunk_entity_relation_graphdb,
+                self.entities_vdb,
+                self.relationships_vdb,
+                self.text_chunks,
+                param,
+                asdict(self),
             )
-            return response
-        except Exception as e:
-            logger.error(f"Error during document classification: {e}")
-            raise e
+        elif param.mode == "progressive":
+            response, chunk_ids = await naive_query(
+                query,
+                self.chunks_vdb,
+                param,
+                asdict(self),
+            )
+        else:
+            raise ValueError(f"Unknown mode {param.mode}")
+        return response, chunk_ids, keywords
 
     def delete_by_entity(self, entity_name: str):
         """

@@ -306,6 +306,7 @@ Respond in JSON:
 {{
     "category": "<best category>",
     "subcategory": "<underlying type or subcategory>",
+    "confidence": 0.0 to 1.0,
     "justification": "<why you chose this category>"
 }}
 """
