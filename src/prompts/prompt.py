@@ -1,5 +1,3 @@
-import os
-import pathlib
 from src.entities.legal.legal import load_legal_entities
 
 from pathlib import Path

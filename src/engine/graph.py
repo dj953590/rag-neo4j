@@ -15,7 +15,7 @@ from src.engine.operations import (
     extract_entities,
     # local_query,global_query,hybrid_query,
     kg_query,
-    naive_query,
+    naive_query, basic_document_classification,
 )
 from src.docs.chunker.chunks import extract_chunks, extract_chunks_md, extract_page_chunks_md
 from src.storage.db.sql.pgdb import PGDB
@@ -445,7 +445,7 @@ class GraphEngine:
                 str: The classification result.
         """
         loop = always_get_an_event_loop()
-        return loop.run_until_complete(self.aclassify_document(doc))
+        return loop.run_until_complete(self.aclassify_document(param))
 
     async def aclassify_document(self, param: ClassifyParam = ClassifyParam()):
         """
@@ -460,26 +460,20 @@ class GraphEngine:
             raise ValueError("Document content cannot be empty.")
         response = ""
         if param.mode in ["basic"]:
-            response = await kg_query(
-                query,
-                self.chunk_entity_relation_graph,
-                self.chunk_entity_relation_graphdb,
-                self.entities_vdb,
-                self.relationships_vdb,
-                self.text_chunks,
+            response = await basic_document_classification(
+                self.chunks_db,
                 param,
                 asdict(self),
             )
         elif param.mode == "progressive":
-            response, chunk_ids = await naive_query(
-                query,
-                self.chunks_vdb,
+            response = await basic_document_classification(
+                self.chunks_db,
                 param,
                 asdict(self),
             )
         else:
             raise ValueError(f"Unknown mode {param.mode}")
-        return response, chunk_ids, keywords
+        return response
 
     def delete_by_entity(self, entity_name: str):
         """

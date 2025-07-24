@@ -11,7 +11,7 @@ from typing import Union
 from collections import Counter, defaultdict
 import warnings
 
-from src.storage.db.sql.pgdb import PGDB
+
 from src.storage.db.sql.templates.classifier import SQL_TEMPLATE_CLASSIFIER
 from src.storage.db.sqlbase import SQLBase
 from src.utils.log import logger
