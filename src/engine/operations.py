@@ -1460,24 +1460,18 @@ async def basic_document_classification(chunks_db: SQLBase,
         logger.error("Document ID and pages are required for classification.")
         return {"error": "Document ID and pages are required for classification."}
 
-    chunks, summary_text = extract_pages_text(chunks_db, classify_param.doc_id, classify_param.pages)
+    chunks, summary_text = await extract_pages_text(chunks_db, classify_param.doc_id, classify_param.pages)
 
-    init_prompt = build_initial_classification_prompt(summary_text)
+    init_prompt = await build_initial_classification_prompt(summary_text)
     init_response = await use_llm_func(init_prompt)
-    init_json = json.loads(init_response)
 
-    result = {
-        "initial_summary": init_json,
-        "refined_category": init_json["category"],
-        "chunks": []
-    }
-    return result
+    return init_response
 
 
 async def  build_initial_classification_prompt(initial_text: str) -> str:
     basic_classification_prompt = PROMPTS["basic_document_classification"]
     context_base = dict(
-        entity_types=PROMPTS["DEFAULT_DOCUMENT_DEFINITION"],
+        categories=PROMPTS["DEFAULT_DOCUMENT_DEFINITION"],
         initial_text=initial_text,
     )
     classify_prompt = basic_classification_prompt.format(**context_base)
@@ -1486,8 +1480,8 @@ async def  build_initial_classification_prompt(initial_text: str) -> str:
 async def extract_pages_text(chunks_db: SQLBase, doc_id: str, start_chunks: int) -> tuple[list[str], str]:
     classic_sql = text(SQL_TEMPLATE_CLASSIFIER["classic_sql"])
     # Await the result if pgdb.execute is async, otherwise remove await
-    result = await chunks_db.execute(classic_sql.bindparams(doc_id=doc_id, namespace=chunks_db.namespace, pages=start_chunks))
+    result = chunks_db.execute(classic_sql.bindparams(doc_id=doc_id, namespace=chunks_db.namespace, pages=start_chunks))
     # Assuming result is a list of dicts with 'chunk_id' and 'content'
-    chunk_ids = [row["chunk_id"] for row in result]
-    combined_text = "\n".join(row["content"] for row in result)
+    chunk_ids = [row[0] for row in result]
+    combined_text = "\n".join(row[1] for row in result)
     return chunk_ids, combined_text

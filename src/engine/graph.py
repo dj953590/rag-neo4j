@@ -117,9 +117,7 @@ class GraphEngine:
     Returns:
           GRAG: An instance of the GRAG class.
     """
-    working_dir: str = field(
-        default_factory=lambda: f"./tkgs_cache_{datetime.now().strftime('%Y-%m-%d-%H:%M:%S')}"
-    )
+    working_dir: str = ""
     # Default not to use embedding cache
     embedding_cache_config: dict = field(
         default_factory=lambda: {
@@ -193,7 +191,7 @@ class GraphEngine:
         _print_config = ",\n  ".join([f"{k} = {v}" for k, v in asdict(self).items()])
         logger.debug(f"Graph RAG init with param:\n  {_print_config}\n")
 
-        if not os.path.exists(self.working_dir):
+        if self.working_dir and not os.path.exists(self.working_dir):
             logger.info(f"Creating working directory {self.working_dir}")
             os.makedirs(self.working_dir)
 

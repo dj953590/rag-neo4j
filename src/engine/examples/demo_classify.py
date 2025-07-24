@@ -15,6 +15,7 @@ while True:
     if doc_name.lower() == 'bye' or doc_name.lower() == 'exit':
         break
     doc_id = compute_mdhash_id(doc_name, "DOC-")
+    print(f"Document ID: {doc_id}")
     classify_param = ClassifyParam(
         mode="basic",
         pages=5,
