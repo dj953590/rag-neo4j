@@ -21,6 +21,8 @@ from tenacity import (
     retry_if_exception_type,
 )
 
+from src.utils.utils import escape_cypher_properties, escape_cypher_node
+
 
 @dataclass
 class Neo4JStorage(BaseGraphStorage):
@@ -271,13 +273,14 @@ class Neo4JStorage(BaseGraphStorage):
             node_id: The unique identifier for the node (used as label)
             node_data: Dictionary of node properties
         """
-        label = node_id.strip('"')
-        if not label:
+
+        if not node_id:
             logger.info(
                 f"Node label is empty. Cannot upsert node for data: {node_data}"
             )
             return
-        properties = node_data
+        label = escape_cypher_node(node_id)
+        properties = escape_cypher_properties(node_data)
 
         async def _do_upsert(tx: AsyncManagedTransaction):
             query = f"""
@@ -318,14 +321,15 @@ class Neo4JStorage(BaseGraphStorage):
             target_node_id (str): Label of the target node (used as identifier)
             edge_data (dict): Dictionary of properties to set on the edge
         """
-        source_node_label = source_node_id.strip('"')
-        target_node_label = target_node_id.strip('"')
-        if not source_node_label or not target_node_label:
+
+        if not source_node_id or not target_node_id:
             logger.info(
                 f"Source or target node label is empty. Cannot upsert edge for data: {edge_data}"
             )
             return
-        edge_properties = edge_data
+        source_node_label = escape_cypher_node(source_node_id)
+        target_node_label = escape_cypher_node(target_node_id)
+        edge_properties = escape_cypher_properties(edge_data)
 
         async def _do_upsert_edge(tx: AsyncManagedTransaction):
             query = f"""

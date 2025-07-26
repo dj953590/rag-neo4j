@@ -15,7 +15,7 @@ from src.engine.operations import (
     extract_entities,
     # local_query,global_query,hybrid_query,
     kg_query,
-    naive_query, basic_document_classification,
+    naive_query, document_classification,
 )
 from src.docs.chunker.chunks import extract_chunks, extract_chunks_md, extract_page_chunks_md
 from src.storage.db.sql.pgdb import PGDB
@@ -242,7 +242,6 @@ class GraphEngine:
                                            embedding_func=self.embedding_func,
                                            )
                            )
-        self.chunks_db = (PGDB(namespace="chunks", global_config=asdict(self),))
 
     def old_insert(self, data: list):
         """
@@ -543,14 +542,14 @@ class GraphEngine:
             raise ValueError("Document content cannot be empty.")
         response = ""
         if param.mode in ["basic"]:
-            response = await basic_document_classification(
-                self.chunks_db,
+            response = await document_classification(
+                self.chunks_vdb,
                 param,
                 asdict(self),
             )
         elif param.mode == "progressive":
-            response = await basic_document_classification(
-                self.chunks_db,
+            response = await document_classification(
+                self.chunks_vdb,
                 param,
                 asdict(self),
             )
