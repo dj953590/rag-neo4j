@@ -1,5 +1,6 @@
 from enum import Enum
 from sqlalchemy import create_engine, Column, String, JSON, Integer, func, DateTime, Date, Text
+from pgvector.sqlalchemy import Vector
 from sqlalchemy.ext.declarative import declarative_base
 
 
@@ -28,7 +29,7 @@ class Documents(Base):
     chunk_id = Column(String, primary_key=True, nullable=False)
     content = Column(String, nullable=True)
     mdata = Column(JSON, nullable=True)
-    embedding = Column(String, nullable=True)  # Replace with custom type if using pgvector
+    embedding = Column(Vector, nullable=True)  # Replace with custom type if using pgvector
     doc_id = Column(String, nullable=True)
     chunk_sequence = Column(Integer, nullable=True)
     updated_on = Column(DateTime, server_default=func.now(), nullable=False)

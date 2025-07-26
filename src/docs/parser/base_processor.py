@@ -16,6 +16,7 @@ class BaseProcessor(ABC):
         self.output_path = output_path
         self.output_text_path = output_text_path
         # Initialize the OCR model
+        """
         self.ocr_model = ocr_predictor(
             det_arch="fast_base",  # detection architecture
             reco_arch="vitstr_base",  # recognition architecture
@@ -57,6 +58,7 @@ class BaseProcessor(ABC):
             clf_engine_cfg=EngineConfig(),
             # classification (orientation) model engine configuration (default: internal predefined configuration)
         )
+        """
 
     def preprocess_image(self, image):
         """

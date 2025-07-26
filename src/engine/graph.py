@@ -201,13 +201,14 @@ class GraphEngine:
 
         # Initialize storage instances
         # full_docs : JsonKVStorage
-        self.full_docs = (JsonKVStorage(namespace="full_docs", global_config=asdict(self),
+
+        self.full_docs = (JsonKVStorage(namespace=self.doc_name + "_" + "full_docs", global_config=asdict(self),
                                         embedding_func=self.embedding_func, ))
         # text_chunks : JsonKVStorage
-        self.text_chunks = ((JsonKVStorage(namespace="text_chunks", global_config=asdict(self),
+        self.text_chunks = ((JsonKVStorage(namespace=self.doc_name + "_" + "text_chunks", global_config=asdict(self),
                                            embedding_func=self.embedding_func, )))
         # chunk_entity_relation_graph : NetworkXStorage
-        self.chunk_entity_relation_graph = (NetworkXStorage(namespace="chunk_entity_relation",
+        self.chunk_entity_relation_graph = (NetworkXStorage(namespace=self.doc_name + "_" + "er",
                                                             global_config=asdict(self),
                                                             embedding_func=self.embedding_func, ))
         # chunk_entity_relation_graphdb : Neo4JStorage
@@ -243,7 +244,7 @@ class GraphEngine:
                            )
         self.chunks_db = (PGDB(namespace="chunks", global_config=asdict(self),))
 
-    def insert(self, data: list):
+    def old_insert(self, data: list):
         """
         Insert JSON data into the storage.
 
@@ -254,7 +255,22 @@ class GraphEngine:
         """
         loop = always_get_an_event_loop()
         return loop.run_until_complete(self.ainsert(data))
+    def insert(self, data: list, mode: str = "ALL"):
+        """
+        Insert JSON data into the storage.
 
+        Args:
+            data (dict): The JSON data to be inserted.
+            mode (str): The mode of insertion. Can be "ALL", "LOCAL", "VECTOR", or "GRAPH".
+                - "ALL": Insert into all storage types.
+                - "LOCAL": Insert into local storage.
+                - "VECTOR": Insert into vector storage.
+                - "GRAPH": Insert into graph storage.
+        Returns:
+                None
+        """
+        loop = always_get_an_event_loop()
+        return loop.run_until_complete(self.ainsert(data, mode=mode))
     async def check_docs(self, docs: str):
         """
         Check if the documents are already in the storage.
@@ -278,7 +294,76 @@ class GraphEngine:
             return None
         return new_docs
 
-    async def ainsert(self, data: list):
+    async def ainsert(self, data: list, mode: str = "ALL"):
+        if mode.upper() == "ALL":
+            modes = {"LOCAL", "VECTOR", "GRAPH"}
+        else:
+            modes = {m.strip().upper() for m in mode.split(",")}
+
+        chunk_data, docs = extract_page_chunks_md(data)
+        inserting_chunks = {}
+        chunk_sequence = 0
+        update_storage = False
+        try:
+            new_docs = await self.check_docs(docs)
+            if new_docs is None:
+                return
+            update_storage = True
+            # Always build inserting_chunks
+            for doc_key, doc in new_docs.items():
+                for chunk in chunk_data:
+                    chunk_text = chunk["chunk_text"]
+                    page_no = chunk["page"]
+                    positions = chunk.get("positions", [])
+                    chunk_id = compute_mdhash_id(chunk_text, prefix="chunk-")
+                    inserting_chunks[chunk_id] = {
+                        "content": chunk_text,
+                        "full_doc_id": doc_key,
+                        "doc_id": self.doc_id,
+                        "doc_name": self.doc_name,
+                        "chunk_sequence": chunk_sequence,
+                        "page_no": page_no,
+                        "positions": positions,
+                        "s_id": doc_key,
+                    }
+                    chunk_sequence += 1
+
+            # LOCAL step
+            if "LOCAL" in modes:
+                new_docs = await self.check_docs(docs)
+                if new_docs is None:
+                    logger.warning("All docs are already in the storage")
+                else:
+                    update_storage = True
+                    logger.info(f"[New Docs] inserting {len(new_docs)} docs into memory storage")
+                    await self.full_docs.upsert(new_docs)
+                    await self.text_chunks.upsert(inserting_chunks)
+
+            # VECTOR step
+            if "VECTOR" in modes:
+                logger.info(f"[New Chunks] inserting {len(inserting_chunks)} chunks into vector storage")
+                await self.chunks_vdb.upsert(inserting_chunks)
+
+            # GRAPH step
+            if "GRAPH" in modes:
+                logger.info("[Entity Extraction]...")
+                maybe_new_kg = await extract_entities(
+                    inserting_chunks,
+                    knowledge_graph_inst=self.chunk_entity_relation_graph,
+                    entity_vdb=self.entities_vdb,
+                    relationships_vdb=self.relationships_vdb,
+                    kg_db=self.chunk_entity_relation_graphdb,
+                    global_config=asdict(self),
+                )
+                if maybe_new_kg is None:
+                    logger.warning("No new entities and relationships found")
+                else:
+                    self.chunk_entity_relation_graph = maybe_new_kg
+        finally:
+             if update_storage:
+                await self._insert_done()
+
+    async def old_ainsert(self, data: list):
         """
         Insert one or more strings into the storage asynchronously.
 
