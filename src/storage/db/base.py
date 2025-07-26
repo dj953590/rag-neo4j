@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import TypedDict, Union, Literal, Generic, TypeVar
+from typing import TypedDict, Union, Literal, Generic, TypeVar, Any
 
 import numpy as np
 
@@ -74,6 +74,13 @@ class BaseVectorStorage(StorageNameSpace):
         """
         raise NotImplementedError
 
+    async def read(self, query: str, params: dict = None) -> list[Any]:
+        """        Execute a select query on the vector storage."""
+        raise NotImplementedError
+
+    async def write(self, query: str, params: dict = None) -> int:
+        """        Execute a select query on the vector storage."""
+        raise NotImplementedError
 
 @dataclass
 class BaseGraphStorage(StorageNameSpace):

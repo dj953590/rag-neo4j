@@ -1,10 +1,10 @@
 import asyncio
 from dataclasses import dataclass
-from typing import Union
+from typing import Union, Any
 import numpy as np
 from dynaconf import settings
 from pgvector.sqlalchemy import Vector
-from sqlalchemy import create_engine, Column, String, JSON, Integer, func, DateTime
+from sqlalchemy import create_engine, Column, String, JSON, Integer, func, DateTime, text, Engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from src.storage.db.base import BaseVectorStorage, QueryParam, StorageNameSpace
@@ -30,7 +30,7 @@ class PGVectorStorage(BaseVectorStorage):
             self._schema = settings.get('PG_SCHEMA', None)
             # Create SQLAlchemy engine and session
             args = {"options": f"-c search_path={self._schema}"}
-            self._engine = create_engine(self._connection_string,
+            self._engine: Engine = create_engine(self._connection_string,
                                          connect_args=args)
 
             self._Session = sessionmaker(bind=self._engine)
@@ -177,6 +177,54 @@ class PGVectorStorage(BaseVectorStorage):
         except Exception as e:
             logger.error(f"Error during PGVector query: {str(e)}")
             raise
+
+    async def read(self, query: str, params: dict = None) -> list[Any]:
+        """
+        Execute a raw SQL query with optional parameter binding.
+
+        Args:
+            query : The SQL query string.
+            params (dict, optional): Dictionary of parameters to bind.
+
+        Returns:
+            list: Query results as a list of rows, or rowcount for non-select queries.
+        """
+        try:
+            stmt = text(query)
+            stmt_params = stmt.bindparams(**params)
+            compiled = stmt_params.compile(self._engine, compile_kwargs={"literal_binds": True})
+            logger.info(f"SQL: {compiled}")
+            with self._engine.connect() as conn:
+                result = conn.execute(stmt_params)
+                rows: list[Any] = result.fetchall()  # Explicitly type rows
+                return rows
+        except Exception as e:
+            logger.error(f"Error during select: {str(e)}")
+            return []
+
+    async def write(self, query: str, params: dict = None) -> int:
+        """
+        Execute an INSERT, UPDATE, or DELETE SQL statement with optional parameters.
+
+        Args:
+            query: The SQL statement.
+            params: Dictionary of parameters to bind.
+
+        Returns:
+            int: Number of affected rows.
+        """
+        try:
+            stmt = text(query)
+            stmt_params = stmt.bindparams(**params)
+            compiled = stmt_params.compile(self._engine, compile_kwargs={"literal_binds": True})
+            logger.info(f"SQL: {compiled}")
+            with self._engine.connect() as conn:
+                result = conn.execute(stmt_params)
+                conn.commit()
+                return result.rowcount
+        except Exception as e:
+            logger.error(f"Error during execute_non_query: {str(e)}")
+            return 0
 
     async def index_done_callback(self):
         # PGVector handles persistence automatically

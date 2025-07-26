@@ -1442,13 +1442,13 @@ async def naive_query(
 
     return response, chunks_ids
 
-async def basic_document_classification(chunks_db: SQLBase,
+async def document_classification(chunks_vdb:BaseVectorStorage,
                                  classify_param: ClassifyParam,
                                  global_config: dict,):
     """
         Classifies a document based on its content.
     Args:
-        chunks_db: The database containing text chunks.
+        chunks_vdb: The database containing text chunks.
         classify_param: The classification parameters.
         global_config: The global configuration.
     Returns:
@@ -1460,15 +1460,19 @@ async def basic_document_classification(chunks_db: SQLBase,
         logger.error("Document ID and pages are required for classification.")
         return {"error": "Document ID and pages are required for classification."}
 
-    chunks, summary_text = await extract_pages_text(chunks_db, classify_param.doc_id, classify_param.pages)
-
-    init_prompt = await build_initial_classification_prompt(summary_text)
+    params = {
+        "doc_id": classify_param.doc_id,
+        "pages": classify_param.pages,
+        "namespace": chunks_vdb.namespace
+    }
+    chunks, summary_text = await extract_pages(chunks_vdb, params)
+    init_prompt = await document_classification_prompt(summary_text)
     init_response = await use_llm_func(init_prompt)
 
     return init_response
 
 
-async def  build_initial_classification_prompt(initial_text: str) -> str:
+async def  document_classification_prompt(initial_text: str) -> str:
     basic_classification_prompt = PROMPTS["basic_document_classification"]
     context_base = dict(
         categories=PROMPTS["DEFAULT_DOCUMENT_DEFINITION"],
@@ -1477,10 +1481,11 @@ async def  build_initial_classification_prompt(initial_text: str) -> str:
     classify_prompt = basic_classification_prompt.format(**context_base)
     return classify_prompt
 
-async def extract_pages_text(chunks_db: SQLBase, doc_id: str, start_chunks: int) -> tuple[list[str], str]:
-    classic_sql = text(SQL_TEMPLATE_CLASSIFIER["classic_sql"])
+async def extract_pages(chunks_vdb: BaseVectorStorage, params: dict) -> tuple[list[str], str]:
+
+    classic_sql = SQL_TEMPLATE_CLASSIFIER["classic_sql"]
     # Await the result if pgdb.execute is async, otherwise remove await
-    result = chunks_db.execute(classic_sql.bindparams(doc_id=doc_id, namespace=chunks_db.namespace, pages=start_chunks))
+    result = await chunks_vdb.read(classic_sql, params=params)
     # Assuming result is a list of dicts with 'chunk_id' and 'content'
     chunk_ids = [row[0] for row in result]
     combined_text = "\n".join(row[1] for row in result)
