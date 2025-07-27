@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Date of Credit Agreement",
+    "description": "Extract the date of the Credit Agreement — the date on which the agreement was executed...",
+    "examples": [
+      "This Credit Agreement is dated as of May 15, 2023",
+      "Executed as of this 15th day of May, 2023"
+    ],
+    "document_types": ["Credit Agreement", "Amendment"]
+  },
+  {
+    "name": "Document Execution Date",
+    "description": "Extract the execution date for a given document such as Fee Letter, Compliance Certificate, or Amendment...",
+    "examples": [
+      "Effective Date: May 15, 2023",
+      "Agreement Date: March 1, 2022"
+    ],
+    "document_types": ["Fee Letter", "Compliance Certificate", "Amendment"]
+  },
+  {
+    "name": "Report Issuance Date",
+    "description": "Extract the report issuance or period-end date from annual or quarterly reports...",
+    "examples": [
+      "Filed on March 15, 2023",
+      "Reporting period ended December 31, 2022"
+    ],
+    "document_types": ["Annual Report", "Quarterly Report"]
+  }
+]
