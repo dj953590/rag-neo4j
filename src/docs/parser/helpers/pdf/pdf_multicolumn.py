@@ -29,7 +29,7 @@ Usage
 ------
 - As a CLI shell command use
 
-  python pdf_multicolumn.py input.pdf footer_margin header_margin
+  python multi_column.py input.pdf footer_margin header_margin
 
   Where margins are the height of the bottom / top stripes to ignore on each
   page.
@@ -50,24 +50,33 @@ Usage
       print(page.get_text(clip=rect, sort=True))
   ----------------------------------------------------------------------------------
 
+Dependencies
+-------------
+PyMuPDF v1.24.2 or later
+
+Copyright and License
+----------------------
+Copyright 2024 Artifex Software, Inc.
+License GNU Affero GPL 3.0
 """
 
 import string
 
 import pymupdf
 
-pymupdf.TOOLS.set_small_glyph_heights(True)
+pymupdf.TOOLS.unset_quad_corrections(True)
 
 
 def column_boxes(
-    page,
-    *,
-    footer_margin=50,
-    header_margin=50,
-    no_image_text=True,
-    textpage=None,
-    paths=None,
-    avoid=None,
+        page,
+        *,
+        footer_margin=50,
+        header_margin=50,
+        no_image_text=True,
+        textpage=None,
+        paths=None,
+        avoid=None,
+        ignore_images=False,
 ):
     """Determine bboxes which wrap a column on the page.
 
@@ -92,6 +101,23 @@ def column_boxes(
                 return i
         return 0
 
+    def in_bbox_using_cache(bb, bboxes, cache):
+        """Return 1-based number if a bbox contains bb, else return 0."""
+        """Results are stored in the cache for speedup."""
+        cache_key = f"{id(bb)}_{id(bboxes)}"
+        cached = cache.get(cache_key)
+        if cached is not None:
+            return cached
+
+        index = 0
+        for i, bbox in enumerate(bboxes, start=1):
+            if bb in bbox:
+                index = i
+                break
+
+        cache[cache_key] = index
+        return index
+
     def intersects_bboxes(bb, bboxes):
         """Return True if a bbox touches bb, else return False."""
         for bbox in bboxes:
@@ -111,7 +137,7 @@ def column_boxes(
         """
         for b in bboxlist:
             if not intersects_bboxes(temp, vert_bboxes) and (
-                b is None or b == bb or (temp & b).is_empty
+                    b is None or b == bb or (temp & b).is_empty
             ):
                 continue
             return False
@@ -131,6 +157,9 @@ def column_boxes(
             bb0 = nblocks[i - 1]
             if bb0 == bb1:
                 del nblocks[i]
+
+        if len(nblocks) == 0:
+            return nblocks
 
         # 2. repair sequence in special cases:
         # consecutive bboxes with almost same bottom value are sorted ascending
@@ -160,9 +189,9 @@ def column_boxes(
 
         Joins any rectangles that "touch" each other.
         This means that their intersection is valid (but may be empty).
-        To prefer vertical joins, we will ignore small horizontal gaps.
+        To prefer vertical joins, we will ignore small gaps.
         """
-        delta = (0, 0, 0, 2)  # allow this gap below
+        delta = (0, 0, 0, 10)  # allow this gap below
         prects = bboxes[:]
         new_rects = []
         while prects:
@@ -171,7 +200,7 @@ def column_boxes(
             while repeat:
                 repeat = False
                 for i in range(len(prects) - 1, 0, -1):
-                    if not ((prect0 + delta) & prects[i]).is_empty:
+                    if ((prect0 + delta) & prects[i]).is_valid:
                         prect0 |= prects[i]
                         del prects[i]
                         repeat = True
@@ -200,15 +229,15 @@ def column_boxes(
         prects.sort(key=lambda b: (b.x0, b.y0))
         new_rects = [prects[0]]  # initialize with first item
 
-        # walk through the rest, top to bottom, thwn left to right
+        # walk through the rest, top to bottom, then left to right
         for r in prects[1:]:
             r0 = new_rects[-1]  # previous bbox
 
-            # join if we have similar borders and are not to far down
+            # join if we have similar borders and are not too far down
             if (
-                abs(r.x0 - r0.x0) <= 3
-                and abs(r.x1 - r0.x1) <= 3
-                and abs(r0.y1 - r.y0) <= 12
+                    abs(r.x0 - r0.x0) <= 3
+                    and abs(r.x1 - r0.x1) <= 3
+                    and abs(r0.y1 - r.y0) <= 10
             ):
                 r0 |= r
                 new_rects[-1] = r0
@@ -217,7 +246,7 @@ def column_boxes(
             new_rects.append(r)
         return new_rects
 
-    def join_rects_phase3(bboxes, path_rects):
+    def join_rects_phase3(bboxes, path_rects, cache):
         prects = bboxes[:]
         new_rects = []
 
@@ -231,8 +260,11 @@ def column_boxes(
                     # do not join across columns
                     if prect1.x0 > prect0.x1 or prect1.x1 < prect0.x0:
                         continue
+
                     # do not join different backgrounds
-                    if in_bbox(prect0, path_rects) != in_bbox(prect1, path_rects):
+                    if in_bbox_using_cache(
+                            prect0, path_rects, cache
+                    ) != in_bbox_using_cache(prect1, path_rects, cache):
                         continue
                     temp = prect0 | prect1
                     test = set(
@@ -240,6 +272,7 @@ def column_boxes(
                     )
                     if test == set((tuple(prect0), tuple(prect1))):
                         prect0 |= prect1
+                        prects[0] = prect0
                         del prects[i]
                         repeat = True
             new_rects.append(prect0)
@@ -276,7 +309,7 @@ def column_boxes(
                     r
                     for r in new_rects
                     if r.x1 < box.x0
-                    and (box.y0 <= r.y0 <= box.y1 or box.y0 <= r.y1 <= box.y1)
+                       and (box.y0 <= r.y0 <= box.y1 or box.y0 <= r.y1 <= box.y1)
                     # and in_bbox(r, path_rects) == background
                 ],
                 key=lambda r: r.x1,
@@ -289,7 +322,7 @@ def column_boxes(
         sort_rects.sort(key=lambda sr: sr[1])  # by computed key
         new_rects = [sr[0] for sr in sort_rects]  # extract sorted rectangles
 
-        # move shaded text rects into a separate list
+        # move text rects with background color into a separate list
         shadow_rects = []
         # for i in range(len(new_rects) - 1, 0, -1):
         #     r = +new_rects[i]
@@ -303,14 +336,15 @@ def column_boxes(
     clip.y1 -= footer_margin  # Remove footer area
     clip.y0 += header_margin  # Remove header area
 
-    paths = [
-        p
-        for p in page.get_drawings()
-        if p["rect"].width < clip.width and p["rect"].height < clip.height
-    ]
+    if paths is None:
+        paths = [
+            p
+            for p in page.get_drawings()
+            if p["rect"].width < clip.width and p["rect"].height < clip.height
+        ]
 
     if textpage is None:
-        textpage = page.get_textpage(clip=clip, flags=pymupdf.TEXTFLAGS_TEXT)
+        textpage = page.get_textpage(clip=clip, flags=pymupdf.TEXT_ACCURATE_BBOXES)
 
     bboxes = []
 
@@ -341,8 +375,9 @@ def column_boxes(
     path_rects.sort(key=lambda b: (b.y0, b.x0))
 
     # bboxes of images on page, no need to sort them
-    for item in page.get_images():
-        img_bboxes.extend(page.get_image_rects(item[0]))
+    if ignore_images is False:
+        for item in page.get_images():
+            img_bboxes.extend(page.get_image_rects(item[0]))
 
     # blocks of text on page
     blocks = textpage.extractDICT()["blocks"]
@@ -382,13 +417,13 @@ def column_boxes(
     # immediately return of no text found
     if bboxes == []:
         return []
-
     # --------------------------------------------------------------------
     # Join bboxes to establish some column structure
     # --------------------------------------------------------------------
     # the final block bboxes on page
     nblocks = [bboxes[0]]  # pre-fill with first bbox
     bboxes = bboxes[1:]  # remaining old bboxes
+    cache = {}
 
     for i, bb in enumerate(bboxes):  # iterate old bboxes
         check = False  # indicates unwanted joins
@@ -402,7 +437,9 @@ def column_boxes(
                 continue
 
             # never join across different background colors
-            if in_bbox(nbb, path_rects) != in_bbox(bb, path_rects):
+            if in_bbox_using_cache(nbb, path_rects, cache) != in_bbox_using_cache(
+                    bb, path_rects, cache
+            ):
                 continue
 
             temp = bb | nbb  # temporary extension of new block
@@ -425,64 +462,14 @@ def column_boxes(
 
     # do some elementary cleaning
     nblocks = clean_nblocks(nblocks)
+    if len(nblocks) == 0:
+        return nblocks
 
     # several phases of rectangle joining
-    nblocks = join_rects_phase1(nblocks)
+    # TODO: disabled for now as too aggressive:
+    # nblocks = join_rects_phase1(nblocks)
     nblocks = join_rects_phase2(nblocks)
-    nblocks = join_rects_phase3(nblocks, path_rects)
+    nblocks = join_rects_phase3(nblocks, path_rects, cache)
 
     # return identified text bboxes
     return nblocks
-
-
-if __name__ == "__main__":
-    """Only for debugging purposes, currently.
-
-    Draw red borders around the returned text bboxes and insert
-    the bbox number.
-    Then save the file under the name "input-blocks.pdf".
-    """
-    import sys
-
-    RED = pymupdf.pdfcolor["red"]
-    # get the file name
-    filename = sys.argv[1]
-
-    # check if footer margin is given
-    if len(sys.argv) > 2:
-        footer_margin = int(sys.argv[2])
-    else:  # use default vaue
-        footer_margin = 50
-
-    # check if header margin is given
-    if len(sys.argv) > 3:
-        header_margin = int(sys.argv[3])
-    else:  # use default vaue
-        header_margin = 50
-
-    # open document
-    doc = pymupdf.open(filename)
-
-    # iterate over the pages
-    for page in doc:
-        # get the text bboxes
-        bboxes = column_boxes(
-            page, footer_margin=footer_margin, header_margin=header_margin
-        )
-
-        # prepare a canvas to draw rectangles and text
-        shape = page.new_shape()
-
-        # iterate over the bboxes
-        for i, rect in enumerate(bboxes):
-            shape.draw_rect(rect)  # draw a border
-
-            # write sequence number
-            shape.insert_text(rect.tl + (5, 15), str(i), color=RED)
-
-        # finish drawing / text with color red
-        shape.finish(color=RED)
-        shape.commit()  # store to the page
-
-    # save document with text bboxes
-    doc.ez_save(filename.replace(".pdf", "-blocks.pdf"))
