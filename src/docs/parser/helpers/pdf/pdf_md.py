@@ -29,7 +29,6 @@ from onnxtr.io import DocumentFile
 from tqdm import tqdm
 
 import pymupdf
-from beartype.typing import List, Dict
 from pymupdf import Document, mupdf
 
 from src.docs.chunker.chunks import extract_chunks_md
@@ -93,7 +92,7 @@ class IdentifyHeaders:
 
     def __init__(
             self,
-            doc: str,
+            doc: Document,
             pages: list = None,
             body_limit: float = 12,  # force this to be body text
             max_levels: int = 6,  # accept this many header levels
@@ -338,7 +337,7 @@ def to_markdown(
         show_progress=True,
         use_glyphs=False,
         ignore_alpha=False,
-) -> str:
+) -> list:
     """Process the document and return the text of the selected pages.
 
     Args:

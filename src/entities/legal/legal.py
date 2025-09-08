@@ -12,7 +12,7 @@ class LegalEntityType(BaseModel):
     def dump(self):
         return {
             "entity_type": self.entity_type,
-            "description": self.description
+            #"description": self.description
         }
 
 

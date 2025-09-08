@@ -1,6 +1,4 @@
-Cypher
 
-Abbieve
 MATCH (n)-[r]-(m)
 WHERE n.doc_id = 'DOC-ef0ff6e2b1ed8219e449e705d6553eb1bc013ea0540e1dcb68482041f8487491' AND r.doc_id ='DOC-ef0ff6e2b1ed8219e449e705d6553eb1bc013ea0540e1dcb68482041f8487491' AND m.doc_id = 'DOC-ef0ff6e2b1ed8219e449e705d6553eb1bc013ea0540e1dcb68482041f8487491'
 RETURN n, r, m
@@ -16,7 +14,7 @@ RETURN n, r, m
 
 Caterpillar
 MATCH (n)-[r]-(m)
-WHERE n.doc_id = '	DOC-7adaca4f7a065364c6a54b4aab78729ff0f3653a853c6f5dd48743451dd9b941' AND r.doc_id ='	DOC-7adaca4f7a065364c6a54b4aab78729ff0f3653a853c6f5dd48743451dd9b941' AND m.doc_id = '	DOC-7adaca4f7a065364c6a54b4aab78729ff0f3653a853c6f5dd48743451dd9b941'
+WHERE n.doc_id = 'DOC-7adaca4f7a065364c6a54b4aab78729ff0f3653a853c6f5dd48743451dd9b941' AND r.doc_id ='DOC-7adaca4f7a065364c6a54b4aab78729ff0f3653a853c6f5dd48743451dd9b941' AND m.doc_id = 'DOC-7adaca4f7a065364c6a54b4aab78729ff0f3653a853c6f5dd48743451dd9b941'
 RETURN n, r, m
 
 get all the nodes and relationship

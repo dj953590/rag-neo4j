@@ -12,7 +12,7 @@ from src.storage.db.sql.pgdb import PGDB
 from src.storage.s3.s3store import S3Storage
 from src.utils.log import logger
 from src.utils.utils import compute_mdhash_id
-from src.storage.db.sql.tables.t_base import DocumentsMaster
+from src.storage.db.sql.tables.engine_tables import DocumentsMaster
 
 
 @dataclass

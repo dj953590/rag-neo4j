@@ -362,6 +362,7 @@ async def extract_entities(
     use_llm_func: callable = global_config["llm_model_func"]
     entity_extract_max_gleaning = global_config["entity_extract_max_gleaning"]
     batch_size = global_config["entity_extract_batch_size"]
+    chunks_max_join = global_config["entity_extract_chunk_max_join"]
 
     ordered_chunks = list(chunks.items())
     # add language and example number params to prompt
@@ -433,6 +434,8 @@ async def extract_entities(
         logger.debug(f"Prompt for Extracting entities from chunk: {hint_prompt}")
 
         final_result = await use_llm_func(hint_prompt)
+
+        """
         history = pack_user_ass_to_openai_messages(hint_prompt, final_result)
         for now_glean_index in range(entity_extract_max_gleaning):
             glean_result = await use_llm_func(continue_prompt, history_messages=history)
@@ -448,7 +451,7 @@ async def extract_entities(
             if_loop_result = if_loop_result.strip().strip('"').strip("'").lower()
             if if_loop_result != "yes":
                 break
-
+        """
         records = split_string_by_multi_markers(
             final_result,
             [context_base["record_delimiter"], context_base["completion_delimiter"]],
@@ -500,6 +503,27 @@ async def extract_entities(
         batch_set_results = await asyncio.gather(*[_process_single_content(chunk) for chunk in batch])
         return batch_set_results
 
+    async def join_chunks_with_tags(ordered_chunks, max_join):
+        """
+        Joins up to max_join chunks, tagging each with its chunk_key at the top and bottom.
+        Returns a list of (joined_chunk_key, chunk_dict) tuples, matching the ordered_chunks format.
+        """
+        joined = []
+        for i in range(0, len(ordered_chunks), max_join):
+            batch = ordered_chunks[i:i + max_join]
+            joined_text = []
+            joined_keys = []
+            for chunk_key, chunk in batch:
+                content = chunk["content"]
+                tagged = f"[ID: {chunk_key}]\n{content}\n[ID: {chunk_key}]"
+                joined_text.append(tagged)
+                joined_keys.append(chunk_key)
+            joined_content = "\n\n".join(joined_text)
+            # Use a combined key or the first key as the new chunk_key
+            joined_chunk_key = "|".join(joined_keys)
+            joined.append((joined_chunk_key, {"content": joined_content}))
+        return joined
+
     results = []
     """
     # single processing a chunk
@@ -508,7 +532,12 @@ async def extract_entities(
         result = await _process_single_content(chunk_key_dp)
         results.append(result)
     """
+    # join the chunks using the limit of entity_extract_chunk_max_join and tag with the chunk_key at the top of content and bottom with ID:
+
     # for batch Split ordered_chunks into batches of size 4
+    ordered_chunks = await join_chunks_with_tags(ordered_chunks, chunks_max_join)
+
+    logger.info(f"Total chunks after joining: {len(ordered_chunks)}")
 
     batches = [ordered_chunks[i:i + batch_size] for i in range(0, len(ordered_chunks), batch_size)]
     for batch in tqdm(batches, total=len(batches), desc="Processing batches", unit="batch"):
