@@ -8,7 +8,7 @@ from dynaconf import settings
 from src.docs.parser.pdf_processor import PDFProcessor
 from src.utils.utils import compute_mdhash_id
 
-parent_folder = "amazon"
+parent_folder = "caterpillar"
 WORKING_DIR = "./" + parent_folder
 
 if not os.path.exists(WORKING_DIR):
@@ -36,9 +36,9 @@ for pdf_file in pdf_files:
         doc_name=doc_name,
     )
 
-    extractor = PDFProcessor(file_path=pdf_path, output_path=output_path, output_text_path=output_text_path)
+    extractor = PDFProcessor(file_path=str(pdf_path))
     structured_data = extractor.markdown()
-    engine.insert(structured_data, mode="LOCAL,VECTOR")
+    engine.insert(structured_data, mode="VECTOR,GRAPH")
 
     end_time = time.time()
     print(f"Total processing time for {doc_name}: {end_time - start_time:.2f} seconds")
