@@ -1073,7 +1073,7 @@ async def _find_most_related_text_unit_from_entities(
 
     if not all_text_units:
         logger.warning("No valid text units found")
-        return []
+        return [], []
     # Sorts all_text_units by order and relation_counts, truncates the list by token size, and extracts the content.
     all_text_units = sorted(
         all_text_units, key=lambda x: (x["order"], -x["relation_counts"])
@@ -1169,7 +1169,7 @@ async def _get_edge_data(
     results = await relationships_vdb.query(keywords, param=query_param)
 
     if not len(results):
-        return "", "", ""
+        return [], [], [], []
 
     edge_datas = await asyncio.gather(
         *[
@@ -1333,7 +1333,7 @@ async def _find_related_text_unit_from_relationships(
 
     if not all_text_units_lookup:
         logger.warning("No valid text chunks found")
-        return []
+        return [], []
 
     all_text_units = [{"id": k, **v} for k, v in all_text_units_lookup.items()]
     all_text_units = sorted(all_text_units, key=lambda x: x["order"])

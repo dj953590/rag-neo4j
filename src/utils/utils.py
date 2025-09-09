@@ -410,12 +410,14 @@ def csv_string_to_list(csv_string: str) -> List[List[str]]:
 
 def escape_cypher_node(label: str) -> str:
     # Escape backslashes and single quotes for Cypher label usage
+    label = label.strip('"')
     return label.strip().replace("\\", "\\\\").replace("'", "\\'")
 
 def escape_cypher_properties(properties: dict) -> dict:
     # Recursively escape single quotes in string property values
     def escape_value(val):
         if isinstance(val, str):
+            val = val.strip('"')
             return val.strip().replace("\\", "\\\\").replace("'", "\\'")
         elif isinstance(val, dict):
             return {k: escape_value(v) for k, v in val.items()}

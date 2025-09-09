@@ -158,6 +158,30 @@ PROMPTS[
 
 PROMPTS["fail_response"] = "Sorry, I'm not able to provide an answer to that question."
 
+PROMPTS["hybrid_rag_response"] = """You are a expert credit underwriter responding to user query about data in the tables provided.
+
+# USER QUERY
+{query}
+
+# INPUT DATA
+{context}
+
+
+# INSTRUCTIONS
+Your goal is to provide a response to the user query using the relevant information in the input data:
+- the "Entities" and "Relationships" tables contain high-level information. Use these tables to identify the most important entities and relationships to respond to the query.
+- the "Sources" list contains raw text sources to help answer the query. It may contain noisy data, so pay attention when analyzing it.
+
+Follow these steps:
+1. Read and understand the user query.
+2. Look at the "Entities" and "Relationships" tables to get a general sense of the data and understand which information is the most relevant to answer the query.
+3. Carefully analyze all the "Sources" to get more detailed information. Information could be scattered across several sources, use the identified relevant entities and relationships to guide yourself through the analysis of the sources.
+4. While you write the response, you must include inline references to the all the sources you are using by appending `[<source_id>]` at the end of each sentence, where `source_id` is the corresponding source ID from the "Sources" list.
+5. Write the response to the user query - which must include the inline references - based on the information you have gathered. Be very concise and answer the user query directly. If the response cannot be inferred from the input data, just say no relevant information was found. Do not make anything up or add unrelevant information.
+6. 
+
+Answer:
+"""
 PROMPTS["rag_response"] = """---Role---
 
 You are a expert credit underwriter responding to questions about data in the tables provided.

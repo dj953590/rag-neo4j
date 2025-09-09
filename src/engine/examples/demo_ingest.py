@@ -38,7 +38,7 @@ for pdf_file in pdf_files:
 
     extractor = PDFProcessor(file_path=str(pdf_path))
     structured_data = extractor.markdown()
-    engine.insert(structured_data, mode="VECTOR,GRAPH")
+    engine.insert(structured_data, mode="LOCAL,VECTOR,GRAPH")
 
     end_time = time.time()
     print(f"Total processing time for {doc_name}: {end_time - start_time:.2f} seconds")
