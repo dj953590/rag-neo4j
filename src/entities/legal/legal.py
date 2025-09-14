@@ -20,7 +20,7 @@ class LegalEntitySchema(BaseModel):
     legal_entities: List[LegalEntityType]
 
     def dump(self):
-        return [entity.dump() for entity in self.legal_entities]
+        return [entity.entity_type for entity in self.legal_entities]
 
 
 def load_legal_entities(file_path: str) -> LegalEntitySchema:
@@ -57,5 +57,4 @@ if __name__ == "__main__":
     # Example usage
     file_path = os.path.join(os.path.dirname(__file__), "data\\Agreement.txt")  # Update with the actual path
     legal_entities_schema = load_legal_entities(file_path)
-    print(legal_entities_schema.model_dump_json(indent=4))
     print(legal_entities_schema.dump())

@@ -84,6 +84,7 @@ class PGVectorStorage(BaseVectorStorage):
                 # Split data into batches
                 # Use asyncio.gather to run embedding tasks concurrently
                 # Upsert in batches
+                batch_documents = [str(doc) for doc in batch_documents]
 
                 batches = [
                     batch_documents[i: i + self._max_batch_size]

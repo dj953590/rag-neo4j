@@ -6,9 +6,7 @@ RETURN n, r, m
 DOC-5619df3ed8174d0d8a59a7c69c0d2e4d08b31bfa20e08b964330e5d3d2b5c6eb
 
 MATCH (n)-[r]-(m)
-WHERE n.doc_id = 'DOC-5619df3ed8174d0d8a59a7c69c0d2e4d08b31bfa20e08b964330e5d3d2b5c6eb'
-AND r.doc_id ='DOC-5619df3ed8174d0d8a59a7c69c0d2e4d08b31bfa20e08b964330e5d3d2b5c6eb'
-AND m.doc_id = 'DOC-5619df3ed8174d0d8a59a7c69c0d2e4d08b31bfa20e08b964330e5d3d2b5c6eb'
+WHERE n.doc_id = 'DOC-d78f3a912cf6a0d022b78fa6955d54764af5f4e9ad6a1aef69147ba45f381b9c'
 RETURN n, r, m
 
 
@@ -23,4 +21,4 @@ match (n) - [r] - (m) return n,r,m
 
 Remove all the nodes and associated relationship
 
-match (n) detach delete n
+match (n) WHERE n.doc_id = 'DOC-d78f3a912cf6a0d022b78fa6955d54764af5f4e9ad6a1aef69147ba45f381b9c' detach delete n

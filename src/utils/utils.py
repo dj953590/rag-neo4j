@@ -393,6 +393,46 @@ def process_combine_contexts(hl, ll):
     combined_sources_result = "\n".join(combined_sources_result)
     return combined_sources_result
 
+# python
+def process_combine_context_json(hl: str, ll: str) -> str:
+    """
+    Parse two CSV strings, combine rows (deduplicated), map rows to header attributes,
+    and return a JSON string of the resulting list of objects.
+    """
+    list_hl = csv_string_to_list(hl.strip()) if hl and hl.strip() else []
+    list_ll = csv_string_to_list(ll.strip()) if ll and ll.strip() else []
+
+    header = None
+    if list_hl and list_hl[0]:
+        header = list_hl[0]
+        list_hl = list_hl[1:]
+    if header is None and list_ll and list_ll[0]:
+        header = list_ll[0]
+        list_ll = list_ll[1:]
+    if header is None:
+        return json.dumps([], ensure_ascii=False, indent=2)
+
+    combined_rows = []
+    seen = set()
+    for row in list_hl + list_ll:
+        if not row:
+            continue
+        row_tuple = tuple(row)
+        if row_tuple in seen:
+            continue
+        seen.add(row_tuple)
+
+        # Normalize row length to header length:
+        if len(row) < len(header):
+            row = row + [""] * (len(header) - len(row))
+        elif len(row) > len(header):
+            # join overflow columns into the last header field
+            row = row[: len(header) - 1] + [",".join(row[len(header) - 1 :])]
+
+        combined_rows.append({header[i]: row[i] for i in range(len(header))})
+
+    return json.dumps(combined_rows, ensure_ascii=False, indent=2)
+
 def process_combine_chunks_ids(hl, ll):
     combined_chunks = []
     seen = set()
@@ -402,6 +442,12 @@ def process_combine_chunks_ids(hl, ll):
             seen.add(item)
 
     return combined_chunks
+
+def _safe_load_json(value):
+    try:
+        return json.loads(value) if isinstance(value, str) else value
+    except json.JSONDecodeError:
+        return value
 
 def csv_string_to_list(csv_string: str) -> List[List[str]]:
     output = io.StringIO(csv_string)

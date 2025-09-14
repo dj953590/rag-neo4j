@@ -330,13 +330,14 @@ class Neo4JStorage(BaseGraphStorage):
         source_node_label = escape_cypher_node(source_node_id)
         target_node_label = escape_cypher_node(target_node_id)
         edge_properties = escape_cypher_properties(edge_data)
+        edge_type = edge_properties.get("type", "DIRECTED").upper()
 
         async def _do_upsert_edge(tx: AsyncManagedTransaction):
             query = f"""
             MATCH (source:`{source_node_label}`)
             WITH source
             MATCH (target:`{target_node_label}`)
-            MERGE (source)-[r:DIRECTED]->(target)
+            MERGE (source)-[r:`{edge_type}`]->(target)
             SET r += $properties
             RETURN r
             """

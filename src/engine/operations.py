@@ -27,7 +27,7 @@ from src.utils.utils import (
     split_string_by_multi_markers,
     truncate_list_by_token_size,
     compute_args_hash, truncate_list_ids_by_token_size,
-    process_combine_chunks_ids,
+    process_combine_chunks_ids, process_combine_context_json, _safe_load_json,
 )
 from src.storage.db.base import (
     BaseGraphStorage,
@@ -102,6 +102,7 @@ async def _handle_entity_relation_summary(
     context_base = dict(
         entity_name=entity_or_relation_name,
         description_list=use_description.split(GRAPH_FIELD_SEP),
+        summary_length=summary_max_tokens,
         language=language,
     )
     use_prompt = prompt_template.format(**context_base)
@@ -160,6 +161,7 @@ async def _handle_single_relationship_extraction(
     edge_description = clean_str(record_attributes[3])
 
     edge_keywords = clean_str(record_attributes[4])
+    edge_type = clean_str(record_attributes[5])
     edge_source_id = chunk_key
     weight = (
         float(record_attributes[-1]) if is_float_regex(record_attributes[-1]) else 1.0
@@ -170,6 +172,7 @@ async def _handle_single_relationship_extraction(
         weight=weight,
         description=edge_description,
         keywords=edge_keywords,
+        edge_type=edge_type,
         source_id=edge_source_id,
     )
 
@@ -196,8 +199,8 @@ async def _merge_nodes_then_upsert(
     already_entity_types = []
     already_source_ids = []
     already_description = []
-
-    already_node = await knowledge_graph_inst.get_node(entity_name)
+    query_param = QueryParam(doc_id=global_config["doc_id"])
+    already_node = await kg_db.get_node(entity_name, param=query_param)
     if already_node is not None:
         already_entity_types.append(already_node["entity_type"])
         already_source_ids.extend(
@@ -218,6 +221,7 @@ async def _merge_nodes_then_upsert(
     source_id = GRAPH_FIELD_SEP.join(
         set([dp["source_id"] for dp in nodes_data] + already_source_ids)
     )
+
     description = await _handle_entity_relation_summary(
         entity_name, description, global_config
     )
@@ -267,9 +271,9 @@ async def _merge_edges_then_upsert(
     already_source_ids = []
     already_description = []
     already_keywords = []
-
-    if await knowledge_graph_inst.has_edge(src_id, tgt_id):
-        already_edge = await knowledge_graph_inst.get_edge(src_id, tgt_id)
+    query_param = QueryParam(doc_id=global_config["doc_id"])
+    if await kg_db.has_edge(src_id, tgt_id, param=query_param):
+        already_edge = await kg_db.get_edge(src_id, tgt_id, param=query_param)
         already_weights.append(already_edge["weight"])
         already_source_ids.extend(
             split_string_by_multi_markers(already_edge["source_id"], [GRAPH_FIELD_SEP])
@@ -289,6 +293,7 @@ async def _merge_edges_then_upsert(
     source_id = GRAPH_FIELD_SEP.join(
         set([dp["source_id"] for dp in edges_data] + already_source_ids)
     )
+    edge_type = GRAPH_FIELD_SEP.join(set([dp["edge_type"] for dp in edges_data]))
     for need_insert_id in [src_id, tgt_id]:
         if not (await knowledge_graph_inst.has_node(need_insert_id)):
             await knowledge_graph_inst.upsert_node(
@@ -311,8 +316,10 @@ async def _merge_edges_then_upsert(
             weight=weight,
             description=description,
             keywords=keywords,
+            type=edge_type,
             source_id=source_id,
             doc_id=doc_id,
+
         ),
     )
 
@@ -323,6 +330,7 @@ async def _merge_edges_then_upsert(
             weight=weight,
             description=description,
             keywords=keywords,
+            type=edge_type,
             source_id=source_id,
             doc_id=doc_id,
         ),
@@ -332,6 +340,7 @@ async def _merge_edges_then_upsert(
         tgt_id=tgt_id,
         description=description,
         keywords=keywords,
+        type=edge_type,
         source_id=source_id,
     )
     return edge_data
@@ -535,9 +544,9 @@ async def extract_entities(
     # join the chunks using the limit of entity_extract_chunk_max_join and tag with the chunk_key at the top of content and bottom with ID:
 
     # for batch Split ordered_chunks into batches of size 4
-    ordered_chunks = await join_chunks_with_tags(ordered_chunks, chunks_max_join)
+    #ordered_chunks = await join_chunks_with_tags(ordered_chunks, chunks_max_join)
 
-    logger.info(f"Total chunks after joining: {len(ordered_chunks)}")
+    logger.info(f"Total chunks : {len(ordered_chunks)}")
 
     batches = [ordered_chunks[i:i + batch_size] for i in range(0, len(ordered_chunks), batch_size)]
     for batch in tqdm(batches, total=len(batches), desc="Processing batches", unit="batch"):
@@ -875,20 +884,14 @@ async def _build_query_context(
             [hl_text_units_context, ll_text_units_context],
             [hl_chunks_ids, ll_chunks_ids],
     )
-    completed_context = f"""
-            -----Entities-----
-            ```csv
-            {entities_context}
-            ```
-            -----Relationships-----
-            ```csv
-            {relations_context}
-            ```
-            -----Sources-----
-            ```csv
-            {text_units_context}
-            ```
-            """
+    completed_context_obj = {
+            "entities": _safe_load_json(entities_context),
+            "relationships": _safe_load_json(relations_context),
+            "sources": _safe_load_json(text_units_context),
+        }
+
+    completed_context = json.dumps(completed_context_obj, ensure_ascii=False, indent=2)
+
     return completed_context, chunks_ids
 
 
@@ -1374,17 +1377,19 @@ def combine_contexts(entities, relationships, sources, chunks_ids):
     hl_relationships, ll_relationships = relationships[0], relationships[1]
     hl_sources, ll_sources = sources[0], sources[1]
     # Combine and deduplicate the entities
-    combined_entities = process_combine_contexts(hl_entities, ll_entities)
+    combined_entities = process_combine_context_json(hl_entities, ll_entities)
 
     # Combine and deduplicate the relationships
-    combined_relationships = process_combine_contexts(
+    combined_relationships = process_combine_context_json(
         hl_relationships, ll_relationships
     )
 
     # Combine and deduplicate the sources
-    combined_sources = process_combine_contexts(hl_sources, ll_sources)
+    combined_sources = process_combine_context_json(hl_sources, ll_sources)
+    hl = chunks_ids[0] if isinstance(chunks_ids[0], list) else [chunks_ids[0]]
+    ll = chunks_ids[1] if isinstance(chunks_ids[1], list) else [chunks_ids[1]]
 
-    combined_chunks_ids =     process_combine_chunks_ids(chunks_ids[0], chunks_ids[1])
+    combined_chunks_ids =     process_combine_chunks_ids(hl, ll)
 
     return combined_entities, combined_relationships, combined_sources, combined_chunks_ids
 
@@ -1437,7 +1442,19 @@ async def naive_query(
         return PROMPTS["fail_response"]
 
     logger.info(f"Truncate {len(chunks)} to {len(maybe_trun_chunks)} chunks")
-    section = "\n--New Chunk--\n".join([c["content"] for c in maybe_trun_chunks])
+    # Build context
+    section = json.dumps(
+        [
+            {
+                "chunk_id": chunk["chunk_id"],
+                "cosine similarity": chunk["cosine"],
+                "content": chunk["content"],
+            }
+            for chunk in maybe_trun_chunks
+        ],
+        ensure_ascii=False,
+        indent=2
+    )
 
     if query_param.only_need_context:
         return section

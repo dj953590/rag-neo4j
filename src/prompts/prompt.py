@@ -31,51 +31,42 @@ PROMPTS["DEFAULT_10K_ENTITIES"] = DEFAULT_10K_ENTITIES
 
 PROMPTS["entity_extraction"] = """You are credit analyst, expert in named entity relationship extractor for credit, legal and financial domains.
 - **Your Goal** - 
-Given a **Markdown** text tagged with **ID:** at the top and bottom of each document page relevant to credit agreements and a list of legal entity types, 
-**identify all entities** and the **ID:** from the text that match these types and extract **all relationships** among the identified entities.  
-Use **{language}** as the output language.  
----
-### **Entity Types with Descriptions for Credit Agreement**  
-Below is a list of **valid entity types** with their **descriptions**. Use this as a reference when identifying entities:  
-
-{entity_types}
+Given a **Markdown** text tagged with **ID:** at the top and bottom of each document page and a predefined set of entity types and relationship types, perform a precise and comprehensive extraction. Use **{language}** as the output language.
 
 ---
 ### **Steps**
-1. **Identify all entities**  
-   - Extract all entities that match the provided **entity types**.  !Important: Be Extensive in your search for entities.
-   - If an entity does not match an exact type but is still **credit or legal of financial related**, classify it appropriately.  
-   - For each identified entity, extract:  
-     - **Entity Name**: The exact name as mentioned in the text (capitalize if in English).  
-     - **Entity Type**: One of the predefined **credit, legal, financial related** entity types. 
-            - ** DO NOT ** include any entity that does not match the entity types or are not related to **credit, legal, financial related**.
-            - ** DO NOT ** include entity without a type
-     - **Entity Description**: A **comprehensive** summary of the entity's obligations, rights, attributes, role, and significance based on the text.
-     - **ID:**: The unique identifier where entity was found in the document page.
-    - **Format each entity** as:  
-     `("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description><tuple_delimiter><id><tuple_delimiter>)`  
+1.  **Process Contextual Information:**
+    - First, process the "DEFINITIONS; CONSTRUCTION" section to build an internal context map. For each capitalized term defined in this section, map it to its full, real-world referent or a comprehensive description. For example, recognize that "Bank" refers to "CITIBANK, N.A." and "Borrower" refers to "PUERTO RICO ELECTRIC POWER AUTHORITY."
 
-2. **Extract relationships among identified entities**  
-   - Identify **clear relationships** between entities and extract:  
-     - **Source Entity**: The first entity involved in the relationship.  
-     - **Target Entity**: The second entity involved.  
-     - **Relationship Description**: Detailed Explanation of how the two entities are related.  
-     - **Relationship Strength**: A numeric score (1-10) indicating how strong the relationship is between the source entity and target entity.  
-     - **Relationship Keywords**: Key terms that describe the nature of the relationship. !Important: Be Extensive in defining key terms.
-   - **Format each relationship** as:  
-     `("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_strength>)`
+2.  **Identify and Classify Entities:**
+    - Scan the entire text and identify only real-world entities that fall into the following valid, specific types {entity_types}
+    - DO NOT extract any entity that is merely a defined term (e.g., "Advances", "Agreement", "Default Rate"). Map such terms back to their real-world referents identified in Step 1.
+    - For each identified entity, extract:
+        - **Entity Name**: The full, exact name as it appears in the text (e.g., "CITIBANK, N.A.").
+        - **Entity Type**: A type from the predefined list of entity types.
+        - **Entity Description**: A brief, factual summary of the entity's obligations or significance.
+    - Format each entity as a structured tuple:
+      `("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>){record_delimiter}`
+
+3.  **Extract Relationships Among Identified Entities:**
+    - Identify clear, factual relationships between the extracted entities.
+    - For each relationship, extract:
+        - **Source Entity**: The full name of the first entity involved.
+        - **Target Entity**: The full name of the second entity.
+        - **Relationship Description**: A concise, factual summary of the relationship.
+        - **Relationship Keywords**: one or more high-level key words that summarize the overarching nature of the relationship, focusing on concepts or themes rather than specific details.
+        - **Relationship Type**: The specific type from the predefined list. Use only the following predefined relationship types: `is_party_to`, `is_represented_by`, `provides_credit_to`, `is_governed_by`, `is_authorized_by`, `has_obligation_to`
+        - **Relationship Strength**: A numeric score (1-10) indicating how strong the relationship is between the source entity and target entity.  
+          
+    - **Format each relationship** as:  
+     `("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_keywords>{tuple_delimiter}<relationship_type>{tuple_delimiter}<relationship_strength>){record_delimiter}`
    - **DO NOT** include entities with **NO relationships** in the output.
    - **DO NOT** include relationships that do not have a **source entity** and a **target entity**.
 
-3. **Extract key concepts and themes**  
-   - Extract high level keywords that capture essence of the text in **credit, legal, financial** domain. !Important: Be Extensive in defining keywords.
-   - Extract content keywords that capture entities details or concrete terms in the text for **credit, legal, financial** domain  
-   - **Format as**:  
-     `("content_keywords"{tuple_delimiter}<high_level_keywords>)` 
-
-4. **Return output in structured format** in {language} as a single list of all the entities and relationships identified in steps 1 and 2  
-   - Use **{record_delimiter}** as the delimiter between records.  
-   - End response with `{completion_delimiter}`.
+4.  **Return Output:**
+    - Return output in structured format in {language} as a single list of all the entities and relationships identified in steps 2 and 3.
+    - Use **{record_delimiter}** as the delimiter between records.
+    - End response with `{completion_delimiter}`.
 
 ######################
 -Real Data-
@@ -115,28 +106,33 @@ US$5,470M
 The legal entities employing the authors of this report are listed below (and their regulators are listed further herein). Rajiv Berlia; Surendra Goyal
 ################
 Output:
-("entity"{tuple_delimiter}"Tata Technologies"{tuple_delimiter}"company"{tuple_delimiter}"Tata Technologies (TATE.NS) Initiate at Sell: Leveraged to Auto Vertical."){record_delimiter}
-("entity"{tuple_delimiter}"TATE.NS"{tuple_delimiter}"Ticker"{tuple_delimiter}"ata Technologies (TATE.NS) Initiate at Sell."){record_delimiter}
-("entity"{tuple_delimiter}"automotive"{tuple_delimiter}"industry"{tuple_delimiter}"Technologies (TTL) is a ER&D service provider (particularly exposed to automotive vertical)."){record_delimiter}
-("entity"{tuple_delimiter}"aerospace"{tuple_delimiter}"industry"{tuple_delimiter}"focus on other key verticals like aerospace – recently, TTL has become a strategic supplier for Airbus."){record_delimiter}
-("entity"{tuple_delimiter}"Price"{tuple_delimiter}"statistics"{tuple_delimiter}"Initiate at Sell with TP of Rs1,000 (~10% downside).Sell Price (30 Jan 24 15:30) Rs1,120.85 Target price Rs1,000.00."){record_delimiter}
-("entity"{tuple_delimiter}"TML"{tuple_delimiter}"client"{tuple_delimiter}"mining opportunities in existing set of marquee clients – TML, JLR, etc. Tata Group parentage will further help."){record_delimiter}
-("entity"{tuple_delimiter}"Rajiv Berlia"{tuple_delimiter}"author"{tuple_delimiter}"The legal entities employing the authors of this report are listed below and their regulators are listed further herein {tuple_delimiter}Rajiv Berlia; Surendra Goyal."){record_delimiter}
-("relationship"{tuple_delimiter}"TTL"{tuple_delimiter}"VinFast"{tuple_delimiter}"TTL was engaged by {tuple_delimiter}VinFast across full vehicle turnkey programs for their VF6 and VF7 models resulting in significant growth for Tata"{tuple_delimiter}7){record_delimiter}
-("relationship"{tuple_delimiter}"TTL"{tuple_delimiter}"Sell"{tuple_delimiter}"We initiate TTL with a {tuple_delimiter}Sell rating and {tuple_delimiter}target price of Rs1000"{tuple_delimiter}6){record_delimiter}
-("content_keywords"{tuple_delimiter}"Growth Drivers, Client Expansion, Company Financials, Revenues"){completion_delimiter}
+("entity"{tuple_delimiter}Tata Technologies{tuple_delimiter}company{tuple_delimiter}Tata Technologies (TATE.NS) Initiate at Sell: Leveraged to Auto Vertical.){record_delimiter}
+("entity"{tuple_delimiter}TATE.NS{tuple_delimiter}Ticker{tuple_delimiter}Tata Technologies (TATE.NS) Initiate at Sell.){record_delimiter}
+("entity"{tuple_delimiter}automotive{tuple_delimiter}industry{tuple_delimiter}Technologies (TTL) is a ER&D service provider (particularly exposed to automotive vertical)){record_delimiter}
+("entity"{tuple_delimiter}aerospace{tuple_delimiter}industry{tuple_delimiter}focus on other key verticals like aerospace – recently, TTL has become a strategic supplier for Airbus){record_delimiter}
+("entity"{tuple_delimiter}Price{tuple_delimiter}statistics{tuple_delimiter}Initiate at Sell with TP of Rs1,000 (~10% downside).Sell Price (30 Jan 24 15:30) Rs1,120.85 Target price Rs1,000.00){record_delimiter}
+("entity"{tuple_delimiter}TML{tuple_delimiter}client{tuple_delimiter}mining opportunities in existing set of marquee clients – TML, JLR, etc. Tata Group parentage will further help){record_delimiter}
+("entity"{tuple_delimiter}Rajiv Berlia{tuple_delimiter}author{tuple_delimiter}The legal entities employing the authors of this report are listed below and their regulators are listed further herein {tuple_delimiter}Rajiv Berlia; Surendra Goyal){record_delimiter}
+("relationship"{tuple_delimiter}TTL{tuple_delimiter}VinFast{tuple_delimiter}TTL was engaged by VinFast across full vehicle turnkey programs for their VF6 and VF7 models resulting in significant growth for Tata{tuple_delimiter}turnkey program{tuple_delimiter}is_party_to{tuple_delimiter}7){record_delimiter}
+("relationship"{tuple_delimiter}TTL{tuple_delimiter}Sell{tuple_delimiter}We initiate TTL with a {tuple_delimiter}Sell rating and target price of Rs1000{tuple_delimiter}Rating, Target price{tuple_delimiter}is_represented_by{tuple_delimiter}6){record_delimiter}
 #############################""",
 #############################""",
 ]
 
 PROMPTS[
     "summarize_entity_descriptions"
-] = """You are a expert credit underwriter responsible for generating a comprehensive summary of the data from **credit, legal, financial** document provided below.
-Given one or two entities, and a list of descriptions, all related to the same entity or group of entities.
-Please concatenate all of these into a single, comprehensive description. Make sure to include information collected from all the descriptions.
-If the provided descriptions are contradictory, please resolve the contradictions and provide a single, coherent summary.
-Make sure it is written in third person, and include the entity names so we the have full context.
-Use {language} as output language.
+] = """You are a expert credit underwriter responsible for generating a comprehensive summary of the entities and description provided.
+
+---Task---
+Your task is to synthesize a list of descriptions of a given entity or relation into a single, comprehensive, and cohesive summary.
+
+---Instructions---
+1. **Comprehensiveness:** The summary must integrate key information from all provided descriptions. Do not omit important facts.
+2. **Context:** The summary must explicitly mention the name of the entity or relation for full context.
+3. **Conflict:** In case of conflicting or inconsistent descriptions, determine if they originate from multiple, distinct entities or relationships that share the same name. If so, summarize each entity or relationship separately and then consolidate all summaries.
+4. **Style:** The output must be written from an objective, third-person perspective.
+5. **Length:** Maintain depth and completeness while ensuring the summary's length not exceed {summary_length} tokens.
+6. **Language:** The entire output must be written in {language}.
 
 #######
 -Data-
@@ -160,13 +156,6 @@ PROMPTS["fail_response"] = "Sorry, I'm not able to provide an answer to that que
 
 PROMPTS["hybrid_rag_response"] = """You are a expert credit underwriter responding to user query about data in the tables provided.
 
-# USER QUERY
-{query}
-
-# INPUT DATA
-{context}
-
-
 # INSTRUCTIONS
 Your goal is to provide a response to the user query using the relevant information in the input data:
 - the "Entities" and "Relationships" tables contain high-level information. Use these tables to identify the most important entities and relationships to respond to the query.
@@ -176,9 +165,11 @@ Follow these steps:
 1. Read and understand the user query.
 2. Look at the "Entities" and "Relationships" tables to get a general sense of the data and understand which information is the most relevant to answer the query.
 3. Carefully analyze all the "Sources" to get more detailed information. Information could be scattered across several sources, use the identified relevant entities and relationships to guide yourself through the analysis of the sources.
-4. While you write the response, you must include inline references to the all the sources you are using by appending `[<source_id>]` at the end of each sentence, where `source_id` is the corresponding source ID from the "Sources" list.
-5. Write the response to the user query - which must include the inline references - based on the information you have gathered. Be very concise and answer the user query directly. If the response cannot be inferred from the input data, just say no relevant information was found. Do not make anything up or add unrelevant information.
-6. 
+4. Write the response to the user query - which must include the inline references - based on the information you have gathered. Be very concise and answer the user query directly. If the response cannot be inferred from the input data, just say no relevant information was found. Do not make anything up or add unrelevant information.
+
+
+# INPUT DATA
+{context_data}
 
 Answer:
 """
@@ -214,10 +205,15 @@ Given the query, list both high-level and low-level keywords. High-level keyword
 
 ---Instructions---
 
-- Output the keywords in JSON format.
-- The JSON should have two keys:
-  - "high_level_keywords" for overarching concepts or themes in **credit, legal, financial**  domain.
-  - "low_level_keywords" for specific entities or details **credit, legal, financial**  domain.
+your task is to extract two distinct types of keywords:
+1. **high_level_keywords**: for overarching concepts or themes, capturing user's core intent, the subject area, or the type of question being asked.
+2. **low_level_keywords**: for specific entities or details, identifying the specific entities, proper nouns, credit, legal or financial domain jargon, product names, or concrete items.
+
+---Instructions & Constraints---
+1. **Output Format**: Your output MUST be a valid JSON object and nothing else. Do not include any explanatory text, markdown code fences (like ```json), or any other text before or after the JSON. It will be parsed directly by a JSON parser.
+2. **Source of Truth**: All keywords must be explicitly derived from the user query, with both high-level and low-level keyword categories required to contain content.
+3. **Concise & Meaningful**: Keywords should be concise words or meaningful phrases. Prioritize multi-word phrases when they represent a single concept. For example, from "latest financial report of Apple Inc.", you should extract "latest financial report" and "Apple Inc." rather than "latest", "financial", "report", and "Apple".
+4. **Handle Edge Cases**: For queries that are too simple, vague, or nonsensical (e.g., "hello", "ok", "asdfghjkl"), you must return a JSON object with empty lists for both keyword types.
 
 ######################
 -Examples-
@@ -286,7 +282,7 @@ Do not include information where the supporting evidence for it is not provided.
 
 {content_data}
 
-Add sections and commentary to the response as appropriate for the length and format. Style the response in markdown.
+Add sections and commentary to the response as appropriate for the length and format. Style the response in markdown and include the inline references for chunk id's - based on the information you have gathered.
 """
 
 PROMPTS[

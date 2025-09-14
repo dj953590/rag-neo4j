@@ -54,7 +54,7 @@ def main():
                 return
             if query.lower() == 'back':
                 break
-            query_param = QueryParam(mode="naive", doc_id=doc_id)
+            query_param = QueryParam(mode="hybrid", doc_id=doc_id)
             result, ids, k_wds = engine.query(query, param=query_param)
             print("Query Results:")
             print(result)
