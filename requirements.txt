@@ -49,5 +49,8 @@ openpyxl~=3.1.5
 python-pptx~=1.0.2
 ruff~=0.9.3
 chromadb~=0.6.3
-boto3~=1.36.21
-botocore~=1.36.21
+boto3
+botocore
+
+pydantic-ai~=1.0.10
+fastmcp~=2.12.3
