@@ -79,9 +79,7 @@ class MyCustomOpenAIModel(Model):
             # Extract the content from the response
             content = response.choices[0].message.content or ""
 
-            # Return the result as an AssistantMessage
-            return AssistantMessage(content=content)
-
+            return UserMessage(content=content)
         except Exception as e:
             print(f"OpenAI API Error: {e}")
             # In a real app, handle retries or raise a specific error
