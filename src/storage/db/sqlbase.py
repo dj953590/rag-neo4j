@@ -15,3 +15,6 @@ class SQLBase(ABC):
     def execute(self, query):
         raise NotImplementedError("Subclasses should implement this method.")
 
+    def read(self, query, params=None):
+        raise NotImplementedError("Subclasses should implement this method.")
+

@@ -1,5 +1,7 @@
 
 from dataclasses import dataclass, field
+from typing import Any
+
 from sqlalchemy import Table, Column, Integer, String, MetaData, text, func, create_engine, and_
 from sqlalchemy.orm import declarative_base, sessionmaker
 
@@ -27,66 +29,44 @@ class PGDB(SQLBase):
 
 
 
-    def execute(self, query):
-        compiled = query.compile(self.engine, compile_kwargs={"literal_binds": True})
-        logger.info(f"SQL: {compiled}")
-        with self.engine.connect() as conn:
-            result = conn.execute(query)
-            try:
-                return result.fetchall()
-            except Exception:
-                return result.rowcount
+    def read(self, query: str, params: dict = None) -> list[Any]:
+        """
+        Execute a raw SQL query with optional parameter binding.
+
+        Args:
+            query : The SQL query string.
+            params (dict, optional): Dictionary of parameters to bind.
+
+        Returns:
+            list: Query results as a list of rows, or rowcount for non-select queries.
+        """
+        try:
+            stmt = text(query)
+            stmt_params = stmt.bindparams(**params)
+            compiled = stmt_params.compile(self.engine, compile_kwargs={"literal_binds": True})
+            logger.info(f"SQL: {compiled}")
+            with self.engine.connect() as conn:
+                result = conn.execute(stmt_params)
+                rows: list[Any] = result.fetchall()  # Explicitly type rows
+                list_of_dicts = [row._asdict() for row in rows]
+                return list_of_dicts
+        except Exception as e:
+            logger.error(f"Error during select: {str(e)}")
+            return []
 
 async def main():
 
     namespace = "example"  # Replace with actual value
     global_config = {}
     pgdb = PGDB(namespace, global_config)
-    
-    """
-        columns = [
-            Column('id', Integer, primary_key=True),
-            Column('name', String)
-        ]
-        table_name = "example_table"
-        data = {"id": 1, "name": "Test Name"}
-
-        pgdb.create_table(table_name, columns)
-        pgdb.delete(table_name, text("id=1"))
-        print("Deleted data from PostgreSQL")
-        pgdb.insert(table_name, data)
-        print("Inserted data into PostgreSQL")
-
-        master = DocumentMaster(id="1", name="Test", state="Test", parent="Test", updated_on=func.now())
-        pgdb.merge(master)
-        result =  pgdb.select(table_name)
-        print("Selected data from PostgreSQL:", result)
-
-        result =  pgdb.select("document_master", text("id='1'"))
-        print("Selected data from PostgreSQL:", result)
-        pgdb.update(table_name, text("id=1"), {"name": "Updated Name"})
-        print("Updated data in PostgreSQL")
-
-        # SELECT using execute
-        select_query = text(f"SELECT * FROM {table_name} WHERE id=1")
-        result = pgdb.execute(select_query)
-        print("Execute SELECT result:", result)
-
-        # UPDATE using execute
-        update_query = text(f"UPDATE {table_name} SET name='Execute Updated' WHERE id=1")
-        update_count = pgdb.execute(update_query)
-        print("Execute UPDATE affected rows:", update_count)
-
-        pgdb.delete(table_name, text("id=1"))
-        print("Deleted data from PostgreSQL")
-        pgdb.delete("document_master", text("id='1'"))
-        print("Deleted documents master data from PostgreSQL")
-        pgdb.drop_table(table_name)
-    """
-    classic_sql = text(SQL_TEMPLATE_CLASSIFIER["classic_sql"])
-    doc_id = "DOC-236032ad52b5c77d76ca8b5b9d3ee21fa9d36f49e15211204ee2de8f5df0e70a"
+    classic_sql = SQL_TEMPLATE_CLASSIFIER["document_result"]
+    doc_id = "DOC-7adaca4f7a065364c6a54b4aab78729ff0f3653a853c6f5dd48743451dd9b941"
     namespace = "chunks"
-    result = pgdb.execute(classic_sql.bindparams(doc_id=doc_id, namespace=namespace))
+    params = {
+        "doc_id": doc_id,
+        "namespace": namespace
+    }
+    result = pgdb.read(classic_sql, params)
     print(result)
 if __name__ == "__main__":
     import asyncio
