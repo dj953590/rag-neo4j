@@ -72,3 +72,4 @@ def get_document_status(document_id: str) -> dict:
 
 if __name__ == "__main__":
     mcp.run(transport="streamable-http")
+    # for mcp inspector $env:PYTHONPATH="C:\Users\DJ\git\rag-neo4j" mcp dev data.py
