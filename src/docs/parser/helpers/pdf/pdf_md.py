@@ -24,7 +24,7 @@ import string
 from binascii import b2a_base64
 from typing import Any
 
-from markitdown import MarkItDown
+
 from onnxtr.io import DocumentFile
 from tqdm import tqdm
 
