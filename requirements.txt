@@ -4,7 +4,7 @@ PyMuPDF~=1.26.3
 setuptools==69.5.1
 textwrap3~=0.9.2
 neo4j~=5.26.0
-python-dotenv~=1.0.1
+python-dotenv
 dynaconf~=3.2.6
 langchain_groq~=0.2.1
 pydantic~=2.10.4
@@ -12,7 +12,7 @@ celery~=5.4.0
 jinja2~=3.1.5
 networkx~=3.4.2
 graspologic~=3.4.1
-groq~=0.13.1
+groq
 openai~=1.99.9
 instructor~=1.7.2
 tenacity~=9.0.0
@@ -51,6 +51,3 @@ ruff~=0.9.3
 chromadb~=0.6.3
 boto3
 botocore
-
-pydantic-ai~=1.0.10
-fastmcp~=2.12.3
